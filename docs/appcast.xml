@@ -5,5 +5,12 @@
         <link>https://corvusdevs.github.io/CorvusArcade/appcast.xml</link>
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
+        <item>
+            <title>Version 0.1.0</title>
+            <pubDate>Fri, 10 Jul 2026 03:45:35 +0000</pubDate>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>First public alpha</li><li>Tested with Battle.net and Overwatch on Apple Silicon</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.1.0/CorvusArcade-0.1.0.zip" sparkle:version="1" sparkle:shortVersionString="0.1.0" sparkle:edSignature="QvDqSPTf2fBdX3/YdUa91ddgTdh+TYpwRrf5eSpnKXdtpzrjCIBIWOyaU0+/Z/3c7sIIEph/dM3gNVdpPHcwAA==" length="570235925" type="application/octet-stream" />
+        </item>
     </channel>
 </rss>
