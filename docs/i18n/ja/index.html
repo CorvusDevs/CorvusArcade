@@ -210,29 +210,54 @@
             nav { padding: 14px 20px; }
         }
 
-        .lang-wrap { position: relative; }
-        .lang-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 7px 12px; color: var(--text); font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+        .nav-right { display: flex; align-items: center; gap: 14px; }
+        .lang-wrap { position: relative; flex-shrink: 0; }
+        .lang-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; color: var(--text); font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
         .lang-btn .lang-glyph { font-weight: 700; letter-spacing: -1px; }
         .lang-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; z-index: 300; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 6px 0; min-width: 190px; max-height: 60vh; overflow-y: auto; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
         .lang-menu.open { display: block; }
-        .lang-menu a { display: block; padding: 8px 16px; color: var(--text); font-size: 13px; text-decoration: none; white-space: nowrap; }
-        .lang-menu a:hover { background: rgba(255,255,255,0.06); }
+        .lang-menu a { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 16px; color: var(--text); font-size: 13px; text-decoration: none; white-space: nowrap; }
+        .lang-menu a:hover { background: rgba(255,255,255,0.08); }
         .lang-menu a.active { color: var(--accent-light); }
-
-        .lang-wrap { position: relative; }
-        .lang-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 7px 12px; color: var(--text); font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-        .lang-btn .lang-glyph { font-weight: 700; letter-spacing: -1px; }
-        .lang-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; z-index: 300; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 6px 0; min-width: 190px; max-height: 60vh; overflow-y: auto; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
-        .lang-menu.open { display: block; }
-        .lang-menu a { display: block; padding: 8px 16px; color: var(--text); font-size: 13px; text-decoration: none; white-space: nowrap; }
-        .lang-menu a:hover { background: rgba(255,255,255,0.06); }
-        .lang-menu a.active { color: var(--accent-light); }
+        .lang-menu img { width: 20px; height: 14px; border-radius: 2px; object-fit: cover; }
     </style>
 </head>
 <body>
     <nav>
         <a href="https://corvusdevs.github.io/" class="nav-brand"><img src="https://corvusdevs.github.io/avatar.png" alt="CorvusDevs">Corvus<span>Devs</span></a>
-        <div style="display:flex;align-items:center;gap:14px"><div class="lang-wrap"><button class="lang-btn" onclick="var m=this.nextElementSibling;m.classList.toggle('open');event.stopPropagation();"><span class="lang-glyph">文A</span> English</button><div class="lang-menu"><a href="https://corvusdevs.github.io/CorvusArcade/" class="active">English</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/ar/">العربية</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/cs/">Čeština</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/da/">Dansk</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/de/">Deutsch</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/el/">Ελληνικά</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/es/">Español</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/es-MX/">Español (México)</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/fi/">Suomi</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr/">Français</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/he/">עברית</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/hi/">हिन्दी</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/hu/">Magyar</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/id/">Indonesia</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/it/">Italiano</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/ja/">日本語</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/ko/">한국어</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/ms/">Melayu</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/nb/">Norsk bokmål</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/nl/">Nederlands</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/pl/">Polski</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/pt-BR/">Português (Brasil)</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/pt-PT/">Português (Portugal)</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/ro/">Română</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/ru/">Русский</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/sk/">Slovenčina</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/sv/">Svenska</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/th/">ไทย</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/tr/">Türkçe</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/">Українська</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">Tiếng Việt</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">简体中文</a><a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases" class="nav-cta">ダウンロード</a></div>
+        <div class="nav-right"><div class="lang-wrap"><button class="lang-btn" aria-label="Language" onclick="var m=this.nextElementSibling;m.classList.toggle('open');event.stopPropagation();"><span class="lang-glyph">文A</span> 日本語</button><div class="lang-menu"><a href="https://corvusdevs.github.io/CorvusArcade/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/en.svg" alt="" width="20" height="14" loading="lazy">English</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ar/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ar.svg" alt="" width="20" height="14" loading="lazy">العربية</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/cs/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/cs.svg" alt="" width="20" height="14" loading="lazy">Čeština</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/da/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/da.svg" alt="" width="20" height="14" loading="lazy">Dansk</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/de/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/de.svg" alt="" width="20" height="14" loading="lazy">Deutsch</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/el/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/el.svg" alt="" width="20" height="14" loading="lazy">Ελληνικά</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/es/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/es.svg" alt="" width="20" height="14" loading="lazy">Español</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/es-MX/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/es-MX.svg" alt="" width="20" height="14" loading="lazy">Español (México)</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fi.svg" alt="" width="20" height="14" loading="lazy">Suomi</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr.svg" alt="" width="20" height="14" loading="lazy">Français</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/he/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/he.svg" alt="" width="20" height="14" loading="lazy">עברית</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hi.svg" alt="" width="20" height="14" loading="lazy">हिन्दी</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hu/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hu.svg" alt="" width="20" height="14" loading="lazy">Magyar</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/id/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/id.svg" alt="" width="20" height="14" loading="lazy">Indonesia</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/it/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/it.svg" alt="" width="20" height="14" loading="lazy">Italiano</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ja/" class="active"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ja.svg" alt="" width="20" height="14" loading="lazy">日本語</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ko/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ko.svg" alt="" width="20" height="14" loading="lazy">한국어</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ms/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ms.svg" alt="" width="20" height="14" loading="lazy">Melayu</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/nb/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/nb.svg" alt="" width="20" height="14" loading="lazy">Norsk bokmål</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/nl/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/nl.svg" alt="" width="20" height="14" loading="lazy">Nederlands</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/pl/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/pl.svg" alt="" width="20" height="14" loading="lazy">Polski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/pt-BR/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/pt-BR.svg" alt="" width="20" height="14" loading="lazy">Português (Brasil)</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/pt-PT/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/pt-PT.svg" alt="" width="20" height="14" loading="lazy">Português (Portugal)</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ro/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ro.svg" alt="" width="20" height="14" loading="lazy">Română</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ru/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ru.svg" alt="" width="20" height="14" loading="lazy">Русский</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/sk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/sk.svg" alt="" width="20" height="14" loading="lazy">Slovenčina</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/sv/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/sv.svg" alt="" width="20" height="14" loading="lazy">Svenska</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/th/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/th.svg" alt="" width="20" height="14" loading="lazy">ไทย</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/tr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/tr.svg" alt="" width="20" height="14" loading="lazy">Türkçe</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases" class="nav-cta">ダウンロード</a></div>
     </nav>
 
     <section class="hero">
@@ -367,7 +392,6 @@
         <p>アカウントなし、テレメトリなし、トラッキングなし。完全にあなたの Mac で動作します。</p>
         <p style="margin-top:10px;opacity:0.7">Corvus Arcade is not affiliated with Blizzard Entertainment, Apple, or CrossOver. Overwatch and Battle.net are trademarks of Blizzard Entertainment.</p>
     </footer>
-<script>document.addEventListener("click",function(e){var m=document.querySelector(".lang-menu.open");if(m&&!e.target.closest(".lang-wrap"))m.classList.remove("open");});</script>
 <script>document.addEventListener("click",function(e){var m=document.querySelector(".lang-menu.open");if(m&&!e.target.closest(".lang-wrap"))m.classList.remove("open");});</script>
 </body>
 </html>
