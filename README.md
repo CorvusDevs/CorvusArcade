@@ -95,7 +95,7 @@ Corvus Arcade is a work in progress and is shared in the open so people can foll
 
 ## Built with
 
-**SwiftUI** · **Wine 11 (CrossOver-source)** · **DXMT** · **Apple D3DMetal / Game Porting Toolkit** · **Rosetta 2** · **Sparkle**
+**SwiftUI** · **Wine 11** · **DXMT** · **Apple D3DMetal / Game Porting Toolkit** · **Rosetta 2** · **Sparkle**
 
 ## Privacy
 
