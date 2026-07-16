@@ -7,10 +7,10 @@
         <language>en</language>
         <item>
             <title>Version 0.1.1</title>
-            <pubDate>Wed, 15 Jul 2026 23:30:42 +0000</pubDate>
+            <pubDate>Thu, 16 Jul 2026 00:06:45 +0000</pubDate>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<ul><li>The Play button now responds the moment you click it, with a clear loading indicator while your game starts up.</li><li>Corvus Arcade steps out of the way only once your game is actually on screen, and comes right back when you close it.</li><li>Fewer permission pop-ups when you launch a game.</li><li>Smoother play, with fewer interruptions after your Mac tidies up temporary files.</li></ul>]]></description>
-            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.1.1/CorvusArcade-0.1.1.zip" sparkle:version="2" sparkle:shortVersionString="0.1.1" sparkle:edSignature="VvkGii45uYh0Yrav2y+s5Z/201OS4xbOiN+qv7FSn0p2KJIRFL1QGT8pHQGphm8Z8WfvtfHFLOSNi03adDYGBw==" length="573560742" type="application/octet-stream" />
+            <description><![CDATA[<ul><li>Snappier launching. The Play button responds the moment you click it, and shows a loading indicator while your game starts up.</li><li>Smarter window handling. Corvus Arcade steps aside only once your game is on screen, and comes right back when you close it.</li><li>Fewer permission pop-ups. Launching a game no longer keeps asking for access to your folders.</li><li>Smoother play. Your game keeps running smoothly even after your Mac clears out temporary files.</li><li>Update controls in Settings. Check for updates yourself, and turn automatic updates on or off.</li><li>Automatic updates are on by default, so you always have the latest alpha.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.1.1/CorvusArcade-0.1.1.zip" sparkle:version="3" sparkle:shortVersionString="0.1.1" sparkle:edSignature="RHGAKNAX94VA3fCTug6cmWjvXIjSdnM9pBqVndYoqJhHzBEedo9nra2uFU9KVEMUny1z5rZSlCdqQ5WKKFZqAQ==" length="573570055" type="application/octet-stream" />
         </item>
         <item>
             <title>Version 0.1.0</title>
