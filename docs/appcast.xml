@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.1.2</title>
+            <pubDate>Fri, 17 Jul 2026 03:38:02 +0000</pubDate>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Low-memory warning. On Macs with limited memory, Corvus Arcade now shows which apps are using the most, so you can close them for smoother play.</li><li>Free memory during play. Optionally close a game's launcher, like Battle.net, once the game starts, to free up memory. Turn it on in Settings.</li><li>Recommended in-game settings. Each game now lists the options that run best on Mac, right on its page.</li><li>Built-in performance log, so lag and stutter are easy to look into. Manage log space in Settings.</li><li>Smoother and more reliable under the hood.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.1.2/CorvusArcade-0.1.2.zip" sparkle:version="5" sparkle:shortVersionString="0.1.2" sparkle:edSignature="dLzokn/cReIUfvnjCW1JGx9p1VycliGyo3nCTwCLqIXZy8t0T4l2TsGomBQkLir3b3yswUYiVLLcD6gono0+Bg==" length="573656158" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.1.1</title>
             <pubDate>Thu, 16 Jul 2026 21:47:47 +0000</pubDate>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
