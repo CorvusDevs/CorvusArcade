@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.2.0</title>
+            <pubDate>Sat, 18 Jul 2026 15:33:57 +0000</pubDate>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>A brand-new look. Corvus Arcade has been redesigned around a dark performance dashboard that keeps Play and your Mac's live status up front.</li><li>A new Home library. Every game and its status now show on a visual grid.</li><li>A live performance readout. A GPU and memory gauge sits right next to Play, with a rolling graph while you play.</li><li>Readiness checks with quick fixes. The game page flags things like tight memory and offers a one-tap fix before you play.</li><li>Everything organized into tabs. Overview, Graphics, Game settings, and Performance, so the setting you want is one click away.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.2.0/CorvusArcade-0.2.0.zip" sparkle:version="7" sparkle:shortVersionString="0.2.0" sparkle:edSignature="outE+fwcdzBaWu/DZxHmZQ2NfOdCEvlcA1odqUVWRPXIDXYscWzM3mHE1T1DhvW+e3dZydSAVWI+BCQhzWU7BQ==" length="573789356" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.1.3</title>
             <pubDate>Sat, 18 Jul 2026 04:54:11 +0000</pubDate>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
