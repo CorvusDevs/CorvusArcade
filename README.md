@@ -62,7 +62,7 @@ Corvus Arcade is a work in progress and is shared in the open so people can foll
 
 ## Features
 
-- **Live performance readout.** A GPU and memory gauge sits right next to Play, with a rolling graph while you play, so you can see how your Mac is holding up.
+- **Live GPU and memory.** A GPU and memory gauge sits right next to Play, with a rolling graph while you play, so you can see how your Mac is holding up.
 - **Readiness checks with quick fixes.** The game page flags things like tight memory and offers a one-tap fix before you start.
 - **Your whole library at a glance.** A Home view shows each game with its live status, ready, playing, or needs setup.
 - **One-click Overwatch.** A curated setup creates a clean bottle, installs Battle.net, and launches straight toward a match.
