@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://corvusdevs.github.io/CorvusArcade/icon.png" width="200" height="200" alt="Corvus Arcade icon">
+<img src="https://corvusdevs.github.io/CorvusArcade/icon.png?v=8" width="200" height="200" alt="Corvus Arcade icon">
 
 # Corvus Arcade <sub><img src="https://img.shields.io/badge/status-ALPHA-E8B23C?style=flat-square" alt="Alpha"></sub>
 
