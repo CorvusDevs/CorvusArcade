@@ -160,17 +160,19 @@
         .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
         .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
         .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
-        .changelog { max-width: 760px; margin: 8px auto 0; display: grid; gap: 12px; }
-        details.release { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
-        summary.release-ver { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 15px 20px; font-size: 15px; font-weight: 700; color: var(--accent-light); }
-        summary.release-ver::-webkit-details-marker { display: none; }
-        summary.release-ver::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform 0.2s; }
-        details[open] summary.release-ver::after { transform: rotate(-135deg); }
-        summary.release-ver:hover { color: var(--accent); }
-        .changelog-list { list-style: none; display: grid; gap: 14px; margin: 0; padding: 2px 20px 18px 20px; }
+        .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
+        .changelog-summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 18px 22px; font-size: 16px; font-weight: 700; color: var(--text); }
+        .changelog-summary::-webkit-details-marker { display: none; }
+        .changelog-summary::after { content: ""; margin-left: auto; width: 9px; height: 9px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform 0.2s; }
+        .changelog-box[open] .changelog-summary::after { transform: rotate(-135deg); }
+        .changelog-box[open] .changelog-summary { border-bottom: 1px solid var(--border); }
+        .changelog-summary:hover { color: var(--accent-light); }
+        .changelog { display: grid; gap: 26px; padding: 22px; }
+        .changelog-box:not([open]) .changelog { display: none; }
+        .release-ver { font-size: 14px; font-weight: 700; color: var(--accent-light); padding: 3px 12px; border: 1px solid var(--border); border-radius: 20px; display: inline-block; margin-bottom: 14px; }
+        .changelog-list { list-style: none; display: grid; gap: 14px; margin: 0; padding: 0; }
         .changelog-list li { padding-left: 18px; border-left: 2px solid var(--border); font-size: 14.5px; line-height: 1.55; color: var(--text-secondary); }
         .changelog-list li strong { display: block; color: var(--text); font-size: 15px; margin-bottom: 3px; }
-        details.release:not([open]) .changelog-list { display: none; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -385,41 +387,43 @@
     <section class="block" id="whats-new">
         <div class="container">
             <div class="section-label">Changelog</div>
-            <h2 class="section-title">Uudet ominaisuudet</h2>
-            <div class="changelog">
-            <details class="release">
-                <summary class="release-ver">0.3.0</summary>
-                <ul class="changelog-list">
-                    <li><strong>Vaihda kieli välittömästi</strong>Corvus Arcade puhuu nyt 33 kieltä, ja voit vaihtaa kieltä Asetuksista ilman sovelluksen uudelleenkäynnistystä.</li>
-                    <li><strong>Tyhjennä shader-välimuisti</strong>Uusi Asetukset-napin painike vapauttaa levytilaa, jonka Metal-varjostimen välimuisti käyttää. Pelit rakentavat sen uudelleen automaattisesti seuraavassa käynnistyksessä.</li>
-                    <li><strong>Muotoiltu uudelleen Asetukset-näkymä</strong>Settings now matches the app&#x27;s dark performance dashboard, with clearer graphics, game, and storage controls.</li>
-                </ul>
+            <details class="changelog-box">
+                <summary class="changelog-summary">Uudet ominaisuudet</summary>
+                <div class="changelog">
+                <div class="release">
+                    <span class="release-ver">0.3.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Vaihda kieli välittömästi</strong>Corvus Arcade puhuu nyt 33 kieltä, ja voit vaihtaa kieltä Asetuksista ilman sovelluksen uudelleenkäynnistystä.</li>
+                        <li><strong>Tyhjennä shader-välimuisti</strong>Uusi Asetukset-napin painike vapauttaa levytilaa, jonka Metal-varjostimen välimuisti käyttää. Pelit rakentavat sen uudelleen automaattisesti seuraavassa käynnistyksessä.</li>
+                        <li><strong>Muotoiltu uudelleen Asetukset-näkymä</strong>Settings now matches the app&#x27;s dark performance dashboard, with clearer graphics, game, and storage controls.</li>
+                    </ul>
+                </div>
+                <div class="release">
+                    <span class="release-ver">0.2.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Uusi ulkoasu</strong>Corvus Arcade has been redesigned around a dark performance dashboard, keeping the launch button and your Mac&#x27;s live status up front.</li>
+                        <li><strong>Uusi kotikirjasto</strong>Your games now live on a visual grid that shows each one&#x27;s status at a glance.</li>
+                        <li><strong>Elävä GPU- ja muisti</strong>Palkki ja liukuvat grafiikka näyttävät, kuinka kovaa GPU ja muisti työskentelevät pelatessasi.</li>
+                        <li><strong>Valmiustarkistukset nopeilla korjauksilla</strong>Pelisivu ilmoittaa muistin kyllästymisestä ja antaa painikkeen vapauttaa sitä ennen pelaamista.</li>
+                        <li><strong>Sivut on järjestetty välilehtiin</strong>Yleiset, Grafiikka, Peliasetukset ja Toiminta, jotta haluttu asetus on aina yhden napautuksen päässä.</li>
+                        <li><strong>Pelin asetukset, käynnistimessä</strong>Change a game&#x27;s display mode, resolution, graphics quality, and frame-rate cap right from Corvus Arcade, on the game&#x27;s page.</li>
+                        <li><strong>Ikkunamoodi</strong>Pelit voidaan avata siirrettävään Mac-ikkunaan, kun peli on asetettu ikkunatilaan.</li>
+                        <li><strong>Matalan muistin varoitus</strong>Muistia rajoitetuissa Mac-koneissa Corvus Arcade näyttää, mitkä sovellukset käyttävät eniten muistia, jotta voit sulkea ne sujuvamman pelin varmistamiseksi.</li>
+                        <li><strong>Vapauta muistia pelatessa</strong>Optionally close a game&#x27;s launcher, like Battle.net, once the game has started, to free up memory. Turn it on in Settings.</li>
+                        <li><strong>Mukana oleva suorituskykykirjoitus</strong>Corvus Arcade tallentaa pelin aikana vaikuttavat tekijät, jotta viiveen tarkastelu on myöhemmin helppoa. Hallitse logitilaa Asetuksista.</li>
+                        <li><strong>Snappier käynnistyy</strong>Lähtöpainike reagoi välittömästi klikkaukseen, ja selkeä latausindikaattori näkyy, kun peli käynnistyy.</li>
+                        <li><strong>Älykäs ikkunakäsittely</strong>Corvus Arcade siirtyy sivuun vain, kun pelisi on näytöllä, ja palaa heti takaisin, kun suljet sen.</li>
+                    </ul>
+                </div>
+                <div class="release">
+                    <span class="release-ver">0.1.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Overwatch Apple Siliconille</strong>Runs on a self-contained Wine 11 with DXMT and Apple&#x27;s D3DMetal. No CrossOver, no Terminal.</li>
+                        <li><strong>Automaattiset päivitykset</strong>Corvus Arcade pitää itsensä ajan tasalla, joten sinulla on aina uusimmat alfa-versiot.</li>
+                    </ul>
+                </div>
+                </div>
             </details>
-            <details class="release">
-                <summary class="release-ver">0.2.0</summary>
-                <ul class="changelog-list">
-                    <li><strong>Uusi ulkoasu</strong>Corvus Arcade has been redesigned around a dark performance dashboard, keeping the launch button and your Mac&#x27;s live status up front.</li>
-                    <li><strong>Uusi kotikirjasto</strong>Your games now live on a visual grid that shows each one&#x27;s status at a glance.</li>
-                    <li><strong>Elävä GPU- ja muisti</strong>Palkki ja liukuvat grafiikka näyttävät, kuinka kovaa GPU ja muisti työskentelevät pelatessasi.</li>
-                    <li><strong>Valmiustarkistukset nopeilla korjauksilla</strong>Pelisivu ilmoittaa muistin kyllästymisestä ja antaa painikkeen vapauttaa sitä ennen pelaamista.</li>
-                    <li><strong>Sivut on järjestetty välilehtiin</strong>Yleiset, Grafiikka, Peliasetukset ja Toiminta, jotta haluttu asetus on aina yhden napautuksen päässä.</li>
-                    <li><strong>Pelin asetukset, käynnistimessä</strong>Change a game&#x27;s display mode, resolution, graphics quality, and frame-rate cap right from Corvus Arcade, on the game&#x27;s page.</li>
-                    <li><strong>Ikkunamoodi</strong>Pelit voidaan avata siirrettävään Mac-ikkunaan, kun peli on asetettu ikkunatilaan.</li>
-                    <li><strong>Matalan muistin varoitus</strong>Muistia rajoitetuissa Mac-koneissa Corvus Arcade näyttää, mitkä sovellukset käyttävät eniten muistia, jotta voit sulkea ne sujuvamman pelin varmistamiseksi.</li>
-                    <li><strong>Vapauta muistia pelatessa</strong>Optionally close a game&#x27;s launcher, like Battle.net, once the game has started, to free up memory. Turn it on in Settings.</li>
-                    <li><strong>Mukana oleva suorituskykykirjoitus</strong>Corvus Arcade tallentaa pelin aikana vaikuttavat tekijät, jotta viiveen tarkastelu on myöhemmin helppoa. Hallitse logitilaa Asetuksista.</li>
-                    <li><strong>Snappier käynnistyy</strong>Lähtöpainike reagoi välittömästi klikkaukseen, ja selkeä latausindikaattori näkyy, kun peli käynnistyy.</li>
-                    <li><strong>Älykäs ikkunakäsittely</strong>Corvus Arcade siirtyy sivuun vain, kun pelisi on näytöllä, ja palaa heti takaisin, kun suljet sen.</li>
-                </ul>
-            </details>
-            <details class="release">
-                <summary class="release-ver">0.1.0</summary>
-                <ul class="changelog-list">
-                    <li><strong>Overwatch Apple Siliconille</strong>Runs on a self-contained Wine 11 with DXMT and Apple&#x27;s D3DMetal. No CrossOver, no Terminal.</li>
-                    <li><strong>Automaattiset päivitykset</strong>Corvus Arcade pitää itsensä ajan tasalla, joten sinulla on aina uusimmat alfa-versiot.</li>
-                </ul>
-            </details>
-            </div>
         </div>
     </section>
     <!-- CHANGELOG:END -->
