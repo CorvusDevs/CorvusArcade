@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>A rendszer ellenőrzi a Rosetta 2, a csomagolt motor, valamint a szabad tárhelyet a kezdés előtt, és telepíti a Rosetta-t, ha hiányzik.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">Minden beépítve</div>
+            <h2 class="section-title">A teljes funkciólista</h2>
+            <ul class="feature-list">
+                <li>Egy kattintásos Overwatch 2 telepítés, tiszta üveggel, a Battle.nettel és az indítással, beállítás nélkül.</li>
+                <li>Tároljon bármelyik Windows-játékot, mindegyik saját elszigetített palackban.</li>
+                <li>Egy csomagolt Wine 11, DXMT és Apple D3DMetal motorral, CrossOver, Homebrew vagy Terminal nélkül.</li>
+                <li>Játékonkénti grafika DXMT vagy D3DMetal, GPTK 3 vagy GPTK 4, valamint MetalFX felbontásnöveléssel.</li>
+                <li>Játékonkénti megjelenítési mód, felbontás, grafikai minőség és keretfrekvencia-korlát.</li>
+                <li>A ablakos mód, amely lehetővé teszi a Cmd-Tab-ot egy mérkőzés alatt.</li>
+                <li>Élő GPU, memória és cserememória olvasat egy gördülő grafikonnal a játék közben.</li>
+                <li>A hibákat jelző és egy kattintással javító készenléti ellenőrzések.</li>
+                <li>A 16 GB-os Mac alacsony memóriára vonatkozó figyelmeztetése, amely megmutatja, mely alkalmazásokat kell bezárni.</li>
+                <li>Automatikusan felszabadítja a memóriát a játék indítójának befejezése után.</li>
+                <li>Beépített teljesítménynapló, amely későbbi akadozások könnyű nyomon követését teszi lehetővé.</li>
+                <li>Egy Metal FPS és keretidő-réteg, amelyet akkor kapcsolhat be, amikor szüksége van rá.</li>
+                <li>A shader cache törlése a Beállításokból a tárhely helyének felszabadításához.</li>
+                <li>Háromszármány nyelv egy alkalmazáson belüli kapcsolóval, amely újraindítás nélkül kerül alkalmazásra.</li>
+                <li>Egy kattintással telepíthető automatikus frissítések.</li>
+                <li>A Rosetta 2, a csomagolt motor és a szabad tárhely ellenőrzése az első indításkor.</li>
+            </ul>
         </div>
     </section>
 

@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>Перевіряє наявність Rosetta 2 (вбудованого движка) та вільне місце на диску перед запуском та встановлює Rosetta за потреби.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">Включено все</div>
+            <h2 class="section-title">Повний список функцій</h2>
+            <ul class="feature-list">
+                <li>Одноклікове налаштування Overwatch 2 з чистим інсталятором, Battle.net і запуском без необхідності нічого налаштовувати.</li>
+                <li>Додайте будь-яку гру Windows, кожна в окремій ізольованій пляшці.</li>
+                <li>Збірна Wine 11, DXMT та Apple D3DMetal без CrossOver, Homebrew чи Terminal.</li>
+                <li>Графіка для кожної гри з DXMT або D3DMetal, GPTK 3 або GPTK 4, а також масштабування MetalFX.</li>
+                <li>Режим відображення для кожної гри, роздільна здатність, якість графіки та обмеження частоти кадрів.</li>
+                <li>Режим з вікнами, який дозволяє натиснути Cmd-Tab під час матчу.</li>
+                <li>Живий монітор GPU, пам'яті та swap з графіком у режимі реального часу під час гри.</li>
+                <li>Перевірки готовності, що виявляють проблеми та усувають їх одним натисканням.</li>
+                <li>Попередження про нестачу пам'яті, яке показує, які додатки потрібно закрити на Mac з 16 ГБ пам'яті.</li>
+                <li>Автоматично звільняє пам'ять, закриваючи запускну програму гри після її старту.</li>
+                <li>Вбудований журнал продуктивності, який полегшує подальший аналіз затримок.</li>
+                <li>Металовий оверлей FPS та часу кадру, який можна увімкнути за бажанням.</li>
+                <li>Очистіть кеш шейдерів у Налаштуваннях, щоб звільнити місце на диску.</li>
+                <li>Тридцять три мови з перемикачем у додатку, який застосовується без перезавантаження.</li>
+                <li>Автоматичні оновлення, які можна встановити в один клік.</li>
+                <li>Перевірка при першому запуску для Rosetta 2 (вбудованого движка) та вільного місця на диску.</li>
+            </ul>
         </div>
     </section>
 

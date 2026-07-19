@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>在開始之前，本功能會確認 Rosetta 2（內建引擎）與可用磁碟空間，若缺少則自動安裝。</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">全部包含</div>
+            <h2 class="section-title">完整功能清單</h2>
+            <ul class="feature-list">
+                <li>一鍵安裝 Overwatch 2，包含乾淨的瓶身、Battle.net 與啟動，無需任何設定。</li>
+                <li>新增任何 Windows 遊戲，每款遊戲都裝在獨立的瓶裝中。</li>
+                <li>內建 Wine 11、DXMT 與 Apple D3DMetal 引擎，無需 CrossOver、Homebrew 或終端機。</li>
+                <li>每款遊戲的圖形，支援 DXMT 或 D3DMetal、GPTK 3 或 GPTK 4，以及 MetalFX 超解析。</li>
+                <li>每款遊戲的顯示模式、解析度、圖形品質及幀數上限。</li>
+                <li>支援在比賽期間按 Cmd-Tab 切換到視窗模式的視窗模式。</li>
+                <li>遊玩時可即時顯示 GPU、記憶體與交換空間的讀取數值，並提供滾動圖表。</li>
+                <li>可標記問題並一鍵修復的準備檢查。</li>
+                <li>16 GB Mac 記憶體不足警告，顯示應關閉的應用程式。</li>
+                <li>自動釋放記憶體，在遊戲啟動後關閉遊戲啟動器。</li>
+                <li>內建效能記錄，可輕鬆追蹤後續的卡頓問題。</li>
+                <li>一個可隨時開啟的 Metal FPS 與幀時間覆蓋層。</li>
+                <li>在「設定」中清除陰影線快取以釋放磁碟空間。</li>
+                <li>支援三十三種語言，內建語言切換器可立即生效，無需重新啟動。</li>
+                <li>可透過一鍵安裝的自動更新。</li>
+                <li>Rosetta 2、內建引擎及可用磁碟空間的首次執行檢查。</li>
+            </ul>
         </div>
     </section>
 

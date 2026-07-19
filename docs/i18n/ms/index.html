@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>Menyahkan Rosetta 2, enjin yang disertakan, dan ruang cakera bebas sebelum anda memulakan, serta memasang Rosetta jika tiada.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">Semuanya disertakan</div>
+            <h2 class="section-title">Senarai ciri lengkap</h2>
+            <ul class="feature-list">
+                <li>Tetapan Overwatch 2 dalam satu klik, dengan botol yang bersih, Battle.net, dan pelancaran, tanpa apa-apa yang perlu dikonfigurasi.</li>
+                <li>Tambah mana-mana permainan Windows, setiap satu dalam botol yang terasing.</li>
+                <li>Wine 11, DXMT, dan enjin Apple D3DMetal yang dibundel, tanpa CrossOver, Homebrew, atau Terminal.</li>
+                <li>Grafik per permainan, dengan DXMT atau D3DMetal, GPTK 3 atau GPTK 4, dan peningkatan resolusi MetalFX.</li>
+                <li>Mod paparan per-permainan, resolusi, kualiti grafik, dan had kadar bingkai.</li>
+                <li>Mod tingkap yang membolehkan anda beralih menggunakan Cmd-Tab semasa perlawanan.</li>
+                <li>Bacaan langsung GPU, memori, dan swap dengan graf bergulir semasa anda bermain.</li>
+                <li>Semakan kesiapan yang menandakan masalah dan membetulkannya dalam satu klik.</li>
+                <li>Amaran memori rendah yang menunjukkan aplikasi yang perlu ditutup pada Mac 16 GB.</li>
+                <li>Membebaskan memori secara automatik dengan menutup pelancaran permainan setelah ia bermula.</li>
+                <li>Log prestasi terbina dalam yang memudahkan anda menjejak masalah tersendat pada masa hadapan.</li>
+                <li>Tindas  untuk menyalakan penapis FPS dan masa bingkai Metal apabila anda mahu.</li>
+                <li>Kosongkan  dalam Tetapan untuk memulihkan ruang cakera keras.</li>
+                <li>Tiga puluh tiga bahasa dengan penderia dalam aplikasi yang berkuat kuasa tanpa perlu memulakan semula.</li>
+                <li>Kemas kini automatik yang boleh anda pasang dengan satu klik.</li>
+                <li>Semakan pertama untuk Rosetta 2, enjin yang disertakan, dan ruang cakera bebas.</li>
+            </ul>
         </div>
     </section>
 

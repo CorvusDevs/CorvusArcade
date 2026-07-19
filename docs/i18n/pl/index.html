@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>Weryfikuje Rosettę 2, wbudowany silnik oraz wolną przestrzeń dyskową przed rozpoczęciem i instaluje Rosettę, jeśli jest brakuje.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">Wszystko dołączone</div>
+            <h2 class="section-title">Pełna lista funkcji</h2>
+            <ul class="feature-list">
+                <li>Jeden kliknięcie do konfiguracji Overwatcha 2 z czystą butelką, Battle.net i uruchomieniem, bez niczego do ustawiania.</li>
+                <li>Dodaj dowolną grę Windows, każdą w osobnej, izolowanej butelce.</li>
+                <li>Zawiera zintegrowane Wine 11, DXMT oraz silnik Apple D3DMetal, bez CrossOver, Homebrew ani Terminala.</li>
+                <li>Grafiki na grę, z DXMT lub D3DMetal, GPTK 3 lub GPTK 4 oraz skalowaniem MetalFX.</li>
+                <li>Tryb wyświetlania na grę, rozdzielczość, jakość grafiki oraz limit klatek na sekundę.</li>
+                <li>Tryb okienkowy, który pozwala wyjść z gry za pomocą Cmd-Tab.</li>
+                <li>Na żywo odczyt GPU, pamięci i wymiany z rolującym wykresem podczas odtwarzania.</li>
+                <li>Sprawdzanie gotowości, które wykrywa problemy i naprawia je jednym kliknięciem.</li>
+                <li>Ostrzeżenie o niskiej ilości pamięci, które pokazuje, jakie aplikacje należy zamknąć na Macu o 16 GB pamięci.</li>
+                <li>Automatycznie zwalnia pamięć, zamykając uruchamiaciela gry po jego starcie.</li>
+                <li>Wbudowany dziennik wydajności, który ułatwia późniejszą analizę zacięć.</li>
+                <li>Przycisk do włączania nakładki FPS i czasu klatki w Metalu, którą możesz włączyć, gdy tego potrzebujesz.</li>
+                <li>Wyczyść pamięć podręczną shaderów w Ustawieniach, aby zwolnić miejsce na dysku.</li>
+                <li>Trzydzieści trzy języki z przełącznikiem w aplikacji, który działa bez konieczności ponownego uruchomienia.</li>
+                <li>Automatyczne aktualizacje, które można zainstalować jednym kliknięciem.</li>
+                <li>Pierwsze uruchomienie: sprawdzenie Rosetty 2 (wbudowany silnik) oraz wolnej przestrzeni dyskowej.</li>
+            </ul>
         </div>
     </section>
 

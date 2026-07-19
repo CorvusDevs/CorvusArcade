@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>Vérifie la présence de Rosetta 2, du moteur intégré et de l'espace disque disponible avant de commencer, puis installe Rosetta si elle est manquante.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">Tout inclus</div>
+            <h2 class="section-title">La liste complète des fonctionnalités</h2>
+            <ul class="feature-list">
+                <li>Installation d'Overwatch 2 en un clic, avec une bouteille propre, Battle.net et le lancement, sans rien à configurer.</li>
+                <li>Ajoutez n'importe quel jeu Windows, chacun dans sa propre bouteille isolée.</li>
+                <li>Un Wine 11, DXMT et moteur Apple D3DMetal inclus, sans CrossOver, Homebrew ni Terminal.</li>
+                <li>Graphismes par jeu, avec DXMT ou D3DMetal, GPTK 3 ou GPTK 4, et upscaling MetalFX.</li>
+                <li>Mode d'affichage par partie, résolution, qualité graphique et limite de fréquence d'images.</li>
+                <li>Un mode fenêtre qui vous permet de quitter avec Cmd-Tab pendant une partie.</li>
+                <li>Une lecture en direct de la GPU, de la mémoire et du swap, avec un graphique en temps réel pendant votre jeu.</li>
+                <li>Vérifications de préparation qui signalent les problèmes et les corrigent en un clic.</li>
+                <li>Avertissement de faible mémoire indiquant les applications à fermer sur un Mac de 16 Go.</li>
+                <li>Libère automatiquement la mémoire en fermant le lanceur du jeu une fois celui-ci lancé.</li>
+                <li>Un journal de performances intégré qui rend facile le repérage des saccades ultérieurement.</li>
+                <li>Un superposition FPS et temps d'image Metal que vous pouvez activer quand vous le souhaitez.</li>
+                <li>Videz le cache des shaders dans Réglages pour libérer de l'espace disque.</li>
+                <li>Trente-trois langues avec un commutateur dans l'application qui s'applique sans redémarrage.</li>
+                <li>Mises à jour automatiques que vous pouvez installer en un clic.</li>
+                <li>Premier contrôle à l'exécution pour Rosetta 2, le moteur inclus, et l'espace disque disponible.</li>
+            </ul>
         </div>
     </section>
 

@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>Pred spustením overí Rosettu 2, integrovaný motor, a voľné miesto na disku a nainštaluje Rosettu, ak chýba.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">Všetko zahrnuté</div>
+            <h2 class="section-title">Celý zoznam funkcií</h2>
+            <ul class="feature-list">
+                <li>Jeden kliknutie na nastavenie Overwatch 2 s čistou fľašou, Battle.netom a spustením, bez potreby konfigurácie.</li>
+                <li>Pridajte akúkoľvek hru pre Windows, každú v samostatnej izolovanej fľaši.</li>
+                <li>Bundlovaný Wine 11, DXMT a Apple D3DMetal motor, bez CrossOver, Homebrew alebo Terminálu.</li>
+                <li>Grafika na hru s DXMT alebo D3DMetal, GPTK 3 alebo GPTK 4 a MetalFX upscaling.</li>
+                <li>Režim zobrazenia na hru, rozlíšenie, kvalita grafík a limit frekvencie snímkov.</li>
+                <li>Okno, ktoré vám umožní prepnúť sa pomocou Cmd-Tab počas zápasu.</li>
+                <li>Živý čítanie GPU, pamäte a výmeny s kresleným grafom počas prehrávania.</li>
+                <li>Kontrola pripravenosti, ktorá odhalí problémy a opraví ich jedným kliknutím.</li>
+                <li>Upozornenie na nízku dostupnú pamäť, ktoré zobrazí aplikácie, ktoré je potrebné zavrieť na Macu s 16 GB RAM.</li>
+                <li>Automaticky uvoľňuje pamäť zatvorením spúšťača hry po jeho spustení.</li>
+                <li>Vstavaný protokol výkonu, ktorý zjednodušuje následné sledovanie prerušovaného prehrávania.</li>
+                <li>Metalová vrstva FPS a času kadra, ktorú môžete zapnúť, keď ju potrebujete.</li>
+                <li>Vyčistite shaderovú vyrovnávaciu pamäť v Nastaveniach, aby ste uvoľnili miesto na disku.</li>
+                <li>Triadŕa jazykov s prepínačom v aplikácii, ktorý sa aplikuje bez reštartu.</li>
+                <li>Automatické aktualizácie, ktoré môžete nainštalovať jedným kliknutím.</li>
+                <li>Prvá kontrola pri prvom spustení pre Rosettu 2, zabalený engine a voľné miesto na disku.</li>
+            </ul>
         </div>
     </section>
 

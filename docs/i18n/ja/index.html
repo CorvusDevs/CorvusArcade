@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>Rosetta 2 の有無と空き容量を確認し、必要に応じて自動インストールします。</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">すべてを含みます。</div>
+            <h2 class="section-title">機能一覧</h2>
+            <ul class="feature-list">
+                <li>ワンクリックでオーバーウォッチ 2 のセットアップ、クリーンインストール、Battle.net 接続、起動。設定は不要です。</li>
+                <li>Windows のゲームを任意の数追加し、それぞれを個別のボトルに隔離します。</li>
+                <li>にバンドルされた Wine 11、DXMT、および Apple D3DMetal エンジンで、CrossOver、Homebrew、または Terminal を使用しない。</li>
+                <li>ゲームごとのグラフィックスで、DXMT または D3DMetal、GPTK 3 または GPTK 4、MetalFX アップスケーリングに対応。</li>
+                <li>ゲームごとの表示モード、解像度、グラフィック品質、およびフレームレート上限。</li>
+                <li>試合中に Cmd-Tab でウィンドウを切り替えることができるウィンドウモードです。</li>
+                <li>プレイ中にグラフをスクロールさせながら、GPU、メモリ、スワップのリアルタイム読み出し。</li>
+                <li>問題を特定し、ワンタップで修正する準備状況チェック。</li>
+                <li>16 GB の Mac で表示される低メモリ警告で、閉じる必要があるアプリが示されます。</li>
+                <li>ゲームのランチャーが起動したら自動的にメモリを解放します。</li>
+                <li>内蔵の性能ログで、後のスタッター追跡が容易になります。</li>
+                <li>Metal FPS とフレーム時間オーバーレイを、必要な時にオンにできる機能です。</li>
+                <li>設定でシェーダーキャッシュをクリアしてディスク容量を確保します。</li>
+                <li>33 の言語に対応し、アプリ内で切り替えることで再起動なしで適用されます。</li>
+                <li>ワンクリックでインストールできる自動更新。</li>
+                <li>Rosetta 2、バンドルされたエンジン、および空きディスク容量の最初の起動時チェック。</li>
+            </ul>
         </div>
     </section>
 

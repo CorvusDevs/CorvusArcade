@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>Başlamadan önce Rosetta 2, paketle gelen motor ve boş disk alanını doğrular, eksikse sizin için Rosetta'yı kurar.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">Her şey dahil</div>
+            <h2 class="section-title">Tam özellik listesi</h2>
+            <ul class="feature-list">
+                <li>Tek tıkla Overwatch 2 kurulumu, temiz bir şişe, Battle.net ve başlatma ile, hiçbir şeyi yapılandırmanıza gerek yok.</li>
+                <li>Herhangi bir Windows oyununu, her biri için ayrı bir izole şişeye ekleyin.</li>
+                <li>Bundled Wine 11, DXMT ve Apple D3DMetal motoru; CrossOver, Homebrew veya Terminal gerektirmez.</li>
+                <li>Oyun başına grafikler, DXMT veya D3DMetal, GPTK 3 veya GPTK 4 ve MetalFX yükseltme ile.</li>
+                <li>Oyun başına görüntüleme modu, çözünürlük, grafik kalitesi ve kare hızı sınırı.</li>
+                <li>Eşleşme sırasında Cmd-Tab ile pencere moduna geçmenizi sağlayan bir mod.</li>
+                <li>Oyun sırasında oynarken kayan bir grafik ile canlı GPU, bellek ve swap okuması.</li>
+                <li>Sorunları işaret eden ve tek dokunmayla düzelten hazırlık kontrolleri.</li>
+                <li>16 GB'lı bir Mac'te kapatılması gereken uygulamaları gösteren düşük bellek uyarısı.</li>
+                <li>Oyun başlatıcıyı başlattıktan sonra otomatik olarak kapatarak belleği serbest bırakır.</li>
+                <li>Gecikmeleri daha sonra kolayca izlenebilecek yerleşik bir performans kaydı.</li>
+                <li>Metal FPS ve kare-süre üst katmanı, istediğinizde açıp kapatabileceğiniz bir özelliktir.</li>
+                <li>Shader önbelleğini Ayarlar'dan temizleyerek disk alanı kazanın.</li>
+                <li>Uygulama içi bir anahtar ile yeniden başlatmaya gerek kalmadan uygulanan otuz üç dil.</li>
+                <li>Tek tıkla yükleyebileceğiniz otomatik güncellemeler.</li>
+                <li>Rosetta 2 (dahil edilen motor), bir ilk çalıştırma kontrolü ve boş disk alanı için.</li>
+            </ul>
         </div>
     </section>
 

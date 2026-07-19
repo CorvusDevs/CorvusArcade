@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>ตรวจสอบ Rosetta 2 ซึ่งเป็นตัวประมวลผลที่รวมมาให้ พื้นที่ว่างบนดิสก์ และติดตั้ง Rosetta ให้คุณโดยอัตโนมัติหากไม่มี</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">รวมทุกอย่าง</div>
+            <h2 class="section-title">รายการฟีเจอร์ทั้งหมด</h2>
+            <ul class="feature-list">
+                <li>การติดตั้ง Overwatch 2 แบบคลิกเดียว พร้อมขวดสะอาด Battle.net และเริ่มเล่น โดยไม่ต้องตั้งค่าอะไร</li>
+                <li>เพิ่มเกม Windows.. เกมแต่ละเกมจะถูกบรรจุในขวดแยกกัน</li>
+                <li>มี Wine 11, DXMT และ Apple D3DMetal engine รวมอยู่ในแอปนี้ โดยไม่ต้องใช้ CrossOver, Homebrew หรือ Terminal</li>
+                <li>กราฟิกแบบแยกเกม รองรับ DXMT หรือ D3DMetal, GPTK 3 หรือ GPTK 4 และ MetalFX upscaling</li>
+                <li>โหมดแสดงผลต่อเกม ความละเอียด คุณภาพกราฟิก และขีดจำกัดเฟรมเรท</li>
+                <li>โหมดหน้าต่างที่ให้คุณกด Cmd-Tab ออกได้ระหว่างการแข่งขัน</li>
+                <li>การอ่านค่า GPU, หน่วยความจำ และพื้นที่สลับแบบเรียลไทม์พร้อมกราฟแบบหมุนขณะเล่น</li>
+                <li>การตรวจสอบความพร้อมที่จะระบุปัญหาและแก้ไขได้ด้วยการแตะครั้งเดียว</li>
+                <li>คำเตือนหน่วยความจำต่ำที่แสดงว่าแอปใดควรปิดบน Mac ขนาด 16 GB</li>
+                <li>ปล่อยหน่วยความจำโดยอัตโนมัติโดยการปิดตัวเริ่มต้นของเกมหลังจากเริ่มเล่นแล้ว</li>
+                <li>บันทึกประสิทธิภาพในตัวที่ช่วยให้ติดตามอาการกระตุกได้ง่ายขึ้นในอนาคต</li>
+                <li>Metal FPS และกราฟฟิกรอบเวลาเฟรมที่คุณสามารถเปิดได้เมื่อต้องการ</li>
+                <li>ล้างแคชเชเดอร์จาก การตั้งค่า เพื่อคืนพื้นที่ดิสก์</li>
+                <li>รองรับ 33 ภาษาพร้อมสลับภาษาในแอปโดยไม่ต้องรีสตาร์ท</li>
+                <li>การอัปเดตอัตโนมัติที่คุณสามารถติดตั้งได้ด้วยการคลิกครั้งเดียว</li>
+                <li>การตรวจสอบครั้งแรกของ Rosetta 2 เครื่องยนต์ที่รวมมา และพื้นที่ว่างบนดิสก์</li>
+            </ul>
         </div>
     </section>
 

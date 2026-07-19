@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>בדוק את Rosetta 2, מנוע המובנה, ואת מקום האחסון החופשי לפני ההתחלה, והתקן את Rosetta במקרה שהוא חסר.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">כלול</div>
+            <h2 class="section-title">רשימת הפיצ'רים המלאה</h2>
+            <ul class="feature-list">
+                <li>התקנת Overwatch 2 באמצעות לחיצה אחת, עם בקבוק נקי, Battle.net והפעלה, ללא צורך בהגדרות.</li>
+                <li>הוסף כל משחק ווינדוס, כל אחד בקבוק מבודד משלו.</li>
+                <li>מנוע מובנה של Wine 11, DXMT ו-Apple D3DMetal, ללא CrossOver, Homebrew או Terminal.</li>
+                <li>גרפיקה למשחק בודד, עם DXMT או D3DMetal, GPTK 3 או GPTK 4, ו-MetalFX לשיפור הרזולוציה.</li>
+                <li>מצב הצגה לכל משחק, רזולוציה, איכות הגרפיקה וסף קצב המסגרות.</li>
+                <li>מצב חלון המאפשר לכם לצאת באמצעות Cmd-Tab במהלך משחק.</li>
+                <li>קריאה בזמן אמת של כרטיס מסך גרפי, זיכרון וזיכרון חליפין עם גרף מתעדכן בזמן ההפעלה.</li>
+                <li>בדיקות מוכנות המזהות בעיות ומתקנות אותן בלחיצה אחת.</li>
+                <li>התראה על חוסר בזיכרון המציגה אילו אפליקציות יש לסגור במחשב Mac עם 16 ג'יגה-בייט זיכרון.</li>
+                <li>פונה בזיכרון באופן אוטומטי על ידי סגירת ממשק ההפעלה של המשחק לאחר ההתחלה.</li>
+                <li>יומן ביצועים מובנה המאפשר מעקב אחר קיטון בקלות בהמשך.</li>
+                <li>מסך יישור של Metal FPS וזמן-מסגרת שניתן להפעיל כשיחפץ.</li>
+                <li>את מטמון ה-Shader בהגדרות כדי לשחרר מקום בחלל הקבצים.</li>
+                <li>שלושים ושלוש שפות עם מחליף בתוך האפליקציה שמופעל ללא הפסקה.</li>
+                <li>עדכוני אוטומטיים שניתן להתקין בלחיצה אחת.</li>
+                <li>בדיקת הפעלה ראשונה עבור Rosetta 2, המנוע המשובץ, וזיכרון דיסק פנוי.</li>
+            </ul>
         </div>
     </section>
 

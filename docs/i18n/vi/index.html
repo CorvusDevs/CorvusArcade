@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>Xác nhận Rosetta 2, bộ xử lý đã tích hợp sẵn và dung lượng ổ đĩa trống trước khi bắt đầu, sau đó tự động cài đặt Rosetta nếu chưa có.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">Tất cả đã được bao gồm</div>
+            <h2 class="section-title">Danh sách tính năng đầy đủ</h2>
+            <ul class="feature-list">
+                <li>Một cú nhấp chuột để cài đặt Overwatch 2 với giao diện Bottle sạch sẽ, kết nối Battle.net và khởi chạy, không cần cấu hình bất kỳ điều gì.</li>
+                <li>Thêm bất kỳ trò chơi Windows nào, mỗi trò chơi một chiếc chai riêng biệt.</li>
+                <li>Được tích hợp sẵn Wine 11, DXMT và bộ máy Apple D3DMetal, không cần CrossOver, Homebrew hay Terminal.</li>
+                <li>Đồ họa theo trò chơi, với DXMT hoặc D3DMetal, GPTK 3 hoặc GPTK 4, và MetalFX lên tỷ lệ.</li>
+                <li>Chế độ hiển thị theo trò chơi, độ phân giải, chất lượng đồ họa và giới hạn tốc độ khung hình.</li>
+                <li>Chế độ có cửa sổ cho phép bạn chuyển sang tab bằng Cmd-Tab trong khi trận đấu đang diễn ra.</li>
+                <li>Hiển thị thời gian thực về GPU, bộ nhớ và vùng đệm trao đổi với biểu đồ chạy liên tục khi bạn chơi.</li>
+                <li>Kiểm tra sẵn sàng phát hiện lỗi và khắc phục chỉ với một cú nhấp chuột.</li>
+                <li>Cảnh báo bộ nhớ thấp hiển thị các ứng dụng cần đóng trên Mac 16 GB.</li>
+                <li>Giải phóng bộ nhớ tự động bằng cách đóng trình khởi động trò chơi sau khi nó đã bắt đầu.</li>
+                <li>Nhật ký hiệu suất tích hợp giúp dễ dàng theo dõi tình trạng giật lag sau này.</li>
+                <li>Một lớp phủ FPS và thời gian khung hình Metal có thể bật lên khi bạn muốn.</li>
+                <li>Xóa bộ nhớ đệm shader từ Cài đặt để giải phóng dung lượng ổ cứng.</li>
+                <li>Ba mươi ba ngôn ngữ với bộ chuyển đổi trong ứng dụng áp dụng mà không cần khởi động lại.</li>
+                <li>Cập nhật tự động có thể cài đặt với một cú nhấp chuột.</li>
+                <li>Kiểm tra lần đầu cho Rosetta 2, bộ xử lý được tích hợp và dung lượng ổ đĩa trống.</li>
+            </ul>
         </div>
     </section>
 

@@ -157,6 +157,9 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
+        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
+        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -206,6 +209,7 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
@@ -338,6 +342,31 @@
                     <p>Confirms Rosetta 2, the bundled engine, and free disk space before you start, and installs Rosetta for you if it is missing.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="section-label">Everything included</div>
+            <h2 class="section-title">The complete feature list</h2>
+            <ul class="feature-list">
+                <li>One-click Overwatch 2 setup, with a clean bottle, Battle.net, and launch, and nothing to configure.</li>
+                <li>Add any Windows game, each in its own isolated bottle.</li>
+                <li>A bundled Wine 11, DXMT, and Apple D3DMetal engine, with no CrossOver, Homebrew, or Terminal.</li>
+                <li>Per-game graphics, with DXMT or D3DMetal, GPTK 3 or GPTK 4, and MetalFX upscaling.</li>
+                <li>Per-game display mode, resolution, graphics quality, and frame-rate cap.</li>
+                <li>A windowed mode that lets you Cmd-Tab out during a match.</li>
+                <li>A live GPU, memory, and swap readout with a rolling graph as you play.</li>
+                <li>Readiness checks that flag problems and fix them in one tap.</li>
+                <li>A low-memory warning that shows which apps to close on a 16 GB Mac.</li>
+                <li>Frees memory automatically by closing the game's launcher once it has started.</li>
+                <li>A built-in performance log that makes stutter easy to trace later.</li>
+                <li>A Metal FPS and frame-time overlay you can turn on when you want it.</li>
+                <li>Clear the shader cache from Settings to reclaim disk space.</li>
+                <li>Thirty-three languages with an in-app switcher that applies without a restart.</li>
+                <li>Automatic updates you can install in one click.</li>
+                <li>A first-run check for Rosetta 2, the bundled engine, and free disk space.</li>
+            </ul>
         </div>
     </section>
 

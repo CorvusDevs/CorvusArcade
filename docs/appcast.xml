@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.3.0</title>
+            <pubDate>Sun, 19 Jul 2026 00:53:25 +0000</pubDate>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Switch languages instantly. Corvus Arcade now speaks 33 languages, and you can change language in Settings without restarting the app.</li><li>Clear the shader cache. A new Settings button frees the disk space the Metal shader cache uses, and games rebuild it automatically on the next launch.</li><li>A redesigned Settings screen that matches the dark performance dashboard, with clearer graphics, game, and storage controls.</li><li>Dozens of localization fixes across all 33 languages.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.3.0/CorvusArcade-0.3.0.zip" sparkle:version="8" sparkle:shortVersionString="0.3.0" sparkle:edSignature="OxzQbYy3QI3iERytsIhcfge57b1lNgdDscMWcxICdu10N/0kFXVvu+SSY70GYy/qneAVwMROICeRFAeYR+nKAg==" length="572974713" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.2.0</title>
             <pubDate>Sat, 18 Jul 2026 15:33:57 +0000</pubDate>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
