@@ -160,6 +160,11 @@
         .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
         .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
         .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
+        .changelog-list { list-style: none; max-width: 820px; margin: 8px auto 0; display: grid; gap: 16px; }
+        .changelog-list li { padding-left: 20px; border-left: 2px solid var(--border); font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+        .changelog-list li strong { display: block; color: var(--text); font-size: 15.5px; margin-bottom: 3px; }
+        .changelog { max-width: 820px; margin: 8px auto 0; display: grid; gap: 40px; }
+        .release-ver { font-size: 15px; font-weight: 700; color: var(--accent-light); margin-bottom: 16px; padding: 3px 12px; border: 1px solid var(--border); border-radius: 20px; display: inline-block; }
 
         .reqs { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px 26px; }
         .reqs li { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
@@ -298,7 +303,7 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 18a9 9 0 1 1 17 0"/><path d="M12 14l4-4"/><circle cx="12" cy="14" r="1.4"/></svg></div>
-                    <h3>GPU y memoria en vivo</h3>
+                    <h3>GPU y memoria en tiempo real</h3>
                     <p>Un medidor y un gráfico en movimiento muestran cuánto esfuerzo están haciendo tu GPU y la memoria mientras juegas.</p>
                 </div>
                 <div class="feature-card">
@@ -369,6 +374,49 @@
             </ul>
         </div>
     </section>
+
+    <!-- CHANGELOG:START -->
+    <section class="block" id="whats-new">
+        <div class="container">
+            <div class="section-label">Changelog</div>
+            <h2 class="section-title">Novedades</h2>
+            <div class="changelog">
+            <div class="release">
+                <h3 class="release-ver">0.3.0</h3>
+                <ul class="changelog-list">
+                    <li><strong>Cambiar idiomas instantáneamente</strong>Corvus Arcade ahora habla 33 idiomas y puedes cambiar el idioma desde Ajustes sin reiniciar la aplicación.</li>
+                    <li><strong>Borrar la caché del shader</strong>Un nuevo botón en Ajustes libera el espacio en disco que usa la caché de shaders de Metal. Los juegos la reconstruyen automáticamente en el siguiente lanzamiento.</li>
+                    <li><strong>Una pantalla de Ajustes rediseñada</strong>Settings now matches the app&#x27;s dark performance dashboard, with clearer graphics, game, and storage controls.</li>
+                </ul>
+            </div>
+            <div class="release">
+                <h3 class="release-ver">0.2.0</h3>
+                <ul class="changelog-list">
+                    <li><strong>Un aspecto totalmente nuevo</strong>Corvus Arcade has been redesigned around a dark performance dashboard, keeping the launch button and your Mac&#x27;s live status up front.</li>
+                    <li><strong>Nueva biblioteca de Inicio</strong>Your games now live on a visual grid that shows each one&#x27;s status at a glance.</li>
+                    <li><strong>GPU y memoria en tiempo real</strong>Un medidor y un gráfico en tiempo real muestran el rendimiento de tu GPU y la memoria mientras juegas.</li>
+                    <li><strong>Comprobaciones de preparación con reparaciones rápidas</strong>La página del juego marca cosas como la memoria ajustada y te ofrece un botón para liberarla antes de jugar.</li>
+                    <li><strong>Organizados en pestañas</strong>Visión general, Gráficos, Ajustes del juego y Rendimiento, por lo que la configuración que desea siempre está a un clic de distancia.</li>
+                    <li><strong>Ajustes del juego, en el lanzador</strong>Change a game&#x27;s display mode, resolution, graphics quality, and frame-rate cap right from Corvus Arcade, on the game&#x27;s page.</li>
+                    <li><strong>Modo de ventana</strong>Los juegos pueden abrirse en una ventana de Mac móvil cuando el juego está configurado en Ventana.</li>
+                    <li><strong>Advertencia de memoria insuficiente</strong>En los Mac con poca memoria, Corvus Arcade muestra qué aplicaciones consumen más recursos, para que puedas cerrarlas y tener una experiencia de juego más fluida.</li>
+                    <li><strong>Libere memoria mientras juega</strong>Optionally close a game&#x27;s launcher, like Battle.net, once the game has started, to free up memory. Turn it on in Settings.</li>
+                    <li><strong>Registro de rendimiento integrado</strong>Corvus Arcade registra lo que afecta el rendimiento mientras juegas, por lo que es fácil revisar la latencia más tarde. Administre el espacio de registro en Ajustes.</li>
+                    <li><strong>Snappier está iniciando</strong>El botón de inicio responde al instante al hacer clic y muestra un indicador de carga claro mientras inicia el juego.</li>
+                    <li><strong>Manejo de ventanas más inteligente</strong>Corvus Arcade se aparta una sola vez cuando su juego aparece en pantalla, y regresa inmediatamente en cuanto lo cierre.</li>
+                </ul>
+            </div>
+            <div class="release">
+                <h3 class="release-ver">0.1.0</h3>
+                <ul class="changelog-list">
+                    <li><strong>Overwatch en Apple Silicon</strong>Runs on a self-contained Wine 11 with DXMT and Apple&#x27;s D3DMetal. No CrossOver, no Terminal.</li>
+                    <li><strong>Actualizaciones automáticas</strong>Corvus Arcade se mantiene actualizado por sí mismo, por lo que siempre tendrá la última versión alpha.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- CHANGELOG:END -->
 
     <section class="block">
         <div class="container">
