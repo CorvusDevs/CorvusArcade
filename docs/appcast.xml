@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.4.0</title>
+            <pubDate>Fri, 24 Jul 2026 22:14:01 +0000</pubDate>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Your game is found for you. After an installer finishes, Corvus Arcade reads what it registered with Windows and sets the game's program automatically, so there is no more hunting for an .exe.</li><li>Pick a different program any time. A new Change Game Executable option lets you correct the launch target later, and Corvus Arcade warns you if the file you picked is a setup program.</li><li>Bottles are now called containers. The old name did not translate well in any language.</li><li>New games now use the recommended graphics backend by default, and a backend you pick when adding a game is actually applied.</li><li>Tested with a GOG installer (Brotato) in addition to Battle.net and Overwatch.</li><li>Many localization fixes: the site and app were showing English text in several languages.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.4.0/CorvusArcade-0.4.0.zip" sparkle:version="9" sparkle:shortVersionString="0.4.0" sparkle:edSignature="4qPVEas+YzlCC+f30rp8ssKZpvBKwEEZAuAiNQ46oXf72d1xWeryybjzNPGrWrs+t0H66mXgnG3xibm0qraJBQ==" length="573041003" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.3.0</title>
             <pubDate>Sun, 19 Jul 2026 00:53:25 +0000</pubDate>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>

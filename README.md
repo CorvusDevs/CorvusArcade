@@ -30,7 +30,7 @@
 ---
 
 > [!WARNING]
-> **Corvus Arcade is early alpha.** So far it has only been built and tested with **Battle.net** and **Overwatch** on Apple Silicon. Other games and launchers are not supported yet and may not run at all. Expect rough edges, breakage between updates, and features that change or disappear. Use it for fun and experimentation, not as a dependable way to play.
+> **Corvus Arcade is early alpha.** It has been tested with **Battle.net + Overwatch** and with DRM-free **GOG installers** on Apple Silicon. Other games and launchers are unproven and may not run at all. Expect rough edges, breakage between updates, and features that change or disappear. Use it for fun and experimentation, not as a dependable way to play.
 
 A game launcher that runs Windows games on Apple Silicon Macs, with no CrossOver subscription and no manual Wine setup. Corvus Arcade bundles its own redistributable engine, **Wine 11** with **DXMT** and Apple's **D3DMetal** (Game Porting Toolkit), and drives it from a native **SwiftUI** launcher. Pick a game, press Play. It is free, and it runs entirely on your Mac.
 
@@ -56,8 +56,8 @@ A game launcher that runs Windows games on Apple Silicon Macs, with no CrossOver
 
 Corvus Arcade is a work in progress and is shared in the open so people can follow along and try it.
 
-- **Tested target:** Battle.net + Overwatch on Apple Silicon. That is the only combination that has been run end to end.
-- **Everything else is unproven.** The "Add Game" flow is experimental. Anti-cheat, DirectX 12-only titles, and many launchers may not work at all.
+- **Tested targets:** Battle.net + Overwatch on Apple Silicon, and a DRM-free GOG installer added through **Add Game** (Brotato), installed and launched end to end.
+- **Everything else is unproven.** Anti-cheat, DirectX 12-only titles, and most launchers may not work at all. Heavier GOG titles have not been tried.
 - **No guarantees.** Things will break between builds. There is no support commitment yet.
 
 ## Features

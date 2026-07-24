@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade: Run Windows Games on Your Apple Silicon Mac</title>
-    <meta name="description" content="A free, native macOS launcher that runs Windows games on Apple Silicon with a bundled Wine 11, DXMT, and Apple D3DMetal engine. No CrossOver, no Terminal. Early alpha, tested with Battle.net and Overwatch.">
+    <meta name="description" content="A free, native macOS launcher that runs Windows games on Apple Silicon with a bundled Wine 11, DXMT, and Apple D3DMetal engine. No CrossOver, no Terminal. Early alpha, tested with Battle.net, Overwatch and GOG installers.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="A free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine 11 + DXMT + D3DMetal engine, one-click setup. Early alpha, tested with Battle.net and Overwatch.">
+    <meta property="og:description" content="A free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine 11 + DXMT + D3DMetal engine, one-click setup. Early alpha, tested with Battle.net, Overwatch and GOG installers.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="Free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine + D3DMetal engine. Early alpha, tested with Overwatch.">
+    <meta name="twitter:description" content="Free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine + D3DMetal engine. Early alpha, tested with Overwatch and GOG games.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -64,7 +64,7 @@
         "description": "A free native macOS launcher that runs Windows games on Apple Silicon using a bundled Wine 11, DXMT, and Apple D3DMetal engine. Early alpha.",
         "operatingSystem": "macOS 15.0+",
         "applicationCategory": "GameApplication",
-        "releaseNotes": "Early alpha. Tested with Battle.net and Overwatch on Apple Silicon.",
+        "releaseNotes": "Early alpha. Tested with Battle.net, Overwatch and DRM-free GOG installers on Apple Silicon.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Corvus Arcade" },
         "author": { "@type": "Organization", "name": "CorvusDevs", "url": "https://corvusdevs.github.io" }
     }
@@ -291,8 +291,8 @@
     <div class="alpha-banner">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8B23C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         <div>
-            <h3>Early alpha, one tested game</h3>
-            <p>So far Corvus Arcade has only been built and tested with <strong>Battle.net and Overwatch</strong> on Apple Silicon. Other games and launchers are not supported yet and may not run at all. Expect breakage between updates. This is for experimentation, not dependable play.</p>
+            <h3>Early alpha, lightly tested</h3>
+            <p>Corvus Arcade has been tested with Battle.net and Overwatch, and with DRM-free GOG installers. Anything else is unproven: anti-cheat games, DirectX 12-only titles and most launchers may not run at all. Expect breakage between updates. This is for experimentation, not dependable play.</p>
         </div>
     </div>
 
@@ -327,7 +327,7 @@
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                     <h3>One-click Overwatch</h3>
-                    <p>A curated setup builds a clean bottle, installs Battle.net, and launches straight toward a match. No configuration.</p>
+                    <p>A curated setup builds a clean container, installs Battle.net, and launches straight toward a match. No configuration.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4"/><circle cx="8" cy="14" r="1.5"/><circle cx="16" cy="14" r="1.5"/></svg></div>
@@ -363,8 +363,9 @@
             <div class="section-label">Everything included</div>
             <h2 class="section-title">The complete feature list</h2>
             <ul class="feature-list">
-                <li>One-click Overwatch setup, with a clean bottle, Battle.net, and launch, and nothing to configure.</li>
-                <li>Add any Windows game, each in its own isolated bottle.</li>
+                <li>One-click Overwatch setup, with a clean container, Battle.net, and launch, and nothing to configure.</li>
+                <li>Add any Windows game, each in its own isolated container.</li>
+                <li>Installs from a GOG or other Windows installer, then finds the game's program for you.</li>
                 <li>A bundled Wine 11, DXMT, and Apple D3DMetal engine, with no CrossOver, Homebrew, or Terminal.</li>
                 <li>Per-game graphics, with DXMT or D3DMetal, GPTK 3 or GPTK 4, and MetalFX upscaling.</li>
                 <li>Per-game display mode, resolution, graphics quality, and frame-rate cap.</li>
@@ -390,6 +391,14 @@
             <details class="changelog-box">
                 <summary class="changelog-summary">What's New</summary>
                 <div class="changelog">
+                <div class="release">
+                    <span class="release-ver">0.4.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Your game is found for you</strong>After an installer finishes, Corvus Arcade reads what it registered with Windows and sets the game&#x27;s program automatically, so there is no more hunting for an .exe.</li>
+                        <li><strong>Pick a different program any time</strong>A new Change Game Executable option lets you correct the launch target later, and Corvus Arcade warns you if the file you picked is a setup program.</li>
+                        <li><strong>Clearer wording for containers</strong>The isolated Windows environment each game runs in is now called a container throughout the app, a name that reads correctly in every language.</li>
+                    </ul>
+                </div>
                 <div class="release">
                     <span class="release-ver">0.3.0</span>
                     <ul class="changelog-list">
