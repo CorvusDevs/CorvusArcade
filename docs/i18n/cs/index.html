@@ -160,6 +160,8 @@
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
             -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
         .shot { display: block; width: 100%; max-width: 940px; margin: 0 auto; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+        .shots { display: grid; gap: 34px; max-width: 940px; margin: 0 auto; }
+        .shot-cap { text-align: center; font-size: 13.5px; color: var(--text-secondary); margin-top: 12px; }
         .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 26px; transition: border-color 0.2s, transform 0.2s; }
         .feature-card:hover { border-color: var(--accent); transform: translateY(-3px); }
@@ -310,6 +312,23 @@
             <div class="section-label">Aplikace</div>
             <h2 class="section-title">Vaše knihovna, původní pro macOS</h2>
             <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png" alt="Corvus Arcade launcher showing Overwatch with per-game graphics options" class="shot" loading="lazy">
+        </div>
+    </section>
+
+    <section class="block" id="games">
+        <div class="container">
+            <div class="section-label">V akci</div>
+            <h2 class="section-title">Hry běžící na Apple Silicon</h2>
+            <div class="shots">
+                <figure>
+                    <img src="screenshots/overwatch.png" alt="Overwatch running in a macOS window on Apple Silicon through Corvus Arcade" class="shot" loading="lazy">
+                    <figcaption class="shot-cap">Overwatch v živém utkání, běžící v okně macOS.</figcaption>
+                </figure>
+                <figure>
+                    <img src="screenshots/brotato.png" alt="Brotato, installed from a GOG installer, running in a macOS window through Corvus Arcade" class="shot" loading="lazy">
+                    <figcaption class="shot-cap">Brotato, nainstalováno přímo z instalačního programu GOG.</figcaption>
+                </figure>
+            </div>
         </div>
     </section>
 
