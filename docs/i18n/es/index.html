@@ -160,7 +160,22 @@
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
             -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
         .shot { display: block; width: 100%; max-width: 940px; margin: 0 auto; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
-        .shots { display: grid; gap: 34px; max-width: 940px; margin: 0 auto; }
+        .gallery { max-width: 940px; margin: 0 auto; }
+        .gallery > input { position: absolute; opacity: 0; pointer-events: none; }
+        .gallery-stage { position: relative; }
+        .gallery-item { display: none; margin: 0; }
+        .gallery-item img { display: block; width: 100%; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+        .gallery > input:nth-of-type(1):checked ~ .gallery-stage .gallery-item:nth-of-type(1),
+        .gallery > input:nth-of-type(2):checked ~ .gallery-stage .gallery-item:nth-of-type(2),
+        .gallery > input:nth-of-type(3):checked ~ .gallery-stage .gallery-item:nth-of-type(3) { display: block; }
+        .gallery-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+        .gallery-thumbs label { cursor: pointer; border-radius: 10px; overflow: hidden; border: 2px solid transparent; opacity: 0.55; transition: opacity .2s, border-color .2s; display: block; }
+        .gallery-thumbs label:hover { opacity: 0.85; }
+        .gallery-thumbs img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 10; }
+        .gallery > input:nth-of-type(1):checked ~ .gallery-thumbs label:nth-of-type(1),
+        .gallery > input:nth-of-type(2):checked ~ .gallery-thumbs label:nth-of-type(2),
+        .gallery > input:nth-of-type(3):checked ~ .gallery-thumbs label:nth-of-type(3) { opacity: 1; border-color: var(--accent); }
+        .gallery > input:focus-visible ~ .gallery-thumbs label { outline: 2px solid var(--accent-light); outline-offset: 2px; }
         .shot-cap { text-align: center; font-size: 13.5px; color: var(--text-secondary); margin-top: 12px; }
         .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 26px; transition: border-color 0.2s, transform 0.2s; }
@@ -307,27 +322,33 @@
         </div>
     </div>
 
-    <section class="block">
-        <div class="container">
-            <div class="section-label">La aplicación</div>
-            <h2 class="section-title">Tu biblioteca nativa de macOS</h2>
-            <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png" alt="Corvus Arcade launcher showing Overwatch with per-game graphics options" class="shot" loading="lazy">
-        </div>
-    </section>
-
     <section class="block" id="games">
         <div class="container">
             <div class="section-label">En acción</div>
             <h2 class="section-title">Juegos que se ejecutan en Apple Silicon</h2>
-            <div class="shots">
-                <figure>
-                    <img src="screenshots/overwatch.png" alt="Overwatch running in a macOS window on Apple Silicon through Corvus Arcade" class="shot" loading="lazy">
-                    <figcaption class="shot-cap">Overwatch en una partida en vivo, ejecutándose en una ventana de macOS.</figcaption>
-                </figure>
-                <figure>
-                    <img src="screenshots/brotato.png" alt="Brotato, installed from a GOG installer, running in a macOS window through Corvus Arcade" class="shot" loading="lazy">
-                    <figcaption class="shot-cap">Brotato, instalado directamente desde su instalador de GOG.</figcaption>
-                </figure>
+            <div class="gallery">
+                <input type="radio" name="ca-shot" id="ca-shot-1" checked>
+                <input type="radio" name="ca-shot" id="ca-shot-2">
+                <input type="radio" name="ca-shot" id="ca-shot-3">
+                <div class="gallery-stage">
+                    <figure class="gallery-item">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png" alt="Corvus Arcade launcher showing a game with live performance and per-game settings" loading="lazy">
+                        <figcaption class="shot-cap">Tu biblioteca nativa de macOS</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/overwatch.png" alt="Overwatch running in a macOS window on Apple Silicon through Corvus Arcade" loading="lazy">
+                        <figcaption class="shot-cap">Overwatch en una partida en vivo, ejecutándose en una ventana de macOS.</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/brotato.png" alt="Brotato, installed from a GOG installer, running in a macOS window through Corvus Arcade" loading="lazy">
+                        <figcaption class="shot-cap">Brotato, instalado directamente desde su instalador de GOG.</figcaption>
+                    </figure>
+                </div>
+                <div class="gallery-thumbs">
+                    <label for="ca-shot-1" title="Your library, native to macOS"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png" alt="" loading="lazy"></label>
+                    <label for="ca-shot-2" title="Overwatch in a live match, running in a macOS window."><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/overwatch.png" alt="" loading="lazy"></label>
+                    <label for="ca-shot-3" title="Brotato, installed straight from its GOG installer."><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/brotato.png" alt="" loading="lazy"></label>
+                </div>
             </div>
         </div>
     </section>
