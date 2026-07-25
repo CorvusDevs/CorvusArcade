@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Συχνές ερωτήσεις</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Λειτουργεί το Overwatch σε Mac;</summary>
+                <p class="faq-a">Ναι, στο Apple Silicon. Το Corvus Arcade εγκαθιστά το Battle.net και το Overwatch σε ένα απομονωμένο περιβάλλον Windows και τα τρέχει μέσω ενός συσκευασμένου μηχανισμού Wine 11 με το D3DMetal της Apple, οπότε δεν απαιτείται άδεια Windows, το Boot Camp ή μια εικονική μηχανή.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Μπορώ να τρέξω παιχνίδια Windows σε Apple Silicon χωρίς το CrossOver;</summary>
+                <p class="faq-a">Ναι. Η Wine 11, οι μηχανές DXMT και D3DMetal περιλαμβάνονται στην εφαρμογή, οπότε δεν απαιτείται συνδρομή CrossOver, ούτε Homebrew και εντολές Terminal. Κατεβάστε την εφαρμογή και πατήστε Εκκίνηση.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Είναι δωρεάν το Corvus Arcade;</summary>
+                <p class="faq-a">Ναι, είναι δωρεάν και δεν απαιτεί λογαριασμό, δεν έχει τηλεμετρία και δεν κάνει παρακολούθηση. Λειτουργεί εξ ολοκλήρου στον Mac σας.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Ποια παιχνίδια μπορώ να προσθέσω;</summary>
+                <p class="faq-a">Οποιοδήποτε παιχνίδι για Windows με εγκαταστάτη ή αρχείο .exe, καθένα σε ξεχωριστό απομονωμένο δοχείο. Το Overwatch είναι το επιλεγμένο, επαληθευμένο τίτλο, και οι εγκαταστάτες GOG χωρίς DRM έχουν δοκιμαστεί. Τα παιχνίδια με αντι-cheat και οι τίτλοι μόνο για DirectX 12 συνήθως δεν τρέχουν.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Χρειάζομαι το Rosetta 2;</summary>
+                <p class="faq-a">Ναι, και το Corvus Arcade το εγκαθιστά αυτόματα αν λείπει. Ο έλεγχος συστήματος κατά την πρώτη εκτέλεση επιβεβαιώνει επίσης τον ενσωματωμένο κινητήρα και ότι διαθέτετε αρκετό ελεύθερο χώρο δίσκου.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Ποιο Mac χρειάζομαι;</summary>
+                <p class="faq-a">Μακ με Apple Silicon (M1 ή νεότερο) που τρέχει το macOS 15 ή νεότερο. Δεν υποστηρίζονται τα Mac με Intel. Το Battle.net plus Overwatch απαιτεί περίπου 60 GB ελεύθερου χώρου.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

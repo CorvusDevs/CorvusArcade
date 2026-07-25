@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Vanlige spørsmål</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Får Overwatch ikke fungere på Mac.</summary>
+                <p class="faq-a">Ja, på Apple Silicon. Corvus Arcade installerer Battle.net og Overwatch i en isolert Windows-container og kjører dem gjennom en innebygd Wine 11-motor med Apples D3DMetal, slik at ingen Windows-lisens, Boot Camp eller virtuell maskin er påkrevd.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Kan jeg kjøre Windows-spill på Apple Silicon uten CrossOver?</summary>
+                <p class="faq-a">Ja. Wine 11, DXMT og D3DMetal-motoren leveres inne i appen, så det er ingen CrossOver-abonnement, ingen Homebrew og ingen Terminal-kommandoer. Last ned appen og trykk på .</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Er Corvus Arcade gratis?</summary>
+                <p class="faq-a">Ja, det er gratis og krever ingen konto, ingen telemetri og ingen sporing. Det kjører helt på din Mac.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Hvilke spill kan jeg legge til?</summary>
+                <p class="faq-a">Hver Windows-spill med en installer eller en .exe, hver i sitt eget isolerte container. Overwatch er den kuraterede, beviste tittelen, og DRM-frie GOG-installere har blitt testet. Anti-cheat-spill og DirectX 12-kun-titler vil ofte ikke kjøre.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Trenger jeg Rosetta 2?</summary>
+                <p class="faq-a">Ja, og Corvus Arcade installerer det for deg hvis det mangler. Sjekk ved første start bekrefter også den inkluderte motoren og at du har nok ledig diskplass.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Hva Mac trenger du?</summary>
+                <p class="faq-a">En Apple Silicon Mac, det vil si M1 eller nyere, som kjører macOS 15 eller senere. Intel-Macs støttes ikke. Battle.net plus Overwatch krever omtrent 60 GB ledig plass.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

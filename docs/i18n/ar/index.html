@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">الأسئلة الشائعة</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">هل يعمل أوفر ووتش على ماك؟</summary>
+                <p class="faq-a">نعم، على Apple Silicon. يقوم Corvus Arcade بتثبيت Battle.net و Overwatch في حاوية Windows معزولة وتشغيلها عبر محرك Wine 11 المدمج مع D3DMetal الخاص بـ Apple، لذا لا يلزم وجود ترخيص Windows أو Boot Camp أو آلة افتراضية.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">هل يمكنني تشغيل ألعاب ويندوز على معالجات Apple Silicon بدون CrossOver؟</summary>
+                <p class="faq-a">نعم. يتم تضمين محرك Wine 11 و DXMT و D3DMetal داخل التطبيق، لذا لا تحتاج إلى اشتراك CrossOver ولا Homebrew ولا أوامر Terminal. قم بتنزيل التطبيق واضغط على تشغيل.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">هل لعبة Corvus Arcade مجانية؟</summary>
+                <p class="faq-a">نعم، إنه مجاني ولا يتطلب حسابًا ولا يجمع بيانات ولا يتتبعك. يعمل بالكامل على جهاز Mac الخاص بك.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">ما هي الألعاب التي يمكنني إضافتها؟</summary>
+                <p class="faq-a">أي لعبة ويندوز مع برنامج تثبيت أو ملف .exe، كل منها في حاوية معزولة منفصلة. أوفر ووتش هو العنوان المختار والمثبت، وقد تم اختبار مثبتات GOG الخالية من حقوق الملكية الرقمية. غالبًا ما لن تعمل الألعاب المضادة للاحتيال والألعاب التي تعمل فقط مع DirectX 12.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">هل أحتاج إلى Rosetta 2؟</summary>
+                <p class="faq-a">نعم، يقوم Corvus Arcade بتثبيتها لك إذا كانت مفقودة. كما يؤكد فحص النظام الأولي وجود المحرك المدمج وجود مساحة كافية من القرص الصلب.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">ما هو الماك الذي أحتاجه؟</summary>
+                <p class="faq-a">على جهاز Mac مع معالج Apple Silicon (M1 أو أحدث) الذي يعمل بنظام macOS 15 أو أحدث. لا يتم دعم أجهزة Mac المعتمدة على معالجات Intel. يتطلب Battle.net مع Overwatch مساحة فارغة مقدارها حوالي 60 جيجابايت.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

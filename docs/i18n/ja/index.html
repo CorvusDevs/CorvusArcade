@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">よくある質問</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Overwatch は Mac で動作しますか？</summary>
+                <p class="faq-a">はい、Apple Silicon に対応しています。Corvus Arcade は Battle.net と Overwatch を孤立した Windows コンテナにインストールし、Apple の D3DMetal を使用したバンドルされた Wine 11 エンジンで実行するため、Windows ライセンス、Boot Camp、または仮想マシンは不要です。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Apple Silicon で CrossOver がない状態で Windows ゲームを実行できますか？</summary>
+                <p class="faq-a">はい。Wine 11、DXMT、D3DMetal エンジンがアプリに内蔵されているため、CrossOver サブスクリプション、Homebrew、Terminal コマンドは不要です。アプリをダウンロードして「起動」を押してください。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Corvus Arcade は無料ですか？</summary>
+                <p class="faq-a">はい、無料でアカウント、テレメトリ、トラッキングは一切不要です。完全に Mac 上で動作します。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">どのゲームを追加できますか？</summary>
+                <p class="faq-a">Windows ゲームのインストーラーまたは .exe ファイル（それぞれ独立したコンテナに格納）がサポートされています。Overwatch は厳選され実績のあるタイトルであり、DRM 非搭載の GOG インストーラーもテスト済みです。アンチチート機能搭載のゲームや DirectX 12 専用タイトルは動作しない場合があります。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Rosetta 2 は必要ですか？</summary>
+                <p class="faq-a">はい、Corvus Arcade は不足している場合は自動的にインストールします。最初のシステムチェックでは、バンドルされたエンジンと十分な空きディスク容量があることも確認されます。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">どの Mac が必要ですか？</summary>
+                <p class="faq-a">M1 以降の Apple Silicon Mac、macOS 15 以降が必要です。Intel Mac はサポートされません。Battle.net プラス Overwatch は約 60 GB の空き容量が必要です。</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

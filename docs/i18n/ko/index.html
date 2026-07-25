@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">자주 묻는 질문</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">오버워치가 맥에서 작동합니까?</summary>
+                <p class="faq-a">Apple Silicon 에서 예. Corvus Arcade 는 Battle.net 과 Overwatch 를 격리된 Windows 컨테이너에 설치하고 Apple 의 D3DMetal 과 함께 제공되는 Wine 11 엔진을 통해 실행하므로 Windows 라이선스, Boot Camp 또는 가상 머신이 필요하지 않습니다.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Apple Silicon Mac 에서 CrossOver 없이 Windows 게임을 실행할 수 있나요?</summary>
+                <p class="faq-a">네. Wine 11, DXMT 및 D3DMetal 엔진이 앱에 포함되어 있으므로 CrossOver 구독, Homebrew 및 터미널 명령어는 필요하지 않습니다. 앱을 다운로드한 후 Launch 를 누르세요.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Corvus Arcade는 무료인가요?</summary>
+                <p class="faq-a">네, 무료이며 계정, 원격 감시 및 추적 기능이 없습니다. 이 앱은 완전히 귀하의 Mac 에서 실행됩니다.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">어떤 게임을 추가할 수 있나요?</summary>
+                <p class="faq-a">윈도우 게임 중 설치 파일이나 .exe 파일이 각각 독립된 컨테이너에 포함된 모든 게임이 지원됩니다. Overwatch 는 검증된 제목이며, DRM 이 없는 GOG 설치 파일은 테스트되었습니다. 반치트 게임 및 DirectX 12 전용 게임은 실행되지 않을 수 있습니다.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Rosetta 2 가 필요한가요?</summary>
+                <p class="faq-a">네, Corvus Arcade 가 누락된 경우 자동으로 설치합니다. 첫 실행 시 시스템 점검을 통해 번들 엔진과 충분한 여유 디스크 공간이 있는지 확인합니다.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">어떤 Mac이 필요한가요?</summary>
+                <p class="faq-a">Apple Silicon Mac(M1 이상) 및 macOS 15 이상을 실행하는 Mac 에서만 지원됩니다. Intel Mac 은 지원되지 않습니다. Battle.net 플러스 오버워치에는 약 60 GB 의 여유 공간이 필요합니다.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

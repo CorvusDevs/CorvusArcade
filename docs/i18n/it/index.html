@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Domande frequenti</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Overwatch non funziona su Mac.</summary>
+                <p class="faq-a">Sì, su Apple Silicon. Corvus Arcade installa Battle.net e Overwatch in un contenitore Windows isolato e li esegue tramite un motore Wine 11 incluso con D3DMetal di Apple, quindi non è necessario alcun licenza Windows, Boot Camp o macchina virtuale.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Posso eseguire giochi Windows su Apple Silicon senza CrossOver?</summary>
+                <p class="faq-a">Sì. L'ultima versione, DXMT e D3DMetal, è inclusa nell'app, quindi non è necessaria l'abbonamento a CrossOver, né Homebrew o comandi Terminal. Scaricate l'app e premete Avvio.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Corvus Arcade è gratuito?</summary>
+                <p class="faq-a">Sì, è gratuito, non richiede un account, non effettua telemetria e non traccia le attività. Funziona interamente sul tuo Mac.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Quali giochi posso aggiungere?</summary>
+                <p class="faq-a">Ogni gioco Windows con un installer o un file .exe, ciascuno in un contenitore isolato. Overwatch è il titolo curato e collaudato, mentre gli installer DRM-free di GOG sono stati testati. I giochi con anti-cheat e i titoli esclusivi per DirectX 12 spesso non funzionano.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Ho bisogno di Rosetta 2?</summary>
+                <p class="faq-a">Sì, e Corvus Arcade lo installa per voi se manca. Il controllo iniziale del sistema verifica anche il motore incluso e lo spazio libero sul disco.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Qual Mac ho bisogno?</summary>
+                <p class="faq-a">Un Mac con chip Apple Silicon, ovvero M1 o versioni successive, che esegue macOS 15 o versioni successive. I Mac Intel non sono supportati. Battle.net e Overwatch richiedono circa 60 GB di spazio libero.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

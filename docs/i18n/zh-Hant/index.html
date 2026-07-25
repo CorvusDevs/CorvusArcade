@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">常見問題</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">《守望先鋒》是否支援 Mac？</summary>
+                <p class="faq-a">是，適用於 Apple Silicon。Corvus Arcade 會將 Battle.net 和 Overwatch 安裝到隔離的 Windows 容器中，並透過內嵌的 Wine 11 引擎搭配 Apple 的 D3DMetal 來執行它們，因此無需 Windows 授權、Boot Camp 或虛擬機。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">可以在 Apple Silicon 上運行 Windows 遊戲而不使用 CrossOver 嗎？</summary>
+                <p class="faq-a">是。Wine 11、DXMT 和 D3DMetal 引擎已內建於應用程式中，因此無需 CrossOver 訂閱、Homebrew 或終端機指令。下載應用程式並按下「啟動」。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Corvus Arcade 是否免費？</summary>
+                <p class="faq-a">是，它是免費的，無需帳戶，沒有遥測或追蹤，完全在您的 Mac 上運行。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">可以新增哪些遊戲？</summary>
+                <p class="faq-a">任何 Windows 遊戲，每個遊戲都有獨立的安裝程式或 .exe，且各自位於隔離容器中。《守望先鋒》是經過精選且經驗證的遊戲，而 GOG 安裝程式（免 DRM）也經過測試。反作弊遊戲以及僅支援 DirectX 12 的遊戲通常無法執行。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">是否需要 Rosetta 2？</summary>
+                <p class="faq-a">是，若缺少該項，Corvus Arcade 將為您安裝。首次執行系統檢查也會確認捆綁的引擎以及您是否有足夠的可用磁碟空間。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">需要什麼 Mac？</summary>
+                <p class="faq-a">支援 Apple Silicon Mac（M1 或更新版本）並運行 macOS 15 或更高版本。不支援 Intel Mac。Battle.net 與 Overwatch 需要約 60 GB 的可用空間。</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

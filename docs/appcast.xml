@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.4.1</title>
+            <pubDate>Sat, 25 Jul 2026 00:13:34 +0000</pubDate>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>A new app icon.</li><li>Change Game Executable now always shows what it found, with the program in use marked, instead of silently applying a single match and looking like nothing happened.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.4.1/CorvusArcade-0.4.1.zip" sparkle:version="10" sparkle:shortVersionString="0.4.1" sparkle:edSignature="kxLvuEWeDQAGkH96Q3zLswtYDV7QMsDJOxChy1ntB7rA7QD5OW6T1KciFMCwgncDBsQZN2Nih9BHPEVLugsrDw==" length="573299362" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.4.0</title>
             <pubDate>Fri, 24 Jul 2026 22:14:01 +0000</pubDate>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>

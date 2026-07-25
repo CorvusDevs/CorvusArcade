@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Pertanyaan Umum</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Apakah Overwatch dapat berjalan di Mac?</summary>
+                <p class="faq-a">Ya, pada Apple Silicon. Corvus Arcade menginstal Battle.net dan Overwatch ke dalam wadah Windows terisolasi dan menjalankannya melalui mesin Wine 11 yang disertakan dengan D3DMetal milik Apple, sehingga tidak memerlukan lisensi Windows, Boot Camp, atau mesin virtual.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Apakah saya dapat menjalankan game Windows pada Apple Silicon tanpa CrossOver?</summary>
+                <p class="faq-a">Ya. Wine 11, DXMT, dan mesin D3DMetal disertakan dalam aplikasi, sehingga tidak ada langganan CrossOver, Homebrew, atau perintah Terminal. Unduh aplikasi dan tekan Peluncur.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Apakah Corvus Arcade gratis?</summary>
+                <p class="faq-a">Ya, ini gratis dan tidak memerlukan akun, tidak memiliki telemetri, serta tidak melakukan pelacakan. Aplikasi ini berjalan sepenuhnya di Mac Anda.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Game apa yang bisa saya tambahkan?</summary>
+                <p class="faq-a">Setiap game Windows dengan instalasi atau file .exe, masing-masing dalam wadah terisolasi. Overwatch adalah judul yang dikurasi dan terbukti, serta instalasi GOG yang bebas DRM telah diuji. Game anti-cheat dan judul yang hanya mendukung DirectX 12 sering kali tidak dapat dijalankan.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Apakah saya memerlukan Rosetta 2?</summary>
+                <p class="faq-a">Ya, dan Corvus Arcade menginstalnya untuk Anda jika tidak tersedia. Pemeriksaan sistem pada pertama kali dijalankan juga memastikan mesin yang disertakan dan bahwa Anda memiliki ruang disk bebas yang cukup.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Mac apa yang saya butuhkan?</summary>
+                <p class="faq-a">Mac Apple Silicon (M1 atau lebih baru) yang menjalankan macOS 15 atau versi terbaru. Mac Intel tidak didukung. Battle.net plus Overwatch memerlukan sekitar 60 GB ruang kosong.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

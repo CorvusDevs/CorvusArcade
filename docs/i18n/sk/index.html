@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Časté otázky</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Funguje Overwatch na Mac?</summary>
+                <p class="faq-a">Áno, na Apple Silicon. Corvus Arcade nainštaluje Battle.net a Overwatch do izolovaného kontajnera Windows a spúšťa ich cez zabalený Wine 11 engine s Apple D3DMetal, takže nie je potrebná licencia Windows, Boot Camp ani virtuálna mašina.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Môžem spúšťať hry z Windows na Apple Silicon bez CrossOver?</summary>
+                <p class="faq-a">Áno. Wine 11, DXMT a D3DMetal motor sú obsiahnuté v aplikácii, takže nie je potrebný predplatný CrossOver, Homebrew ani príkazy Terminálu. Stiahnite si aplikáciu a stlačte Spustiť.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Je Corvus Arcade zdarma?</summary>
+                <p class="faq-a">Áno, je to zdarma, nemá žiadne účty, žiadnu telemetriu ani žiadne sledovanie. Spúšťa sa úplne na vašom Macu.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Ktoré hry môžete pridať?</summary>
+                <p class="faq-a">Akékoľvek Windows hry s inštalátorom alebo souborom .exe, každá v samostatnom izolovanom kontajneri. Overwatch je kurátorský, overený titul, a inštalátory z DRM-free GOG boli overené. Hry s anti-cheatom a tituly len pre DirectX 12 často nebudú fungovať.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Potrebujem Rosetta 2?</summary>
+                <p class="faq-a">Áno, a Corvus Arcade ho nainštaluje, ak chýba. Kontrola pri prvom spustení tiež overí, či je balený engine nainštalovaný, a či máte dostatok voľného miesta na disku.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Aký Mac potrebujem?</summary>
+                <p class="faq-a">Apple Silicon Mac (M1 alebo novší) s macOS 15 alebo novším. Intel Macs nie sú podporované. Battle.net s Overwatchom vyžaduje približne 60 GB voľného miesta.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

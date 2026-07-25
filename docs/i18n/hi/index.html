@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">अक्सर पूछे जाने वाले प्रश्न</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">ओवरवॉच मैक पर काम करता है?</summary>
+                <p class="faq-a">हाँ, Apple Silicon पर। Corvus Arcade, Battle.net और Overwatch को एक अलग विंडोज़ कंटेनर में इंस्टॉल करता है और उन्हें Apple के D3DMetal के साथ बंडल की गई Wine 11 इंजन के माध्यम से चलाने की अनुमति देता है, इसलिए कोई विंडोज़ लाइसेंस, Boot Camp या वर्चुअल मशीन शामिल नहीं है।</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">क्या आप Apple Silicon पर Windows गेम्स CrossOver के बिना चला सकते हैं?</summary>
+                <p class="faq-a">हाँ। वाइन 11, DXMT और D3DMetal इंजन ऐप के अंदर शामिल हैं, इसलिए CrossOver सदस्यता, Homebrew या टर्मिनल कमांड की आवश्यकता नहीं है। ऐप डाउनलोड करें और लॉन्च दबाएं।</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">क्या Corvus Arcade मुफ़्त है?</summary>
+                <p class="faq-a">हाँ, यह निःशुल्क है और इसमें खाता, निगरानी या ट्रैकिंग नहीं है। यह पूरी तरह से आपके Mac पर चलता है।</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">मैं कौन-सी गेम्स जोड़ सकता हूँ?</summary>
+                <p class="faq-a">Windows गेम, जिनमें इंस्टॉलर या .exe होता है, प्रत्येक अपने अलग-अलग इolated कंटेनर में होता है। ओवरवॉच एक सत्यापित और प्रमाणित शीर्षक है, और DRM-मुक्त GOG इंस्टॉलर परीक्षण किए गए हैं। एंटी-चीट गेम और केवल DirectX 12 वाले शीर्षक अक्सर चल नहीं पाएंगे।</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">मुझे Rosetta 2 की आवश्यकता है?</summary>
+                <p class="faq-a">हाँ, और यदि Corvus Arcade मेंटु इंस्टॉलर इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इंस्टॉलर मेंटु इं</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">मैं किस Mac की आवश्यकता रखता हूँ?</summary>
+                <p class="faq-a">एप्पल सिलिकॉन मैक, जिसका अर्थ है M1 या नया, macOS 15 या बाद में चल रहा है। इंटेल मैक सपोर्टेड नहीं हैं। Battle.net प्लस ओवरवॉच के लिए लगभग 60 GB मुक्त स्थान की आवश्यकता है।</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

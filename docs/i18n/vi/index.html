@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Các câu hỏi thường gặp</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Overwatch có hoạt động trên Mac không?</summary>
+                <p class="faq-a">Trên Apple Silicon, Corvus Arcade cài đặt Battle.net và Overwatch vào một máy chứa Windows bị cô lập và chạy chúng thông qua một động cơ Wine 11 được tích hợp sẵn cùng D3DMetal của Apple, do đó không liên quan đến giấy phép Windows, Boot Camp hay máy ảo.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Tôi có thể chạy các trò chơi Windows trên Apple Silicon mà không cần CrossOver không?</summary>
+                <p class="faq-a">Có. Phiên bản Wine 11, DXMT và D3DMetal được tích hợp sẵn trong ứng dụng, vì vậy không cần đăng ký CrossOver, không cần Homebrew và không cần lệnh Terminal. Tải ứng dụng và nhấn Phát lại.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Corvus Arcade có miễn phí không?</summary>
+                <p class="faq-a">Có, nó miễn phí và không yêu cầu tài khoản, không có telemetry và không có theo dõi. Nó chạy hoàn toàn trên Mac của bạn.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Bạn có thể thêm những trò chơi nào?</summary>
+                <p class="faq-a">Bất kỳ trò chơi Windows nào có trình cài đặt hoặc tệp .exe, mỗi cái trong một thùng chứa bị cô lập riêng biệt. Overwatch là tựa game được tuyển chọn và đã được kiểm chứng, trong khi các trình cài đặt GOG miễn phí DRM đã được thử nghiệm. Các trò chơi có hệ thống chống gian lận hoặc chỉ hỗ trợ DirectX 12 thường sẽ không chạy được.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Tôi có cần Rosetta 2 không?</summary>
+                <p class="faq-a">Có, và Corvus Arcade sẽ tự cài đặt cho bạn nếu thiếu. Kiểm tra hệ thống lần đầu cũng xác nhận động cơ được tích hợp và đảm bảo bạn có đủ dung lượng trống trên ổ đĩa.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Bạn cần Mac nào?</summary>
+                <p class="faq-a">Trên Mac Apple Silicon (M1 hoặc mới hơn) chạy macOS 15 trở lên. Mac Intel không được hỗ trợ. Battle.net plus Overwatch cần khoảng 60 GB dung lượng trống.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

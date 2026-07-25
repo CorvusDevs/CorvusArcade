@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -238,6 +247,64 @@
         .lang-menu a.active { color: var(--accent-light); }
         .lang-menu img { width: 20px; height: 14px; border-radius: 2px; object-fit: cover; }
     </style>
+    <!-- FAQ-LD:START -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+                {
+                        "@type": "Question",
+                        "name": "Does Overwatch work on a Mac?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes, on Apple Silicon. Corvus Arcade installs Battle.net and Overwatch into an isolated Windows container and runs them through a bundled Wine 11 engine with Apple's D3DMetal, so no Windows licence, Boot Camp or virtual machine is involved."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Can I run Windows games on Apple Silicon without CrossOver?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. The Wine 11, DXMT and D3DMetal engine ships inside the app, so there is no CrossOver subscription, no Homebrew and no Terminal commands. Download the app and press Launch."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Is Corvus Arcade free?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes, it is free and has no account, no telemetry and no tracking. It runs entirely on your Mac."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Which games can I add?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Any Windows game with an installer or an .exe, each in its own isolated container. Overwatch is the curated, proven title, and DRM-free GOG installers have been tested. Anti-cheat games and DirectX 12-only titles often will not run."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Do I need Rosetta 2?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes, and Corvus Arcade installs it for you if it is missing. The first-run system check also confirms the bundled engine and that you have enough free disk space."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "What Mac do I need?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "An Apple Silicon Mac, meaning M1 or newer, running macOS 15 or later. Intel Macs are not supported. Battle.net plus Overwatch needs roughly 60 GB of free space."
+                        }
+                }
+        ]
+}
+    </script>
+    <!-- FAQ-LD:END -->
 </head>
 <body>
     <nav>
@@ -436,6 +503,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Common questions</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Does Overwatch work on a Mac?</summary>
+                <p class="faq-a">Yes, on Apple Silicon. Corvus Arcade installs Battle.net and Overwatch into an isolated Windows container and runs them through a bundled Wine 11 engine with Apple's D3DMetal, so no Windows licence, Boot Camp or virtual machine is involved.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Can I run Windows games on Apple Silicon without CrossOver?</summary>
+                <p class="faq-a">Yes. The Wine 11, DXMT and D3DMetal engine ships inside the app, so there is no CrossOver subscription, no Homebrew and no Terminal commands. Download the app and press Launch.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Is Corvus Arcade free?</summary>
+                <p class="faq-a">Yes, it is free and has no account, no telemetry and no tracking. It runs entirely on your Mac.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Which games can I add?</summary>
+                <p class="faq-a">Any Windows game with an installer or an .exe, each in its own isolated container. Overwatch is the curated, proven title, and DRM-free GOG installers have been tested. Anti-cheat games and DirectX 12-only titles often will not run.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Do I need Rosetta 2?</summary>
+                <p class="faq-a">Yes, and Corvus Arcade installs it for you if it is missing. The first-run system check also confirms the bundled engine and that you have enough free disk space.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">What Mac do I need?</summary>
+                <p class="faq-a">An Apple Silicon Mac, meaning M1 or newer, running macOS 15 or later. Intel Macs are not supported. Battle.net plus Overwatch needs roughly 60 GB of free space.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

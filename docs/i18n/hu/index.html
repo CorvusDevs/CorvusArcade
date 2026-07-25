@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Gyakori kérdések</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Működik-e az Overwatch egy Mac-en?</summary>
+                <p class="faq-a">Igen, Apple Silicon esetén. A Corvus Arcade a Battle.net-et és az Overwatcht egy elszigetelt Windows konténerbe telepíti, majd a saját Wine 11 motorján keresztül, Apple D3DMetal segítségével futtatja, így nem szükséges Windows licenc, Boot Camp vagy virtuális gép.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Futhat futtatni Windowsos játékokat Apple Siliconon CrossOver nélkül?</summary>
+                <p class="faq-a">Igen. A Wine 11, DXMT és D3DMetal motor be van építve az alkalmazásba, így nincs szükség CrossOver előfizetésre, Homebrewre vagy Terminálparancsokra. Töltse le az alkalmazást, majd nyomja meg a Lejátszás gombot.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">A Corvus Arcade ingyenes?</summary>
+                <p class="faq-a">Igen, ingyenes, nincs fiók, nincs telemetria és nincs követés. Teljes egészében a Mac-en fut.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Melyik játékokat adhatok hozzá?</summary>
+                <p class="faq-a">Bármelyik Windows-játék telepítővel vagy .exe fájljal, mindegyik saját elszigetelt konténerben. Az Overwatch a kurált, bevált cím, a DRM-mentes GOG telepítők pedig tesztelték. A csalásellenes rendszerekkel ellátott játékok és a DirectX 12-re korlátozott címek gyakran nem futnak.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Szükséges-e a Rosetta 2?</summary>
+                <p class="faq-a">Igen, a Corvus Arcade telepíti, ha hiányzik. Az első futtatás során végzett rendszerellenőrzés megerősíti a csomagolt motort, valamint azt is, hogy elegendő szabad tárhely áll rendelkezésre.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Melyik Macet kell használnom?</summary>
+                <p class="faq-a">Apple Silicon Mac (M1 vagy újabb), macOS 15 vagy újabb verzió futtatásával. Intel Macs nem támogatottak. A Battle.net plus Overwatch számára kb. 60 GB szabad helyre van szükség.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

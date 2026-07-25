@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Overwatch 可以在 Mac 上运行吗？</summary>
+                <p class="faq-a">是的，适用于 Apple Silicon 芯片。Corvus Arcade 会将 Battle.net 和 Overwatch 安装到隔离的 Windows 容器中，并通过捆绑的 Wine 11 引擎（结合 Apple 的 D3DMetal）运行它们，因此无需 Windows 许可证、Boot Camp 或虚拟机。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">可以在 Apple Silicon 上运行 Windows 游戏吗，但不使用 CrossOver？</summary>
+                <p class="faq-a">是。Wine 11、DXMT 和 D3DMetal 引擎已内置于应用中，因此无需 CrossOver 订阅、Homebrew 或终端命令。下载应用并按下“启动”。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Corvus Arcade 是否免费？</summary>
+                <p class="faq-a">是的，它完全免费，无需账户，无遥测且无追踪。它完全在您的 Mac 上运行。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">可以添加哪些游戏？</summary>
+                <p class="faq-a">任何带有安装程序或 .exe 文件的 Windows 游戏，每个都位于独立的容器中。《守望先锋》是经过精选且经验证的标题，GOG 的免 DRM 安装程序也经过测试。反作弊游戏和仅支持 DirectX 12 的游戏通常无法运行。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">是否需要 Rosetta 2？</summary>
+                <p class="faq-a">是的，如果缺少该组件，Corvus Arcade 将为您安装。首次运行系统检查还会验证捆绑的引擎以及您是否有足够的可用磁盘空间。</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">需要什么样的 Mac？</summary>
+                <p class="faq-a">适用于运行 macOS 15 或更高版本的 Apple Silicon Mac（M1 或更新型号），不支持 Intel Mac。运行 Battle.net 和 Overwatch 需要大约 60 GB 的可用空间。</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Часті запитання</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Чи працює Overwatch на Mac?</summary>
+                <p class="faq-a">Так, на Apple Silicon. Corvus Arcade встановлює Battle.net та Overwatch до ізольованого контейнера Windows та запускає їх через зібраний Wine 11-й рушій з D3DMetal від Apple, тому не потрібна ліцензія Windows, Boot Camp чи віртуальна машина.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Чи можна запустити ігри Windows на Apple Silicon без CrossOver?</summary>
+                <p class="faq-a">Так. Wine 11, DXMT та D3DMetal-двигун вбудовані в додаток, тому підписка CrossOver, Homebrew та команди Terminal не потрібні. Завантажте додаток і натисніть Запустити.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Чи безкоштовний Corvus Arcade?</summary>
+                <p class="faq-a">Так, це безкоштовно, не вимагає облікового запису, не має телеметрії та не здійснює відстеження. Програма повністю працює на вашому Mac.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Які ігри я можу додати?</summary>
+                <p class="faq-a">У будь-яку гру для Windows з установником або файлом .exe, кожен у власному ізольованому контейнері. Overwatch, це відібраний та перевірений продукт, а DRM-вільні установники GOG були протестовані. Гри з анти-читом та ті, що працюють лише на DirectX 12, часто не запускаються.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Чи потрібна мені Rosetta 2?</summary>
+                <p class="faq-a">Так, а Corvus Arcade встановлює його за вас, якщо його немає. Перевірка при першому запуску також підтверджує наявність вбудованого рушія та достатню вільну пам'ять на диску.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Який Mac мені потрібен?</summary>
+                <p class="faq-a">Для роботи потрібен Mac з чіпом Apple Silicon (M1 або новіший) та macOS 15 або новіша версія. Підтримка Mac з процесорами Intel не передбачається. Battle.net та Overwatch вимагають приблизно 60 ГБ вільного місця.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">

@@ -146,6 +146,15 @@
         .alpha-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
+        .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+        .faq-q { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 15.5px; font-weight: 600; color: var(--text); }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; margin-left: auto; width: 8px; height: 8px; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary); transform: rotate(45deg); transition: transform .2s; flex: none; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); }
+        .faq-q:hover { color: var(--accent-light); }
+        .faq-a { margin: 0; padding: 0 20px 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+        .faq-item:not([open]) .faq-a { display: none; }
         .section-label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
         .section-title { text-align: center; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 52px;
             background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
@@ -436,6 +445,39 @@
         </div>
     </section>
     <!-- CHANGELOG:END -->
+
+    <section class="block" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Questions fréquentes</h2>
+            <div class="faq">
+            <details class="faq-item">
+                <summary class="faq-q">Overwatch fonctionne-t-il sur un Mac ?</summary>
+                <p class="faq-a">Oui, sur Apple Silicon. Corvus Arcade installe Battle.net et Overwatch dans un conteneur Windows isolé et les exécute via un moteur Wine 11 intégré avec D3DMetal d'Apple, de sorte qu'aucune licence Windows, Boot Camp ni machine virtuelle n'est nécessaire.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Puis-je exécuter des jeux Windows sur Apple Silicon sans CrossOver ?</summary>
+                <p class="faq-a">Oui. Le moteur Wine 11, DXMT et D3DMetal est inclus dans l'application, il n'y a donc pas besoin d'abonnement CrossOver, ni de Homebrew, ni de commandes Terminal. Téléchargez l'application et appuyez sur Lancer.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Corvus Arcade est-il gratuit ?</summary>
+                <p class="faq-a">Oui, c'est gratuit et ne nécessite aucun compte, aucune télémétrie ni aucun suivi. Il fonctionne entièrement sur votre Mac.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Quels jeux puis-je ajouter ?</summary>
+                <p class="faq-a">Tous les jeux Windows avec un installateur ou un fichier .exe, chacun dans son propre conteneur isolé. Overwatch est le titre sélectionné et éprouvé, et les installateurs de GOG sans DRM ont été testés. Les jeux avec anti-triche et les titres exclusifs à DirectX 12 ne fonctionneront souvent pas.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">Ai-je besoin de Rosetta 2 ?</summary>
+                <p class="faq-a">Oui, et Corvus Arcade l'installe pour vous s'il manque. Le contrôle système lors du premier lancement confirme également le moteur inclus et que vous disposez d'espace disque suffisant.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">De quel Mac ai-je besoin ?</summary>
+                <p class="faq-a">Sur un Mac Apple Silicon (M1 ou plus récent) avec macOS 15 ou ultérieur. Les Mac Intel ne sont pas pris en charge. Battle.net plus Overwatch nécessite environ 60 Go d'espace libre.</p>
+            </details>
+            </div>
+        </div>
+    </section>
 
     <section class="block">
         <div class="container">
