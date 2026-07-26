@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});</script>
+    <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade: Speel Windows-spellen op uw Apple Silicon Mac</title>
     <meta name="description" content="A free, native macOS launcher that runs Windows games on Apple Silicon with a bundled Wine 11, DXMT, and Apple D3DMetal engine. No CrossOver, no Terminal. Early alpha, tested with Battle.net, Overwatch and GOG installers.">
@@ -557,18 +557,41 @@
         var section=document.getElementById('corvus-carousel'); if(!section) return;
         var track=section.querySelector('.corvus-carousel__track'); if(!track) return;
         function slug(){ var e=section.getAttribute('data-current-slug'); if(e) return e.toLowerCase(); var s=location.pathname.split('/').filter(Boolean); return s.length?s[0].toLowerCase():''; }
-        function card(app){ var a=document.createElement('a'); a.className='corvus-carousel__card'; a.href=app.url; a.setAttribute('role','listitem');
+        // --- page-carousel v3: locale-aware -------------------------------
+        // Card copy comes from a per-locale sidecar so the shared manifest stays
+        // ~2 KB gzipped instead of carrying 32 locales to every page load.
+        var I18N=null;
+        function loc(){ return (document.documentElement.lang||'en'); }
+        function pick(app){ return (I18N&&I18N[app.slug])||{}; }
+        function ctaText(){
+            if(I18N&&I18N._ui&&I18N._ui.cta) return I18N._ui.cta;
+            var el=document.getElementById('corvus-carousel-cta');
+            return (el&&el.textContent.trim())||'Learn more';
+        }
+        // Only deep-link when the app SAYS it has that locale: several sites have
+        // no /i18n/ at all and others are partial, so appending blindly 404s.
+        function href(app){
+            var l=loc(); if(l==='en') return app.url;
+            var have=app.locales||[]; if(have.indexOf(l)<0) return app.url;
+            return app.url.replace(/\/$/,'')+'/i18n/'+l+'/';
+        }
+        function card(app){ var a=document.createElement('a'); a.className='corvus-carousel__card'; a.href=href(app); a.setAttribute('role','listitem');
+            var t=pick(app);
             var img=document.createElement('img'); img.className='corvus-carousel__card-icon'; img.src=app.icon; img.alt=''; img.loading='lazy'; img.width=56; img.height=56;
-            var tag=document.createElement('div'); tag.className='corvus-carousel__card-tagline'; tag.textContent=app.tagline||'';
+            var tag=document.createElement('div'); tag.className='corvus-carousel__card-tagline'; tag.textContent=t.tagline||app.tagline||'';
             var name=document.createElement('div'); name.className='corvus-carousel__card-name'; name.textContent=app.name;
-            var desc=document.createElement('p'); desc.className='corvus-carousel__card-desc'; desc.textContent=app.description||'';
-            var cta=document.createElement('span'); cta.className='corvus-carousel__card-cta'; cta.textContent='Learn more →';
+            var desc=document.createElement('p'); desc.className='corvus-carousel__card-desc'; desc.textContent=t.description||app.description||'';
+            var cta=document.createElement('span'); cta.className='corvus-carousel__card-cta'; cta.textContent=ctaText()+' \u2192';
             a.append(img,tag,name,desc,cta); return a; }
         function wire(){ var p=section.querySelector('.corvus-carousel__nav--prev'),n=section.querySelector('.corvus-carousel__nav--next'); if(!p||!n) return; var F=80; var step=function(){return Math.max(track.clientWidth*0.8,296);};
             p.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});}); n.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
             function sync(){ var s=track.scrollLeft<=4, e=track.scrollLeft+track.clientWidth>=track.scrollWidth-4; p.disabled=s; n.disabled=e; track.style.setProperty('--fade-l',s?'0px':F+'px'); track.style.setProperty('--fade-r',e?'0px':F+'px'); }
             track.addEventListener('scroll',sync,{passive:true}); window.addEventListener('resize',sync,{passive:true}); sync(); }
-        (window.__corvusAppsPromise||fetch(APPS,{cache:'default'}).then(function(r){return r.ok?r.json():null;})).then(function(data){
+        Promise.all([
+            window.__corvusAppsPromise||fetch(APPS,{cache:'default'}).then(function(r){return r.ok?r.json():null;}),
+            window.__corvusI18nPromise||Promise.resolve(null)
+        ]).then(function(res){
+            var data=res[0]; I18N=res[1];
             var apps=(data&&Array.isArray(data.apps))?data.apps:[]; var cur=slug(); var f=apps.filter(function(a){return (a.slug||'').toLowerCase()!==cur;});
             if(!f.length){section.style.display='none';return;} f.sort(function(a,b){return (b.featured?1:0)-(a.featured?1:0);});
             var frag=document.createDocumentFragment(); f.forEach(function(a){frag.appendChild(card(a));}); track.appendChild(frag); wire();
