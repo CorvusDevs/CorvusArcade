@@ -426,6 +426,10 @@
                 <li>内置的性能日志，方便后续轻松追踪卡顿问题。</li>
                 <li>一个可在需要时开启的 Metal FPS 和帧时间覆盖层。</li>
                 <li>在设置中清除着色器缓存以释放磁盘空间。</li>
+                <li>所有游戏的封面图，若游戏不在 Steam 上，则取自游戏程序本身。</li>
+                <li>将 Windows 程序拖放到库中以添加游戏。</li>
+                <li>修复容器以恢复缺失的字体并重新应用游戏的设置。</li>
+                <li>查看每个游戏使用的磁盘空间以及库中的总空间。</li>
                 <li>支持33种语言，且无需重启即可通过应用内切换器切换。</li>
                 <li>可一键安装的自动更新。</li>
                 <li>Rosetta 2 引擎、捆绑包及可用磁盘空间的初次运行检查。</li>
@@ -440,6 +444,16 @@
             <details class="changelog-box">
                 <summary class="changelog-summary">新功能</summary>
                 <div class="changelog">
+                <div class="release">
+                    <span class="release-ver">0.4.2</span>
+                    <ul class="changelog-list">
+                        <li><strong>每款游戏都有专属封面图</strong>现在，Steam 之外游戏将显示其程序自身的图标，并覆盖在匹配颜色的封面上，而不是使用普通占位符。</li>
+                        <li><strong>修复容器</strong>新增的“修复”选项可恢复缺失的字体并重新应用每个游戏的设置，修复空白菜单和文本问题，同时不会删除您已安装的任何内容。</li>
+                        <li><strong>拖入程序以添加游戏</strong>在任何位置拖放 Windows 程序，"添加游戏"表单将自动打开并预填好内容。</li>
+                        <li><strong>查看每款游戏使用的内容</strong>您的库现在会显示每个游戏占用的磁盘空间以及所有游戏的总空间。</li>
+                        <li><strong>DXMT 后端实现了更清晰的超分辨率</strong>MetalFX 选项现在可在 DXMT 后端生效，此前该选项在此处无效。</li>
+                    </ul>
+                </div>
                 <div class="release">
                     <span class="release-ver">0.4.0</span>
                     <ul class="changelog-list">
@@ -476,7 +490,7 @@
                 <div class="release">
                     <span class="release-ver">0.1.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Apple Silicon 上的守望先锋</strong>基于自包含的 Wine 11、DXMT 和 Apple 的 D3DMetal 运行，无需 CrossOver 或终端。</li>
+                        <li><strong>Apple Silicon 上的 Overwatch</strong>基于自包含的 Wine 11、DXMT 和 Apple 的 D3DMetal 运行，无需 CrossOver 或终端。</li>
                         <li><strong>自动更新</strong>Corvus Arcade 会自动更新，因此您始终拥有最新的测试版。</li>
                     </ul>
                 </div>

@@ -76,7 +76,7 @@ Corvus Arcade is a work in progress and is shared in the open so people can foll
 - **Live GPU and memory.** A GPU and memory gauge sits right next to Play, with a rolling graph while you play, so you can see how your Mac is holding up.
 - **Readiness checks with quick fixes.** The game page flags things like tight memory and offers a one-tap fix before you start.
 - **Your whole library at a glance.** A Home view shows each game with its live status, ready, playing, or needs setup.
-- **One-click Overwatch.** A curated setup creates a clean bottle, installs Battle.net, and launches straight toward a match.
+- **One-click Overwatch.** A curated setup creates a clean container, installs Battle.net, and launches straight toward a match.
 - **Your own engine, bundled.** Wine 11 with DXMT and Apple's D3DMetal ship inside the app. No CrossOver, no Homebrew, no terminal.
 - **Backend picker.** Choose DXMT (open-source Metal D3D11) or D3DMetal (Apple's toolkit, D3D11 and D3D12), globally or per game.
 - **GPTK 3 or GPTK 4.** Switch between the stable D3DMetal 3 and the newer D3DMetal 4 beta per game, with the framework swapped in at launch.
@@ -84,10 +84,13 @@ Corvus Arcade is a work in progress and is shared in the open so people can foll
 - **Frame-rate cap, MetalFX, and an FPS overlay.** Tune performance and heat, with a live frames-per-second readout when you want it.
 - **Per-game overrides.** Backend, GPTK version, window mode, and frame cap can all be set for a single game.
 - **First-run system check.** Confirms Rosetta 2, the bundled engine, and free disk space before you start, and installs Rosetta for you if needed.
-- **Real setup progress.** The Battle.net download shows a live progress bar with a forward-only time estimate.
-- **Bottle management.** Reset, delete, clear temporary files, see disk usage, and open the bottle folder from the game's page.
+- **Real setup progress.** Launcher downloads show a live progress bar with sizes and a forward-only time estimate.
+- **Cover art for every game.** Games that are not on Steam take their artwork from the game's own program, on a cover coloured to match.
+- **Repair a container.** Restores missing fonts and re-applies a game's settings, fixing blank menus and text without touching what you installed.
+- **See what each game uses.** The library shows the disk space per game and the total across your whole library.
+- **Container management.** Repair, reset, delete, clear temporary files, see disk usage, and open the container folder from the game's page.
 - **Stays out of the way.** Keeps the display awake while you play, hides on launch if you like, and tells you if a game crashed with one click to the log.
-- **Add your own games (experimental).** Point it at a Windows installer or `.exe`, and it builds a fresh bottle.
+- **Add your own games (experimental).** Point it at a Windows installer or `.exe`, and it builds a fresh container. You can also drag a program straight onto the library.
 - **Native and private.** SwiftUI throughout, no account, no telemetry.
 
 ## What makes Corvus Arcade different

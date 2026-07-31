@@ -426,6 +426,10 @@
                 <li>内蔵の性能ログで、後のスタッター追跡が容易になります。</li>
                 <li>Metal FPS とフレーム時間オーバーレイを、必要な時にオンにできる機能です。</li>
                 <li>設定でシェーダーキャッシュをクリアしてディスク容量を確保します。</li>
+                <li>Steam 以外の場合、ゲームのプログラムからカバーアートを取得します。</li>
+                <li>Windows プログラムをライブラリにドラッグしてゲームを追加します。</li>
+                <li>コンテナを修復して、フォントを復元し、ゲームの設定を再適用します。</li>
+                <li>各ゲームのディスク使用量とライブラリ全体の合計を確認できます。</li>
                 <li>33 の言語に対応し、アプリ内で切り替えることで再起動なしで適用されます。</li>
                 <li>ワンクリックでインストールできる自動更新。</li>
                 <li>Rosetta 2、バンドルされたエンジン、および空きディスク容量の最初の起動時チェック。</li>
@@ -440,6 +444,16 @@
             <details class="changelog-box">
                 <summary class="changelog-summary">新機能</summary>
                 <div class="changelog">
+                <div class="release">
+                    <span class="release-ver">0.4.2</span>
+                    <ul class="changelog-list">
+                        <li><strong>各ゲームに独自のアートワークを用意しました</strong>Steam 以外にないゲームは、単なるプレースホルダーではなく、対応するカバーの色に合わせたアイコンが表示されます。</li>
+                        <li><strong>コンテナを修復します</strong>新しい「修復」オプションにより、不足しているフォントを復元し、各ゲームの設定を再適用します。これにより、メニューやテキストが空白になっている問題が解決し、インストールしたデータはすべて保持されます。</li>
+                        <li><strong>ゲームを追加するには、プログラムをここにドラッグしてください</strong>Windows プログラムをライブラリの任意の場所にドロップすると、入力済みの「ゲーム追加」フォームが開きます。</li>
+                        <li><strong>各ゲームが使用しているものを確認できます</strong>ライブラリには、各ゲームのディスク使用量と、すべてのゲームの合計が表示されます。</li>
+                        <li><strong>DXMT バックエンドのシャープなアップスケーリング</strong>MetalFX オプションが、以前は何も機能しなかった DXMT バックエンドでも有効になりました。</li>
+                    </ul>
+                </div>
                 <div class="release">
                     <span class="release-ver">0.4.0</span>
                     <ul class="changelog-list">
@@ -476,7 +490,7 @@
                 <div class="release">
                     <span class="release-ver">0.1.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Apple シリコン用オーバーウォッチ</strong>独立した Wine 11、DXMT、Apple の D3DMetal を使用し、CrossOver やターミナルは不要です。</li>
+                        <li><strong>Apple シリコン上の Overwatch</strong>独立した Wine 11、DXMT、Apple の D3DMetal を使用し、CrossOver やターミナルは不要です。</li>
                         <li><strong>自動更新</strong>Corvus Arcade は常に最新の状態に保たれているため、最新のアルファ版を常に利用できます。</li>
                     </ul>
                 </div>
