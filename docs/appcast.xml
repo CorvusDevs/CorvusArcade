@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.4.3</title>
+            <pubDate>Fri, 31 Jul 2026 15:19:06 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Requires macOS 26 or later. Earlier versions could install the app but never actually run its graphics engine, so the requirement now matches reality.</li><li>The D3DMetal version picker shows which beta is bundled, and GPTK 4 is offered only on macOS 26.4 or later, where it can actually load.</li><li>Games that take their cover art from their own program now keep it, instead of rebuilding the artwork every time the library was opened.</li><li>A failed container setup now reports on the game it actually belongs to.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.4.3/CorvusArcade-0.4.3.zip" sparkle:version="12" sparkle:shortVersionString="0.4.3" sparkle:edSignature="+NWBuff2yN0kFz0S+aqCGps5AMS+bSa3TML3fGYsBC8nhW1AueJUKIsdsJhqWs6XT/x2v6In1qKZcW7UvBBQAw==" length="573412413" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.4.2</title>
             <pubDate>Fri, 31 Jul 2026 07:40:45 +0000</pubDate>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
