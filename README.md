@@ -9,7 +9,7 @@
 <p>
   <img src="https://img.shields.io/badge/status-alpha-E8B23C?style=flat-square" alt="Alpha status">
   <img src="https://img.shields.io/github/v/release/CorvusDevs/CorvusArcade?style=flat-square&color=6D5AE6&label=release" alt="Latest release">
-  <img src="https://img.shields.io/badge/macOS-15.0+-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS 15.0+">
+  <img src="https://img.shields.io/badge/macOS-26.0+-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS 26.0+">
   <img src="https://img.shields.io/badge/Apple%20Silicon-only-444?style=flat-square" alt="Apple Silicon only">
   <img src="https://img.shields.io/badge/price-free-4CAF50?style=flat-square" alt="Free">
 </p>
@@ -106,7 +106,7 @@ Corvus Arcade is a work in progress and is shared in the open so people can foll
 ## Requirements
 
 - Apple Silicon Mac (M1 or newer)
-- macOS 15 or later
+- macOS 26 or later (26.4 for the GPTK 4 backend)
 - Rosetta 2 (the app installs it for you if it is missing)
 - Around 60 GB free for a Battle.net + Overwatch install
 
