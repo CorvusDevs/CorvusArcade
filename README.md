@@ -2,12 +2,11 @@
 
 <img src="https://corvusdevs.github.io/CorvusArcade/icon.png?v=8" width="200" height="200" alt="Corvus Arcade icon">
 
-# Corvus Arcade <sub><img src="https://img.shields.io/badge/status-ALPHA-E8B23C?style=flat-square" alt="Alpha"></sub>
+# Corvus Arcade
 
 **Run Windows games on your Apple Silicon Mac**
 
 <p>
-  <img src="https://img.shields.io/badge/status-alpha-E8B23C?style=flat-square" alt="Alpha status">
   <img src="https://img.shields.io/github/v/release/CorvusDevs/CorvusArcade?style=flat-square&color=6D5AE6&label=release" alt="Latest release">
   <img src="https://img.shields.io/badge/macOS-26.0+-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS 26.0+">
   <img src="https://img.shields.io/badge/Apple%20Silicon-only-444?style=flat-square" alt="Apple Silicon only">
@@ -29,14 +28,14 @@
 
 ---
 
-> [!WARNING]
-> **Corvus Arcade is early alpha.** It has been tested with **Battle.net + Overwatch** and with DRM-free **GOG installers** on Apple Silicon. Other games and launchers are unproven and may not run at all. Expect rough edges, breakage between updates, and features that change or disappear. Use it for fun and experimentation, not as a dependable way to play.
+> [!NOTE]
+> **What runs today.** Battle.net + Overwatch, DRM-free **GOG installers**, and games that ship as a plain archive are tested and working on Apple Silicon. Games protected by anti-cheat will not run, and DirectX 12-only titles are still unproven. Corvus Arcade checks a game against a community anti-cheat database and tells you before you install.
 
 A game launcher that runs Windows games on Apple Silicon Macs, with no CrossOver subscription and no manual Wine setup. Corvus Arcade bundles its own redistributable engine, **Wine 11** with **DXMT** and Apple's **D3DMetal** (Game Porting Toolkit), and drives it from a native **SwiftUI** launcher. Pick a game, press Play. It is free, and it runs entirely on your Mac.
 
 <div align="center">
 
-<img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png" width="820" alt="Corvus Arcade game page showing Overwatch with a live performance readout and readiness checks">
+<img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png?v=050" width="820" alt="Corvus Arcade game page showing Overwatch with a live performance readout and readiness checks">
 
 <em>The game page: one-click Play next to a live performance readout, with readiness checks that fix issues before you play.</em>
 
@@ -55,7 +54,7 @@ A game launcher that runs Windows games on Apple Silicon Macs, with no CrossOver
 
 ## Contents
 
-- [Alpha status](#alpha-status)
+- [What runs today](#what-runs-today)
 - [Features](#features)
 - [What makes Corvus Arcade different](#what-makes-corvus-arcade-different)
 - [Requirements](#requirements)
@@ -63,13 +62,13 @@ A game launcher that runs Windows games on Apple Silicon Macs, with no CrossOver
 - [Privacy](#privacy)
 - [More from CorvusDevs](#more-from-corvusdevs)
 
-## Alpha status
+## What runs today
 
-Corvus Arcade is a work in progress and is shared in the open so people can follow along and try it.
+Corvus Arcade is developed in the open, and this is an honest account of what has been verified.
 
 - **Tested targets:** Battle.net + Overwatch on Apple Silicon, and a DRM-free GOG installer added through **Add Game** (Brotato), installed and launched end to end.
-- **Everything else is unproven.** Anti-cheat, DirectX 12-only titles, and most launchers may not work at all. Heavier GOG titles have not been tried.
-- **No guarantees.** Things will break between builds. There is no support commitment yet.
+- **Known not to work:** games with anti-cheat. DirectX 12-only titles and most launchers remain unproven. Heavier GOG titles have not been tried.
+- **Reporting:** issues and requests are welcome on GitHub.
 
 ## Features
 
@@ -92,6 +91,7 @@ Corvus Arcade is a work in progress and is shared in the open so people can foll
 - **Stays out of the way.** Keeps the display awake while you play, hides on launch if you like, and tells you if a game crashed with one click to the log.
 - **Add your own games (experimental).** Point it at a Windows installer or `.exe`, and it builds a fresh container. You can also drag a program straight onto the library.
 - **Native and private.** SwiftUI throughout, no account, no telemetry.
+- **Signed and notarized by Apple.** Every release carries an Apple Developer ID signature and is notarized, so macOS verifies it on open and never shows an unidentified-developer warning. The disk image is stapled, so that works offline too.
 
 ## What makes Corvus Arcade different
 

@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.5.0</title>
+            <pubDate>Wed, 05 Aug 2026 00:49:50 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Add a game straight from a zip or rar: Games that come as a compressed file with no installer now unpack on their own. Corvus Arcade finds the program inside and sets it up for you.</li><li>Check anti-cheat support before you install: Each game now shows whether its anti-cheat works on a Mac, so you know before you download instead of after.</li><li>Cover art and descriptions in your language: Cover art now comes straight from the store, so it stays current, and each game's description appears in the language you use Corvus Arcade in.</li><li>Use your own cover image: Right-click any game to choose your own cover or banner. You can restore the downloaded artwork at any time.</li><li>A hint when the other backend runs it better: When a game is known to run better on the other graphics backend, its page now says so and switches with one click.</li><li>Run games in a window: Games can now start windowed instead of taking over the whole screen.</li><li>Newer graphics engine: Corvus Arcade now ships Apple's latest Game Porting Toolkit, which improves compatibility and speed in many Direct3D games.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.5.0/CorvusArcade-0.5.0.zip" sparkle:version="13" sparkle:shortVersionString="0.5.0" sparkle:edSignature="ZVVNUZjSG3zj4/sRn/iFRLWAe23fN/d/hjJbO6HtUvSJsKN/XXMXXduyngYQbxYhlcZviYFJYx/PWkOudIPuDA==" length="573593783" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.4.3</title>
             <pubDate>Fri, 31 Jul 2026 15:19:06 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>

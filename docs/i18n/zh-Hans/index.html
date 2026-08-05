@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade：在 Apple Silicon Mac 上运行 Windows 游戏</title>
-    <meta name="description" content="A free, native macOS launcher that runs Windows games on Apple Silicon with a bundled Wine 11, DXMT, and Apple D3DMetal engine. No CrossOver, no Terminal. Early alpha, tested with Battle.net, Overwatch and GOG installers.">
+    <meta name="description" content="A free, native macOS launcher that runs Windows games on Apple Silicon with a bundled Wine 11, DXMT, and Apple D3DMetal engine. No CrossOver, no Terminal. Tested with Battle.net, Overwatch, GOG installers and archive releases.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="A free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine 11 + DXMT + D3DMetal engine, one-click setup. Early alpha, tested with Battle.net, Overwatch and GOG installers.">
+    <meta property="og:description" content="A free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine 11 + DXMT + D3DMetal engine, one-click setup. Tested with Battle.net, Overwatch, GOG installers and archive releases.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="Free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine + D3DMetal engine. Early alpha, tested with Overwatch and GOG games.">
+    <meta name="twitter:description" content="Free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine + D3DMetal engine. Tested with Overwatch, GOG games and archive releases.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -61,10 +61,10 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Corvus Arcade",
-        "description": "A free native macOS launcher that runs Windows games on Apple Silicon using a bundled Wine 11, DXMT, and Apple D3DMetal engine. Early alpha.",
+        "description": "A free native macOS launcher that runs Windows games on Apple Silicon using a bundled Wine 11, DXMT, and Apple D3DMetal engine.",
         "operatingSystem": "macOS 26.0+",
         "applicationCategory": "GameApplication",
-        "releaseNotes": "Early alpha. Tested with Battle.net, Overwatch and DRM-free GOG installers on Apple Silicon.",
+        "releaseNotes": "Tested with Battle.net, Overwatch, DRM-free GOG installers and archive releases on Apple Silicon.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Corvus Arcade" },
         "author": { "@type": "Organization", "name": "CorvusDevs", "url": "https://corvusdevs.github.io" }
     }
@@ -81,7 +81,7 @@
         :root {
             --bg: #0B0A12; --surface: #15141F; --surface-2: #1D1B2A; --border: #2A2740;
             --text: #F3F1F8; --text-secondary: #948DAA; --accent: #6D5AE6; --accent-light: #8B78FF;
-            --accent-dim: rgba(109, 90, 230, 0.12); --alpha: #E8B23C; --alpha-dim: rgba(232, 178, 60, 0.12);
+            --accent-dim: rgba(109, 90, 230, 0.12);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -118,11 +118,6 @@
             -webkit-text-fill-color: transparent; color: transparent;
             display: flex; justify-content: center; align-items: flex-start; gap: 14px; flex-wrap: wrap;
         }
-        .alpha-tag {
-            -webkit-text-fill-color: var(--alpha); color: var(--alpha);
-            font-size: 18px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-            border: 1.5px solid var(--alpha); border-radius: 8px; padding: 4px 10px; margin-top: 10px; background: var(--alpha-dim);
-        }
         .hero .subtitle { font-size: 19px; color: var(--text-secondary); max-width: 620px; margin: 0 auto 34px; font-weight: 400; }
         .hero-cta {
             display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px;
@@ -132,18 +127,19 @@
         }
         .hero-cta:hover { background: var(--accent-light); transform: translateY(-2px); }
         .hero-free { display: block; font-size: 14px; color: var(--text-secondary); margin-top: 16px; }
+        .hero-trust { display: block; font-size: 13px; color: var(--text-secondary); opacity: .8; margin-top: 6px; }
 
         .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
-        .alpha-banner {
+        .note-banner {
             max-width: 820px; margin: 64px auto 0; padding: 22px 26px;
-            background: var(--alpha-dim); border: 1px solid rgba(232,178,60,0.35); border-radius: 16px;
+            background: var(--accent-dim); border: 1px solid rgba(109,90,230,0.35); border-radius: 16px;
             display: flex; gap: 16px; align-items: flex-start;
         }
-        .alpha-banner svg { flex-shrink: 0; margin-top: 2px; }
-        .alpha-banner h3 { font-size: 16px; margin-bottom: 4px; color: var(--alpha); }
-        .alpha-banner p { font-size: 14.5px; color: var(--text-secondary); }
-        .alpha-banner strong { color: var(--text); }
+        .note-banner svg { flex-shrink: 0; margin-top: 2px; }
+        .note-banner h3 { font-size: 16px; margin-bottom: 4px; color: var(--accent-light); }
+        .note-banner p { font-size: 14.5px; color: var(--text-secondary); }
+        .note-banner strong { color: var(--text); }
 
         section.block { padding: 96px 0 0; }
         .faq { max-width: 760px; margin: 8px auto 0; display: grid; gap: 10px; }
@@ -167,14 +163,16 @@
         .gallery-item img { display: block; width: 100%; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
         .gallery > input:nth-of-type(1):checked ~ .gallery-stage .gallery-item:nth-of-type(1),
         .gallery > input:nth-of-type(2):checked ~ .gallery-stage .gallery-item:nth-of-type(2),
-        .gallery > input:nth-of-type(3):checked ~ .gallery-stage .gallery-item:nth-of-type(3) { display: block; }
-        .gallery-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+        .gallery > input:nth-of-type(3):checked ~ .gallery-stage .gallery-item:nth-of-type(3),
+        .gallery > input:nth-of-type(4):checked ~ .gallery-stage .gallery-item:nth-of-type(4) { display: block; }
+        .gallery-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
         .gallery-thumbs label { cursor: pointer; border-radius: 10px; overflow: hidden; border: 2px solid transparent; opacity: 0.55; transition: opacity .2s, border-color .2s; display: block; }
         .gallery-thumbs label:hover { opacity: 0.85; }
         .gallery-thumbs img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 10; }
         .gallery > input:nth-of-type(1):checked ~ .gallery-thumbs label:nth-of-type(1),
         .gallery > input:nth-of-type(2):checked ~ .gallery-thumbs label:nth-of-type(2),
-        .gallery > input:nth-of-type(3):checked ~ .gallery-thumbs label:nth-of-type(3) { opacity: 1; border-color: var(--accent); }
+        .gallery > input:nth-of-type(3):checked ~ .gallery-thumbs label:nth-of-type(3),
+        .gallery > input:nth-of-type(4):checked ~ .gallery-thumbs label:nth-of-type(4) { opacity: 1; border-color: var(--accent); }
         .gallery > input:focus-visible ~ .gallery-thumbs label { outline: 2px solid var(--accent-light); outline-offset: 2px; }
         .shot-cap { text-align: center; font-size: 13.5px; color: var(--text-secondary); margin-top: 12px; }
         .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -305,20 +303,21 @@
 
     <section class="hero">
         <img src="https://corvusdevs.github.io/CorvusArcade/icon.png" alt="Corvus Arcade" class="hero-icon">
-        <h1>Corvus Arcade <span class="alpha-tag">Alpha</span></h1>
+        <h1>Corvus Arcade</h1>
         <p class="subtitle">在 Apple Silicon Mac 上运行 Windows 游戏，使用自带引擎的原生启动器，集成 Wine 11、DXMT 及 Apple 的 D3DMetal，无需 CrossOver 或终端，选择游戏即可点击播放。</p>
         <a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="hero-cta">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             免费下载
         </a>
-        <span class="hero-free">免费 · macOS 26+ · 仅限 Apple Silicon</span>
+        <span class="hero-free">Free &middot; macOS 26+ &middot; Apple Silicon only</span>
+        <span class="hero-trust">由 Apple Developer ID 签名，并由 Apple 进行公证。</span>
     </section>
 
-    <div class="alpha-banner">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8B23C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    <div class="note-banner">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6D5AE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         <div>
-            <h3>早期测试版，测试不充分</h3>
-            <p>Corvus Arcade 已测试 Battle.net 和 Overwatch，以及无 DRM 的 GOG 安装程序。其他内容均未验证：反作弊游戏、仅限 DirectX 12 的标题以及大多数启动器可能无法运行。更新之间可能出现损坏问题。此版本仅供实验，不可保证稳定游玩。</p>
+            <h3>目前可运行的游戏</h3>
+            <p>Battle.net 和 Overwatch、免 DRM 的 GOG 安装包，以及以普通压缩包形式分发的游戏均已测试并确认可用。受反作弊保护的游戏无法运行，而仅支持 DirectX 12 的游戏目前尚未验证。Corvus Arcade 会在您安装前告知您哪些游戏可以运行，哪些不行。</p>
         </div>
     </div>
 
@@ -330,9 +329,10 @@
                 <input type="radio" name="ca-shot" id="ca-shot-1" checked>
                 <input type="radio" name="ca-shot" id="ca-shot-2">
                 <input type="radio" name="ca-shot" id="ca-shot-3">
+                <input type="radio" name="ca-shot" id="ca-shot-4">
                 <div class="gallery-stage">
                     <figure class="gallery-item">
-                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png" alt="Corvus Arcade launcher showing a game with live performance and per-game settings" loading="lazy">
+                        <img src="screenshots/launcher.png?v=050" alt="Corvus Arcade launcher showing a game with live performance and per-game settings" loading="lazy">
                         <figcaption class="shot-cap">您的本机 macOS 库</figcaption>
                     </figure>
                     <figure class="gallery-item">
@@ -343,11 +343,16 @@
                         <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/brotato.png" alt="Brotato, installed from a GOG installer, running in a macOS window through Corvus Arcade" loading="lazy">
                         <figcaption class="shot-cap">Brotato 已通过 GOG 安装程序直接安装。</figcaption>
                     </figure>
+                    <figure class="gallery-item">
+                        <img src="screenshots/howmanydudes.png" alt="How Many Dudes? running on Apple Silicon through Corvus Arcade, with the Metal overlay showing 92 FPS on the DXMT backend" loading="lazy">
+                        <figcaption class="shot-cap">《How Many Dudes?》直接从压缩包中解压，在 DXMT 后端下运行流畅，帧率高达 92 FPS。</figcaption>
+                    </figure>
                 </div>
                 <div class="gallery-thumbs">
-                    <label for="ca-shot-1" title="Your library, native to macOS"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png" alt="" loading="lazy"></label>
+                    <label for="ca-shot-1" title="Your library, native to macOS"><img src="screenshots/launcher.png?v=050" alt="" loading="lazy"></label>
                     <label for="ca-shot-2" title="Overwatch in a live match, running in a macOS window."><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/overwatch.png" alt="" loading="lazy"></label>
                     <label for="ca-shot-3" title="Brotato, installed straight from its GOG installer."><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/brotato.png" alt="" loading="lazy"></label>
+                    <label for="ca-shot-4" title="How Many Dudes?, unpacked straight from an archive and running at 92 FPS on the DXMT backend."><img src="screenshots/howmanydudes.png" alt="" loading="lazy"></label>
                 </div>
             </div>
         </div>
@@ -445,6 +450,18 @@
                 <summary class="changelog-summary">新功能</summary>
                 <div class="changelog">
                 <div class="release">
+                    <span class="release-ver">0.5.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>直接从 zip 或 rar 文件添加游戏</strong>现在，无需安装程序即可解压的压缩文件游戏将自动解压。Corvus Arcade 会自动查找内部程序并为您完成设置。</li>
+                        <li><strong>安装前请检查反作弊支持</strong>现在每个游戏都会显示其反作弊功能是否适用于 Mac，让您在下载前就能知晓，而无需等到下载后。</li>
+                        <li><strong>使用你的语言显示封面和简介</strong>封面图现在直接从商店获取，因此始终保持最新，并且每个游戏的描述都会显示为您在 Corvus Arcade 中使用的语言。</li>
+                        <li><strong>使用自己的封面图片</strong>右键点击任意游戏以选择自定义封面或横幅。您随时可以恢复下载的艺术作品。</li>
+                        <li><strong>当其他后端运行得更好时，会提供提示</strong>当游戏在另一个图形后端上运行得更好时，其页面现在会明确说明这一点，并且只需点击一次即可切换。</li>
+                        <li><strong>在窗口中运行游戏</strong>游戏现在可以以窗口模式启动，而不再独占整个屏幕。</li>
+                        <li><strong>更新的图形引擎</strong>Corvus Arcade 现已推出 Apple 最新的 Game Porting Toolkit，该工具可提升众多 Direct3D 游戏的兼容性与速度。</li>
+                    </ul>
+                </div>
+                <div class="release">
                     <span class="release-ver">0.4.2</span>
                     <ul class="changelog-list">
                         <li><strong>每款游戏都有专属封面图</strong>现在，Steam 之外游戏将显示其程序自身的图标，并覆盖在匹配颜色的封面上，而不是使用普通占位符。</li>
@@ -526,8 +543,12 @@
                 <p class="faq-a">是的，如果缺少该组件，Corvus Arcade 将为您安装。首次运行系统检查还会验证捆绑的引擎以及您是否有足够的可用磁盘空间。</p>
             </details>
             <details class="faq-item">
+                <summary class="faq-q">Corvus Arcade 安全吗？</summary>
+                <p class="faq-a">是的。每个版本均使用 Apple 开发者 ID 证书签名，并由 Apple 进行公证，Apple 会在发布前扫描其是否包含恶意软件。macOS 在您打开应用时会验证该签名，因此您不会收到“未识别的开发者”警告。磁盘映像也经过了盖章，因此即使离线也能通过检查。Corvus Arcade 不会收集任何数据，也无需创建账户。</p>
+            </details>
+            <details class="faq-item">
                 <summary class="faq-q">需要什么样的 Mac？</summary>
-                <p class="faq-a">Apple Silicon Mac（M1 或更新版本），运行 macOS 26 或更高版本。不支持 Intel Mac。Battle.net 和 Overwatch 需要大约 60 GB 的可用空间。</p>
+                <p class="faq-a">An Apple Silicon Mac, meaning M1 or newer, running macOS 26 or later. Intel Macs are not supported. Battle.net plus Overwatch needs roughly 60 GB of free space.</p>
             </details>
             </div>
         </div>
@@ -548,8 +569,8 @@
     </section>
 
     <section class="cta-final">
-        <h2>试用 Alpha</h2>
-        <p>免费、原生且私密，请知悉目前仍处于早期阶段。</p>
+        <h2>下载</h2>
+        <p>免费、原生且私密。无需账号、无需遥测，也无需配置。</p>
         <a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="hero-cta">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             下载 macOS 版本
