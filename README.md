@@ -81,6 +81,15 @@ Corvus Arcade is developed in the open, and this is an honest account of what ha
 - **GPTK 3 or GPTK 4.** Switch between the stable D3DMetal 3 and the newer D3DMetal 4 beta per game, with the framework swapped in at launch.
 - **Alt-tab friendly.** A windowed mode runs the game inside a Mac window so you can Cmd-Tab to other apps mid-game.
 - **Frame-rate cap, MetalFX, and an FPS overlay.** Tune performance and heat, with a live frames-per-second readout when you want it.
+- **Screenshots while you play.** A shortcut captures the game window, not the whole screen, and the shots live in a viewer on the game's page with a gallery and arrow keys.
+- **Eight colour themes.** Four dark and four light, chosen in Settings. The default is drawn from the app icon.
+- **Favourites, search, and sorting.** Pin games to the top of the library and the sidebar, search by name, and sort by last played, name or size.
+- **Your saves are protected.** Removing a game asks first, says how many save files are at stake, and offers to export them before anything is deleted.
+- **Alt reaches your games.** Windows games receive the Alt key, which macOS otherwise keeps for typing special characters.
+- **Rename any game.** Correct a name the store got wrong, or one taken from an archive filename.
+- **Export and restore.** Save your game list, preferences and per-game settings to one small file, and restore them on another Mac.
+- **Knows what a game renders with.** Reads the game's own binaries to report DirectX version and bitness, and warns when neither backend can run it.
+- **Desktop shortcuts.** Create a double-clickable launcher for any game; it resolves through Corvus Arcade so it never goes stale.
 - **Per-game overrides.** Backend, GPTK version, window mode, and frame cap can all be set for a single game.
 - **First-run system check.** Confirms Rosetta 2, the bundled engine, and free disk space before you start, and installs Rosetta for you if needed.
 - **Real setup progress.** Launcher downloads show a live progress bar with sizes and a forward-only time estimate.
