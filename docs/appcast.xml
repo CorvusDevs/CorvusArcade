@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.6.0</title>
+            <pubDate>Fri, 07 Aug 2026 21:11:42 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Take screenshots while you play: Press a shortcut during a game to capture its window, then browse the shots on the game's page in a viewer with a gallery and arrow keys.</li><li>Eight colour themes: Four dark and four light, chosen in Settings. The default is drawn from the app icon.</li><li>Favourites and search: Pin the games you play to the top of the library and the sidebar, search by name, and sort by last played, name or size.</li><li>Your saves are protected: Removing a game now asks first, says how many save files are at stake, and offers to export them before anything is deleted.</li><li>The Alt key reaches your games: Windows games can now receive Alt, which macOS previously kept for typing special characters. Games that bind Alt work without any setup.</li><li>Rename a game: Correct a name the store got wrong, or one taken from an archive filename.</li><li>Export your library: Save your game list, preferences and per-game settings to one small file, and restore them on another Mac.</li><li>DirectX 9 games are flagged: Corvus Arcade now reads what a game renders with and warns when neither graphics backend can run it, before you spend the download.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.6.0/CorvusArcade-0.6.0.zip" sparkle:version="14" sparkle:shortVersionString="0.6.0" sparkle:edSignature="Qw88aaqr3KOg2K3tT3GxtDTqzoIyUluAG9r28wmBA4TV1mp7tyWQOZMtldoDwDWNuLZ/e6i4fBtMa0OfANprDA==" length="573995670" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.5.0</title>
             <pubDate>Wed, 05 Aug 2026 00:49:50 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
