@@ -118,6 +118,7 @@ Corvus Arcade is developed in the open, and this is an honest account of what ha
 - macOS 26 or later (26.4 for the GPTK 4 backend)
 - Rosetta 2 (the app installs it for you if it is missing)
 - Around 60 GB free for a Battle.net + Overwatch install
+- Corvus Arcade checks a multi-part installer's files before anything runs, and says if one is missing or damaged.
 
 ## Built with
 

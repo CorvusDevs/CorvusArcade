@@ -55,6 +55,9 @@
     <link rel="alternate" hreflang="vi" href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">
+    <link rel="alternate" hreflang="ca" href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/">
+    <link rel="alternate" hreflang="hr" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
+    <link rel="alternate" hreflang="fr-CA" href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/">
     <link rel="alternate" hreflang="x-default" href="https://corvusdevs.github.io/CorvusArcade/">
     <script type="application/ld+json">
     {
@@ -298,7 +301,10 @@
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
-<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">İndir</a></div>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ca.svg" alt="" width="20" height="14" loading="lazy">Català</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hr.svg" alt="" width="20" height="14" loading="lazy">Hrvatski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr-CA.svg" alt="" width="20" height="14" loading="lazy">Français (Canada)</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">İndir</a></div>
     </nav>
 
     <section class="hero">
@@ -395,7 +401,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 8h4.2l1.3 1.3V14h-5.5z"/><path d="M10.8 8v2.2h2.1"/></svg></div>
-                    <h3>Kayıtlarınız güvende.</h3>
+                    <h3>Kayıtlarınız güvende</h3>
                     <p>Oyunu kaldırmak önce onay ister. Kayıt dosyaları sayılır ve silinmeden önce bunları dışa aktarma teklifi sunulur.</p>
                 </div>
                 <div class="feature-card">
@@ -446,6 +452,7 @@
                 <li>Mağaza veya arşiv dosya adında yanlış yazılan oyun adlarını yeniden adlandırın.</li>
                 <li>Oyunlarınızı, tercihlerinizi ve oyun başına ayarları bir dosyaya dışa aktarın, ardından başka bir Mac'te geri yükleyin.</li>
                 <li>İndirilecek oyunun, hiçbir arka uç tarafından sağlanmayan bir grafik özelliğine ihtiyacı olduğuna dair bir uyarı.</li>
+                <li>Corvus Arcade, çok parçalı bir yükleyicinin dosyalarını herhangi bir işlem başlatılmadan önce kontrol eder ve eksik veya bozuk bir dosya olup olmadığını bildirir.</li>
                 <li>Tek tıkla yükleyebileceğiniz otomatik güncellemeler.</li>
                 <li>Rosetta 2 (dahil edilen motor), bir ilk çalıştırma kontrolü ve boş disk alanı için.</li>
             </ul>
@@ -460,12 +467,23 @@
                 <summary class="changelog-summary">Yenilikler</summary>
                 <div class="changelog">
                 <div class="release">
+                    <span class="release-ver">0.7.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Birkaç bölümden oluşan bir oyunu yükleyin</strong>Point Corvus Arcade’e numaralandırılmış yükleyici dosyalarının bulunduğu bir klasörü gösterin; program dosyaları kontrol eder, eksik veya bozuk bir dosya olup olmadığını bildirir ve ardından yükleyiciyi çalıştırır.</li>
+                        <li><strong>Yükleyici penceresi artık başlatıcının arkasında açılmıyor</strong>Eskiden yükleyicinin kendi penceresi başlatıcının arkasında açılırdı, bu yüzden bir tıklama beklerken donmuş gibi görünürdü. Artık kendi kendine ön plana çıkıyor.</li>
+                        <li><strong>Yükleyici işlemi tamamlandığında oyununuz bulunacaktır</strong>Corvus Arcade artık tarama işlemini başlatmadan önce yükleyicinin kapanmasını bekliyor; böylece programı bulmanızı istemeden oyunu kendi başına algılıyor.</li>
+                        <li><strong>Yüklemeler artık yanlış sürücüde başarısız olmuyor</strong>Eskiden yükleyiciler, macOS’un izin vermediği bir konumu önerir ve ardından bir erişim hatası nedeniyle dururdu. Artık oyunun kendi konteyneri içindeki bir klasörden başlatılıyorlar.</li>
+                        <li><strong>Yükleme başarısız olduğunda bu mesaj görüntülenir</strong>Bir yükleyici erken durduğunda, Corvus Arcade kütüphanenizde boş bir oyun bırakmak yerine bunu bildirir.</li>
+                        <li><strong>Bir yüklemenin ne yaptığını görün</strong>Başlatıcı, ne kadarının yazıldığını gösterir, dosyanın açılma işleminin devam ettiğini bildirir ve birkaç dakika boyunca hiçbir şey olmadığında size haber verir.</li>
+                    </ul>
+                </div>
+                <div class="release">
                     <span class="release-ver">0.6.0</span>
                     <ul class="changelog-list">
                         <li><strong>Oyun oynarken ekran görüntüleri alın</strong>Oyun sırasında bir kısayol tuşuna basarak penceresini yakalayın, ardından galeri ve ok tuşlarıyla birlikte oyun sayfasındaki çekimleri görüntüleyicide gezinin.</li>
                         <li><strong>Sekiz renk teması</strong>Dört karanlık ve dört açık tema, Ayarlar'dan seçilir. Varsayılan tema, uygulama ikonundan alınır.</li>
                         <li><strong>Favoriler ve arama</strong>Oynadığınız oyunları kütüphane ve kenar çubuğunun en üstüne sabitleyin, adlara göre arayın ve son oynanan, ad veya boyuta göre sıralayın.</li>
-                        <li><strong>Kayıtlarınız güvende.</strong>Oyunu kaldırırken artık önce soru soruluyor, ne kadar kayıtlı dosyanın risk altında olduğu belirtiliyor ve silinmeden önce bunları dışa aktarma seçeneği sunuluyor.</li>
+                        <li><strong>Kayıtlarınız güvende</strong>Oyunu kaldırırken artık önce soru soruluyor, ne kadar kayıtlı dosyanın risk altında olduğu belirtiliyor ve silinmeden önce bunları dışa aktarma seçeneği sunuluyor.</li>
                         <li><strong>Alt tuşu oyunlarınıza ulaşır</strong>Windows oyunları artık macOS'te özel karakterler yazmak için ayrılmış olan Alt tuşunu kullanabilir. Alt tuşuna bağlanmış oyunlar herhangi bir ayar gerektirmeden çalışır.</li>
                         <li><strong>Oyunu yeniden adlandır</strong>Mağazanın yanlış yazdığı bir ismi düzeltin veya arşiv dosya adından alınmış bir ismi düzeltin.</li>
                         <li><strong>Kütüphanenizi Dışa Aktar</strong>Oyun listenizi, tercihlerinizi ve oyun bazlı ayarlarınızı tek bir küçük dosyaya kaydedin ve bunları başka bir Mac'te geri yükleyin.</li>

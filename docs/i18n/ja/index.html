@@ -55,6 +55,9 @@
     <link rel="alternate" hreflang="vi" href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">
+    <link rel="alternate" hreflang="ca" href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/">
+    <link rel="alternate" hreflang="hr" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
+    <link rel="alternate" hreflang="fr-CA" href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/">
     <link rel="alternate" hreflang="x-default" href="https://corvusdevs.github.io/CorvusArcade/">
     <script type="application/ld+json">
     {
@@ -298,7 +301,10 @@
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
-<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">ダウンロード</a></div>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ca.svg" alt="" width="20" height="14" loading="lazy">Català</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hr.svg" alt="" width="20" height="14" loading="lazy">Hrvatski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr-CA.svg" alt="" width="20" height="14" loading="lazy">Français (Canada)</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">ダウンロード</a></div>
     </nav>
 
     <section class="hero">
@@ -395,7 +401,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 8h4.2l1.3 1.3V14h-5.5z"/><path d="M10.8 8v2.2h2.1"/></svg></div>
-                    <h3>保存は保護されています</h3>
+                    <h3>セーブデータは保護されます</h3>
                     <p>ゲームの削除はまず確認を求めます。失われるセーブファイルの数をカウントし、削除前にエクスポートするかどうかを提案します。</p>
                 </div>
                 <div class="feature-card">
@@ -446,6 +452,7 @@
                 <li>名前の誤りを修正する（ストアまたはアーカイブファイル名が間違っている場合）</li>
                 <li>ゲーム、設定、および各ゲームの設定を 1 つのファイルにエクスポートし、別の Mac で復元します。</li>
                 <li>グラフィックス機能のバックエンドが両方に提供されていないゲームをダウンロードする前に表示される警告です。</li>
+                <li>Corvus Arcadeは、実行を開始する前に、複数パートからなるインストーラーのファイルを確認し、ファイルが欠落していたり破損していたりする場合にその旨を通知します。</li>
                 <li>ワンクリックでインストールできる自動更新。</li>
                 <li>Rosetta 2、バンドルされたエンジン、および空きディスク容量の最初の起動時チェック。</li>
             </ul>
@@ -460,12 +467,23 @@
                 <summary class="changelog-summary">新機能</summary>
                 <div class="changelog">
                 <div class="release">
+                    <span class="release-ver">0.7.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>複数のパートに分かれているゲームをインストールする</strong>Point Corvus Arcadeに、番号が振られたインストーラーファイルのフォルダを指定すると、それらをチェックし、欠落や破損がある場合はその旨を通知した上で、インストーラーを実行します。</li>
+                        <li><strong>インストーラーのウィンドウが、ランチャーの背後で開かなくなりました</strong>以前は、インストーラー独自のウィンドウがランチャーの背後で開かれていたため、クリックを待つ間、動作が固まっているように見えていました。現在は、自動的に最前面に表示されるようになりました。</li>
+                        <li><strong>インストーラーの処理が完了すると、ゲームが見つかります</strong>Corvus Arcadeは、インストーラーが終了するのを待ってから検索を行うようになったため、ユーザーにプログラムを探すよう求めることなく、自動的にゲームを検出するようになりました。</li>
+                        <li><strong>間違ったドライブへのインストールで失敗することがなくなりました</strong>以前は、インストーラーがmacOSで許可されない場所を指定し、アクセスエラーで処理が中断されることがありました。現在は、ゲーム自身のコンテナ内のフォルダから起動するようになっています。</li>
+                        <li><strong>インストールに失敗した場合は、その旨が表示されます</strong>インストーラーが途中で停止した場合、Corvus Arcadeはライブラリに空のゲームを残すのではなく、その旨を報告します。</li>
+                        <li><strong>インストール処理の状況を確認する</strong>このランチャーは、書き込みの進捗状況を表示し、まだ解凍中の場合はその旨を通知し、数分間何も変化がない場合はそのことを知らせてくれます。</li>
+                    </ul>
+                </div>
+                <div class="release">
                     <span class="release-ver">0.6.0</span>
                     <ul class="changelog-list">
                         <li><strong>プレイ中にスクリーンショットを撮影します</strong>ゲーム中のショートカットキーを押してウィンドウをキャプチャし、ギャラリーと矢印キー付きのビューアでゲームページ内のショットを閲覧できます。</li>
                         <li><strong>8 色のテーマ</strong>ダークテーマ 4 つとライトテーマ 4 つを設定から選べます。デフォルトはアプリアイコンから取られています。</li>
                         <li><strong>お気に入りと検索</strong>プレイ中のゲームをライブラリとサイドバーのトップにピン留めし、名称で検索、または最終プレイ順、名称、サイズ順でソートできます。</li>
-                        <li><strong>保存は保護されています</strong>ゲームの削除時に、まず確認を促し、保存データの数が表示され、削除前にエクスポートするかどうかを提案するようになりました。</li>
+                        <li><strong>セーブデータは保護されます</strong>ゲームの削除時に、まず確認を促し、保存データの数が表示され、削除前にエクスポートするかどうかを提案するようになりました。</li>
                         <li><strong>Alt キーがゲームに届きます</strong>Windows ゲームは、以前 macOS で特殊文字の入力に割り当てられていた Alt キーも使用できるようになりました。Alt キーを割り当てているゲームは、特別な設定なしで動作します。</li>
                         <li><strong>ゲーム名を変更</strong>ストアが取り違えた名前や、アーカイブのファイル名から取られた名前を修正できます。</li>
                         <li><strong>ライブラリを書き出します</strong>ゲームリスト、環境設定、ゲームごとの設定を 1 つの小さなファイルに保存し、別の Mac で復元できます。</li>

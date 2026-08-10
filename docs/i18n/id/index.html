@@ -55,6 +55,9 @@
     <link rel="alternate" hreflang="vi" href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">
+    <link rel="alternate" hreflang="ca" href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/">
+    <link rel="alternate" hreflang="hr" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
+    <link rel="alternate" hreflang="fr-CA" href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/">
     <link rel="alternate" hreflang="x-default" href="https://corvusdevs.github.io/CorvusArcade/">
     <script type="application/ld+json">
     {
@@ -298,7 +301,10 @@
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
-<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Unduh</a></div>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ca.svg" alt="" width="20" height="14" loading="lazy">Català</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hr.svg" alt="" width="20" height="14" loading="lazy">Hrvatski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr-CA.svg" alt="" width="20" height="14" loading="lazy">Français (Canada)</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Unduh</a></div>
     </nav>
 
     <section class="hero">
@@ -395,7 +401,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 8h4.2l1.3 1.3V14h-5.5z"/><path d="M10.8 8v2.2h2.1"/></svg></div>
-                    <h3>Penyimpanan Anda dilindungi</h3>
+                    <h3>Data simpanan Anda dilindungi</h3>
                     <p>Menghapus game meminta konfirmasi terlebih dahulu. Sistem menghitung file simpanan yang terpengaruh dan menawarkan untuk mengekspornya sebelum menghapus apa pun.</p>
                 </div>
                 <div class="feature-card">
@@ -446,6 +452,7 @@
                 <li>Ubah nama game jika nama game tersebut salah di toko atau dalam nama file arsip.</li>
                 <li>Ekspor game, preferensi, dan pengaturan per game ke satu file, lalu kembalikan di Mac lain.</li>
                 <li>Peringatan sebelum mengunduh game yang memerlukan fitur grafis yang tidak disediakan oleh backend manapun.</li>
+                <li>Corvus Arcade memeriksa berkas-berkas dari penginstal bertahap sebelum proses apa pun dijalankan, dan akan memberi tahu jika ada berkas yang hilang atau rusak.</li>
                 <li>Pembaruan otomatis yang dapat Anda pasang dengan satu klik.</li>
                 <li>Periksa pertama kali untuk Rosetta 2, mesin yang disertakan, dan ruang disk gratis.</li>
             </ul>
@@ -460,12 +467,23 @@
                 <summary class="changelog-summary">Apa yang Baru</summary>
                 <div class="changelog">
                 <div class="release">
+                    <span class="release-ver">0.7.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Instal game yang terdiri dari beberapa bagian</strong>Arahkan Point Corvus Arcade ke folder yang berisi berkas-berkas penginstal yang diberi nomor, lalu program ini akan memeriksanya; jika ada yang hilang atau rusak, program ini akan menjalankan penginstal tersebut.</li>
+                        <li><strong>Jendela penginstal tidak lagi terbuka di belakang peluncur</strong>Dulu, jendela program penginstal akan terbuka di belakang jendela peluncur, sehingga tampak seolah-olah macet saat menunggu klik. Kini, jendela tersebut muncul di depan dengan sendirinya.</li>
+                        <li><strong>Game Anda akan terdeteksi setelah proses pemasangan selesai</strong>Corvus Arcade kini menunggu hingga program penginstal ditutup sebelum melakukan pencarian, sehingga aplikasi ini dapat mendeteksi game tersebut secara otomatis, alih-alih meminta Anda untuk mencari programnya.</li>
+                        <li><strong>Proses pemasangan tidak lagi gagal karena dilakukan pada drive yang salah</strong>Dulu, program penginstal menawarkan lokasi yang tidak diizinkan oleh macOS, lalu berhenti karena kesalahan akses. Kini, program tersebut berjalan di dalam folder yang berada di dalam kontainer game itu sendiri.</li>
+                        <li><strong>Pemasangan yang gagal menunjukkan hal itu</strong>Jika sebuah game berhenti sebelum selesai, Corvus Arcade akan melaporkannya, alih-alih membiarkan game kosong di perpustakaan Anda.</li>
+                        <li><strong>Lihat apa yang sedang dilakukan oleh sebuah instalasi</strong>Launcher ini menampilkan seberapa banyak data yang telah ditulis, memberi tahu saat proses ekstraksi masih berlangsung, dan memberi tahu Anda jika tidak ada aktivitas selama beberapa menit.</li>
+                    </ul>
+                </div>
+                <div class="release">
                     <span class="release-ver">0.6.0</span>
                     <ul class="changelog-list">
                         <li><strong>Ambil tangkapan layar saat bermain</strong>Tekan pintasan selama permainan untuk menangkap jendelanya, lalu jelajahi bidikan di halaman permainan menggunakan pemutar dengan galeri dan tombol panah.</li>
                         <li><strong>Delapan tema warna</strong>Empat tema gelap dan empat tema terang, dipilih di Pengaturan. Default diambil dari ikon aplikasi.</li>
                         <li><strong>Favorit dan pencarian</strong>Sematkan game yang Anda mainkan di bagian atas pustaka game dan bilah sisi, cari berdasarkan nama, dan urutkan berdasarkan terakhir dimainkan, nama, atau ukuran.</li>
-                        <li><strong>Penyimpanan Anda dilindungi</strong>Menghapus game sekarang akan meminta konfirmasi terlebih dahulu, memberitahu berapa banyak file penyimpanan yang berisiko, dan menawarkan untuk mengekspornya sebelum ada yang dihapus.</li>
+                        <li><strong>Data simpanan Anda dilindungi</strong>Menghapus game sekarang akan meminta konfirmasi terlebih dahulu, memberitahu berapa banyak file penyimpanan yang berisiko, dan menawarkan untuk mengekspornya sebelum ada yang dihapus.</li>
                         <li><strong>Tombol Alt sampai ke game Anda</strong>Game Windows kini dapat menerima Alt, yang sebelumnya dipertahankan oleh macOS untuk mengetik karakter khusus. Game yang mengikat Alt berfungsi tanpa perlu pengaturan apa pun.</li>
                         <li><strong>Ubah nama game</strong>Perbaiki nama yang salah di toko, atau nama yang diambil dari nama file arsip.</li>
                         <li><strong>Ekspor pustaka game Anda</strong>Simpan daftar game, preferensi, dan pengaturan per game ke dalam satu file kecil, lalu kembalikan mereka di Mac lainnya.</li>
@@ -489,7 +507,7 @@
                     <ul class="changelog-list">
                         <li><strong>Sekarang memerlukan macOS 26</strong>Versi sebelumnya dapat menginstal Corvus Arcade tetapi tidak pernah menjalankan mesin grafisnya, sehingga persyaratan sekarang sesuai dengan apa yang benar-benar berfungsi.</li>
                         <li><strong>Lihat versi beta D3DMetal yang disertakan</strong>Pemilih backend grafis menamai beta yang disertakan, dan GPTK 4 hanya tersedia pada macOS 26.4 atau lebih baru, di mana ia dapat dimuat.</li>
-                        <li><strong>Cover art dari program dipertahankan.</strong>Permainan yang mengambil gambar sampul dari program mereka sendiri kini menyimpannya, alih-alih membangun ulang setiap kali pustaka game dibuka.</li>
+                        <li><strong>Cover art dari program dipertahankan.</strong>Permainan yang mengambil gambar sampul dari program mereka sendiri kini menyimpannya, alih-alih membangun ulang setiap kali perpustakaan dibuka.</li>
                         <li><strong>Kesalahan pengaturan wadah yang lebih jelas</strong>Konfigurasi wadah yang gagal kini melaporkan pada game yang sebenarnya dimilikinya.</li>
                     </ul>
                 </div>
@@ -498,7 +516,7 @@
                     <ul class="changelog-list">
                         <li><strong>Setiap game memiliki seni sendiri</strong>Game yang tidak ada di Steam kini menampilkan ikon dari programnya sendiri pada sampul berwarna yang sesuai, bukan placeholder polos.</li>
                         <li><strong>Perbaiki kontainer</strong>Opsi Perbaikan baru memulihkan font yang hilang dan menerapkan kembali pengaturan setiap game, memperbaiki menu dan teks kosong tanpa menghapus apa pun yang Anda instalasi.</li>
-                        <li><strong>Seret program ke dalam untuk menambahkan game</strong>Tarik program Windows ke mana saja di pustaka game Anda, dan formulir Tambah Game akan terbuka sudah terisi.</li>
+                        <li><strong>Seret program ke dalam untuk menambahkan game</strong>Tarik program Windows ke mana saja di perpustakaan Anda, dan formulir Tambah Game akan terbuka sudah terisi.</li>
                         <li><strong>Lihat apa yang digunakan setiap game</strong>Perpustakaan Anda sekarang menampilkan ruang disk yang digunakan setiap game dan totalnya di seluruh game.</li>
                         <li><strong>Upscaling yang lebih tajam pada backend DXMT</strong>Opsi MetalFX kini berlaku pada backend DXMT, di mana sebelumnya tidak melakukan apa pun.</li>
                     </ul>

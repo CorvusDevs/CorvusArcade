@@ -55,6 +55,9 @@
     <link rel="alternate" hreflang="vi" href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">
+    <link rel="alternate" hreflang="ca" href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/">
+    <link rel="alternate" hreflang="hr" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
+    <link rel="alternate" hreflang="fr-CA" href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/">
     <link rel="alternate" hreflang="x-default" href="https://corvusdevs.github.io/CorvusArcade/">
     <script type="application/ld+json">
     {
@@ -364,7 +367,10 @@
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
-<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Download</a></div>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ca.svg" alt="" width="20" height="14" loading="lazy">Català</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hr.svg" alt="" width="20" height="14" loading="lazy">Hrvatski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr-CA.svg" alt="" width="20" height="14" loading="lazy">Français (Canada)</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Download</a></div>
     </nav>
 
     <section class="hero">
@@ -512,6 +518,7 @@
                 <li>Rename any game whose name the store or an archive filename got wrong.</li>
                 <li>Export your games, preferences and per-game settings to one file, then restore them on another Mac.</li>
                 <li>A warning before you download a game that needs a graphics feature neither backend provides.</li>
+                <li>Corvus Arcade checks a multi-part installer's files before anything runs, and says if one is missing or damaged.</li>
                 <li>Automatic updates you can install in one click.</li>
                 <li>A first-run check for Rosetta 2, the bundled engine, and free disk space.</li>
             </ul>
@@ -525,6 +532,17 @@
             <details class="changelog-box">
                 <summary class="changelog-summary">What's New</summary>
                 <div class="changelog">
+                <div class="release">
+                    <span class="release-ver">0.7.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Install a game that comes in several parts</strong>Point Corvus Arcade at a folder of numbered installer files and it checks them, says if one is missing or damaged, then runs the installer.</li>
+                        <li><strong>The installer window no longer opens behind the launcher</strong>An installer&#x27;s own window used to open behind the launcher, so it looked stuck while it waited for a click. It now comes to the front by itself.</li>
+                        <li><strong>Your game is found once the installer finishes</strong>Corvus Arcade now waits for the installer to close before it looks, so it picks the game up on its own instead of asking you to find the program.</li>
+                        <li><strong>Installs no longer fail on the wrong drive</strong>Installers used to offer a location macOS will not allow, then stop with an access error. They now start in a folder inside the game&#x27;s own container.</li>
+                        <li><strong>A failed install says so</strong>When an installer stops early, Corvus Arcade reports it instead of leaving an empty game in your library.</li>
+                        <li><strong>See what an install is doing</strong>The launcher shows how much has been written, says when it is still unpacking, and tells you when nothing has happened for a few minutes.</li>
+                    </ul>
+                </div>
                 <div class="release">
                     <span class="release-ver">0.6.0</span>
                     <ul class="changelog-list">

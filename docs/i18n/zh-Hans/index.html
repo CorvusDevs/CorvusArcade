@@ -55,6 +55,9 @@
     <link rel="alternate" hreflang="vi" href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">
+    <link rel="alternate" hreflang="ca" href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/">
+    <link rel="alternate" hreflang="hr" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
+    <link rel="alternate" hreflang="fr-CA" href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/">
     <link rel="alternate" hreflang="x-default" href="https://corvusdevs.github.io/CorvusArcade/">
     <script type="application/ld+json">
     {
@@ -298,7 +301,10 @@
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/" class="active"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
-<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">下载</a></div>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ca.svg" alt="" width="20" height="14" loading="lazy">Català</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hr.svg" alt="" width="20" height="14" loading="lazy">Hrvatski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr-CA.svg" alt="" width="20" height="14" loading="lazy">Français (Canada)</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">下载</a></div>
     </nav>
 
     <section class="hero">
@@ -446,6 +452,7 @@
                 <li>重命名商店或存档文件名中名称有误的任何游戏。</li>
                 <li>将游戏、偏好设置及每款游戏的设置导出到一个文件中，然后在另一台 Mac 上恢复它们。</li>
                 <li>下载需要图形功能的游戏前会出现警告，因为两个后端均不支持该功能。</li>
+                <li>Corvus Arcade 会在任何程序运行之前检查多部分安装程序的文件，并提示是否有文件缺失或损坏。</li>
                 <li>可一键安装的自动更新。</li>
                 <li>Rosetta 2 引擎、捆绑包及可用磁盘空间的初次运行检查。</li>
             </ul>
@@ -459,6 +466,17 @@
             <details class="changelog-box">
                 <summary class="changelog-summary">新功能</summary>
                 <div class="changelog">
+                <div class="release">
+                    <span class="release-ver">0.7.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>安装一个由多个部分组成的游戏</strong>将 Point Corvus Arcade 指向一个包含编号安装程序文件的文件夹，它会检查这些文件，如果发现有文件缺失或损坏，则会运行安装程序。</li>
+                        <li><strong>安装程序窗口不再在启动器后面打开</strong>以前，安装程序的窗口会打开在启动器后面，因此在等待用户点击时看起来像是卡住了。现在，它会自动浮动到最前面。</li>
+                        <li><strong>安装程序完成后，即可找到您的游戏</strong>Corvus Arcade 现在会等待安装程序关闭后再进行检测，因此它会自动识别游戏，而不会要求您手动查找该程序。</li>
+                        <li><strong>安装不再因选错磁盘而失败</strong>以前，安装程序会指定一个 macOS 不允许的安装位置，随后因访问错误而停止。现在，它们会在游戏自身容器内的一个文件夹中启动。</li>
+                        <li><strong>安装失败时会显示该提示</strong>当安装程序提前停止时，Corvus Arcade 会报告此情况，而不是在您的游戏库中留下一个空的游戏条目。</li>
+                        <li><strong>查看安装程序正在执行什么操作</strong>该启动器会显示已写入的数据量，提示正在解压，并在几分钟内没有发生任何变化时通知你。</li>
+                    </ul>
+                </div>
                 <div class="release">
                     <span class="release-ver">0.6.0</span>
                     <ul class="changelog-list">

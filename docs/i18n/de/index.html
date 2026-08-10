@@ -55,6 +55,9 @@
     <link rel="alternate" hreflang="vi" href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">
+    <link rel="alternate" hreflang="ca" href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/">
+    <link rel="alternate" hreflang="hr" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
+    <link rel="alternate" hreflang="fr-CA" href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/">
     <link rel="alternate" hreflang="x-default" href="https://corvusdevs.github.io/CorvusArcade/">
     <script type="application/ld+json">
     {
@@ -298,7 +301,10 @@
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
-<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Herunterladen</a></div>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ca.svg" alt="" width="20" height="14" loading="lazy">Català</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hr.svg" alt="" width="20" height="14" loading="lazy">Hrvatski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr-CA.svg" alt="" width="20" height="14" loading="lazy">Français (Canada)</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Herunterladen</a></div>
     </nav>
 
     <section class="hero">
@@ -395,7 +401,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 8h4.2l1.3 1.3V14h-5.5z"/><path d="M10.8 8v2.2h2.1"/></svg></div>
-                    <h3>Ihre Speichersätze sind geschützt.</h3>
+                    <h3>Ihre Speicherstände sind geschützt.</h3>
                     <p>Das Entfernen eines Spiels wird zuerst abgefragt. Die Speicherverzeichnisse werden gezählt, und ein Export wird angeboten, bevor etwas gelöscht wird.</p>
                 </div>
                 <div class="feature-card">
@@ -446,6 +452,7 @@
                 <li>Benennen Sie jedes Spiel neu, dessen Name im Store oder in einem Archivdateinamen falsch angegeben wurde.</li>
                 <li>Exportieren Sie Ihre Spiele, Einstellungen und pro-Spiel-Einstellungen in eine Datei, um sie später auf einem anderen Mac wiederherzustellen.</li>
                 <li>Warnung: Das Spiel benötigt eine Grafikfunktion, die keines der beiden Backends unterstützt.</li>
+                <li>Corvus Arcade überprüft die Dateien eines mehrteiligen Installationsprogramms, bevor irgendetwas ausgeführt wird, und meldet, falls eine Datei fehlt oder beschädigt ist.</li>
                 <li>Automatische Updates, die Sie mit einem Klick installieren können.</li>
                 <li>Eine erste Überprüfung für Rosetta 2, den beiliegenden Engine, und den freien Speicherplatz.</li>
             </ul>
@@ -460,12 +467,23 @@
                 <summary class="changelog-summary">Neuigkeiten</summary>
                 <div class="changelog">
                 <div class="release">
+                    <span class="release-ver">0.7.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Ein Spiel installieren, das aus mehreren Teilen besteht</strong>Point Corvus Arcade wird auf einen Ordner mit nummerierten Installationsdateien verwiesen, überprüft diese, meldet, falls eine Datei fehlt oder beschädigt ist, und führt anschließend das Installationsprogramm aus.</li>
+                        <li><strong>Das Installationsfenster wird nicht mehr hinter dem Launcher geöffnet</strong>Früher öffnete sich das Fenster des Installationsprogramms hinter dem Launcher, sodass es so aussah, als würde es hängen bleiben, während es auf einen Klick wartete. Jetzt rückt es von selbst in den Vordergrund.</li>
+                        <li><strong>Sobald das Installationsprogramm abgeschlossen ist, wird Ihr Spiel angezeigt.</strong>Corvus Arcade wartet nun, bis das Installationsprogramm geschlossen ist, bevor es nach dem Spiel sucht. So erkennt es das Spiel automatisch, anstatt dich aufzufordern, das Programm selbst zu suchen.</li>
+                        <li><strong>Die Installation schlägt nicht mehr auf dem falschen Laufwerk fehl</strong>Früher haben Installationsprogramme einen Speicherort vorgeschlagen, den macOS nicht zulässt, und sind dann mit einem Zugriffsfehler abgestürzt. Jetzt starten sie in einem Ordner innerhalb des spielseigenen Containers.</li>
+                        <li><strong>Eine fehlgeschlagene Installation zeigt dies an</strong>Wenn ein Installationsvorgang vorzeitig abgebrochen wird, meldet Corvus Arcade dies, anstatt ein leeres Spiel in Ihrer Bibliothek zu hinterlassen.</li>
+                        <li><strong>Sehen Sie, was eine Installation gerade macht</strong>Der Launcher zeigt an, wie viel bereits geschrieben wurde, informiert darüber, wenn noch entpackt wird, und weist darauf hin, wenn seit einigen Minuten nichts mehr passiert ist.</li>
+                    </ul>
+                </div>
+                <div class="release">
                     <span class="release-ver">0.6.0</span>
                     <ul class="changelog-list">
                         <li><strong>Machen Sie Screenshots, während Sie spielen</strong>Drücken Sie während eines Spiels eine Tastenkombination, um sein Fenster einzufangen, und durchsuchen Sie danach die Aufnahmen auf der Seite des Spiels in einem Viewer mit Galerie und Pfeiltasten.</li>
                         <li><strong>Acht Farbthemen</strong>Vier dunkle und vier helle Themen, die in den Einstellungen ausgewählt werden können. Das Standardthema wird aus dem App-Symbol abgeleitet.</li>
                         <li><strong>Favoriten und Suche</strong>Heften Sie die Spiele, die Sie spielen, oben an die Bibliothek und die Seitenleiste, suchen Sie nach Namen und sortieren Sie nach zuletzt gespielt, Name oder Größe.</li>
-                        <li><strong>Ihre Speichersätze sind geschützt.</strong>Das Entfernen eines Spiels fragt jetzt zuerst nach, nennt die Zahl der betroffenen Spielstände und bietet an, sie vor dem Löschen zu exportieren.</li>
+                        <li><strong>Ihre Speicherstände sind geschützt.</strong>Das Entfernen eines Spiels fragt jetzt zuerst nach, nennt die Zahl der betroffenen Spielstände und bietet an, sie vor dem Löschen zu exportieren.</li>
                         <li><strong>Die Alt-Taste erreicht Ihre Spiele</strong>Windows-Spiele können nun Alt empfangen, was auf macOS zuvor für die Eingabe spezieller Zeichen reserviert war. Spiele, die Alt binden, funktionieren ohne jegliche Einrichtung.</li>
                         <li><strong>Spiel umbenennen</strong>Korrigieren Sie einen falschen Namen, den der Store verwendet, oder einen Namen, der aus einem Archivdateinamen übernommen wurde.</li>
                         <li><strong>Bibliothek exportieren</strong>Speichern Sie Ihre Spiel-Liste, Einstellungen und pro-Spiel-Konfigurationen in einer einzigen kleinen Datei und stellen Sie diese auf einem anderen Mac wieder her.</li>

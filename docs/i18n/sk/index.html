@@ -55,6 +55,9 @@
     <link rel="alternate" hreflang="vi" href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">
+    <link rel="alternate" hreflang="ca" href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/">
+    <link rel="alternate" hreflang="hr" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
+    <link rel="alternate" hreflang="fr-CA" href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/">
     <link rel="alternate" hreflang="x-default" href="https://corvusdevs.github.io/CorvusArcade/">
     <script type="application/ld+json">
     {
@@ -298,7 +301,10 @@
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
-<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Sťahovanie</a></div>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ca.svg" alt="" width="20" height="14" loading="lazy">Català</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hr.svg" alt="" width="20" height="14" loading="lazy">Hrvatski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr-CA.svg" alt="" width="20" height="14" loading="lazy">Français (Canada)</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Sťahovanie</a></div>
     </nav>
 
     <section class="hero">
@@ -395,7 +401,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 8h4.2l1.3 1.3V14h-5.5z"/><path d="M10.8 8v2.2h2.1"/></svg></div>
-                    <h3>Vaše zálohy sú chránené</h3>
+                    <h3>Vaše uložené pozície sú chránené</h3>
                     <p>Odstránenie hry sa najprv potvrdí. Počíta sa počet súborov s uloženými dátami a ponúkne ich exportovať pred akýmkoľvek odstránením.</p>
                 </div>
                 <div class="feature-card">
@@ -446,6 +452,7 @@
                 <li>Premenujte hru, ktorú obchod alebo názov súboru v archíve označil nesprávne.</li>
                 <li>Exportujte svoje hry, preferencie a nastavenia pre jednotlivé hry do jedného súboru, neskôr ich obnovte na inom Mac.</li>
                 <li>Varovanie pred stiahnutím hry, ktorá vyžaduje grafickú funkciu, ktorú žiadne z backendov nepodporuje.</li>
+                <li>Program Corvus Arcade skontroluje súbory viacdielneho inštalačného balíka ešte pred spustením a upozorní, ak niektorý z nich chýba alebo je poškodený.</li>
                 <li>Automatické aktualizácie, ktoré môžete nainštalovať jedným kliknutím.</li>
                 <li>Prvá kontrola pri prvom spustení pre Rosettu 2, zabalený engine a voľné miesto na disku.</li>
             </ul>
@@ -460,12 +467,23 @@
                 <summary class="changelog-summary">Novinky</summary>
                 <div class="changelog">
                 <div class="release">
+                    <span class="release-ver">0.7.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Nainštalujte hru, ktorá sa skladá z viacerých častí</strong>Nastavte program Point Corvus Arcade tak, aby smeroval na priečinok s očíslovanými inštalačnými súbormi, a ten ich skontroluje; ak zistí, že niektorý chýba alebo je poškodený, spustí inštalátor.</li>
+                        <li><strong>Okno inštalátora sa už neotvára za spúšťačom</strong>Vlastné okno inštalačného programu sa predtým otváralo za spúšťačom, takže to vyzeralo, ako keby sa zaseklo, kým čakalo na kliknutie. Teraz sa samo presunie do popredia.</li>
+                        <li><strong>Vaša hra sa nájde hneď po dokončení inštalácie</strong>Corvus Arcade teraz počká, kým sa inštalačný program zatvorí, a až potom začne vyhľadávať, takže hru nájde sám, namiesto toho, aby vás požiadal, aby ste program našli vy.</li>
+                        <li><strong>Inštalácia už nekončí neúspechom v dôsledku výberu nesprávneho disku</strong>Inštalačné programy predtým navrhovali umiestnenie, ktoré systém macOS nepovoľuje, a následne sa zastavili s chybou prístupu. Teraz sa spúšťajú v priečinku vnútri vlastného kontajnera hry.</li>
+                        <li><strong>O tom svedčí neúspešná inštalácia</strong>Ak sa inštalácia preruší predčasne, Corvus Arcade to nahlási, namiesto toho, aby vo vašej knižnici zostala prázdna hra.</li>
+                        <li><strong>Zistiť, čo práve robí inštalácia</strong>Spúšťač zobrazuje, koľko sa už zapísalo, informuje o tom, kedy prebieha rozbaľovanie, a upozorní vás, ak sa niekoľko minút nič nedeje.</li>
+                    </ul>
+                </div>
+                <div class="release">
                     <span class="release-ver">0.6.0</span>
                     <ul class="changelog-list">
                         <li><strong>Počas hry robte snímky obrazovky</strong>Stlačte skratku počas hry na zachytanie jej okna, následne prezerajte snímky na stránke hry v prehliadači s galériou a šípovými klávesami.</li>
                         <li><strong>Osem farebných tém</strong>Štyri tmavé a štyri svetlé, na výber v Nastaveniach. Predvolená vychádza z ikony aplikácie.</li>
                         <li><strong>Obľúbené a vyhľadávanie</strong>Pripnajte si hry, ktoré hrajete, na vrch knižnice a bočného panela, vyhľadávajte podľa názvu a zoradíte podľa poslednej hry, názvu alebo veľkosti.</li>
-                        <li><strong>Vaše zálohy sú chránené</strong>Pri odstraňovaní hry sa teraz najprv vyžaduje potvrdenie, uvádza sa, koľko súborov s úlohami je ohrozených a ponúka sa ich export pred akýmkoľvek vymazaním.</li>
+                        <li><strong>Vaše uložené pozície sú chránené</strong>Pri odstraňovaní hry sa teraz najprv vyžaduje potvrdenie, uvádza sa, koľko súborov s úlohami je ohrozených a ponúka sa ich export pred akýmkoľvek vymazaním.</li>
                         <li><strong>Kláves Alt sa dostane do vašich hier</strong>Hry pre Windows teraz môžu prijímať Alt, ktoré macOS predtým ponechalo pre zadanie špeciálnych znakov. Hry, ktoré majú Alt viazaný, fungujú bez akejkoľvek konfigurácie.</li>
                         <li><strong>Premenovať hru</strong>Opravte názov, ktorý obchod určil nesprávne, alebo názov prevzatý z názvu archívu.</li>
                         <li><strong>Exportovať knižnicu</strong>Uložte zoznam hier, predvoľby a nastavenia jednotlivých hier do jedného malého súboru a obnovte ich na inom Macu.</li>

@@ -55,6 +55,9 @@
     <link rel="alternate" hreflang="vi" href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">
+    <link rel="alternate" hreflang="ca" href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/">
+    <link rel="alternate" hreflang="hr" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
+    <link rel="alternate" hreflang="fr-CA" href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/">
     <link rel="alternate" hreflang="x-default" href="https://corvusdevs.github.io/CorvusArcade/">
     <script type="application/ld+json">
     {
@@ -298,7 +301,10 @@
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
-<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Hämta</a></div>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ca.svg" alt="" width="20" height="14" loading="lazy">Català</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hr.svg" alt="" width="20" height="14" loading="lazy">Hrvatski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr-CA.svg" alt="" width="20" height="14" loading="lazy">Français (Canada)</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">Hämta</a></div>
     </nav>
 
     <section class="hero">
@@ -395,7 +401,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 8h4.2l1.3 1.3V14h-5.5z"/><path d="M10.8 8v2.2h2.1"/></svg></div>
-                    <h3>Dina spar är skyddade</h3>
+                    <h3>Dina sparfiler är skyddade</h3>
                     <p>Vid borttagning av ett spel frågas först. Antalet sparfiler som är på spel räknas och det erbjuds att exportera dem innan något tas bort.</p>
                 </div>
                 <div class="feature-card">
@@ -446,6 +452,7 @@
                 <li>Byt namn på spel vars namn i butiken eller i ett arkivnamn är fel.</li>
                 <li>Exportera dina spel, inställningar och per-spelsinställningar till en fil, och återställ sedan dem på en annan Mac.</li>
                 <li>En varning innan du laddar ner ett spel som kräver en grafisk funktion som ingen backend tillhandahåller.</li>
+                <li>Corvus Arcade kontrollerar filerna i ett installationsprogram som består av flera delar innan något körs, och meddelar om någon fil saknas eller är skadad.</li>
                 <li>Automatiska uppdateringar som du kan installera med ett klick.</li>
                 <li>En första kontroll för Rosetta 2, den medföljande motor, och ledig diskutrymme.</li>
             </ul>
@@ -460,12 +467,23 @@
                 <summary class="changelog-summary">Nyheter</summary>
                 <div class="changelog">
                 <div class="release">
+                    <span class="release-ver">0.7.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>Installera ett spel som består av flera delar</strong>Point Corvus Arcade pekar på en mapp med numrerade installationsfiler och kontrollerar dem; programmet meddelar om någon fil saknas eller är skadad och kör sedan installationsprogrammet.</li>
+                        <li><strong>Installationsfönstret öppnas inte längre bakom startprogrammet</strong>Tidigare öppnades installationsprogrammets eget fönster bakom startprogrammet, vilket gjorde att det såg ut som om det hade hängt sig medan det väntade på ett klick. Nu kommer det automatiskt fram i förgrunden.</li>
+                        <li><strong>Spelet dyker upp så snart installationsprogrammet är klart</strong>Corvus Arcade väntar nu på att installationsprogrammet ska stängas innan det söker efter spelet, så att det hittar spelet på egen hand istället för att be dig att leta reda på programmet.</li>
+                        <li><strong>Installationerna misslyckas inte längre på fel enhet</strong>Tidigare angav installationsprogrammen en plats som macOS inte tillåter, varefter de avbröts med ett åtkomstfel. Nu startar de i en mapp inuti spelets egen behållare.</li>
+                        <li><strong>Ett misslyckat installationsförsök visar just det</strong>När en installatör avbryts i förtid rapporterar Corvus Arcade detta istället för att lämna ett tomt spel i ditt bibliotek.</li>
+                        <li><strong>Se vad en installation gör</strong>Startprogrammet visar hur mycket som har skrivits, meddelar när det fortfarande pågår med att packa upp filer och varnar dig när ingenting har hänt på några minuter.</li>
+                    </ul>
+                </div>
+                <div class="release">
                     <span class="release-ver">0.6.0</span>
                     <ul class="changelog-list">
                         <li><strong>Ta skärmbilder medan du spelar</strong>Tryck på en kortkommando under ett spel för att fånga dess fönster, och bläddra sedan bland bilderna på spelets sida i en visare med galleri och piltangenter.</li>
                         <li><strong>Åtta färgteman</strong>Fyra mörka och fyra ljusa, valda i Inställningar. Standardinställningen hämtas från appikonen.</li>
                         <li><strong>Favoriter och sök</strong>Fäst spelen du spelar högst upp i biblioteket och sidofältet, sök på namn och sortera efter senast spelad, namn eller storlek.</li>
-                        <li><strong>Dina spar är skyddade</strong>Att ta bort ett spel frågar nu först, anger hur många sparfiler som står på spel och erbjuder att exportera dem innan något raderas.</li>
+                        <li><strong>Dina sparfiler är skyddade</strong>Att ta bort ett spel frågar nu först, anger hur många sparfiler som står på spel och erbjuder att exportera dem innan något raderas.</li>
                         <li><strong>Alt-tangenten når fram till dina spel</strong>Windows-spel kan nu få Alt, vilket macOS tidigare behöll för att skriva in specialtecken. Spel som binder Alt fungerar utan någon konfiguration.</li>
                         <li><strong>Byt namn på ett spel</strong>Rätta ett namn som butiken har felaktigt identifierat, eller ett som hämtats från en arkivfilnamn.</li>
                         <li><strong>Exportera biblioteket</strong>Spara din spellista, inställningar och per-spelkonfiguration till en liten fil, och återställ dem på en annan Mac.</li>

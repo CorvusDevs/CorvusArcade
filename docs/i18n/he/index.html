@@ -55,6 +55,9 @@
     <link rel="alternate" hreflang="vi" href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/">
+    <link rel="alternate" hreflang="ca" href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/">
+    <link rel="alternate" hreflang="hr" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
+    <link rel="alternate" hreflang="fr-CA" href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/">
     <link rel="alternate" hreflang="x-default" href="https://corvusdevs.github.io/CorvusArcade/">
     <script type="application/ld+json">
     {
@@ -298,7 +301,10 @@
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/uk/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/uk.svg" alt="" width="20" height="14" loading="lazy">Українська</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/vi/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/vi.svg" alt="" width="20" height="14" loading="lazy">Tiếng Việt</a>
 <a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hans.svg" alt="" width="20" height="14" loading="lazy">简体中文</a>
-<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">הורדה</a></div>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hant/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/zh-Hant.svg" alt="" width="20" height="14" loading="lazy">繁體中文</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/ca/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/ca.svg" alt="" width="20" height="14" loading="lazy">Català</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/hr.svg" alt="" width="20" height="14" loading="lazy">Hrvatski</a>
+<a href="https://corvusdevs.github.io/CorvusArcade/i18n/fr-CA/"><img src="https://corvusdevs.github.io/CorvusArcade/flags/fr-CA.svg" alt="" width="20" height="14" loading="lazy">Français (Canada)</a></div></div><a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest" class="nav-cta">הורדה</a></div>
     </nav>
 
     <section class="hero">
@@ -395,7 +401,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B78FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 8h4.2l1.3 1.3V14h-5.5z"/><path d="M10.8 8v2.2h2.1"/></svg></div>
-                    <h3>השמירות שלך מוגנות</h3>
+                    <h3>קובצי השמירה שלך מוגנים</h3>
                     <p>ההסרה של משחק מבקשת תחילה. היא מונה את קבצי ההצלה שעל סכנה ומציעה לייצא אותם לפני שכל דבר נמחק.</p>
                 </div>
                 <div class="feature-card">
@@ -446,6 +452,7 @@
                 <li>שנה את שם המשחק ששמו שוהה על ידי החנות או קובץ הארכיון.</li>
                 <li>ייצא את המשחקים, ההעדפות וההגדרות לכל משחק לקובץ אחד, ולאחר מכן שחזר אותם במחשב Mac אחר.</li>
                 <li>אזהרה לפני הוראת המשחק, שדורש תכונת גרפיקה שאף אחת מאחורי המנועים לא מספקת.</li>
+                <li>Corvus Arcade בודק את הקבצים של מתקין רב-חלקים לפני שההתקנה מתחילה, ומודיע אם קובץ כלשהו חסר או פגום.</li>
                 <li>עדכוני אוטומטיים שניתן להתקין בלחיצה אחת.</li>
                 <li>בדיקת הפעלה ראשונה עבור Rosetta 2, המנוע המשובץ, וזיכרון דיסק פנוי.</li>
             </ul>
@@ -460,12 +467,23 @@
                 <summary class="changelog-summary">חדש</summary>
                 <div class="changelog">
                 <div class="release">
+                    <span class="release-ver">0.7.0</span>
+                    <ul class="changelog-list">
+                        <li><strong>התקן משחק המורכב מכמה חלקים</strong>Point Corvus Arcade מכוון לתיקייה של קבצי התקנה ממוספרים, בודק אותם, מציין אם קובץ כלשהו חסר או פגום, ואז מפעיל את תוכנית ההתקנה.</li>
+                        <li><strong>חלון ההתקנה כבר לא נפתח מאחורי תוכנת ההפעלה</strong>בעבר, חלון ההתקנה היה נפתח מאחורי תוכנת ההפעלה, ולכן נראה היה כאילו הוא תקוע בזמן שהמתין ללחיצה. כעת הוא עולה לקדמת המסך מעצמו.</li>
+                        <li><strong>המשחק שלך יופיע ברגע שהתקנה תסתיים</strong>Corvus Arcade ממתינה כעת לסגירת תוכנת ההתקנה לפני שהיא מתחילה לחפש, כך שהיא מאתרת את המשחק בעצמה במקום לבקש ממך לאתר את התוכנה.</li>
+                        <li><strong>ההתקנות כבר לא נכשלות בכונן הלא נכון</strong>בעבר, תוכנות ההתקנה היו מציעות מיקום ש-macOS לא מאפשר, ואז היו נעצרות בשל שגיאת גישה. כעת הן מתחילות בתיקייה הנמצאת בתוך הקונטיינר של המשחק עצמו.</li>
+                        <li><strong>התקנה שנכשלה מציינת זאת</strong>כאשר מתקין מפסיק את פעולתו בטרם עת, Corvus Arcade מדווח על כך במקום להשאיר משחק ריק בספרייה שלך.</li>
+                        <li><strong>לראות מה ההתקנה עושה</strong>תוכנת ההפעלה מציגה את כמות הנתונים שנכתבה, מודיעה כאשר התהליך עדיין מתבצע, ומעדכנת אותך כאשר לא חלה כל פעילות במשך מספר דקות.</li>
+                    </ul>
+                </div>
+                <div class="release">
                     <span class="release-ver">0.6.0</span>
                     <ul class="changelog-list">
                         <li><strong>צלמו מסך בזמן שאתם משחקים</strong>לחצו על מקש קיצורי דרך במהלך משחק כדי לצלם את חלון המשחק, ולאחר מכן גלו את הצילומים בעמוד המשחק באמצעות צופה המציג גלריה עם מקשי החץ.</li>
                         <li><strong>שמונה ערכות צבע</strong>ארבעה כהים וארבעה בהירים, שנבחרו בהגדרות. ברירת המחדל נגזרת מהאייקון של האפליקציה.</li>
                         <li><strong>מועדפים וחיפוש</strong>הצמידו את המשחקים שאתם משחקים לראש הספרייה ולסרגל הצד, חפשו לפי שם, ומיינו לפי משחק אחרון, שם או גודל.</li>
-                        <li><strong>השמירות שלך מוגנות</strong>הסרת משחק שואלת עכשיו תחילה, מציינת כמה קובצי שמירה בסכנה, ומציעה לייצא אותם לפני שנמחק דבר.</li>
+                        <li><strong>קובצי השמירה שלך מוגנים</strong>הסרת משחק שואלת עכשיו תחילה, מציינת כמה קובצי שמירה בסכנה, ומציעה לייצא אותם לפני שנמחק דבר.</li>
                         <li><strong>מקש Alt מגיע למשחקים שלך</strong>משחקי Windows עכשיו יכולים לקבל Alt, בעוד ש-macOS שמרו אותו בעבר להקלדת תווים מיוחדים. משחקים המגדירים Alt עובדים ללא צורך בהגדרה מראש.</li>
                         <li><strong>שינוי שם של משחק</strong>תקנו את השם שהחנות טעו בו, או שנקרא כך מתוך שם קובץ בארכיון.</li>
                         <li><strong>ייצוא הספרייה שלך</strong>שמרו את רשימת המשחקים, ההעדפות וההגדרות של כל משחק לקובץ קטן אחד, ושחזרו אותם ב-Mac אחר.</li>
