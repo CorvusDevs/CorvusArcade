@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.7.0</title>
+            <pubDate>Mon, 10 Aug 2026 20:10:25 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Install a game that comes in several parts: Point Corvus Arcade at a folder of numbered installer files and it checks them, says if one is missing or damaged, then runs the installer.</li><li>The installer window no longer opens behind the launcher: An installer's own window used to open behind the launcher, so it looked stuck while it waited for a click. It now comes to the front by itself.</li><li>Your game is found once the installer finishes: Corvus Arcade now waits for the installer to close before it looks, so it picks the game up on its own instead of asking you to find the program.</li><li>Installs no longer fail on the wrong drive: Installers used to offer a location macOS will not allow, then stop with an access error. They now start in a folder inside the game's own container.</li><li>A failed install says so: When an installer stops early, Corvus Arcade reports it instead of leaving an empty game in your library.</li><li>See what an install is doing: The launcher shows how much has been written, says when it is still unpacking, and tells you when nothing has happened for a few minutes.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.7.0/CorvusArcade-0.7.0.zip" sparkle:version="15" sparkle:shortVersionString="0.7.0" sparkle:edSignature="UNHUSWv4hrsr8iIXyksWsx2u/o/ATGKcf8y4TeZHkdUO1LgvT7TwxneuFlLnJeBDJt/JfXfyLzHqCKw916HNDQ==" length="574170774" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.6.0</title>
             <pubDate>Fri, 07 Aug 2026 21:11:42 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
