@@ -28,9 +28,6 @@
 
 ---
 
-> [!NOTE]
-> **What runs today.** Battle.net + Overwatch, DRM-free **GOG installers**, and games that ship as a plain archive are tested and working on Apple Silicon. Games protected by anti-cheat will not run, and DirectX 12-only titles are still unproven. Corvus Arcade checks a game against a community anti-cheat database and tells you before you install.
-
 A game launcher that runs Windows games on Apple Silicon Macs, with no CrossOver subscription and no manual Wine setup. Corvus Arcade bundles its own redistributable engine, **Wine 11** with **DXMT** and Apple's **D3DMetal** (Game Porting Toolkit), and drives it from a native **SwiftUI** launcher. Pick a game, press Play. It is free, and it runs entirely on your Mac.
 
 <div align="center">
@@ -59,21 +56,12 @@ A game launcher that runs Windows games on Apple Silicon Macs, with no CrossOver
 
 ## Contents
 
-- [What runs today](#what-runs-today)
 - [Features](#features)
 - [What makes Corvus Arcade different](#what-makes-corvus-arcade-different)
 - [Requirements](#requirements)
 - [Built with](#built-with)
 - [Privacy](#privacy)
 - [More from CorvusDevs](#more-from-corvusdevs)
-
-## What runs today
-
-Corvus Arcade is developed in the open, and this is an honest account of what has been verified.
-
-- **Tested targets:** Battle.net + Overwatch on Apple Silicon, and a DRM-free GOG installer added through **Add Game** (Brotato), installed and launched end to end.
-- **Known not to work:** games with anti-cheat. DirectX 12-only titles and most launchers remain unproven. Heavier GOG titles have not been tried.
-- **Reporting:** issues and requests are welcome on GitHub.
 
 ## Features
 
