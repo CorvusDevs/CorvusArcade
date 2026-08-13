@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade: Windows-pelit Apple Silicon -Mac-koneellasi</title>
-    <meta name="description" content="A free, native macOS launcher that runs Windows games on Apple Silicon with a bundled Wine 11, DXMT, and Apple D3DMetal engine. No CrossOver, no Terminal. Tested with Battle.net, Overwatch, GOG installers and archive releases.">
+    <meta name="description" content="Käytä Windows-pelejä Apple Silicon -pohjaisilla Mac-tietokoneilla ilmaisella natiivisella käynnistysohjelmalla, joka sisältää Wine 11:n, DXMT:n ja D3DMetalin. Ei CrossOveria, Homebrewia tai terminaalia.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/i18n/fi/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/i18n/fi/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="A free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine 11 + DXMT + D3DMetal engine, one-click setup. Tested with Battle.net, Overwatch, GOG installers and archive releases.">
+    <meta property="og:description" content="Käytä Windows-pelejä Apple Silicon -pohjaisilla Mac-tietokoneilla ilmaisella natiivisella käynnistysohjelmalla, joka sisältää Wine 11:n, DXMT:n ja D3DMetalin. Ei CrossOveria, Homebrewia tai terminaalia.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="Free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine + D3DMetal engine. Tested with Overwatch, GOG games and archive releases.">
+    <meta name="twitter:description" content="Käytä Windows-pelejä Apple Silicon -pohjaisilla Mac-tietokoneilla ilmaisella natiivisella käynnistysohjelmalla, joka sisältää Wine 11:n, DXMT:n ja D3DMetalin. Ei CrossOveria, Homebrewia tai terminaalia.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -64,7 +64,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Corvus Arcade",
-        "description": "A free native macOS launcher that runs Windows games on Apple Silicon using a bundled Wine 11, DXMT, and Apple D3DMetal engine.",
+        "description": "Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal.",
         "operatingSystem": "macOS 26.0+",
         "applicationCategory": "GameApplication",
         "releaseNotes": "Tested with Battle.net, Overwatch, DRM-free GOG installers and archive releases on Apple Silicon.",
@@ -243,6 +243,9 @@
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
+        @media (max-width: 520px) {
+            .nav-cta { display: none; }
+        }
 
         .nav-right { display: flex; align-items: center; gap: 14px; }
         .lang-wrap { position: relative; flex-shrink: 0; }
@@ -312,7 +315,7 @@
     <section class="block" id="games">
         <div class="container">
             <div class="section-label">Toiminnassa</div>
-            <h2 class="section-title">Käynnistinyö, ei työkalupaketti</h2>
+            <h2 class="section-title">Oma kirjastosi, macOS</h2>
             <div class="gallery">
                 <input type="radio" name="ca-shot" id="ca-shot-1" checked>
                 <input type="radio" name="ca-shot" id="ca-shot-2">
@@ -320,27 +323,27 @@
                 <input type="radio" name="ca-shot" id="ca-shot-4">
                 <div class="gallery-stage">
                     <figure class="gallery-item">
-                        <img src="screenshots/launcher.png?v=080" alt="Corvus Arcade 0.8.0 showing Overwatch, compatibility checks, screenshots, and live system readiness" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.webp?v=080" alt="Corvus Arcade 0.8.0 showing Overwatch, compatibility checks, screenshots, and live system readiness" width="1400" height="950">
                         <figcaption class="shot-cap">Oma kirjastosi, macOS</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="screenshots/quick-launch.png?v=080" alt="Quick Launch searching games and launcher actions" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/quick-launch.webp?v=080" alt="Quick Launch searching games and launcher actions" width="1400" height="950" loading="lazy">
                         <figcaption class="shot-cap">Pikakäynnistys</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="screenshots/game-tools.png?v=080" alt="Per-game settings with Save Data Vault and Container Snapshots" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/game-tools.webp?v=080" alt="Per-game settings with Save Data Vault and Container Snapshots" width="1400" height="950" loading="lazy">
                         <figcaption class="shot-cap">Tallennuksesi ovat suojattuja</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="screenshots/light-theme.png?v=080" alt="Corvus Arcade game page using the Linen light theme" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/light-theme.webp?v=080" alt="Corvus Arcade game page using the Linen light theme" width="1400" height="950" loading="lazy">
                         <figcaption class="shot-cap">Kahdeksan väriteemaa</figcaption>
                     </figure>
                 </div>
                 <div class="gallery-thumbs">
-                    <label for="ca-shot-1" title="Your library, native to macOS"><img src="screenshots/launcher.png?v=080" alt="" loading="lazy"></label>
-                    <label for="ca-shot-2" title="Quick Launch"><img src="screenshots/quick-launch.png?v=080" alt="" loading="lazy"></label>
-                    <label for="ca-shot-3" title="Your saves are protected"><img src="screenshots/game-tools.png?v=080" alt="" loading="lazy"></label>
-                    <label for="ca-shot-4" title="Eight colour themes"><img src="screenshots/light-theme.png?v=080" alt="" loading="lazy"></label>
+                    <label for="ca-shot-1" title="Your library, native to macOS"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/launcher.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
+                    <label for="ca-shot-2" title="Quick Launch"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/quick-launch.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
+                    <label for="ca-shot-3" title="Your saves are protected"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/game-tools.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
+                    <label for="ca-shot-4" title="Eight colour themes"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/light-theme.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
                 </div>
             </div>
         </div>
@@ -401,46 +404,6 @@
         </div>
     </section>
 
-    <section class="block">
-        <div class="container">
-            <div class="section-label">Kaikki sisältyy</div>
-            <h2 class="section-title">Kaikki ominaisuudet</h2>
-            <ul class="feature-list">
-                <li>Yhden napsautuksen Overwatch-asetus puhtaassa kontissa, Battle.netissä ja käynnistyksessä, ilman mitään konfiguroitavaa.</li>
-                <li>Lisää Windows-peli, joka saa oman erillisen säiliönsä.</li>
-                <li>Asentaa GOG:n tai muun Windows-asentimen ohjelman, ja löytää pelin ohjelman puolestasi.</li>
-                <li>Yhteensidottu Wine 11, DXMT- ja Apple D3DMetal-moottori ilman CrossOveria, Homebrewä tai Terminaalia.</li>
-                <li>Pelikohtainen grafiikka, jossa käytetään DXMT:ia tai D3DMetalia, GPTK 3:ta tai GPTK 4:ää sekä MetalFX-yksinkertaistamista.</li>
-                <li>Pelikohtainen näytötila, resoluutio, grafiikan laatu ja kehyksien lukumäärän rajoitus.</li>
-                <li>Ikkunamoodi, jossa voit vaihtaa  kesken ottelun.</li>
-                <li>Elävä GPU-, muistin ja vaihdinlukema, jossa on liukuvan graafin näkymä pelatessasi.</li>
-                <li>Valmiustarkistukset, jotka merkitsevät ongelmia ja korjaavat ne yhdellä napautuksella.</li>
-                <li>Muistivarojen varoitus, jossa näytetään suljettavat sovellukset 16 GB:n Macissa.</li>
-                <li>Vapauttaa muistia automaattisesti sulkeutumalla pelin käynnistimen, kun se on käynnistynyt.</li>
-                <li>Sisäänrakennettu suorituskykyloki, jolla myöhemmin on helppo seurata huojuksia.</li>
-                <li>Metal FPS- ja kestoajan päälle/päältä kytkettävä päällekkäiskirjoitus, jota voit käyttää silloin kun haluat.</li>
-                <li>Tyhjennä shader-välimuisti Asetuksista vapauttamaan levytilaa.</li>
-                <li>Kaikkien pelien kannet, otettu pelin omasta ohjelmasta, jos se ei ole Steamissa.</li>
-                <li>Vedä Windows-ohjelma kirjastoon lisätäksesi pelin.</li>
-                <li>Korjaa säiliö palauttaaksesi puuttuvat fontit ja ottaaksesi pelin asetukset uudelleen käyttöön.</li>
-                <li>Katso, kuinka paljon levytilaa jokainen peli käyttää, ja kokonaismäärä koko kirjastossasi.</li>
-                <li>Kolmikymmentäkolmea kieltä, joiden kielen vaihtaminen sovelluksen sisäisellä vaihtimella on mahdollista ilman uudelleenkäynnistystä.</li>
-                <li>Peliruudun otteita, jotka on otettu pikanäppäimellä ja näytetään sisäänrakennetussa katselijassa.</li>
-                <li>Kahta väriteemaa, neljä tummaa ja neljä vaaleaa, joista oletusarvoinen otetaan sovellikon kuvasta.</li>
-                <li>Favoriitit, jotka kiinnittävät pelin pelilistan ja sivupalkin yläosaan.</li>
-                <li>Etsi nimen mukaan ja lajittele viimeksi soitetun, nimen tai koon mukaan.</li>
-                <li>Tallennussuoja: ennen pelin poistamista sen tallennustiedostot lasketaan ja niitä voidaan viedä.</li>
-                <li>Alt-ohjelma on nyt saatavilla peleissäsi. macOS pidätti aiemmin sen erillisenä erityismerkkien kirjoittamiseen.</li>
-                <li>Nimeä uudelleen peli, jonka nimi oli väärin kaupassa tai arkistotiedoston nimessä.</li>
-                <li>Vieä pelisi, asetukset ja pelikohtaiset asetukset yhdeksi tiedostoksi ja palauta ne toisella Macilla.</li>
-                <li>Varoitus lataa peliä, joka vaatii grafiikkaominaisuuden, jota ei kumpikaan backend tueta.</li>
-                <li>Corvus Arcade tarkistaa moniosaisen asennusohjelman tiedostot ennen kuin mitään suoritetaan ja ilmoittaa, jos jokin tiedosto puuttuu tai on vioittunut.</li>
-                <li>Automaattiset päivitykset, jotka voit asentaa yhdellä klikkauksella.</li>
-                <li>Rosetta 2 -moottorin, mukautetun moottorin ja vapaan levytilan ensimmäisen käynnistystarkistuksen suorittaminen.</li>
-            </ul>
-        </div>
-    </section>
-
     <!-- CHANGELOG:START -->
     <section class="block" id="whats-new">
         <div class="container">
@@ -458,108 +421,7 @@
                         <li><strong>Tunnisteet</strong>Lisää tunnisteita, kuten Co-op, Rentouttava, Valmis tai Perhe. Erota tunnisteet toisistaan pilkuilla.</li>
                     </ul>
                 </div>
-                <div class="release">
-                    <span class="release-ver">0.7.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Asenna peli, joka koostuu useista osista</strong>Point Corvus Arcade -ohjelma etsii numeroitujen asennustiedostojen kansiosta tiedostot, tarkistaa ne, ilmoittaa, jos jokin tiedosto puuttuu tai on vioittunut, ja suorittaa sitten asennuksen.</li>
-                        <li><strong>Asennusikkuna ei enää avaudu käynnistysohjelman taakse</strong>Aiemmin asennusohjelman oma ikkuna avautui käynnistysohjelman taakse, joten se näytti jumittuneen odottaessaan napsautusta. Nyt se nousee itsestään etualalle.</li>
-                        <li><strong>Peli löytyy, kun asennusohjelma on valmis</strong>Corvus Arcade odottaa nyt, että asennusohjelma sulkeutuu, ennen kuin se aloittaa haun, joten se löytää pelin itse sen sijaan, että pyytäisi sinua etsimään ohjelmaa.</li>
-                        <li><strong>Asennukset eivät enää epäonnistu väärälle asemalle</strong>Aiemmin asennusohjelmat yrittivät asentaa järjestelmään sijainnin, jota macOS ei salli, minkä jälkeen ne keskeytyivät pääsyoikeusvirheen vuoksi. Nykyään ne käynnistyvät pelin oman kontin sisällä olevasta kansiosta.</li>
-                        <li><strong>Asennuksen epäonnistuminen kertoo sen</strong>Kun asennus keskeytyy ennenaikaisesti, Corvus Arcade ilmoittaa asiasta sen sijaan, että kirjastosi jäisi tyhjäksi.</li>
-                        <li><strong>Katso, mitä asennus tekee</strong>Käynnistysohjelma näyttää, kuinka paljon on jo kirjoitettu, ilmoittaa, kun tiedostoja puretaan vielä, ja kertoo, kun mitään ei ole tapahtunut muutamaan minuuttiin.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.6.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Ota kuvakaappauksia pelaamisen aikana</strong>Paina pikanäppäintä pelin aikana kaapataksesi sen ikkunan, ja selaa sitten kuvia pelin sivulla katselimessa, jossa on galleria ja nuolinäppäimet.</li>
-                        <li><strong>Kahdeksan väriteemaa</strong>Neljä tummaa ja neljä vaaleaa, valittavissa Asetuksista. Oletus on otettu sovelluksen kuvakkeesta.</li>
-                        <li><strong>Suosikit ja haku</strong>Kiinnitä pelaamasi pelit kirjaston ja sivupalkin yläosaan, hae nimen mukaan ja lajittele viimeksi pelatun, nimen tai koon mukaan.</li>
-                        <li><strong>Tallennuksesi ovat suojattuja</strong>Pelien poistaminen pyytää nyt ensin vahvistusta, ilmoittaa, kuinka monta tallennustiedostoa on kyseessä, ja ehdottaa niiden vientiä ennen kuin mitään poistetaan.</li>
-                        <li><strong>Alt-näppäin tavoittaa pelisi</strong>Windows-pelit voivat nyt vastaanottaa Alt-näppäintä, jota macOS varasi aiemmin erityisten merkkien kirjoittamiseen. Pelit, jotka sitovat Alt-näppäimen, toimivat ilman mitään asetuksia.</li>
-                        <li><strong>Nimeä peli uudelleen</strong>Korjaa nimi, jonka kauppa sai väärin, tai nimi joka on otettu arkistotiedoston nimestä.</li>
-                        <li><strong>Vie kirjastosi</strong>Tallenna pelilistasi, asetukset ja pelikohtaiset asetukset yhdeksi pieneksi tiedostoksi ja palauta ne toisella Macilla.</li>
-                        <li><strong>DirectX 9 -pelejä on merkitty</strong>Corvus Arcade lukee nyt, mitä peli renderoi, ja varoittaa, kun ei kumpikaan grafiikkapääte pysty suorittamaan sitä, ennen kuin lataat sen.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.5.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Lisää peli suoraan zip- tai rar-arkistosta</strong>Pelit, jotka tulevat pakattuna tiedostona ilman asenninta, purkautuvat nyt itsestään. Corvus Arcade löytää ohjelman sisäpuolelta ja asettaa sen käyttöön puolestasi.</li>
-                        <li><strong>Tarkista huijauksenestotuki ennen asennusta</strong>Jokainen peli näyttää nyt, toimiiko sen huijauksenesto Macilla, joten tiedät sen ennen lataamista etkä vasta sen jälkeen.</li>
-                        <li><strong>Kansikuva ja kuvaus kielelläsi</strong>Kansikuva ladataan nyt suoraan kaupasta, joten se pysyy ajantasalla, ja jokaisen pelin kuvaus ilmestyy juuri sinun käyttämäsi kielen mukaisesti Corvus Arcadessa.</li>
-                        <li><strong>Käytä omaa kansikuvaa</strong>Napsauta mitä tahansa peliä hiiren oikealla painikkeella valitaksesi oman kansikuvan tai bannerin. Voit palauttaa ladatut kuvat milloin tahansa.</li>
-                        <li><strong>Vinkki, jos toinen backend suorittaa sen paremmin.</strong>Kun peli tiedetään toimivan paremmin toisella grafiikkataustalla, sen sivu ilmoittaa tämän ja vaihtaa sitä yhdellä klikkauksella.</li>
-                        <li><strong>Suorita pelit ikkunassa</strong>Pelit voivat nyt käynnistyä ikkunoiden muodossa eikä ne vie koko näyttöä.</li>
-                        <li><strong>Uudempi graafinen moottori</strong>Corvus Arcade on nyt saatavilla Apple:n uusin Game Porting Toolkit, joka parantaa yhteensopivuutta ja nopeutta monissa Direct3D -peleissä.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.3</span>
-                    <ul class="changelog-list">
-                        <li><strong>Vaatii nyt macOS 26</strong>Aiemmat versiot pystoivat asentaamaan Corvus Arcaden, mutta sen grafiikkamoottori ei koskaan käynnistynyt, joten vaatimus on nyt muotoiltu sille, mikä toimii todellisuudessa.</li>
-                        <li><strong>Tarkista, mikä D3DMetal-beta on sisällytetty</strong>Grafiikkataustavalmepi valitsee mukautetun beta-version, ja GPTK 4 on saatavilla vain macOS 26.4 tai uudemmassa versiossa, jossa se voi ladata.</li>
-                        <li><strong>Ohjelmaa varten tallennettu kansikuva on säilytetty.</strong>Pelit, jotka ottavat kansikuvansa omasta ohjelmastaan, säilyttävät nyt kuvan sen sijaan, että rakentaisivat sitä uudelleen joka kerta, kun kirjasto aukeaa.</li>
-                        <li><strong>Selkeämmät säiliön asetuksvirheet</strong>Virheellinen kontin asetus ilmoittaa nyt oikeaan peliin, johon se kuuluu.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.2</span>
-                    <ul class="changelog-list">
-                        <li><strong>Jokaiselle pelille on oma kuvansa</strong>Peliä, joita ei ole Steamissa, ei enää näytetä tyhjänä sijaintimerkkinä, vaan niiden omalla kuvakkeella ja samanvärisellä kansikuvalla.</li>
-                        <li><strong>Korjaa säiliö</strong>Uusi korjausvaihtoehto palauttaa puuttuvat fontit ja soveltaa uudelleen jokaisen pelin asetukset, korjaa tyhjät valikot ja teksti ilman, että mitään asennettua poistetaan.</li>
-                        <li><strong>Vedä ohjelma sisään lisätäksesi pelin</strong>Jätä Windows-ohjelma mihin tahansa kirjaston kohtaan, jolloin "Lisää peli"-lomake avautuu täytettynä.</li>
-                        <li><strong>Katso, mitä jokainen peli käyttää</strong>Kirjastosi näyttää nyt jokaisen pelin käyttämän levytilan sekä kaikkien pelien yhteistilan.</li>
-                        <li><strong>Terävämpi upskalaus DXMT-taustalla</strong>MetalFX-vaihtoehto vaikuttaa nyt DXMT-taustaprosessissa, jossa se aikaisemmin ei tehnyt mitään.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.1</span>
-                    <ul class="changelog-list">
-                        <li><strong>Uusi sovellusikon</strong>Corvus Arcade on saanut uuden sovellusikonin.</li>
-                        <li><strong>Peliohjelman valitseminen on selkeämpää</strong>Muuta pelin suoritettavaa niin, että se listaa aina löydetyt kohteet, merkiten ohjelman käytössä olevaksi, sijaan kun se soveltaa hiljaisesti yhden vastaavuuden ja näyttää siltä, ettei mitään ole tapahtunut.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Pelisi on löydetty sinulle</strong>Asennus on valmis, jolloin Corvus Arcade lukee Windowsissa rekisteröimänsä tiedot ja avaa pelin ohjelman automaattisesti, joten .exe-tiedostoa ei tarvitse enää etsiä.</li>
-                        <li><strong>Valitse toinen ohjelma milloin tahansa</strong>Uusi Vaihtaa pelin suoritettavan tiedoston -valinnalla voit korjata myöhemmin käynnistyskohde, ja Corvus Arcade varoittaa, jos valitsemasi tiedosto on asennusohjelma.</li>
-                        <li><strong>Selkeämpi sanamuoto säiliöille</strong>Windows-ympäristö, jossa jokainen peli toimii, on nyt nimetty säiliöksi (container) koko sovelluksessa, mikä on luonteva kaikissa kielissä.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.3.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Vaihda kieli välittömästi</strong>Corvus Arcade puhuu nyt 33 kieltä, ja voit vaihtaa kieltä Asetuksista ilman sovelluksen uudelleenkäynnistystä.</li>
-                        <li><strong>Tyhjennä shader-välimuisti</strong>Uusi Asetukset-napin painike vapauttaa levytilaa, jonka Metal-varjostimen välimuisti käyttää. Pelit rakentavat sen uudelleen automaattisesti seuraavassa käynnistyksessä.</li>
-                        <li><strong>Muotoiltu uudelleen Asetukset-näkymä</strong>Asetukset on nyt synkronoitu sovelluksen tumman suorituskykypaneelin kanssa, selkeämmillä grafiikoilla, peli- ja tallennustilan ohjaimilla.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.2.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Uusi ulkoasu</strong>Corvus Arcade on uudistettu tumma suorituskykypaneeli, jossa käynnistysnappi ja Macin elävä tila ovat etusivulla.</li>
-                        <li><strong>Uusi kotikirjasto</strong>Pelisi ovat nyt visuaalisessa ruudukossa, jossa näet jokaisen tilanteen hetkessä.</li>
-                        <li><strong>Elävä GPU- ja muisti</strong>Palkki ja liukuvat grafiikka näyttävät, kuinka kovaa GPU ja muisti työskentelevät pelatessasi.</li>
-                        <li><strong>Valmiustarkistukset nopeilla korjauksilla</strong>Pelisivu ilmoittaa muistin kyllästymisestä ja antaa painikkeen vapauttaa sitä ennen pelaamista.</li>
-                        <li><strong>Sivut on järjestetty välilehtiin</strong>Yleiset, Grafiikka, Peliasetukset ja Toiminta, jotta haluttu asetus on aina yhden napautuksen päässä.</li>
-                        <li><strong>Pelin asetukset, käynnistimessä</strong>Muuta pelin näytön tyyliä, resoluutiota, grafiikan laatua ja kuvien päivitysnopeuden rajaa Corvus Arcade -sovelluksesta suoraan pelin sivulta.</li>
-                        <li><strong>Ikkunamoodi</strong>Pelit voidaan avata siirrettävään Mac-ikkunaan, kun peli on asetettu ikkunatilaan.</li>
-                        <li><strong>Matalan muistin varoitus</strong>Muistia rajoitetuissa Mac-koneissa Corvus Arcade näyttää, mitkä sovellukset käyttävät eniten muistia, jotta voit sulkea ne sujuvamman pelin varmistamiseksi.</li>
-                        <li><strong>Vapauta muistia pelatessa</strong>Sulje pelin käynnistyssovellus, kuten Battle.net, valinnaisesti, kun peli on käynnissä, vapauttaaksesi muistia. Ota se käyttöön Asetuksissa.</li>
-                        <li><strong>Mukana oleva suorituskykykirjoitus</strong>Corvus Arcade tallentaa pelin aikana vaikuttavat tekijät, jotta viiveen tarkastelu on myöhemmin helppoa. Hallitse logitilaa Asetuksista.</li>
-                        <li><strong>Snappier käynnistyy</strong>Lähtöpainike reagoi välittömästi klikkaukseen, ja selkeä latausindikaattori näkyy, kun peli käynnistyy.</li>
-                        <li><strong>Älykäs ikkunakäsittely</strong>Corvus Arcade siirtyy sivuun vain, kun pelisi on näytöllä, ja palaa heti takaisin, kun suljet sen.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.1.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Overwatch Apple Siliconille</strong>Toimii itsenäisenä Wine 11 -ympäristönä DXMT- ja Applen D3DMetal-tukea hyödyntäen, ilman CrossOveria tai Terminaalia.</li>
-                        <li><strong>Automaattiset päivitykset</strong>Corvus Arcade pitää itsensä ajan tasalla, joten sinulla on aina uusimmat alfa-versiot.</li>
-                    </ul>
-                </div>
+                    <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Julkaisut</a>
                 </div>
             </details>
         </div>
@@ -609,7 +471,7 @@
             <h2 class="section-title">Tarpeesi</h2>
             <ul class="reqs">
                 <li>Mac <span>Apple Silicon (M1 tai uudempi)</span></li>
-                <li>macOS <span>15 tai myöhemmin</span></li>
+                <li>macOS <span>26 or later</span></li>
                 <li>Rosetta 2 <span>Asennettu puuttuessa</span></li>
                 <li>Vapaa tila <span>~60 GB Battle.net + Overwatch</span></li>
                 <li>Hinta <span>Ilmainen</span></li>

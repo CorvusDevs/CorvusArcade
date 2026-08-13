@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade: Execute jogos Windows no seu Mac com Apple Silicon</title>
-    <meta name="description" content="A free, native macOS launcher that runs Windows games on Apple Silicon with a bundled Wine 11, DXMT, and Apple D3DMetal engine. No CrossOver, no Terminal. Tested with Battle.net, Overwatch, GOG installers and archive releases.">
+    <meta name="description" content="Execute jogos do Windows em Macs com Apple Silicon através de um lançador nativo gratuito que inclui o Wine 11, o DXMT e o D3DMetal. Sem CrossOver, Homebrew ou Terminal.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/i18n/pt-PT/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/i18n/pt-PT/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="A free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine 11 + DXMT + D3DMetal engine, one-click setup. Tested with Battle.net, Overwatch, GOG installers and archive releases.">
+    <meta property="og:description" content="Execute jogos do Windows em Macs com Apple Silicon através de um lançador nativo gratuito que inclui o Wine 11, o DXMT e o D3DMetal. Sem CrossOver, Homebrew ou Terminal.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="Free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine + D3DMetal engine. Tested with Overwatch, GOG games and archive releases.">
+    <meta name="twitter:description" content="Execute jogos do Windows em Macs com Apple Silicon através de um lançador nativo gratuito que inclui o Wine 11, o DXMT e o D3DMetal. Sem CrossOver, Homebrew ou Terminal.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -64,7 +64,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Corvus Arcade",
-        "description": "A free native macOS launcher that runs Windows games on Apple Silicon using a bundled Wine 11, DXMT, and Apple D3DMetal engine.",
+        "description": "Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal.",
         "operatingSystem": "macOS 26.0+",
         "applicationCategory": "GameApplication",
         "releaseNotes": "Tested with Battle.net, Overwatch, DRM-free GOG installers and archive releases on Apple Silicon.",
@@ -243,6 +243,9 @@
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
+        @media (max-width: 520px) {
+            .nav-cta { display: none; }
+        }
 
         .nav-right { display: flex; align-items: center; gap: 14px; }
         .lang-wrap { position: relative; flex-shrink: 0; }
@@ -312,7 +315,7 @@
     <section class="block" id="games">
         <div class="container">
             <div class="section-label">Em ação</div>
-            <h2 class="section-title">Um lançador, não uma ferramenta</h2>
+            <h2 class="section-title">A sua biblioteca, nativa do macOS</h2>
             <div class="gallery">
                 <input type="radio" name="ca-shot" id="ca-shot-1" checked>
                 <input type="radio" name="ca-shot" id="ca-shot-2">
@@ -320,27 +323,27 @@
                 <input type="radio" name="ca-shot" id="ca-shot-4">
                 <div class="gallery-stage">
                     <figure class="gallery-item">
-                        <img src="screenshots/launcher.png?v=080" alt="Corvus Arcade 0.8.0 showing Overwatch, compatibility checks, screenshots, and live system readiness" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.webp?v=080" alt="Corvus Arcade 0.8.0 showing Overwatch, compatibility checks, screenshots, and live system readiness" width="1400" height="950">
                         <figcaption class="shot-cap">A sua biblioteca, nativa do macOS</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="screenshots/quick-launch.png?v=080" alt="Quick Launch searching games and launcher actions" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/quick-launch.webp?v=080" alt="Quick Launch searching games and launcher actions" width="1400" height="950" loading="lazy">
                         <figcaption class="shot-cap">Acesso rápido</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="screenshots/game-tools.png?v=080" alt="Per-game settings with Save Data Vault and Container Snapshots" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/game-tools.webp?v=080" alt="Per-game settings with Save Data Vault and Container Snapshots" width="1400" height="950" loading="lazy">
                         <figcaption class="shot-cap">Os seus jogos guardados estão protegidos</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="screenshots/light-theme.png?v=080" alt="Corvus Arcade game page using the Linen light theme" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/light-theme.webp?v=080" alt="Corvus Arcade game page using the Linen light theme" width="1400" height="950" loading="lazy">
                         <figcaption class="shot-cap">Oito temas de cores</figcaption>
                     </figure>
                 </div>
                 <div class="gallery-thumbs">
-                    <label for="ca-shot-1" title="Your library, native to macOS"><img src="screenshots/launcher.png?v=080" alt="" loading="lazy"></label>
-                    <label for="ca-shot-2" title="Quick Launch"><img src="screenshots/quick-launch.png?v=080" alt="" loading="lazy"></label>
-                    <label for="ca-shot-3" title="Your saves are protected"><img src="screenshots/game-tools.png?v=080" alt="" loading="lazy"></label>
-                    <label for="ca-shot-4" title="Eight colour themes"><img src="screenshots/light-theme.png?v=080" alt="" loading="lazy"></label>
+                    <label for="ca-shot-1" title="Your library, native to macOS"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/launcher.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
+                    <label for="ca-shot-2" title="Quick Launch"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/quick-launch.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
+                    <label for="ca-shot-3" title="Your saves are protected"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/game-tools.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
+                    <label for="ca-shot-4" title="Eight colour themes"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/light-theme.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
                 </div>
             </div>
         </div>
@@ -401,46 +404,6 @@
         </div>
     </section>
 
-    <section class="block">
-        <div class="container">
-            <div class="section-label">Incluído</div>
-            <h2 class="section-title">A lista completa de funcionalidades</h2>
-            <ul class="feature-list">
-                <li>Configuração de um clique do Overwatch, com um contentor limpo, o Battle.net e o lançamento, e nada para configurar.</li>
-                <li>Adicione qualquer jogo Windows, cada um num seu próprio container isolado.</li>
-                <li>Instala a partir de um instalador do GOG ou de outro instalador do Windows e, em seguida, procura o programa do jogo por si.</li>
-                <li>Uma versão integrada do Wine 11, DXMT e motor Apple D3DMetal, sem CrossOver, Homebrew ou Terminal.</li>
-                <li>Gráficos por jogo, com DXMT ou D3DMetal, GPTK 3 ou GPTK 4, e escalonamento MetalFX.</li>
-                <li>Modo de exibição por jogo, resolução, qualidade gráfica e limite de taxa de quadros.</li>
-                <li>Um modo de janela que permite sair com Cmd-Tab durante uma partida.</li>
-                <li>Uma leitura em tempo real da GPU, memória e swap, com um gráfico em rolagem enquanto joga.</li>
-                <li>Verificações de prontidão que detetam problemas e os resolvem com um clique.</li>
-                <li>Aviso de memória insuficiente que indica quais aplicações deve fechar num Mac de 16 GB.</li>
-                <li>Liberar memória automaticamente, fechando o lançador do jogo uma vez que este tenha iniciado.</li>
-                <li>Um registo de desempenho integrado que torna fácil rastrear trancos posteriormente.</li>
-                <li>Uma sobreposição de Metal FPS e tempo de quadro que pode ativar quando quiser.</li>
-                <li>Limpe o cache do shader nas Definições para recuperar espaço no disco.</li>
-                <li>Artwork de capa para cada jogo, extraído do próprio programa do jogo quando não está disponível no Steam.</li>
-                <li>Arraste um programa Windows para a biblioteca para adicionar um jogo.</li>
-                <li>Repare o contentor para restaurar as fontes ausentes e re-aplique as definições do jogo.</li>
-                <li>Veja o espaço no disco que cada jogo utiliza e o total da sua biblioteca.</li>
-                <li>Trinta e três idiomas com um alternador no app que se aplica sem necessidade de reiniciar.</li>
-                <li>Capturas de ecrã da janela do jogo, tiradas com um atalho e exibidas num visualizador integrado.</li>
-                <li>Oito temas de cor, quatro escuros e quatro claros, com o padrão extraído do ícone do app.</li>
-                <li>Os Favoritos fixam um jogo no topo da sua lista de jogos e da barra lateral.</li>
-                <li>Pesquise pelo nome e ordene por último reprodução, nome ou tamanho.</li>
-                <li>Proteção de guardados: antes de remover um jogo, os seus ficheiros de guardamento são contados e podem ser exportados.</li>
-                <li>O Alt agora alcança os seus jogos. O macOS mantinha-o anteriormente para digitar caracteres especiais.</li>
-                <li>Renomeie qualquer jogo cujo nome tenha sido registado incorretamente na loja ou num nome de ficheiro de arquivo.</li>
-                <li>Exporte os seus jogos, preferências e definições por jogo para um único ficheiro e restaure-os noutro Mac.</li>
-                <li>Aviso antes de baixar um jogo que requer uma funcionalidade gráfica que nenhum backend fornece.</li>
-                <li>O Corvus Arcade verifica os ficheiros de um instalador composto por várias partes antes de qualquer processo ser executado e indica se algum ficheiro está em falta ou danificado.</li>
-                <li>Atualizações automáticas que pode instalar com um único clique.</li>
-                <li>Uma verificação inicial para o Rosetta 2, o motor incluído, e o espaço livre no disco.</li>
-            </ul>
-        </div>
-    </section>
-
     <!-- CHANGELOG:START -->
     <section class="block" id="whats-new">
         <div class="container">
@@ -458,108 +421,7 @@
                         <li><strong>Etiquetas</strong>Adicione etiquetas como «Co-op», «Relaxante», «Concluído» ou «Família». Separe as etiquetas com vírgulas.</li>
                     </ul>
                 </div>
-                <div class="release">
-                    <span class="release-ver">0.7.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Instalar um jogo que vem em várias partes</strong>O Point Corvus Arcade aponta para uma pasta com ficheiros de instalação numerados, verifica-os, indica se algum está em falta ou danificado e, em seguida, executa o programa de instalação.</li>
-                        <li><strong>A janela do programa de instalação já não se abre por trás do lançador</strong>A janela do próprio programa de instalação costumava abrir por trás do lançador, pelo que parecia estar bloqueada enquanto aguardava um clique. Agora, passa para a frente por si só.</li>
-                        <li><strong>O jogo fica disponível assim que o instalador terminar</strong>O Corvus Arcade agora aguarda que o programa de instalação seja encerrado antes de procurar, pelo que identifica o jogo automaticamente, em vez de pedir que o utilizador localize o programa.</li>
-                        <li><strong>As instalações já não falham na unidade errada</strong>Anteriormente, os instaladores sugeriam um local que o macOS não permitia, pelo que a instalação era interrompida com um erro de acesso. Agora, iniciam a instalação numa pasta dentro do próprio contentor do jogo.</li>
-                        <li><strong>Uma instalação falhada indica isso mesmo</strong>Quando a instalação é interrompida prematuramente, o Corvus Arcade notifica-o, em vez de deixar um jogo em branco na sua biblioteca.</li>
-                        <li><strong>Ver o que uma instalação está a fazer</strong>O lançador mostra a quantidade de dados que já foi gravada, indica quando ainda está a descompactar e avisa-te quando não se verifica qualquer atividade durante alguns minutos.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.6.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Tire capturas de ecrã enquanto joga</strong>Pressione um atalho durante o jogo para capturar a sua janela, em seguida, navegue pelas capturas na página do jogo num visualizador com galeria e setas do teclado.</li>
-                        <li><strong>Oito temas de cores</strong>Quatro temas escuros e quatro claros, escolhidos em Definições. O padrão é extraído do ícone do app.</li>
-                        <li><strong>Favoritos e pesquisa</strong>Fixe os jogos que jogas no topo da biblioteca e da barra lateral, pesquisa por nome e ordena por último jogo, nome ou tamanho.</li>
-                        <li><strong>Os seus jogos guardados estão protegidos</strong>Remover um jogo pede agora confirmação, indica quantos ficheiros de jogo guardados estão em causa e oferece exportá-los antes de eliminar seja o que for.</li>
-                        <li><strong>A tecla Alt chega aos seus jogos</strong>Os jogos para Windows podem agora receber o Alt, que o macOS mantinha anteriormente para digitar caracteres especiais. Jogos que vinculam o Alt funcionam sem qualquer configuração.</li>
-                        <li><strong>Renomear um jogo</strong>Corrija o nome que a loja registou incorretamente, ou um nome extraído de um ficheiro de arquivo.</li>
-                        <li><strong>Exportar a sua biblioteca</strong>Guarde a sua lista de jogos, preferências e definições por jogo num único ficheiro pequeno e restaure-as noutro Mac.</li>
-                        <li><strong>Os jogos DirectX 9 estão marcados</strong>O Corvus Arcade agora lê o que um jogo renderiza e avisa quando nenhum backend gráfico consegue executá-lo, antes de você gastar o download.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.5.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Adicione um jogo diretamente de um zip ou rar</strong>Os jogos que chegam como ficheiros comprimidos, sem instalador, agora descomprimem-se sozinhos. O Corvus Arcade encontra o programa no interior e configura-o para si.</li>
-                        <li><strong>Verifique o suporte ao anti-trapaça antes de instalar</strong>Cada jogo agora mostra se o seu anti-cheat funciona num Mac, para que o saiba antes de fazer o download, em vez de depois.</li>
-                        <li><strong>Capa e descrições no seu idioma</strong>A arte da capa agora vem diretamente da loja, mantendo-se atualizada, e a descrição de cada jogo aparece no idioma que utiliza o Corvus Arcade.</li>
-                        <li><strong>Use a sua própria imagem de capa.</strong>Clique com o botão direito em qualquer jogo para escolher a sua própria capa ou banner. Pode restaurar a arte descarregada a qualquer momento.</li>
-                        <li><strong>Uma dica quando o outro backend o executa melhor.</strong>Quando um jogo é conhecido por funcionar melhor no outro backend gráfico, a sua página agora o indica e altera-o com um único clique.</li>
-                        <li><strong>Execute jogos numa janela</strong>Os jogos podem agora iniciar em janela, em vez de ocupar toda a tela.</li>
-                        <li><strong>Novo motor gráfico</strong>O Corvus Arcade já inclui a mais recente Game Porting Toolkit da Apple, que melhora a compatibilidade e a velocidade em muitos jogos Direct3D.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.3</span>
-                    <ul class="changelog-list">
-                        <li><strong>A partir de agora, requer o macOS 26</strong>Versões anteriores podiam instalar o Corvus Arcade, mas nunca executavam o seu motor gráfico, pelo que o requisito atual corresponde ao que realmente funciona.</li>
-                        <li><strong>Veja qual versão beta do D3DMetal está incluída</strong>O seletor de backends gráficos nomeia a versão beta incluída, e o GPTK 4 está disponível apenas no macOS 26.4 ou posterior, onde pode ser carregado.</li>
-                        <li><strong>A capa do programa é mantida.</strong>Os jogos que utilizam a arte da capa do próprio programa agora mantêm-na, em vez de a reconstruir sempre que a Biblioteca é aberta.</li>
-                        <li><strong>Erros de configuração do container mais claros</strong>A configuração de contentor falhada agora reporta sobre o jogo ao qual efetivamente pertence.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.2</span>
-                    <ul class="changelog-list">
-                        <li><strong>Cada jogo tem a sua própria arte</strong>Os jogos que não estão no Steam agora exibem o ícone do próprio programa, num capa com a cor correspondente, em vez de um marcador simples.</li>
-                        <li><strong>Reparar um container</strong>Uma nova opção de Reparação restaura as fontes ausentes e re-aplica as definições de cada jogo, corrigindo menus e texto em branco sem apagar nada que tenha sido instalado.</li>
-                        <li><strong>Arraste um programa para adicionar um jogo</strong>Arraste um programa Windows para qualquer lugar da sua biblioteca e o formulário Adicionar Jogo abre já preenchido.</li>
-                        <li><strong>Veja o que cada jogo usa</strong>A sua biblioteca agora exibe o espaço em disco que cada jogo ocupa e o total de todos eles.</li>
-                        <li><strong>Escalonamento mais nítido no backend DXMT</strong>A opção MetalFX agora tem efeito no backend DXMT, onde anteriormente não fazia nada.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.1</span>
-                    <ul class="changelog-list">
-                        <li><strong>Um ícone de novo aplicativo</strong>O ícone do app do Corvus Arcade mudou.</li>
-                        <li><strong>A escolha do programa do jogo é mais clara</strong>Altere o Executável do Jogo para listar sempre o que foi encontrado, com o programa em uso marcado, em vez de aplicar silenciosamente uma única correspondência e parecer que nada aconteceu.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>O seu jogo foi encontrado para si</strong>Após a conclusão da instalação, o Corvus Arcade lê o que registrou no Windows e define automaticamente o programa do jogo, eliminando a necessidade de procurar por um ficheiro .exe.</li>
-                        <li><strong>Selecione outro programa sempre que desejar</strong>Uma nova opção Executável do Jogo alterado permite corrigir o alvo de lançamento posteriormente, e o Corvus Arcade avisa se o ficheiro selecionado for um programa de instalação.</li>
-                        <li><strong>Redação mais clara para os contêineres</strong>O ambiente Windows isolado em que cada jogo roda é agora chamado de container em toda a aplicação, um nome que se lê corretamente em todas as línguas.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.3.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Alterar línguas instantaneamente</strong>O Corvus Arcade agora fala 33 idiomas, e pode alterar o idioma nas Definições sem reiniciar o app.</li>
-                        <li><strong>Limpar o cache do shader</strong>Um novo botão nas Definições liberta o espaço no disco utilizado pela cache de shaders Metal. Os jogos reconstroem-na automaticamente no próximo lançamento.</li>
-                        <li><strong>Uma ecrã de Definições redesenhado</strong>As Definições agora correspondem ao painel de desempenho escuro do app, com gráficos mais claros e controlos de jogo e armazenamento.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.2.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Um aspeto totalmente novo</strong>O Corvus Arcade foi redesenhado em torno de um painel de desempenho escuro, mantendo o botão de lançamento e o estado em tempo real do seu Mac em destaque.</li>
-                        <li><strong>Nova biblioteca da Casa</strong>Os seus jogos agora vivem numa grelha visual que mostra o estado de cada um de imediato.</li>
-                        <li><strong>GPU e memória em tempo real</strong>Um medidor e um gráfico em rolo mostram o esforço do seu GPU e da memória enquanto joga.</li>
-                        <li><strong>Verificação de prontidão com correções rápidas</strong>A página do jogo indica problemas como memória insuficiente e disponibiliza um botão para libertá-la antes de jogar.</li>
-                        <li><strong>Organizado em separadores</strong>Visão geral, Gráficos, Definições do jogo e Desempenho, de modo que a definição que deseja esteja sempre a um clique de distância.</li>
-                        <li><strong>Definições do Jogo</strong>Altere o modo de exibição, resolução, qualidade gráfica e limite de quadros por segundo de um jogo diretamente na página do jogo, no Corvus Arcade.</li>
-                        <li><strong>Modo de janela</strong>Os jogos podem abrir numa janela móvel do Mac quando o próprio jogo estiver definido para Janela.</li>
-                        <li><strong>Aviso de memória insuficiente</strong>Em Macs com memória limitada, o Corvus Arcade mostra quais apps consomem mais recursos, para que possa fechá-los e ter uma experiência de jogo mais fluida.</li>
-                        <li><strong>Liberar memória durante jogos</strong>Feche opcionalmente o lançador do jogo, como o Battle.net, após o início do jogo, para libertar memória. Ative-o em Definições.</li>
-                        <li><strong>Registo de desempenho integrado</strong>O Corvus Arcade regista o que afecta o desempenho enquanto joga, de modo a que o lag seja fácil de analisar mais tarde. Gerar o espaço de registo em Definições.</li>
-                        <li><strong>A Snappier está a iniciar</strong>O botão de arranque responde imediatamente ao clicar e exibe um indicador de carregamento claro enquanto o jogo inicia.</li>
-                        <li><strong>Gestão de janelas mais inteligente</strong>O Corvus Arcade fica de lado apenas quando o seu jogo aparece na ecrã, e regressa imediatamente ao fechar o jogo.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.1.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Overwatch no Apple Silicon</strong>Executa num Wine 11 independente, com DXMT e D3DMetal da Apple, sem CrossOver nem Terminal.</li>
-                        <li><strong>Atualizações automáticas</strong>O Corvus Arcade mantém-se atualizado, de modo que sempre tem a versão alpha mais recente.</li>
-                    </ul>
-                </div>
+                    <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Lançamentos</a>
                 </div>
             </details>
         </div>
@@ -609,7 +471,7 @@
             <h2 class="section-title">O que precisa</h2>
             <ul class="reqs">
                 <li>Mac <span>Apple Silicon (M1 ou mais recente)</span></li>
-                <li>macOS <span>15 ou posterior</span></li>
+                <li>macOS <span>26 or later</span></li>
                 <li>Rosetta 2 <span>instalado para si se estiver ausente</span></li>
                 <li>Espaço livre <span>~60 GB para Battle.net + Overwatch</span></li>
                 <li>Preço <span>Gratuito</span></li>

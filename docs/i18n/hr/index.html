@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade: Run Windows Games on Your Apple Silicon Mac</title>
-    <meta name="description" content="A free, native macOS launcher that runs Windows games on Apple Silicon with a bundled Wine 11, DXMT, and Apple D3DMetal engine. No CrossOver, no Terminal. Tested with Battle.net, Overwatch, GOG installers and archive releases.">
+    <meta name="description" content="Pokrećite Windows igre na Apple Silicon Mac računalima pomoću besplatnog nativnog pokretača koji uključuje Wine 11, DXMT i D3DMetal. Bez CrossOvera, Homebrewa ili terminala.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/i18n/hr/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="A free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine 11 + DXMT + D3DMetal engine, one-click setup. Tested with Battle.net, Overwatch, GOG installers and archive releases.">
+    <meta property="og:description" content="Pokrećite Windows igre na Apple Silicon Mac računalima pomoću besplatnog nativnog pokretača koji uključuje Wine 11, DXMT i D3DMetal. Bez CrossOvera, Homebrewa ili terminala.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="Free, native macOS launcher for Windows games on Apple Silicon. Bundled Wine + D3DMetal engine. Tested with Overwatch, GOG games and archive releases.">
+    <meta name="twitter:description" content="Pokrećite Windows igre na Apple Silicon Mac računalima pomoću besplatnog nativnog pokretača koji uključuje Wine 11, DXMT i D3DMetal. Bez CrossOvera, Homebrewa ili terminala.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -64,7 +64,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Corvus Arcade",
-        "description": "A free native macOS launcher that runs Windows games on Apple Silicon using a bundled Wine 11, DXMT, and Apple D3DMetal engine.",
+        "description": "Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal.",
         "operatingSystem": "macOS 26.0+",
         "applicationCategory": "GameApplication",
         "releaseNotes": "Tested with Battle.net, Overwatch, DRM-free GOG installers and archive releases on Apple Silicon.",
@@ -243,6 +243,9 @@
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
         }
+        @media (max-width: 520px) {
+            .nav-cta { display: none; }
+        }
 
         .nav-right { display: flex; align-items: center; gap: 14px; }
         .lang-wrap { position: relative; flex-shrink: 0; }
@@ -312,7 +315,7 @@
     <section class="block" id="games">
         <div class="container">
             <div class="section-label">In action</div>
-            <h2 class="section-title">A launcher, not a toolkit</h2>
+            <h2 class="section-title">Your library, native to macOS</h2>
             <div class="gallery">
                 <input type="radio" name="ca-shot" id="ca-shot-1" checked>
                 <input type="radio" name="ca-shot" id="ca-shot-2">
@@ -320,27 +323,27 @@
                 <input type="radio" name="ca-shot" id="ca-shot-4">
                 <div class="gallery-stage">
                     <figure class="gallery-item">
-                        <img src="screenshots/launcher.png?v=080" alt="Corvus Arcade 0.8.0 showing Overwatch, compatibility checks, screenshots, and live system readiness" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.webp?v=080" alt="Corvus Arcade 0.8.0 showing Overwatch, compatibility checks, screenshots, and live system readiness" width="1400" height="950">
                         <figcaption class="shot-cap">Your library, native to macOS</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="screenshots/quick-launch.png?v=080" alt="Quick Launch searching games and launcher actions" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/quick-launch.webp?v=080" alt="Quick Launch searching games and launcher actions" width="1400" height="950" loading="lazy">
                         <figcaption class="shot-cap">Brzi pokret</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="screenshots/game-tools.png?v=080" alt="Per-game settings with Save Data Vault and Container Snapshots" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/game-tools.webp?v=080" alt="Per-game settings with Save Data Vault and Container Snapshots" width="1400" height="950" loading="lazy">
                         <figcaption class="shot-cap">Vaši spremeni su zaštićeni</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="screenshots/light-theme.png?v=080" alt="Corvus Arcade game page using the Linen light theme" loading="lazy">
+                        <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/light-theme.webp?v=080" alt="Corvus Arcade game page using the Linen light theme" width="1400" height="950" loading="lazy">
                         <figcaption class="shot-cap">Osam tema boja</figcaption>
                     </figure>
                 </div>
                 <div class="gallery-thumbs">
-                    <label for="ca-shot-1" title="Your library, native to macOS"><img src="screenshots/launcher.png?v=080" alt="" loading="lazy"></label>
-                    <label for="ca-shot-2" title="Quick Launch"><img src="screenshots/quick-launch.png?v=080" alt="" loading="lazy"></label>
-                    <label for="ca-shot-3" title="Your saves are protected"><img src="screenshots/game-tools.png?v=080" alt="" loading="lazy"></label>
-                    <label for="ca-shot-4" title="Eight colour themes"><img src="screenshots/light-theme.png?v=080" alt="" loading="lazy"></label>
+                    <label for="ca-shot-1" title="Your library, native to macOS"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/launcher.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
+                    <label for="ca-shot-2" title="Quick Launch"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/quick-launch.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
+                    <label for="ca-shot-3" title="Your saves are protected"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/game-tools.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
+                    <label for="ca-shot-4" title="Eight colour themes"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/light-theme.webp?v=080" alt="" width="360" height="244" loading="lazy"></label>
                 </div>
             </div>
         </div>
@@ -401,46 +404,6 @@
         </div>
     </section>
 
-    <section class="block">
-        <div class="container">
-            <div class="section-label">Everything included</div>
-            <h2 class="section-title">The complete feature list</h2>
-            <ul class="feature-list">
-                <li>One-click Overwatch setup, with a clean container, Battle.net, and launch, and nothing to configure.</li>
-                <li>Add any Windows game, each in its own isolated container.</li>
-                <li>Installs from a GOG or other Windows installer, then finds the game's program for you.</li>
-                <li>A bundled Wine 11, DXMT, and Apple D3DMetal engine, with no CrossOver, Homebrew, or Terminal.</li>
-                <li>Per-game graphics, with DXMT or D3DMetal, GPTK 3 or GPTK 4, and MetalFX upscaling.</li>
-                <li>Per-game display mode, resolution, graphics quality, and frame-rate cap.</li>
-                <li>A windowed mode that lets you Cmd-Tab out during a match.</li>
-                <li>A live GPU, memory, and swap readout with a rolling graph as you play.</li>
-                <li>Readiness checks that flag problems and fix them in one tap.</li>
-                <li>A low-memory warning that shows which apps to close on a 16 GB Mac.</li>
-                <li>Frees memory automatically by closing the game's launcher once it has started.</li>
-                <li>A built-in performance log that makes stutter easy to trace later.</li>
-                <li>A Metal FPS and frame-time overlay you can turn on when you want it.</li>
-                <li>Clear the shader cache from Settings to reclaim disk space.</li>
-                <li>Cover art for every game, taken from the game's own program when it is not on Steam.</li>
-                <li>Drag a Windows program onto the library to add a game.</li>
-                <li>Repair a container to restore missing fonts and re-apply a game's settings.</li>
-                <li>See the disk space each game uses, and the total across your library.</li>
-                <li>Thirty-three languages with an in-app switcher that applies without a restart.</li>
-                <li>Screenshots of the game window, taken with a shortcut and shown in a built-in viewer.</li>
-                <li>Eight colour themes, four dark and four light, with the default drawn from the app icon.</li>
-                <li>Favourites that pin a game to the top of your game list and the sidebar.</li>
-                <li>Search by name, and sort by last played, name or size.</li>
-                <li>Save protection: before a game is removed, its save files are counted and can be exported.</li>
-                <li>Alt now reaches your games. macOS previously kept it for typing special characters.</li>
-                <li>Rename any game whose name the store or an archive filename got wrong.</li>
-                <li>Export your games, preferences and per-game settings to one file, then restore them on another Mac.</li>
-                <li>A warning before you download a game that needs a graphics feature neither backend provides.</li>
-                <li>Corvus Arcade checks a multi-part installer's files before anything runs, and says if one is missing or damaged.</li>
-                <li>Automatic updates you can install in one click.</li>
-                <li>A first-run check for Rosetta 2, the bundled engine, and free disk space.</li>
-            </ul>
-        </div>
-    </section>
-
     <!-- CHANGELOG:START -->
     <section class="block" id="whats-new">
         <div class="container">
@@ -458,108 +421,7 @@
                         <li><strong>Oznake</strong>Dodajte oznake kao što su Co-op, Opuštajuće, Završeno ili Obiteljsko. Odvojite oznake zarezima.</li>
                     </ul>
                 </div>
-                <div class="release">
-                    <span class="release-ver">0.7.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Instalirajte igru koja dolazi u nekoliko dijelova</strong>Uputite Point Corvus Arcade na mapu s numeriranim instalacijskim datotekama, on ih provjerava, javi ako neka nedostaje ili je oštećena, a zatim pokreće instalaciju.</li>
-                        <li><strong>Prozor instalatera više se ne otvara iza pokretača</strong>Prozor samog instalatera ranije bi se otvarao iza pokretača, pa je izgledalo kao da je zaglavljen dok je čekao klik. Sada se samostalno pomakne u prvi plan.</li>
-                        <li><strong>Vaša se igra pronađe nakon što instalacijski program završi.</strong>Corvus Arcade sada čeka da se instalacijski program zatvori prije nego što se pokrene, pa samostalno pronalazi igru umjesto da vas traži da pronađete program.</li>
-                        <li><strong>Instalacije više ne propadaju na pogrešnom disku.</strong>Instalatori su ranije nudili lokaciju koju macOS ne dopušta, a zatim bi se zaustavili zbog pogreške pri pristupu. Sada se pokreću u mapi unutar vlastitog spremnika igre.</li>
-                        <li><strong>Neuspjela instalacija to kaže</strong>Kada instalacija stane prerano, Corvus Arcade to prijavljuje umjesto da u vašoj biblioteci ostavi praznu igru.</li>
-                        <li><strong>Pogledajte što instalacija radi</strong>Pokretač prikazuje koliko je napisano, obavještava kad se još raspakira i obavještava kad se nekoliko minuta ništa nije dogodilo.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.6.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Snimajte zaslone dok se igrate</strong>Pritisnite prečac tijekom igre kako biste uhvatili prozor, a zatim pregledajte snimke na stranici igre u pogledniku s galerijom i tipkama za strelice.</li>
-                        <li><strong>Osam tema boja</strong>Četiri tamna i četiri svijetla, odabrana u Postavkama. Zadano je crta iz ikone aplikacije.</li>
-                        <li><strong>Omiljenice i pretraga</strong>Zakačite igre koje igrate na vrh biblioteke i bočne trake, pretražite po imenu i sortirajte po zadnjoj igri, imenu ili veličini.</li>
-                        <li><strong>Vaši spremeni su zaštićeni</strong>Uklanjanje igre sada prvo traži potvrdu, navodi koliko se datoteka spremljenih igara može izgubiti i nudi izvoz prije brisanja.</li>
-                        <li><strong>Alt tipka omogućuje pristup vašim igrama</strong>Windows igre sada mogu primiti Alt, koji je macOS ranije zadržavao za upisivanje posebnih znakova. Igre koje povezuju Alt rade bez ikakve postavke.</li>
-                        <li><strong>Promjena naziva igre</strong>Ispravite ime koje je trgovina pogrešno unijela ili preuzela iz imena arhivske datoteke.</li>
-                        <li><strong>Izvezi svoju biblioteku</strong>Spremite popis igara, postavke i postavke po igri u jedan mali datoteku, a na drugom Macu ih ponovno učitajte.</li>
-                        <li><strong>Igre DirectX 9 su označene</strong>Corvus Arcade sada čita što igra renderira i upozorava kada nijedan grafički backend ne može pokrenuti igru, prije nego što potrošite preuzimanje.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.5.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Dodajte igru izravno iz zip ili rar arhive</strong>Igre koje dolaze kao komprimirani datoteka bez instalatera sada se same rastavljaju. Corvus Arcade pronalazi program unutra i postavlja ga za vas.</li>
-                        <li><strong>Provjerite podršku za anti-cheat prije instalacije</strong>Svaka igra sada pokazuje rješava li anti-cheat na Macu, tako da znate prije nego što preuzmete umjesto nakon.</li>
-                        <li><strong>Naslovna slika i opisi na vašem jeziku</strong>Sada se naslovna slika preuzima izravno iz trgovine, pa je uvijek ažurna, a opis svake igre prikazuje se u jezici koju koristite u Corvus Arcade.</li>
-                        <li><strong>Koristite vlastitu sliku naslovnice</strong>Desnim lijevi klik na bilo koju igru kako biste odabrali vlastitu naslovnu sliku ili baner. Preuzetu umjetničku djela možete vratiti u bilo kojem trenutku.</li>
-                        <li><strong>Kada drugi backend pokreće aplikaciju bolje, ovo je savjet.</strong>Kada igra bolje radi na drugom grafičkom backendu, njegova stranica sada to navodi i prebacuje se s jednim klikom.</li>
-                        <li><strong>Pokrenite igre u prozoru</strong>Igre se sada mogu pokrenuti u prozoru umjesto da zauzmu cijeli zaslon.</li>
-                        <li><strong>Noviji grafički motor</strong>Corvus Arcade sada uključuje najnoviji Game Porting Toolkit od Applea, koji poboljšava kompatibilnost i brzinu u mnogim Direct3D igrama.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.3</span>
-                    <ul class="changelog-list">
-                        <li><strong>Zahtijeva macOS 26</strong>Ranije verzije su mogle instalirati Corvus Arcade, ali nikada nisu pokretale njegov grafički pokretač, pa je zahtjev sada prilagođen onome što stvarno radi.</li>
-                        <li><strong>Prikažite koji je D3DMetal paket uključen</strong>Grafički backend za izbornik ima naziv pakiranog beta, a GPTK 4 nudi se samo na macOS 26.4 ili novijim verzijama, gdje se može učitati.</li>
-                        <li><strong>Umjetnička slika iz programa se čuva.</strong>Igre koje koriste umjetnička djela s vlastitog programa sada ih zadržavaju, umjesto da ih ponovno izgrade svaki put kada se biblioteka otvori.</li>
-                        <li><strong>Jasnije pogreške postavke spremišta</strong>Neuspješno postavljene spremnike sada se izvještava o igri kojoj pripadaju.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.2</span>
-                    <ul class="changelog-list">
-                        <li><strong>Svaka igra ima svoju umjetninu</strong>Igre koje nisu na Steamu sada prikazuju ikonicu iz vlastite aplikacije na naslovnoj strani u odgovarajućim bojama, umjesto jednostavnog placeholdera.</li>
-                        <li><strong>Popravite spremu</strong>Nova opcija Popravi vraća nedostajuće fontove i ponovno primjenjuje postavke svake igre, čime se ispravljaju prazni izbornici i tekst bez brisanja instaliranog sadržaja.</li>
-                        <li><strong>Povucite program kako biste dodali igru</strong>Windows program bilo gdje u biblioteci, a obrazac Dodaj igru otvara se već popunjen.</li>
-                        <li><strong>Pogledajte što svaka igra koristi</strong>Vaša knjižnica sada prikazuje prostor na disku koji zauzima svaka igra i ukupno za sve.</li>
-                        <li><strong>Oštrije povećanje na DXMT backendu</strong>MetalFX opcija sada djeluje na DXMT backendu, gdje je ranije bila neaktivna.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.1</span>
-                    <ul class="changelog-list">
-                        <li><strong>Nova ikona aplikacije</strong>Corvus Arcade ima novu ikonu aplikacije.</li>
-                        <li><strong>Odabir programa igre je jasniji</strong>Promjena izvršne datoteke igre sada uvijek prikazuje što je pronađeno, s programom koji se koristi označenim, umjesto da tiho primijeni jedno podudaranje i djeluje kao da se ništa nije dogodilo.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.4.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Vaša igra je pronađena za vas.</strong>Nakon što instalacija završi, Corvus Arcade čita ono što je registrirao s Windowsom i automatski pokreće program igre, tako da više nema potrebe tražiti .exe datoteku.</li>
-                        <li><strong>Odaberite drugi program kad god želite.</strong>Nova opcija Promjena izvršne datoteke igre omogućuje vam ispraviti cilj pokretanja kasnije, a Corvus Arcade upozorava vas ako je odabrani datoteka instalacijski program.</li>
-                        <li><strong>Jasnije formuliranje za spremišta</strong>Windows izolirano okruženje u kojem se svaka igra pokreće sada se u cijeloj aplikaciji naziva spremnik, ime koje se pravilno čita na svakom jeziku.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.3.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Mijenjajte jezike odmah</strong>Corvus Arcade sada govori 33 jezika, a jezik možete promijeniti u Postavkama bez ponovnog pokretanja aplikacije.</li>
-                        <li><strong>Očisti shader cache</strong>Novi gumb u Postavkama oslobađa prostor na disku koji koristi Metalov cache za sjenila. Igre će ga ponovno izgraditi automatski pri sljedećem pokretanju.</li>
-                        <li><strong>Ponovno dizajnirani zaslon Postavke</strong>Postavke sada odgovaraju tamnom dasci za prikaz performansi aplikacije, s jasnijim grafikama, kontrolama za igre i pohranu.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.2.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Novi izgled</strong>Corvus Arcade je preuređen oko tamne ploče za prikaz performansi, s gumbom za pokretanje i trenutnim statusom vašeg Maca na istaknutom mjestu.</li>
-                        <li><strong>Nova knjižnica za dom</strong>Vaša igra sada se nalazi na vizualnoj mreži koja prikazuje status svake igre na prvi pogled.</li>
-                        <li><strong>Živi GPU i memorija</strong>Mjerilo i rotirajući grafikon prikazuju koliko se intenzivno koristi vaša GPU i memorija tijekom igranja.</li>
-                        <li><strong>Provjere spremnosti s brzim popravcima</strong>Stranica igre označava probleme poput ograničenog memorije i daje vam gumb za oslobađanje memorije prije igre.</li>
-                        <li><strong>Poređano u kartice</strong>Pregled, Grafika, Postavke igre i Performanse, tako da je postavka koju želite uvijek na jedno klikanje.</li>
-                        <li><strong>Postavke, u pokretaču</strong>Promijenite način prikaza, razlučivanje, kvalitetu grafike i ograničenje broja sličica po sekundi izravno s Corvus Arcade na stranici igre.</li>
-                        <li><strong>Prozorski način rada</strong>Igre se mogu otvoriti u pokretnom Mac prozoru kada je sama igra postavljena na Windowed.</li>
-                        <li><strong>Upozorenje o niskom slobodnom prostoru</strong>Na Macima s ograničenom memorijom, Corvus Arcade prikazuje koje aplikacije troše najviše, pa ih možete zatvoriti za glađanje igre.</li>
-                        <li><strong>Slobodno memoriju tijekom igranja</strong>Opcionalno zatvorite pokretač igre, poput Battle.net-a, nakon što je igra pokrenuta, kako biste oslobodili memoriju. Uključite ovo u Postavkama.</li>
-                        <li><strong>Ugrađeni zapis o performansama</strong>Corvus Arcade bilježi što utječe na performanse tijekom igre, pa je kasnije lako istražiti kašnjenja. Upravljaj prostorom za dnevnike u Postavkama.</li>
-                        <li><strong>Snappier se pokreće.</strong>Gumb za pokretanje reagira odmah nakon klikanja i prikazuje jasni indikator učitavanja dok se igra pokreće.</li>
-                        <li><strong>Pametnija obrada prozora</strong>Corvus Arcade se privremeno uklanja samo dok je vaš igra na ekranu, a vraća se čim ga zatvorite.</li>
-                    </ul>
-                </div>
-                <div class="release">
-                    <span class="release-ver">0.1.0</span>
-                    <ul class="changelog-list">
-                        <li><strong>Overwatch na Apple Siliconu</strong>Radi na samostalnom Wine 11 s DXMT i Appleovim D3DMetal. Bez CrossOvera i Terminala.</li>
-                        <li><strong>Automatske ažuriranja</strong>Corvus Arcade se održava ažurnim, tako da uvijek imate najnoviju alfa verziju.</li>
-                    </ul>
-                </div>
+                    <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Releases</a>
                 </div>
             </details>
         </div>
@@ -609,7 +471,7 @@
             <h2 class="section-title">What you need</h2>
             <ul class="reqs">
                 <li>Mac <span>Apple Silicon (M1 or newer)</span></li>
-                <li>macOS <span>15 or later</span></li>
+                <li>macOS <span>26 or later</span></li>
                 <li>Rosetta 2 <span>installed for you if missing</span></li>
                 <li>Free space <span>~60 GB for Battle.net + Overwatch</span></li>
                 <li>Price <span>Free</span></li>
