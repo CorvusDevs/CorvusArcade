@@ -35,21 +35,26 @@ A game launcher that runs Windows games on Apple Silicon Macs, with no CrossOver
 
 <div align="center">
 
-<img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png?v=050" width="820" alt="Corvus Arcade game page showing Overwatch with a live performance readout and readiness checks">
+<img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png?v=080" width="920" alt="Corvus Arcade 0.8.0 showing Overwatch, compatibility checks, screenshots, and live system readiness">
 
-<em>The game page: one-click Play next to a live performance readout, with readiness checks that fix issues before you play.</em>
+<em>Your Windows game library, presented as a native Mac launcher.</em>
 
 </div>
 
+<table>
+  <tr>
+    <td width="50%"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/quick-launch.png?v=080" alt="Quick Launch searching games and launcher actions"></td>
+    <td width="50%"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/game-tools.png?v=080" alt="Per-game settings with Save Data Vault and Container Snapshots"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Open games and actions instantly with Command-K.</em></td>
+    <td align="center"><em>Protect saves and the full game container before changes.</em></td>
+  </tr>
+</table>
 
 <p align="center">
-  <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/overwatch.png?v=041" width="820" alt="Overwatch running in a macOS window on Apple Silicon through Corvus Arcade">
+  <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/overwatch.png?v=041" width="920" alt="Overwatch running in a macOS window on Apple Silicon through Corvus Arcade">
   <br><em>Overwatch in a live match, running in a macOS window.</em>
-</p>
-
-<p align="center">
-  <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/brotato.png?v=041" width="820" alt="Brotato, installed from a GOG installer, running in a macOS window">
-  <br><em>Brotato, installed straight from its GOG installer.</em>
 </p>
 
 ## Contents
