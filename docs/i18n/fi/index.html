@@ -174,9 +174,20 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
-        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
-        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
-        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
+        .feature-explorer { max-width: 960px; margin: 0 auto; }
+        .feature-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 6px; margin-bottom: 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-tab { border: 0; border-radius: 10px; padding: 12px 16px; background: transparent; color: var(--text-secondary); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color .16s, color .16s, box-shadow .16s; }
+        .feature-tab:hover { color: var(--text); }
+        .feature-tab[aria-selected="true"] { color: #fff; background: linear-gradient(135deg, var(--accent), #9b7cff); box-shadow: 0 8px 24px rgba(109,90,230,.26); }
+        .feature-tab:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+        .feature-category { display: none; margin: 0; border: 0; }
+        .feature-category[data-active] { display: block; }
+        .feature-category > summary { display: none; }
+        .feature-explorer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-explorer-item::before { content: ""; position: absolute; left: 20px; top: 23px; width: 18px; height: 18px; border: 1.5px solid var(--accent-light); border-radius: 50%; background: radial-gradient(circle, var(--accent-light) 0 3px, transparent 4px); }
+        .feature-explorer-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
+        .feature-explorer-item p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
         .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
         .changelog-summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 18px 22px; font-size: 16px; font-weight: 700; color: var(--text); }
         .changelog-summary::-webkit-details-marker { display: none; }
@@ -239,9 +250,19 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
-            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
+        }
+        @media (max-width: 700px) {
+            .feature-tabs { display: none; }
+            .feature-category, .feature-category[data-active] { display: block; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; }
+            .feature-category > summary { display: flex; align-items: center; padding: 16px 18px; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; font-weight: 750; }
+            .feature-category > summary::-webkit-details-marker { display: none; }
+            .feature-category > summary::after { content: "+"; margin-left: auto; color: var(--accent-light); font-size: 20px; font-weight: 400; }
+            .feature-category[open] > summary::after { content: "−"; }
+            .feature-explorer-grid { grid-template-columns: 1fr; gap: 0; padding: 0 12px 12px; }
+            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 38px; }
+            .feature-explorer-item::before { left: 8px; top: 19px; }
         }
         @media (max-width: 520px) {
             .nav-cta { display: none; }
@@ -400,9 +421,93 @@
                     <p>Rajoita kuvien lukumäärää sekunnissa vähentääksesi lämpötilaa ja tuulettimen melua, aktivoi MetalFX-upscaling ja näytä FPS-lukema, kun haluat sen.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block" id="all-features">
+        <div class="container">
+            <div class="section-label">Kaikki sisältyy</div>
+            <h2 class="section-title" id="all-features-title">Kaikki ominaisuudet</h2>
+            <div class="feature-explorer">
+                <div class="feature-tabs" role="tablist" aria-labelledby="all-features-title">
+                    <button class="feature-tab" id="feature-tab-play" type="button" role="tab" aria-selected="true" aria-controls="feature-play" tabindex="0">Pelaa</button>
+                    <button class="feature-tab" id="feature-tab-performance" type="button" role="tab" aria-selected="false" aria-controls="feature-performance" tabindex="-1">Suorituskyky</button>
+                    <button class="feature-tab" id="feature-tab-library" type="button" role="tab" aria-selected="false" aria-controls="feature-library" tabindex="-1">Kirjasto</button>
+                    <button class="feature-tab" id="feature-tab-safety" type="button" role="tab" aria-selected="false" aria-controls="feature-safety" tabindex="-1">Turvallisuus</button>
+                </div>
+
+                <details class="feature-category" id="feature-play" data-feature-panel="play" data-active open>
+                    <summary>Pelaa</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Overwatch yhdellä napsautuksella</h3><p>Kuratoidun asetuksen avulla luodaan siisti kontti, asennetaan Battle.net ja käynnistyy suoraan otteluun. Mitään konfiguroimista ei tarvita.</p></article>
+                        <article class="feature-explorer-item"><h3>Pelisi on löydetty sinulle</h3><p>Asennus on valmis, jolloin Corvus Arcade lukee Windowsissa rekisteröimänsä tiedot ja avaa pelin ohjelman automaattisesti, joten .exe-tiedostoa ei tarvitse enää etsiä.</p></article>
+                        <article class="feature-explorer-item"><h3>Suorita pelit ikkunassa</h3><p>Pelit voivat nyt käynnistyä ikkunoiden muodossa eikä ne vie koko näyttöä.</p></article>
+                        <article class="feature-explorer-item"><h3>Valitse toinen ohjelma milloin tahansa</h3><p>Uusi Vaihtaa pelin suoritettavan tiedoston -valinnalla voit korjata myöhemmin käynnistyskohde, ja Corvus Arcade varoittaa, jos valitsemasi tiedosto on asennusohjelma.</p></article>
+                        <article class="feature-explorer-item"><h3>Asenna peli, joka koostuu useista osista</h3><p>Point Corvus Arcade -ohjelma etsii numeroitujen asennustiedostojen kansiosta tiedostot, tarkistaa ne, ilmoittaa, jos jokin tiedosto puuttuu tai on vioittunut, ja suorittaa sitten asennuksen.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-performance" data-feature-panel="performance">
+                    <summary>Suorituskyky</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Grafiikat pelikohtaisesti</h3><p>Valitse DXMT tai D3DMetal, GPTK 3 tai GPTK 4, ikkunamoodi ja kehyksien lukumäärän rajoitus jokaiselle pelille erikseen.</p></article>
+                        <article class="feature-explorer-item"><h3>Elävä GPU- ja muisti</h3><p>Mittari ja vierivä kaavio näyttävät, kuinka kovaa GPU ja muisti tekevät työtä pelatessasi.</p></article>
+                        <article class="feature-explorer-item"><h3>Kehyjen lukumäärän rajoitus ja FPS-kalvo</h3><p>Rajoita kuvien lukumäärää sekunnissa vähentääksesi lämpötilaa ja tuulettimen melua, aktivoi MetalFX-upscaling ja näytä FPS-lukema, kun haluat sen.</p></article>
+                        <article class="feature-explorer-item"><h3>Tyhjennä shader-välimuisti</h3><p>Uusi Asetukset-napin painike vapauttaa levytilaa, jonka Metal-varjostimen välimuisti käyttää. Pelit rakentavat sen uudelleen automaattisesti seuraavassa käynnistyksessä.</p></article>
+                        <article class="feature-explorer-item"><h3>Valmiustarkistukset</h3><p>Pelin sivu ilmoittaa ongelmista, kuten muistin tiukkuudesta, ja tarjoaa yhden napautuksen korjausmahdollisuuden ennen pelaamista.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-library" data-feature-panel="library">
+                    <summary>Kirjasto</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Pikakäynnistys</h3><p>Hae pelejä ja toimintoja</p></article>
+                        <article class="feature-explorer-item"><h3>Kirjastosi yleiskatsaus</h3><p>Kotienäkymä näyttää jokaisen pelin ja sen nykyisen tilan: valmis, toistossa tai asetuksia tarvitaan.</p></article>
+                        <article class="feature-explorer-item"><h3>Pelatessasi otetut kuvakaappaukset</h3><p>Oikea lyhyt polku tallentaa pelin ikkunan eikä koko näytön. Napsautukset avautuvat näkymään pelisivulla, jossa on kokoelma ja nuolinäppäimet.</p></article>
+                        <article class="feature-explorer-item"><h3>Suosikit ja haku</h3><p>Kiinnitä pelaamasi pelit kirjaston ja sivupalkin yläosaan, hae nimen mukaan ja lajittele viimeksi pelatun, nimen tai koon mukaan.</p></article>
+                        <article class="feature-explorer-item"><h3>Vie kirjastosi</h3><p>Tallenna pelilistasi, asetukset ja pelikohtaiset asetukset yhdeksi pieneksi tiedostoksi ja palauta ne toisella Macilla.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-safety" data-feature-panel="safety">
+                    <summary>Turvallisuus</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Tallennuksesi ovat suojattuja</h3><p>Pelien poistaminen kysyy ensin. Se laskee pelintä varten olevia tallennustiedostoja ja ehdottaa niiden vientiä ennen poistamista.</p></article>
+                        <article class="feature-explorer-item"><h3>Tallennustietojen säilytystila</h3><p>Corvus Arcade luo ensin turvallisen palautuspisteen nykyisistä tallennuksista. Peli on suljettava.</p></article>
+                        <article class="feature-explorer-item"><h3>Konttien tilannekuvat</h3><p>Tallenna koko Windows-kontti ennen kokeiluja tai suuria muutoksia. APFS-tilannekuvat käynnistyvät nopeasti ja vievät lisää tilaa vain tiedostojen muuttuessa.</p></article>
+                        <article class="feature-explorer-item"><h3>Korjaa säiliö</h3><p>Uusi korjausvaihtoehto palauttaa puuttuvat fontit ja soveltaa uudelleen jokaisen pelin asetukset, korjaa tyhjät valikot ja teksti ilman, että mitään asennettua poistetaan.</p></article>
+                        <article class="feature-explorer-item"><h3>Asennuksen epäonnistuminen kertoo sen</h3><p>Kun asennus keskeytyy ennenaikaisesti, Corvus Arcade ilmoittaa asiasta sen sijaan, että kirjastosi jäisi tyhjäksi.</p></article>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
+
+    <script>
+    (function(){
+        var tabs=Array.from(document.querySelectorAll('.feature-tab'));
+        var panels=Array.from(document.querySelectorAll('[data-feature-panel]'));
+        if(!tabs.length||!panels.length)return;
+        function activate(tab,moveFocus){
+            var target=tab.getAttribute('aria-controls');
+            tabs.forEach(function(item){var selected=item===tab;item.setAttribute('aria-selected',selected?'true':'false');item.tabIndex=selected?0:-1;});
+            panels.forEach(function(panel){var selected=panel.id===target;panel.toggleAttribute('data-active',selected);panel.open=selected;});
+            if(moveFocus)tab.focus();
+        }
+        tabs.forEach(function(tab,index){
+            tab.addEventListener('click',function(){activate(tab,false);});
+            tab.addEventListener('keydown',function(event){
+                var next=index;
+                if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+                else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;
+                else if(event.key==='Home')next=0;
+                else if(event.key==='End')next=tabs.length-1;
+                else return;
+                event.preventDefault();activate(tabs[next],true);
+            });
+        });
+    })();
+    </script>
 
     <!-- CHANGELOG:START -->
     <section class="block" id="whats-new">
@@ -505,7 +610,7 @@
         function slug(){ var e=section.getAttribute('data-current-slug'); if(e) return e.toLowerCase(); var s=location.pathname.split('/').filter(Boolean); return s.length?s[0].toLowerCase():''; }
         // --- page-carousel v3: locale-aware -------------------------------
         // Card copy comes from a per-locale sidecar so the shared manifest stays
-        // ~2 KB gzipped instead of carrying 32 locales to every page load.
+        // ~2 KB gzipped instead of carrying 35 locales to every page load.
         var I18N=null;
         function loc(){ return (document.documentElement.lang||'en'); }
         function pick(app){ return (I18N&&I18N[app.slug])||{}; }

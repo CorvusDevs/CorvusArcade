@@ -174,9 +174,20 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
-        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
-        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
-        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
+        .feature-explorer { max-width: 960px; margin: 0 auto; }
+        .feature-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 6px; margin-bottom: 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-tab { border: 0; border-radius: 10px; padding: 12px 16px; background: transparent; color: var(--text-secondary); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color .16s, color .16s, box-shadow .16s; }
+        .feature-tab:hover { color: var(--text); }
+        .feature-tab[aria-selected="true"] { color: #fff; background: linear-gradient(135deg, var(--accent), #9b7cff); box-shadow: 0 8px 24px rgba(109,90,230,.26); }
+        .feature-tab:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+        .feature-category { display: none; margin: 0; border: 0; }
+        .feature-category[data-active] { display: block; }
+        .feature-category > summary { display: none; }
+        .feature-explorer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-explorer-item::before { content: ""; position: absolute; left: 20px; top: 23px; width: 18px; height: 18px; border: 1.5px solid var(--accent-light); border-radius: 50%; background: radial-gradient(circle, var(--accent-light) 0 3px, transparent 4px); }
+        .feature-explorer-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
+        .feature-explorer-item p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
         .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
         .changelog-summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 18px 22px; font-size: 16px; font-weight: 700; color: var(--text); }
         .changelog-summary::-webkit-details-marker { display: none; }
@@ -239,9 +250,19 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
-            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
+        }
+        @media (max-width: 700px) {
+            .feature-tabs { display: none; }
+            .feature-category, .feature-category[data-active] { display: block; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; }
+            .feature-category > summary { display: flex; align-items: center; padding: 16px 18px; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; font-weight: 750; }
+            .feature-category > summary::-webkit-details-marker { display: none; }
+            .feature-category > summary::after { content: "+"; margin-left: auto; color: var(--accent-light); font-size: 20px; font-weight: 400; }
+            .feature-category[open] > summary::after { content: "−"; }
+            .feature-explorer-grid { grid-template-columns: 1fr; gap: 0; padding: 0 12px 12px; }
+            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 38px; }
+            .feature-explorer-item::before { left: 8px; top: 19px; }
         }
         @media (max-width: 520px) {
             .nav-cta { display: none; }
@@ -400,9 +421,93 @@
                     <p>Hạn chế tốc độ khung hình để giảm nhiệt và tiếng quạt, bật MetalFX để tăng độ phân giải và hiển thị chỉ số FPS trực quan khi bạn cần.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block" id="all-features">
+        <div class="container">
+            <div class="section-label">Tất cả đã được bao gồm</div>
+            <h2 class="section-title" id="all-features-title">Danh sách tính năng đầy đủ</h2>
+            <div class="feature-explorer">
+                <div class="feature-tabs" role="tablist" aria-labelledby="all-features-title">
+                    <button class="feature-tab" id="feature-tab-play" type="button" role="tab" aria-selected="true" aria-controls="feature-play" tabindex="0">Chơi</button>
+                    <button class="feature-tab" id="feature-tab-performance" type="button" role="tab" aria-selected="false" aria-controls="feature-performance" tabindex="-1">Hiệu năng</button>
+                    <button class="feature-tab" id="feature-tab-library" type="button" role="tab" aria-selected="false" aria-controls="feature-library" tabindex="-1">Thư viện</button>
+                    <button class="feature-tab" id="feature-tab-safety" type="button" role="tab" aria-selected="false" aria-controls="feature-safety" tabindex="-1">An toàn</button>
+                </div>
+
+                <details class="feature-category" id="feature-play" data-feature-panel="play" data-active open>
+                    <summary>Chơi</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Overwatch chỉ bằng một cú nhấp</h3><p>Cấu hình được chọn lọc sẽ tạo một môi trường sạch, cài đặt Battle.net và bắt đầu trận đấu ngay lập tức. Không cần cấu hình.</p></article>
+                        <article class="feature-explorer-item"><h3>Game của bạn đã được tìm thấy cho bạn</h3><p>Sau khi trình cài đặt hoàn tất, Corvus Arcade sẽ đọc các phần đã đăng ký trên Windows và tự động khởi chạy chương trình trò chơi, do đó bạn không còn cần tìm kiếm tệp .exe nữa.</p></article>
+                        <article class="feature-explorer-item"><h3>Chạy trò chơi trong cửa sổ</h3><p>Bây giờ, các trò chơi có thể bắt đầu ở chế độ cửa sổ thay vì chiếm toàn bộ màn hình.</p></article>
+                        <article class="feature-explorer-item"><h3>Chọn một chương trình khác bất cứ lúc nào</h3><p>Một tùy chọn mới "Thay đổi tệp thực thi trò chơi" cho phép bạn sửa mục đích khởi chạy sau này, và Corvus Arcade cảnh báo bạn nếu tệp bạn chọn là chương trình cài đặt.</p></article>
+                        <article class="feature-explorer-item"><h3>Cài đặt một trò chơi gồm nhiều phần</h3><p>Chỉ định thư mục chứa các tệp cài đặt được đánh số cho Point Corvus Arcade; chương trình sẽ kiểm tra các tệp này, thông báo nếu có tệp nào bị thiếu hoặc bị hỏng, sau đó tiến hành chạy trình cài đặt.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-performance" data-feature-panel="performance">
+                    <summary>Hiệu năng</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Hiệu ứng đồ họa theo trận</h3><p>Chọn DXMT hoặc D3DMetal, GPTK 3 hoặc GPTK 4, chế độ cửa sổ và giới hạn tốc độ khung hình cho mỗi trò chơi một cách độc lập.</p></article>
+                        <article class="feature-explorer-item"><h3>GPU và bộ nhớ hoạt động trực tiếp</h3><p>Một đồng hồ đo và biểu đồ cuộn hiển thị mức độ hoạt động của GPU và bộ nhớ trong khi bạn chơi game.</p></article>
+                        <article class="feature-explorer-item"><h3>Màn hình hiển thị khung hình và FPS</h3><p>Hạn chế tốc độ khung hình để giảm nhiệt và tiếng quạt, bật MetalFX để tăng độ phân giải và hiển thị chỉ số FPS trực quan khi bạn cần.</p></article>
+                        <article class="feature-explorer-item"><h3>Xóa bộ nhớ đệm shader</h3><p>Một nút mới trong Cài đặt sẽ giải phóng dung lượng ổ đĩa mà bộ nhớ đệm shader Metal sử dụng. Các trò chơi sẽ tự động xây dựng lại nó khi khởi động lần tiếp theo.</p></article>
+                        <article class="feature-explorer-item"><h3>Kiểm tra sẵn sàng</h3><p>Trang của trò chơi sẽ cảnh báo các vấn đề như bộ nhớ hạn hẹp và cung cấp giải pháp chỉ với một thao tác trước khi bạn bắt đầu chơi.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-library" data-feature-panel="library">
+                    <summary>Thư viện</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Khởi động nhanh</h3><p>Tìm kiếm trò chơi và hoạt động</p></article>
+                        <article class="feature-explorer-item"><h3>Tổng quan về thư viện của bạn</h3><p>Giao diện chính hiển thị tất cả các trò chơi cùng trạng thái hiện tại: sẵn sàng, đang phát hoặc cần thiết lập.</p></article>
+                        <article class="feature-explorer-item"><h3>Ảnh chụp màn hình khi bạn chơi</h3><p>Một phím tắt ghi lại cửa sổ trò chơi thay vì toàn bộ màn hình. Các bức ảnh được mở trong trình xem trên trang trò chơi, kèm theo thư viện và phím mũi tên.</p></article>
+                        <article class="feature-explorer-item"><h3>Yêu thích và tìm kiếm</h3><p>Ghim các trò chơi bạn chơi lên đầu thư viện và thanh bên, tìm theo tên, và sắp xếp theo lần chơi gần nhất, tên hoặc kích thước.</p></article>
+                        <article class="feature-explorer-item"><h3>Xuất thư viện của bạn</h3><p>Lưu danh sách trò chơi, cài đặt và cấu hình riêng cho từng trò chơi vào một tệp nhỏ, sau đó khôi phục chúng trên một chiếc Mac khác.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-safety" data-feature-panel="safety">
+                    <summary>An toàn</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Các bản lưu của bạn được bảo vệ</h3><p>Xóa một trò chơi sẽ hỏi trước. Corvus Arcade đếm số tệp lưu game liên quan và đề nghị xuất chúng ra trước khi xóa bất cứ thứ gì.</p></article>
+                        <article class="feature-explorer-item"><h3>Kho lưu trữ dữ liệu</h3><p>Corvus Arcade trước tiên sẽ tạo một điểm khôi phục an toàn từ các bản lưu hiện tại. Trò chơi phải được đóng lại.</p></article>
+                        <article class="feature-explorer-item"><h3>Ảnh chụp nhanh container</h3><p>Tạo bản sao lưu toàn bộ container Windows trước khi thực hiện các thử nghiệm hoặc thay đổi lớn. Các bản sao lưu APFS khởi động nhanh chóng và chỉ chiếm thêm dung lượng khi các tệp thay đổi.</p></article>
+                        <article class="feature-explorer-item"><h3>Sửa container</h3><p>Một tùy chọn Sửa mới khôi phục các phông chữ bị thiếu và áp dụng lại cài đặt của từng trò chơi, khắc phục các menu trống và văn bản bị lỗi mà không xóa bất kỳ dữ liệu nào bạn đã cài đặt.</p></article>
+                        <article class="feature-explorer-item"><h3>Thông báo lỗi cài đặt đã nêu rõ điều đó</h3><p>Khi một trình cài đặt dừng lại sớm, Corvus Arcade sẽ báo cáo sự cố này thay vì để lại một trò chơi trống trong thư viện của bạn.</p></article>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
+
+    <script>
+    (function(){
+        var tabs=Array.from(document.querySelectorAll('.feature-tab'));
+        var panels=Array.from(document.querySelectorAll('[data-feature-panel]'));
+        if(!tabs.length||!panels.length)return;
+        function activate(tab,moveFocus){
+            var target=tab.getAttribute('aria-controls');
+            tabs.forEach(function(item){var selected=item===tab;item.setAttribute('aria-selected',selected?'true':'false');item.tabIndex=selected?0:-1;});
+            panels.forEach(function(panel){var selected=panel.id===target;panel.toggleAttribute('data-active',selected);panel.open=selected;});
+            if(moveFocus)tab.focus();
+        }
+        tabs.forEach(function(tab,index){
+            tab.addEventListener('click',function(){activate(tab,false);});
+            tab.addEventListener('keydown',function(event){
+                var next=index;
+                if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+                else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;
+                else if(event.key==='Home')next=0;
+                else if(event.key==='End')next=tabs.length-1;
+                else return;
+                event.preventDefault();activate(tabs[next],true);
+            });
+        });
+    })();
+    </script>
 
     <!-- CHANGELOG:START -->
     <section class="block" id="whats-new">
@@ -505,7 +610,7 @@
         function slug(){ var e=section.getAttribute('data-current-slug'); if(e) return e.toLowerCase(); var s=location.pathname.split('/').filter(Boolean); return s.length?s[0].toLowerCase():''; }
         // --- page-carousel v3: locale-aware -------------------------------
         // Card copy comes from a per-locale sidecar so the shared manifest stays
-        // ~2 KB gzipped instead of carrying 32 locales to every page load.
+        // ~2 KB gzipped instead of carrying 35 locales to every page load.
         var I18N=null;
         function loc(){ return (document.documentElement.lang||'en'); }
         function pick(app){ return (I18N&&I18N[app.slug])||{}; }

@@ -174,9 +174,20 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
-        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
-        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
-        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
+        .feature-explorer { max-width: 960px; margin: 0 auto; }
+        .feature-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 6px; margin-bottom: 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-tab { border: 0; border-radius: 10px; padding: 12px 16px; background: transparent; color: var(--text-secondary); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color .16s, color .16s, box-shadow .16s; }
+        .feature-tab:hover { color: var(--text); }
+        .feature-tab[aria-selected="true"] { color: #fff; background: linear-gradient(135deg, var(--accent), #9b7cff); box-shadow: 0 8px 24px rgba(109,90,230,.26); }
+        .feature-tab:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+        .feature-category { display: none; margin: 0; border: 0; }
+        .feature-category[data-active] { display: block; }
+        .feature-category > summary { display: none; }
+        .feature-explorer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-explorer-item::before { content: ""; position: absolute; left: 20px; top: 23px; width: 18px; height: 18px; border: 1.5px solid var(--accent-light); border-radius: 50%; background: radial-gradient(circle, var(--accent-light) 0 3px, transparent 4px); }
+        .feature-explorer-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
+        .feature-explorer-item p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
         .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
         .changelog-summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 18px 22px; font-size: 16px; font-weight: 700; color: var(--text); }
         .changelog-summary::-webkit-details-marker { display: none; }
@@ -239,9 +250,19 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
-            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
+        }
+        @media (max-width: 700px) {
+            .feature-tabs { display: none; }
+            .feature-category, .feature-category[data-active] { display: block; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; }
+            .feature-category > summary { display: flex; align-items: center; padding: 16px 18px; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; font-weight: 750; }
+            .feature-category > summary::-webkit-details-marker { display: none; }
+            .feature-category > summary::after { content: "+"; margin-left: auto; color: var(--accent-light); font-size: 20px; font-weight: 400; }
+            .feature-category[open] > summary::after { content: "−"; }
+            .feature-explorer-grid { grid-template-columns: 1fr; gap: 0; padding: 0 12px 12px; }
+            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 38px; }
+            .feature-explorer-item::before { left: 8px; top: 19px; }
         }
         @media (max-width: 520px) {
             .nav-cta { display: none; }
@@ -400,9 +421,93 @@
                     <p>Begränsa bildhastigheten för att minska värme och fläktljud, aktivera MetalFX-uppskalning och visa en live-uppskalning av FPS när du vill.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block" id="all-features">
+        <div class="container">
+            <div class="section-label">Allt inkluderat</div>
+            <h2 class="section-title" id="all-features-title">Den fullständiga funktionslistan</h2>
+            <div class="feature-explorer">
+                <div class="feature-tabs" role="tablist" aria-labelledby="all-features-title">
+                    <button class="feature-tab" id="feature-tab-play" type="button" role="tab" aria-selected="true" aria-controls="feature-play" tabindex="0">Spela</button>
+                    <button class="feature-tab" id="feature-tab-performance" type="button" role="tab" aria-selected="false" aria-controls="feature-performance" tabindex="-1">Prestanda</button>
+                    <button class="feature-tab" id="feature-tab-library" type="button" role="tab" aria-selected="false" aria-controls="feature-library" tabindex="-1">Bibliotek</button>
+                    <button class="feature-tab" id="feature-tab-safety" type="button" role="tab" aria-selected="false" aria-controls="feature-safety" tabindex="-1">Säkerhet</button>
+                </div>
+
+                <details class="feature-category" id="feature-play" data-feature-panel="play" data-active open>
+                    <summary>Spela</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Overwatch med ett klick</h3><p>En kuraterad inställning skapar en ren behållare, installerar Battle.net och startar direkt mot en match. Ingen konfiguration.</p></article>
+                        <article class="feature-explorer-item"><h3>Ditt spel har hittats för dig</h3><p>Efter att en installatör är klar läser Corvus Arcade in vad det registrerade hos Windows och startar automatiskt spelprogrammet, så att du inte behöver leta efter en .exe-fil.</p></article>
+                        <article class="feature-explorer-item"><h3>Kör spel i ett fönster</h3><p>Spel kan nu startas i fönsterläge istället för att ta över hela skärmen.</p></article>
+                        <article class="feature-explorer-item"><h3>Välj ett annat program när som helst</h3><p>En ny alternativt förändra spel-exekverbar-menypunkt låter dig korrigera startmålet senare, och Corvus Arcade varnar dig om den fil du valde är ett installationsprogram.</p></article>
+                        <article class="feature-explorer-item"><h3>Installera ett spel som består av flera delar</h3><p>Point Corvus Arcade pekar på en mapp med numrerade installationsfiler och kontrollerar dem; programmet meddelar om någon fil saknas eller är skadad och kör sedan installationsprogrammet.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-performance" data-feature-panel="performance">
+                    <summary>Prestanda</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Grafik per spel</h3><p>Välj DXMT eller D3DMetal, GPTK 3 eller GPTK 4, fönsterläge och en ramhastighetsgräns för varje spel individuellt.</p></article>
+                        <article class="feature-explorer-item"><h3>Live GPU- och minnesanvändning</h3><p>En mätare och ett rullande diagram visar hur hårt din GPU och minnet jobbar medan du spelar.</p></article>
+                        <article class="feature-explorer-item"><h3>Ramhastighetsgräns och FPS-överlägg</h3><p>Begränsa bildhastigheten för att minska värme och fläktljud, aktivera MetalFX-uppskalning och visa en live-uppskalning av FPS när du vill.</p></article>
+                        <article class="feature-explorer-item"><h3>Rensa shadercachen</h3><p>En ny knapp i Inställningar frigör diskutrymme som Metal-shadercachen använder. Spel återbygger den automatiskt vid nästa start.</p></article>
+                        <article class="feature-explorer-item"><h3>Klarhetskontroller</h3><p>Spelsidan markerar problem som begränsat minne och erbjuder en lösning med ett enda klick innan du spelar.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-library" data-feature-panel="library">
+                    <summary>Bibliotek</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Snabbstart</h3><p>Sök efter spel och aktiviteter</p></article>
+                        <article class="feature-explorer-item"><h3>Översikt över din bibliotek</h3><p>Hemvyningen visar alla spel och deras nuvarande status: redo, pågående eller behöver inställning.</p></article>
+                        <article class="feature-explorer-item"><h3>Skärmbilder medan du spelar</h3><p>En genväg fångar spelvinduet istället för hela skärmen. Bilderna öppnas i en visare på spelns sida, med en galleri och pilknappar.</p></article>
+                        <article class="feature-explorer-item"><h3>Favoriter och sök</h3><p>Fäst spelen du spelar högst upp i biblioteket och sidofältet, sök på namn och sortera efter senast spelad, namn eller storlek.</p></article>
+                        <article class="feature-explorer-item"><h3>Exportera biblioteket</h3><p>Spara din spellista, inställningar och per-spelkonfiguration till en liten fil, och återställ dem på en annan Mac.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-safety" data-feature-panel="safety">
+                    <summary>Säkerhet</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Dina sparfiler är skyddade</h3><p>Vid borttagning av ett spel frågas först. Antalet sparfiler som är på spel räknas och det erbjuds att exportera dem innan något tas bort.</p></article>
+                        <article class="feature-explorer-item"><h3>Speldata-valvet</h3><p>Corvus Arcade skapar först en säkerhetsåterställningspunkt från de aktuella sparade spelet. Spelet måste stängas.</p></article>
+                        <article class="feature-explorer-item"><h3>Container-snapshots</h3><p>Säkerhetskopiera hela Windows-containern innan du utför experiment eller gör större ändringar. APFS-snapshots startar snabbt och tar endast mer utrymme när filerna ändras.</p></article>
+                        <article class="feature-explorer-item"><h3>Reparera behållare</h3><p>En ny alternativ Reparation återställer saknade tecken och applicerar inställningarna för varje spel på nytt, vilket åtgärdar tomma menyer och text utan att radera något du har installerat.</p></article>
+                        <article class="feature-explorer-item"><h3>Ett misslyckat installationsförsök visar just det</h3><p>När en installatör avbryts i förtid rapporterar Corvus Arcade detta istället för att lämna ett tomt spel i ditt bibliotek.</p></article>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
+
+    <script>
+    (function(){
+        var tabs=Array.from(document.querySelectorAll('.feature-tab'));
+        var panels=Array.from(document.querySelectorAll('[data-feature-panel]'));
+        if(!tabs.length||!panels.length)return;
+        function activate(tab,moveFocus){
+            var target=tab.getAttribute('aria-controls');
+            tabs.forEach(function(item){var selected=item===tab;item.setAttribute('aria-selected',selected?'true':'false');item.tabIndex=selected?0:-1;});
+            panels.forEach(function(panel){var selected=panel.id===target;panel.toggleAttribute('data-active',selected);panel.open=selected;});
+            if(moveFocus)tab.focus();
+        }
+        tabs.forEach(function(tab,index){
+            tab.addEventListener('click',function(){activate(tab,false);});
+            tab.addEventListener('keydown',function(event){
+                var next=index;
+                if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+                else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;
+                else if(event.key==='Home')next=0;
+                else if(event.key==='End')next=tabs.length-1;
+                else return;
+                event.preventDefault();activate(tabs[next],true);
+            });
+        });
+    })();
+    </script>
 
     <!-- CHANGELOG:START -->
     <section class="block" id="whats-new">
@@ -505,7 +610,7 @@
         function slug(){ var e=section.getAttribute('data-current-slug'); if(e) return e.toLowerCase(); var s=location.pathname.split('/').filter(Boolean); return s.length?s[0].toLowerCase():''; }
         // --- page-carousel v3: locale-aware -------------------------------
         // Card copy comes from a per-locale sidecar so the shared manifest stays
-        // ~2 KB gzipped instead of carrying 32 locales to every page load.
+        // ~2 KB gzipped instead of carrying 35 locales to every page load.
         var I18N=null;
         function loc(){ return (document.documentElement.lang||'en'); }
         function pick(app){ return (I18N&&I18N[app.slug])||{}; }

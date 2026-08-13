@@ -174,9 +174,20 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
-        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
-        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
-        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
+        .feature-explorer { max-width: 960px; margin: 0 auto; }
+        .feature-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 6px; margin-bottom: 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-tab { border: 0; border-radius: 10px; padding: 12px 16px; background: transparent; color: var(--text-secondary); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color .16s, color .16s, box-shadow .16s; }
+        .feature-tab:hover { color: var(--text); }
+        .feature-tab[aria-selected="true"] { color: #fff; background: linear-gradient(135deg, var(--accent), #9b7cff); box-shadow: 0 8px 24px rgba(109,90,230,.26); }
+        .feature-tab:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+        .feature-category { display: none; margin: 0; border: 0; }
+        .feature-category[data-active] { display: block; }
+        .feature-category > summary { display: none; }
+        .feature-explorer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-explorer-item::before { content: ""; position: absolute; left: 20px; top: 23px; width: 18px; height: 18px; border: 1.5px solid var(--accent-light); border-radius: 50%; background: radial-gradient(circle, var(--accent-light) 0 3px, transparent 4px); }
+        .feature-explorer-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
+        .feature-explorer-item p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
         .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
         .changelog-summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 18px 22px; font-size: 16px; font-weight: 700; color: var(--text); }
         .changelog-summary::-webkit-details-marker { display: none; }
@@ -239,9 +250,19 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
-            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
+        }
+        @media (max-width: 700px) {
+            .feature-tabs { display: none; }
+            .feature-category, .feature-category[data-active] { display: block; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; }
+            .feature-category > summary { display: flex; align-items: center; padding: 16px 18px; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; font-weight: 750; }
+            .feature-category > summary::-webkit-details-marker { display: none; }
+            .feature-category > summary::after { content: "+"; margin-left: auto; color: var(--accent-light); font-size: 20px; font-weight: 400; }
+            .feature-category[open] > summary::after { content: "−"; }
+            .feature-explorer-grid { grid-template-columns: 1fr; gap: 0; padding: 0 12px 12px; }
+            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 38px; }
+            .feature-explorer-item::before { left: 8px; top: 19px; }
         }
         @media (max-width: 520px) {
             .nav-cta { display: none; }
@@ -400,9 +421,93 @@
                     <p>可限制帧率以降低发热和风扇噪音，启用 MetalFX 超分辨率，并在需要时显示实时帧率读数。</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block" id="all-features">
+        <div class="container">
+            <div class="section-label">包含所有内容</div>
+            <h2 class="section-title" id="all-features-title">完整功能列表</h2>
+            <div class="feature-explorer">
+                <div class="feature-tabs" role="tablist" aria-labelledby="all-features-title">
+                    <button class="feature-tab" id="feature-tab-play" type="button" role="tab" aria-selected="true" aria-controls="feature-play" tabindex="0">游玩</button>
+                    <button class="feature-tab" id="feature-tab-performance" type="button" role="tab" aria-selected="false" aria-controls="feature-performance" tabindex="-1">性能</button>
+                    <button class="feature-tab" id="feature-tab-library" type="button" role="tab" aria-selected="false" aria-controls="feature-library" tabindex="-1">资料库</button>
+                    <button class="feature-tab" id="feature-tab-safety" type="button" role="tab" aria-selected="false" aria-controls="feature-safety" tabindex="-1">安全</button>
+                </div>
+
+                <details class="feature-category" id="feature-play" data-feature-panel="play" data-active open>
+                    <summary>游玩</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>一键畅玩守望先锋</h3><p>精选配置可创建干净的游戏环境，安装 Battle.net 并直接开始匹配，无需任何设置。</p></article>
+                        <article class="feature-explorer-item"><h3>您的游戏已为您找到</h3><p>安装完成后，Corvus Arcade 会读取其在 Windows 中注册的内容并自动启动游戏程序，因此无需再寻找 .exe 文件。</p></article>
+                        <article class="feature-explorer-item"><h3>在窗口中运行游戏</h3><p>游戏现在可以以窗口模式启动，而不再独占整个屏幕。</p></article>
+                        <article class="feature-explorer-item"><h3>随时选择其他程序</h3><p>新的“更改游戏可执行文件”选项允许您稍后修正启动目标，Corvus Arcade 会提示您所选文件是否为安装程序。</p></article>
+                        <article class="feature-explorer-item"><h3>安装一个由多个部分组成的游戏</h3><p>将 Point Corvus Arcade 指向一个包含编号安装程序文件的文件夹，它会检查这些文件，如果发现有文件缺失或损坏，则会运行安装程序。</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-performance" data-feature-panel="performance">
+                    <summary>性能</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>每局图形</h3><p>为每个游戏独立选择 DXMT 或 D3DMetal、GPTK 3 或 GPTK 4、窗口模式以及帧率上限。</p></article>
+                        <article class="feature-explorer-item"><h3>实时 GPU 和内存</h3><p>仪表盘和滚动图表会显示您在玩游戏时 GPU 和内存的负载情况。</p></article>
+                        <article class="feature-explorer-item"><h3>帧率上限与 FPS 覆盖</h3><p>可限制帧率以降低发热和风扇噪音，启用 MetalFX 超分辨率，并在需要时显示实时帧率读数。</p></article>
+                        <article class="feature-explorer-item"><h3>清除着色器缓存</h3><p>设置中新增了一个按钮，可释放 Metal 着色器缓存占用的磁盘空间。游戏将在下次启动时自动重新构建缓存。</p></article>
+                        <article class="feature-explorer-item"><h3>就绪检查</h3><p>游戏页面会标记内存不足等问题，并在您开始游戏前提供一键修复方案。</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-library" data-feature-panel="library">
+                    <summary>资料库</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>快速启动</h3><p>搜索游戏和活动</p></article>
+                        <article class="feature-explorer-item"><h3>您的库一览</h3><p>主页显示所有游戏及其当前状态：就绪、播放中或需要设置。</p></article>
+                        <article class="feature-explorer-item"><h3>游戏时截图</h3><p>快捷方式仅截取游戏窗口而非整个屏幕。截图将在游戏页面的查看器中打开，并配有图库和方向键。</p></article>
+                        <article class="feature-explorer-item"><h3>收藏夹和搜索</h3><p>将您玩的游戏固定到库和侧边栏顶部，通过名称搜索，并按最后游玩时间、名称或大小排序。</p></article>
+                        <article class="feature-explorer-item"><h3>导出您的库</h3><p>将游戏列表、偏好设置及每个游戏的设置保存到一个小巧的文件中，并可在另一台 Mac 上恢复。</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-safety" data-feature-panel="safety">
+                    <summary>安全</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>您的保存已受保护</h3><p>删除游戏前会先询问。系统会统计受影响的存档文件，并在删除前提供导出选项。</p></article>
+                        <article class="feature-explorer-item"><h3>存档数据库</h3><p>Corvus Arcade 会先从当前存档创建一个安全还原点。必须先关闭游戏。</p></article>
+                        <article class="feature-explorer-item"><h3>容器快照</h3><p>在进行实验或重大更改之前，请完整捕获整个 Windows 容器。APFS 快照启动迅速，且仅在文件发生变化时才会占用更多空间。</p></article>
+                        <article class="feature-explorer-item"><h3>修复容器</h3><p>新增的“修复”选项可恢复缺失的字体并重新应用每个游戏的设置，修复空白菜单和文本问题，同时不会删除您已安装的任何内容。</p></article>
+                        <article class="feature-explorer-item"><h3>安装失败时会显示该提示</h3><p>当安装程序提前停止时，Corvus Arcade 会报告此情况，而不是在您的游戏库中留下一个空的游戏条目。</p></article>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
+
+    <script>
+    (function(){
+        var tabs=Array.from(document.querySelectorAll('.feature-tab'));
+        var panels=Array.from(document.querySelectorAll('[data-feature-panel]'));
+        if(!tabs.length||!panels.length)return;
+        function activate(tab,moveFocus){
+            var target=tab.getAttribute('aria-controls');
+            tabs.forEach(function(item){var selected=item===tab;item.setAttribute('aria-selected',selected?'true':'false');item.tabIndex=selected?0:-1;});
+            panels.forEach(function(panel){var selected=panel.id===target;panel.toggleAttribute('data-active',selected);panel.open=selected;});
+            if(moveFocus)tab.focus();
+        }
+        tabs.forEach(function(tab,index){
+            tab.addEventListener('click',function(){activate(tab,false);});
+            tab.addEventListener('keydown',function(event){
+                var next=index;
+                if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+                else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;
+                else if(event.key==='Home')next=0;
+                else if(event.key==='End')next=tabs.length-1;
+                else return;
+                event.preventDefault();activate(tabs[next],true);
+            });
+        });
+    })();
+    </script>
 
     <!-- CHANGELOG:START -->
     <section class="block" id="whats-new">
@@ -505,7 +610,7 @@
         function slug(){ var e=section.getAttribute('data-current-slug'); if(e) return e.toLowerCase(); var s=location.pathname.split('/').filter(Boolean); return s.length?s[0].toLowerCase():''; }
         // --- page-carousel v3: locale-aware -------------------------------
         // Card copy comes from a per-locale sidecar so the shared manifest stays
-        // ~2 KB gzipped instead of carrying 32 locales to every page load.
+        // ~2 KB gzipped instead of carrying 35 locales to every page load.
         var I18N=null;
         function loc(){ return (document.documentElement.lang||'en'); }
         function pick(app){ return (I18N&&I18N[app.slug])||{}; }

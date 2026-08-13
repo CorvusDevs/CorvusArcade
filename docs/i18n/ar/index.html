@@ -174,9 +174,20 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
-        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
-        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
-        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
+        .feature-explorer { max-width: 960px; margin: 0 auto; }
+        .feature-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 6px; margin-bottom: 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-tab { border: 0; border-radius: 10px; padding: 12px 16px; background: transparent; color: var(--text-secondary); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color .16s, color .16s, box-shadow .16s; }
+        .feature-tab:hover { color: var(--text); }
+        .feature-tab[aria-selected="true"] { color: #fff; background: linear-gradient(135deg, var(--accent), #9b7cff); box-shadow: 0 8px 24px rgba(109,90,230,.26); }
+        .feature-tab:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+        .feature-category { display: none; margin: 0; border: 0; }
+        .feature-category[data-active] { display: block; }
+        .feature-category > summary { display: none; }
+        .feature-explorer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-explorer-item::before { content: ""; position: absolute; left: 20px; top: 23px; width: 18px; height: 18px; border: 1.5px solid var(--accent-light); border-radius: 50%; background: radial-gradient(circle, var(--accent-light) 0 3px, transparent 4px); }
+        .feature-explorer-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
+        .feature-explorer-item p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
         .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
         .changelog-summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 18px 22px; font-size: 16px; font-weight: 700; color: var(--text); }
         .changelog-summary::-webkit-details-marker { display: none; }
@@ -239,9 +250,19 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
-            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
+        }
+        @media (max-width: 700px) {
+            .feature-tabs { display: none; }
+            .feature-category, .feature-category[data-active] { display: block; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; }
+            .feature-category > summary { display: flex; align-items: center; padding: 16px 18px; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; font-weight: 750; }
+            .feature-category > summary::-webkit-details-marker { display: none; }
+            .feature-category > summary::after { content: "+"; margin-left: auto; color: var(--accent-light); font-size: 20px; font-weight: 400; }
+            .feature-category[open] > summary::after { content: "−"; }
+            .feature-explorer-grid { grid-template-columns: 1fr; gap: 0; padding: 0 12px 12px; }
+            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 38px; }
+            .feature-explorer-item::before { left: 8px; top: 19px; }
         }
         @media (max-width: 520px) {
             .nav-cta { display: none; }
@@ -400,9 +421,93 @@
                     <p>قم بتقييد معدل الإطارات لتقليل الحرارة وضجيج المراوح، وتفعيل تحسين MetalFX، وعرض قراءة FPS المباشرة عند الحاجة.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block" id="all-features">
+        <div class="container">
+            <div class="section-label">كل شيء مضمن</div>
+            <h2 class="section-title" id="all-features-title">قائمة الميزات الكاملة</h2>
+            <div class="feature-explorer">
+                <div class="feature-tabs" role="tablist" aria-labelledby="all-features-title">
+                    <button class="feature-tab" id="feature-tab-play" type="button" role="tab" aria-selected="true" aria-controls="feature-play" tabindex="0">اللعب</button>
+                    <button class="feature-tab" id="feature-tab-performance" type="button" role="tab" aria-selected="false" aria-controls="feature-performance" tabindex="-1">الأداء</button>
+                    <button class="feature-tab" id="feature-tab-library" type="button" role="tab" aria-selected="false" aria-controls="feature-library" tabindex="-1">مكتبة</button>
+                    <button class="feature-tab" id="feature-tab-safety" type="button" role="tab" aria-selected="false" aria-controls="feature-safety" tabindex="-1">الأمان</button>
+                </div>
+
+                <details class="feature-category" id="feature-play" data-feature-panel="play" data-active open>
+                    <summary>اللعب</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Overwatch بنقرة واحدة</h3><p>يُعدّ الإعداد المُختار إعدادًا نظيفًا لإنشاء حاوية، وتثبيت Battle.net، والبدء فورًا في المباراة دون أي إعدادات.</p></article>
+                        <article class="feature-explorer-item"><h3>تم العثور على لعبتك لك</h3><p>بعد انتهاء المثبت، يقوم Corvus Arcade بقراءة ما سجله مع Windows ويحدد برنامج اللعبة تلقائياً، فلا داعي للبحث عن ملف .exe.</p></article>
+                        <article class="feature-explorer-item"><h3>شغل الألعاب في نافذة</h3><p>الآن يمكن بدء الألعاب في وضع النافذة بدلاً من احتلال الشاشة بالكامل.</p></article>
+                        <article class="feature-explorer-item"><h3>اختر برنامجًا آخر في أي وقت</h3><p>تتيح لك خيار "تغيير ملف تنفيذ اللعبة" تصحيح الهدف عند التشغيل لاحقًا، ويحذرك Corvus Arcade إذا كان الملف الذي اخترته برنامج تثبيت.</p></article>
+                        <article class="feature-explorer-item"><h3>تثبيت لعبة تتكون من عدة أجزاء</h3><p>قم بتوجيه برنامج «Point Corvus Arcade» إلى مجلد يحتوي على ملفات التثبيت المرقمة، وسيقوم البرنامج بفحصها، وإبلاغك في حال وجود ملف مفقود أو تالف، ثم يقوم بتشغيل برنامج التثبيت.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-performance" data-feature-panel="performance">
+                    <summary>الأداء</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>رسومات لكل لعبة</h3><p>اختر DXMT أو D3DMetal، GPTK 3 أو GPTK 4، وضع نافذة، وحدد الحد الأقصى لمعدل الإطارات لكل لعبة بشكل منفصل.</p></article>
+                        <article class="feature-explorer-item"><h3>GPU.. GPU الحي والذاكرة</h3><p>يُظهر مقياس ومخطط متحرك مقدار الجهد الذي تبذله وحدة معالجة الرسومات (GPU) والذاكرة أثناء اللعب.</p></article>
+                        <article class="feature-explorer-item"><h3>حد الإطارات وتراكب معدل الإطارات</h3><p>قم بتقييد معدل الإطارات لتقليل الحرارة وضجيج المراوح، وتفعيل تحسين MetalFX، وعرض قراءة FPS المباشرة عند الحاجة.</p></article>
+                        <article class="feature-explorer-item"><h3>مسح ذاكرة تخزين المظللات المؤقتة</h3><p>يوفر زر جديد في الإعدادات مساحة القرص التي يشغلها ذاكرة المؤثرات الصلبة لميتال. تقوم الألعاب بإعادة بنائها تلقائيًا عند التشغيل التالي.</p></article>
+                        <article class="feature-explorer-item"><h3>فحوصات التأهيل</h3><p>يُظهر صفحة اللعبة مشاكل مثل الذاكرة المحدودة ويقدم إصلاحًا بنقرة واحدة قبل اللعب.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-library" data-feature-panel="library">
+                    <summary>مكتبة</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>التشغيل السريع</h3><p>البحث عن الألعاب والأنشطة</p></article>
+                        <article class="feature-explorer-item"><h3>مكتبتك في لمحة</h3><p>يُظهر عرض الصفحة الرئيسية كل لعبة وحالتها الحالية: جاهزة، أو قيد التشغيل، أو تحتاج إلى إعداد.</p></article>
+                        <article class="feature-explorer-item"><h3>لقطات الشاشة أثناء اللعب</h3><p>تلتقط الاختصار نافذة اللعبة بدلاً من الشاشة بالكامل. تفتح اللقطات في مشغل على صفحة اللعبة، مع معرض وأزرار الأسهم.</p></article>
+                        <article class="feature-explorer-item"><h3>المفضلة والبحث</h3><p>قم بتثبيت الألعاب التي تلعبها في أعلى المكتبة والقائمة الجانبية، وابحث عنها حسب الاسم، وفرزها حسب آخر مرة تم لعبها أو حسب الاسم أو الحجم.</p></article>
+                        <article class="feature-explorer-item"><h3>تصدير مكتبتك</h3><p>احفظ قائمة الألعاب والتفضيلات وإعدادات كل لعبة في ملف صغير واحد، ثم استعدها على جهاز Mac آخر.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-safety" data-feature-panel="safety">
+                    <summary>الأمان</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>يتم حماية حفظاتك</h3><p>يُطلب تأكيد إزالة اللعبة أولاً؛ يتم حساب ملفات الحفظ المعرضة للخطر وعرض خيار تصديرها قبل أي حذف.</p></article>
+                        <article class="feature-explorer-item"><h3>خزينة بيانات الحفظ</h3><p>يقوم Corvus Arcade أولاً بإنشاء نقطة استعادة احتياطية من الحفظات الحالية. يجب إغلاق اللعبة.</p></article>
+                        <article class="feature-explorer-item"><h3>لقطات الحاويات</h3><p>قم بعمل نسخة احتياطية كاملة لحاوية Windows قبل إجراء التجارب أو إجراء تغييرات كبيرة. تبدأ لقطات APFS بسرعة ولا تستهلك مساحة إضافية إلا عند تغيير الملفات.</p></article>
+                        <article class="feature-explorer-item"><h3>إصلاح حاوية</h3><p>خيار إصلاح جديد يعيد استعادة الخطوط المفقودة ويعيد تطبيق إعدادات كل لعبة، مما يصلح القوائم الناقصة والنصوص دون حذف أي شيء قمت بتثبيته.</p></article>
+                        <article class="feature-explorer-item"><h3>تشير عملية التثبيت الفاشلة إلى ذلك</h3><p>عندما يتوقف برنامج التثبيت قبل اكتماله، يقوم Corvus Arcade بالإبلاغ عن ذلك بدلاً من ترك لعبة فارغة في مكتبتك.</p></article>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
+
+    <script>
+    (function(){
+        var tabs=Array.from(document.querySelectorAll('.feature-tab'));
+        var panels=Array.from(document.querySelectorAll('[data-feature-panel]'));
+        if(!tabs.length||!panels.length)return;
+        function activate(tab,moveFocus){
+            var target=tab.getAttribute('aria-controls');
+            tabs.forEach(function(item){var selected=item===tab;item.setAttribute('aria-selected',selected?'true':'false');item.tabIndex=selected?0:-1;});
+            panels.forEach(function(panel){var selected=panel.id===target;panel.toggleAttribute('data-active',selected);panel.open=selected;});
+            if(moveFocus)tab.focus();
+        }
+        tabs.forEach(function(tab,index){
+            tab.addEventListener('click',function(){activate(tab,false);});
+            tab.addEventListener('keydown',function(event){
+                var next=index;
+                if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+                else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;
+                else if(event.key==='Home')next=0;
+                else if(event.key==='End')next=tabs.length-1;
+                else return;
+                event.preventDefault();activate(tabs[next],true);
+            });
+        });
+    })();
+    </script>
 
     <!-- CHANGELOG:START -->
     <section class="block" id="whats-new">
@@ -505,7 +610,7 @@
         function slug(){ var e=section.getAttribute('data-current-slug'); if(e) return e.toLowerCase(); var s=location.pathname.split('/').filter(Boolean); return s.length?s[0].toLowerCase():''; }
         // --- page-carousel v3: locale-aware -------------------------------
         // Card copy comes from a per-locale sidecar so the shared manifest stays
-        // ~2 KB gzipped instead of carrying 32 locales to every page load.
+        // ~2 KB gzipped instead of carrying 35 locales to every page load.
         var I18N=null;
         function loc(){ return (document.documentElement.lang||'en'); }
         function pick(app){ return (I18N&&I18N[app.slug])||{}; }

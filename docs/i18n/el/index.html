@@ -174,9 +174,20 @@
         .feature-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
         .feature-card p { font-size: 14.5px; color: var(--text-secondary); }
-        .feature-list { list-style: none; max-width: 880px; margin: 10px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 36px; }
-        .feature-list li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
-        .feature-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238B78FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center; }
+        .feature-explorer { max-width: 960px; margin: 0 auto; }
+        .feature-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 6px; margin-bottom: 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-tab { border: 0; border-radius: 10px; padding: 12px 16px; background: transparent; color: var(--text-secondary); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background-color .16s, color .16s, box-shadow .16s; }
+        .feature-tab:hover { color: var(--text); }
+        .feature-tab[aria-selected="true"] { color: #fff; background: linear-gradient(135deg, var(--accent), #9b7cff); box-shadow: 0 8px 24px rgba(109,90,230,.26); }
+        .feature-tab:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+        .feature-category { display: none; margin: 0; border: 0; }
+        .feature-category[data-active] { display: block; }
+        .feature-category > summary { display: none; }
+        .feature-explorer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-explorer-item::before { content: ""; position: absolute; left: 20px; top: 23px; width: 18px; height: 18px; border: 1.5px solid var(--accent-light); border-radius: 50%; background: radial-gradient(circle, var(--accent-light) 0 3px, transparent 4px); }
+        .feature-explorer-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
+        .feature-explorer-item p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
         .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
         .changelog-summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 18px 22px; font-size: 16px; font-weight: 700; color: var(--text); }
         .changelog-summary::-webkit-details-marker { display: none; }
@@ -239,9 +250,19 @@
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-icon { width: 132px; height: 132px; }
             .features-grid { grid-template-columns: 1fr; }
-            .feature-list { grid-template-columns: 1fr; }
             .section-title { font-size: 30px; }
             nav { padding: 14px 20px; }
+        }
+        @media (max-width: 700px) {
+            .feature-tabs { display: none; }
+            .feature-category, .feature-category[data-active] { display: block; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; }
+            .feature-category > summary { display: flex; align-items: center; padding: 16px 18px; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; font-weight: 750; }
+            .feature-category > summary::-webkit-details-marker { display: none; }
+            .feature-category > summary::after { content: "+"; margin-left: auto; color: var(--accent-light); font-size: 20px; font-weight: 400; }
+            .feature-category[open] > summary::after { content: "−"; }
+            .feature-explorer-grid { grid-template-columns: 1fr; gap: 0; padding: 0 12px 12px; }
+            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 38px; }
+            .feature-explorer-item::before { left: 8px; top: 19px; }
         }
         @media (max-width: 520px) {
             .nav-cta { display: none; }
@@ -400,9 +421,93 @@
                     <p>Περιόρισε τα frames ανά δευτερόλεπτο για να μειώσεις τη ζέστη και τον θόρυβο του ανεμιστήρα, ενεργοποίησε τη βελτιστοποίηση MetalFX και εμφάνισε την αναγνώριση FPS σε πραγματικό χρόνο όταν το επιθυμείς.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="block" id="all-features">
+        <div class="container">
+            <div class="section-label">Περιλαμβάνεται όλα</div>
+            <h2 class="section-title" id="all-features-title">Η πλήρης λίστα με τα χαρακτηριστικά</h2>
+            <div class="feature-explorer">
+                <div class="feature-tabs" role="tablist" aria-labelledby="all-features-title">
+                    <button class="feature-tab" id="feature-tab-play" type="button" role="tab" aria-selected="true" aria-controls="feature-play" tabindex="0">Παιχνίδι</button>
+                    <button class="feature-tab" id="feature-tab-performance" type="button" role="tab" aria-selected="false" aria-controls="feature-performance" tabindex="-1">Απόδοση</button>
+                    <button class="feature-tab" id="feature-tab-library" type="button" role="tab" aria-selected="false" aria-controls="feature-library" tabindex="-1">Βιβλιοθήκη</button>
+                    <button class="feature-tab" id="feature-tab-safety" type="button" role="tab" aria-selected="false" aria-controls="feature-safety" tabindex="-1">Ασφάλεια</button>
+                </div>
+
+                <details class="feature-category" id="feature-play" data-feature-panel="play" data-active open>
+                    <summary>Παιχνίδι</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Overwatch με ένα κλικ</h3><p>Ένα επιμελημένο ρυθμίσμα δημιουργεί ένα καθαρό δοχείο, εγκαθιστά το Battle.net και ξεκινά άμεσα για έναν αγώνα. Χωρίς ρύθμιση.</p></article>
+                        <article class="feature-explorer-item"><h3>Το παιχνίδι σας βρέθηκε για εσάς</h3><p>Μετά την ολοκλήρωση της εγκατάστασης, το Corvus Arcade διαβάζει αυτό που καταγράφηκε στο Windows και εκκινεί αυτόματα το πρόγραμμα του παιχνιδιού, ώστε να μην χρειάζεται πλέον να ψάχνετε για αρχείο .exe.</p></article>
+                        <article class="feature-explorer-item"><h3>Τρέξτε παιχνίδια σε ένα παράθυρο</h3><p>Τα παιχνίδια μπορούν τώρα να ξεκινούν σε παράθυρο αντί για την πλήρη οθόνη.</p></article>
+                        <article class="feature-explorer-item"><h3>Επιλέξτε ένα άλλο πρόγραμμα ανά πάσα στιγμή</h3><p>Η νέα επιλογή Επεξεργασίας Εγχειριδίου Εκτελέσιμου σας επιτρέπει να διορθώσετε τον στόχο εκκίνησης αργότερα, και το Corvus Arcade σας προειδοποιεί αν το αρχείο που επιλέξατε είναι πρόγραμμα εγκατάστασης.</p></article>
+                        <article class="feature-explorer-item"><h3>Εγκαταστήστε ένα παιχνίδι που αποτελείται από διάφορα μέρη</h3><p>Το Point Corvus Arcade εντοπίζει έναν φάκελο με αριθμημένα αρχεία εγκατάστασης, τα ελέγχει, επισημαίνει αν κάποιο λείπει ή είναι κατεστραμμένο και, στη συνέχεια, εκτελεί το πρόγραμμα εγκατάστασης.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-performance" data-feature-panel="performance">
+                    <summary>Απόδοση</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Γραφικά ανά παιχνίδι</h3><p>Επιλέξτε DXMT ή D3DMetal, GPTK 3 ή GPTK 4, λειτουργία παραθύρου και όριο αναπαραγωγής πλαισίων για κάθε παιχνίδι ανεξάρτητα.</p></article>
+                        <article class="feature-explorer-item"><h3>Ζωντανή GPU και μνήμη</h3><p>Ένα μέτρο και ένα κυλιόμενο διάγραμμα δείχνουν πόσο σκληρά εργάζονται η GPU και η μνήμη σας κατά την αναπαραγωγή.</p></article>
+                        <article class="feature-explorer-item"><h3>Επικάλυψη πλαισίου και FPS</h3><p>Περιόρισε τα frames ανά δευτερόλεπτο για να μειώσεις τη ζέστη και τον θόρυβο του ανεμιστήρα, ενεργοποίησε τη βελτιστοποίηση MetalFX και εμφάνισε την αναγνώριση FPS σε πραγματικό χρόνο όταν το επιθυμείς.</p></article>
+                        <article class="feature-explorer-item"><h3>Καθαρισμός του cache shaders</h3><p>Ένα νέο κουμπί στις Ρυθμίσεις απελευθερώνει τον χώρο δίσκου που καταλαμβάνει η προσωρινή μνήμη του Metal για shaders. Οι παιχνίδια την επαναχτίζουν αυτόματα την επόμενη εκκίνηση.</p></article>
+                        <article class="feature-explorer-item"><h3>Έλεγχοι έτοιμης κατάστασης</h3><p>Η σελίδα του παιχνιδιού εντοπίζει προβλήματα, όπως περιορισμένη μνήμη, και προσφέρει μια διόρθωση με ένα πάτημα πριν παίξετε.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-library" data-feature-panel="library">
+                    <summary>Βιβλιοθήκη</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Γρήγορη εκκίνηση</h3><p>Αναζήτηση παιχνιδιών και δραστηριοτήτων</p></article>
+                        <article class="feature-explorer-item"><h3>Η βιβλιοθήκη σας σε μια ματιά</h3><p>Η οθόνη Αρχικής σελίδας εμφανίζει κάθε παιχνίδι και την τρέχουσα κατάστασή του: έτοιμο, σε αναπαραγωγή ή χρειάζεται ρύθμιση.</p></article>
+                        <article class="feature-explorer-item"><h3>Στιγμιότυπα κατά την παιχνιδιάριση</h3><p>Ένα γρήγορο κουμπί καταγράφει το παράθυρο του παιχνιδιού, όχι ολόκληρη την οθόνη. Οι λήψεις ανοίγουν σε έναν προβολέα στη σελίδα του παιχνιδιού, με μια γκαλερί και τα πλήκτρα βέλους.</p></article>
+                        <article class="feature-explorer-item"><h3>Αγαπημένα και αναζήτηση</h3><p>Καρφιτσώστε τα παιχνίδια που παίζετε στην κορυφή της βιβλιοθήκης και της πλαϊνής στήλης, αναζητήστε με το όνομα και ταξινομήστε κατά τελευταία χρήση, όνομα ή μέγεθος.</p></article>
+                        <article class="feature-explorer-item"><h3>Εξαγωγή της βιβλιοθήκης σας</h3><p>Αποθηκεύστε τη λίστα παιχνιδιών, τις προτιμήσεις και τις ρυθμίσεις κάθε παιχνιδιού σε ένα μικρό αρχείο και επαναφέρετέ τα σε άλλο Mac.</p></article>
+                    </div>
+                </details>
+
+                <details class="feature-category" id="feature-safety" data-feature-panel="safety">
+                    <summary>Ασφάλεια</summary>
+                    <div class="feature-explorer-grid">
+                        <article class="feature-explorer-item"><h3>Τα αποθηκευμένα αρχεία σας προστατεύονται</h3><p>Η αφαίρεση ενός παιχνιδιού ζητά πρώτα επιβεβαίωση. Απομετρά τα αρχεία αποθήκευσης που κινδυνεύουν και προσφέρει την εξαγωγή τους πριν διαγραφεί κάτι.</p></article>
+                        <article class="feature-explorer-item"><h3>Θησαυροφυλάκιο αποθηκευμένων δεδομένων</h3><p>Το Corvus Arcade δημιουργεί πρώτα ένα σημείο επαναφοράς ασφαλείας από τις τρέχουσες αποθηκεύσεις. Το παιχνίδι πρέπει να είναι κλειστό.</p></article>
+                        <article class="feature-explorer-item"><h3>Στιγμιότυπα κοντέινερ</h3><p>Δημιουργήστε πλήρες αντίγραφο ασφαλείας του κοντέινερ των Windows πριν από πειράματα ή σημαντικές αλλαγές. Τα στιγμιότυπα APFS ξεκινούν γρήγορα και καταλαμβάνουν περισσότερο χώρο μόνο όταν αλλάζουν τα αρχεία.</p></article>
+                        <article class="feature-explorer-item"><h3>Επιδιόρθωση κοντέινερ</h3><p>Μια νέα επιλογή Επισκευής επαναφέρει τα λείποντα γραμματοσειρές και επανεφαρμόζει τις ρυθμίσεις κάθε παιχνιδιού, διορθώνοντας τα κενά μενού και το κείμενο χωρίς να διαγράφει τίποτα που έχετε εγκαταστήσει.</p></article>
+                        <article class="feature-explorer-item"><h3>Αυτό δείχνει ότι η εγκατάσταση απέτυχε</h3><p>Όταν η εγκατάσταση διακοπεί πρόωρα, το Corvus Arcade το αναφέρει, αντί να αφήσει ένα κενό παιχνίδι στη βιβλιοθήκη σας.</p></article>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
+
+    <script>
+    (function(){
+        var tabs=Array.from(document.querySelectorAll('.feature-tab'));
+        var panels=Array.from(document.querySelectorAll('[data-feature-panel]'));
+        if(!tabs.length||!panels.length)return;
+        function activate(tab,moveFocus){
+            var target=tab.getAttribute('aria-controls');
+            tabs.forEach(function(item){var selected=item===tab;item.setAttribute('aria-selected',selected?'true':'false');item.tabIndex=selected?0:-1;});
+            panels.forEach(function(panel){var selected=panel.id===target;panel.toggleAttribute('data-active',selected);panel.open=selected;});
+            if(moveFocus)tab.focus();
+        }
+        tabs.forEach(function(tab,index){
+            tab.addEventListener('click',function(){activate(tab,false);});
+            tab.addEventListener('keydown',function(event){
+                var next=index;
+                if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+                else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;
+                else if(event.key==='Home')next=0;
+                else if(event.key==='End')next=tabs.length-1;
+                else return;
+                event.preventDefault();activate(tabs[next],true);
+            });
+        });
+    })();
+    </script>
 
     <!-- CHANGELOG:START -->
     <section class="block" id="whats-new">
@@ -505,7 +610,7 @@
         function slug(){ var e=section.getAttribute('data-current-slug'); if(e) return e.toLowerCase(); var s=location.pathname.split('/').filter(Boolean); return s.length?s[0].toLowerCase():''; }
         // --- page-carousel v3: locale-aware -------------------------------
         // Card copy comes from a per-locale sidecar so the shared manifest stays
-        // ~2 KB gzipped instead of carrying 32 locales to every page load.
+        // ~2 KB gzipped instead of carrying 35 locales to every page load.
         var I18N=null;
         function loc(){ return (document.documentElement.lang||'en'); }
         function pick(app){ return (I18N&&I18N[app.slug])||{}; }
