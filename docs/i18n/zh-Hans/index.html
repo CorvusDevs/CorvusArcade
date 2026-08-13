@@ -184,8 +184,9 @@
         .feature-category[data-active] { display: block; }
         .feature-category > summary { display: none; }
         .feature-explorer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
-        .feature-explorer-item::before { content: ""; position: absolute; left: 20px; top: 23px; width: 18px; height: 18px; border: 1.5px solid var(--accent-light); border-radius: 50%; background: radial-gradient(circle, var(--accent-light) 0 3px, transparent 4px); }
+        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 62px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-explorer-icon { position: absolute; left: 18px; top: 18px; width: 30px; height: 30px; display: grid; place-items: center; color: var(--accent-light); background: var(--accent-dim); border: 1px solid color-mix(in srgb, var(--accent-light) 38%, transparent); border-radius: 9px; }
+        .feature-explorer-icon svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
         .feature-explorer-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
         .feature-explorer-item p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
         .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
@@ -261,8 +262,8 @@
             .feature-category > summary::after { content: "+"; margin-left: auto; color: var(--accent-light); font-size: 20px; font-weight: 400; }
             .feature-category[open] > summary::after { content: "−"; }
             .feature-explorer-grid { grid-template-columns: 1fr; gap: 0; padding: 0 12px 12px; }
-            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 38px; }
-            .feature-explorer-item::before { left: 8px; top: 19px; }
+            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 48px; }
+            .feature-explorer-icon { left: 8px; top: 15px; }
         }
         @media (max-width: 520px) {
             .nav-cta { display: none; }
@@ -439,44 +440,44 @@
                 <details class="feature-category" id="feature-play" data-feature-panel="play" data-active open>
                     <summary>游玩</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>一键畅玩守望先锋</h3><p>精选配置可创建干净的游戏环境，安装 Battle.net 并直接开始匹配，无需任何设置。</p></article>
-                        <article class="feature-explorer-item"><h3>您的游戏已为您找到</h3><p>安装完成后，Corvus Arcade 会读取其在 Windows 中注册的内容并自动启动游戏程序，因此无需再寻找 .exe 文件。</p></article>
-                        <article class="feature-explorer-item"><h3>在窗口中运行游戏</h3><p>游戏现在可以以窗口模式启动，而不再独占整个屏幕。</p></article>
-                        <article class="feature-explorer-item"><h3>随时选择其他程序</h3><p>新的“更改游戏可执行文件”选项允许您稍后修正启动目标，Corvus Arcade 会提示您所选文件是否为安装程序。</p></article>
-                        <article class="feature-explorer-item"><h3>安装一个由多个部分组成的游戏</h3><p>将 Point Corvus Arcade 指向一个包含编号安装程序文件的文件夹，它会检查这些文件，如果发现有文件缺失或损坏，则会运行安装程序。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></svg></span><h3>一键畅玩守望先锋</h3><p>精选配置可创建干净的游戏环境，安装 Battle.net 并直接开始匹配，无需任何设置。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4M8 11l2 2 4-4"/></svg></span><h3>您的游戏已为您找到</h3><p>安装完成后，Corvus Arcade 会读取其在 Windows 中注册的内容并自动启动游戏程序，因此无需再寻找 .exe 文件。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 7h.01"/></svg></span><h3>在窗口中运行游戏</h3><p>游戏现在可以以窗口模式启动，而不再独占整个屏幕。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h11M4 12h7M4 17h9M17 13l3 3-3 3M20 16h-6"/></svg></span><h3>随时选择其他程序</h3><p>新的“更改游戏可执行文件”选项允许您稍后修正启动目标，Corvus Arcade 会提示您所选文件是否为安装程序。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h6l2 2h8v10H4Z"/><path d="M8 4h8v5M8 14h8M12 11v6"/></svg></span><h3>安装一个由多个部分组成的游戏</h3><p>将 Point Corvus Arcade 指向一个包含编号安装程序文件的文件夹，它会检查这些文件，如果发现有文件缺失或损坏，则会运行安装程序。</p></article>
                     </div>
                 </details>
 
                 <details class="feature-category" id="feature-performance" data-feature-panel="performance">
                     <summary>性能</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>每局图形</h3><p>为每个游戏独立选择 DXMT 或 D3DMetal、GPTK 3 或 GPTK 4、窗口模式以及帧率上限。</p></article>
-                        <article class="feature-explorer-item"><h3>实时 GPU 和内存</h3><p>仪表盘和滚动图表会显示您在玩游戏时 GPU 和内存的负载情况。</p></article>
-                        <article class="feature-explorer-item"><h3>帧率上限与 FPS 覆盖</h3><p>可限制帧率以降低发热和风扇噪音，启用 MetalFX 超分辨率，并在需要时显示实时帧率读数。</p></article>
-                        <article class="feature-explorer-item"><h3>清除着色器缓存</h3><p>设置中新增了一个按钮，可释放 Metal 着色器缓存占用的磁盘空间。游戏将在下次启动时自动重新构建缓存。</p></article>
-                        <article class="feature-explorer-item"><h3>就绪检查</h3><p>游戏页面会标记内存不足等问题，并在您开始游戏前提供一键修复方案。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h7M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg></span><h3>每局图形</h3><p>为每个游戏独立选择 DXMT 或 D3DMetal、GPTK 3 或 GPTK 4、窗口模式以及帧率上限。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>实时 GPU 和内存</h3><p>仪表盘和滚动图表会显示您在玩游戏时 GPU 和内存的负载情况。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17a8 8 0 1 1 14 0M12 13l4-4"/><circle cx="12" cy="13" r="1"/></svg></span><h3>帧率上限与 FPS 覆盖</h3><p>可限制帧率以降低发热和风扇噪音，启用 MetalFX 超分辨率，并在需要时显示实时帧率读数。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></span><h3>清除着色器缓存</h3><p>设置中新增了一个按钮，可释放 Metal 着色器缓存占用的磁盘空间。游戏将在下次启动时自动重新构建缓存。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><h3>就绪检查</h3><p>游戏页面会标记内存不足等问题，并在您开始游戏前提供一键修复方案。</p></article>
                     </div>
                 </details>
 
                 <details class="feature-category" id="feature-library" data-feature-panel="library">
                     <summary>资料库</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>快速启动</h3><p>搜索游戏和活动</p></article>
-                        <article class="feature-explorer-item"><h3>您的库一览</h3><p>主页显示所有游戏及其当前状态：就绪、播放中或需要设置。</p></article>
-                        <article class="feature-explorer-item"><h3>游戏时截图</h3><p>快捷方式仅截取游戏窗口而非整个屏幕。截图将在游戏页面的查看器中打开，并配有图库和方向键。</p></article>
-                        <article class="feature-explorer-item"><h3>收藏夹和搜索</h3><p>将您玩的游戏固定到库和侧边栏顶部，通过名称搜索，并按最后游玩时间、名称或大小排序。</p></article>
-                        <article class="feature-explorer-item"><h3>导出您的库</h3><p>将游戏列表、偏好设置及每个游戏的设置保存到一个小巧的文件中，并可在另一台 Mac 上恢复。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5M10 7v6M7 10h6"/></svg></span><h3>快速启动</h3><p>搜索游戏和活动</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="15" width="7" height="6" rx="1"/><rect x="14" y="15" width="7" height="6" rx="1"/></svg></span><h3>您的库一览</h3><p>主页显示所有游戏及其当前状态：就绪、播放中或需要设置。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v9H3V9a2 2 0 0 1 2-2Z"/><circle cx="12" cy="12.5" r="3.5"/></svg></span><h3>游戏时截图</h3><p>快捷方式仅截取游戏窗口而非整个屏幕。截图将在游戏页面的查看器中打开，并配有图库和方向键。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg></span><h3>收藏夹和搜索</h3><p>将您玩的游戏固定到库和侧边栏顶部，通过名称搜索，并按最后游玩时间、名称或大小排序。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></span><h3>导出您的库</h3><p>将游戏列表、偏好设置及每个游戏的设置保存到一个小巧的文件中，并可在另一台 Mac 上恢复。</p></article>
                     </div>
                 </details>
 
                 <details class="feature-category" id="feature-safety" data-feature-panel="safety">
                     <summary>安全</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>您的保存已受保护</h3><p>删除游戏前会先询问。系统会统计受影响的存档文件，并在删除前提供导出选项。</p></article>
-                        <article class="feature-explorer-item"><h3>存档数据库</h3><p>Corvus Arcade 会先从当前存档创建一个安全还原点。必须先关闭游戏。</p></article>
-                        <article class="feature-explorer-item"><h3>容器快照</h3><p>在进行实验或重大更改之前，请完整捕获整个 Windows 容器。APFS 快照启动迅速，且仅在文件发生变化时才会占用更多空间。</p></article>
-                        <article class="feature-explorer-item"><h3>修复容器</h3><p>新增的“修复”选项可恢复缺失的字体并重新应用每个游戏的设置，修复空白菜单和文本问题，同时不会删除您已安装的任何内容。</p></article>
-                        <article class="feature-explorer-item"><h3>安装失败时会显示该提示</h3><p>当安装程序提前停止时，Corvus Arcade 会报告此情况，而不是在您的游戏库中留下一个空的游戏条目。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="M9 12h6M12 9v6"/></svg></span><h3>您的保存已受保护</h3><p>删除游戏前会先询问。系统会统计受影响的存档文件，并在删除前提供导出选项。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v6h8V3M8 17h8M9 13h6"/></svg></span><h3>存档数据库</h3><p>Corvus Arcade 会先从当前存档创建一个安全还原点。必须先关闭游戏。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 8 4-8 4-8-4Z"/><path d="m4 12 8 4 8-4M4 17l8 4 8-4"/></svg></span><h3>容器快照</h3><p>在进行实验或重大更改之前，请完整捕获整个 Windows 容器。APFS 快照启动迅速，且仅在文件发生变化时才会占用更多空间。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L4 17v3h3l5.7-5.7a4 4 0 0 0 5-5l-2.5 2.5-3-3Z"/></svg></span><h3>修复容器</h3><p>新增的“修复”选项可恢复缺失的字体并重新应用每个游戏的设置，修复空白菜单和文本问题，同时不会删除您已安装的任何内容。</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 2.8 19h18.4Z"/><path d="M12 9v4M12 17h.01"/></svg></span><h3>安装失败时会显示该提示</h3><p>当安装程序提前停止时，Corvus Arcade 会报告此情况，而不是在您的游戏库中留下一个空的游戏条目。</p></article>
                     </div>
                 </details>
             </div>

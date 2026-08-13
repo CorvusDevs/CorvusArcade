@@ -184,8 +184,9 @@
         .feature-category[data-active] { display: block; }
         .feature-category > summary { display: none; }
         .feature-explorer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
-        .feature-explorer-item::before { content: ""; position: absolute; left: 20px; top: 23px; width: 18px; height: 18px; border: 1.5px solid var(--accent-light); border-radius: 50%; background: radial-gradient(circle, var(--accent-light) 0 3px, transparent 4px); }
+        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 62px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-explorer-icon { position: absolute; left: 18px; top: 18px; width: 30px; height: 30px; display: grid; place-items: center; color: var(--accent-light); background: var(--accent-dim); border: 1px solid color-mix(in srgb, var(--accent-light) 38%, transparent); border-radius: 9px; }
+        .feature-explorer-icon svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
         .feature-explorer-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
         .feature-explorer-item p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
         .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
@@ -261,8 +262,8 @@
             .feature-category > summary::after { content: "+"; margin-left: auto; color: var(--accent-light); font-size: 20px; font-weight: 400; }
             .feature-category[open] > summary::after { content: "−"; }
             .feature-explorer-grid { grid-template-columns: 1fr; gap: 0; padding: 0 12px 12px; }
-            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 38px; }
-            .feature-explorer-item::before { left: 8px; top: 19px; }
+            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 48px; }
+            .feature-explorer-icon { left: 8px; top: 15px; }
         }
         @media (max-width: 520px) {
             .nav-cta { display: none; }
@@ -439,44 +440,44 @@
                 <details class="feature-category" id="feature-play" data-feature-panel="play" data-active open>
                     <summary>Jugar</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>Overwatch con un clic</h3><p>Un entorno configurado crea un contenedor limpio, instala Battle.net y lanza el juego directamente hacia una partida. Sin configuración.</p></article>
-                        <article class="feature-explorer-item"><h3>Se ha encontrado tu juego</h3><p>Después de que termine el instalador, Corvus Arcade lee lo que registró en Windows y establece automáticamente el programa del juego, por lo que ya no hay que buscar un archivo .exe.</p></article>
-                        <article class="feature-explorer-item"><h3>Juega en una ventana</h3><p>Ahora los juegos pueden iniciar en ventana en lugar de ocupar toda la pantalla.</p></article>
-                        <article class="feature-explorer-item"><h3>Seleccione otro programa en cualquier momento</h3><p>Una nueva opción Ejecutable del juego le permite corregir la meta de lanzamiento después, y Corvus Arcade le advierte si el archivo que seleccionó es un programa de instalación.</p></article>
-                        <article class="feature-explorer-item"><h3>Instalar un juego que viene en varias partes</h3><p>Point Corvus Arcade busca en una carpeta de archivos de instalación numerados, los revisa, indica si falta alguno o si alguno está dañado y, a continuación, ejecuta el instalador.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></svg></span><h3>Overwatch con un clic</h3><p>Un entorno configurado crea un contenedor limpio, instala Battle.net y lanza el juego directamente hacia una partida. Sin configuración.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4M8 11l2 2 4-4"/></svg></span><h3>Se ha encontrado tu juego</h3><p>Después de que termine el instalador, Corvus Arcade lee lo que registró en Windows y establece automáticamente el programa del juego, por lo que ya no hay que buscar un archivo .exe.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 7h.01"/></svg></span><h3>Juega en una ventana</h3><p>Ahora los juegos pueden iniciar en ventana en lugar de ocupar toda la pantalla.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h11M4 12h7M4 17h9M17 13l3 3-3 3M20 16h-6"/></svg></span><h3>Seleccione otro programa en cualquier momento</h3><p>Una nueva opción Ejecutable del juego le permite corregir la meta de lanzamiento después, y Corvus Arcade le advierte si el archivo que seleccionó es un programa de instalación.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h6l2 2h8v10H4Z"/><path d="M8 4h8v5M8 14h8M12 11v6"/></svg></span><h3>Instalar un juego que viene en varias partes</h3><p>Point Corvus Arcade busca en una carpeta de archivos de instalación numerados, los revisa, indica si falta alguno o si alguno está dañado y, a continuación, ejecuta el instalador.</p></article>
                     </div>
                 </details>
 
                 <details class="feature-category" id="feature-performance" data-feature-panel="performance">
                     <summary>Rendimiento</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>Gráficos por juego</h3><p>Seleccione DXMT o D3DMetal, GPTK 3 o GPTK 4, el modo de ventana y el límite de cuadros por segundo para cada juego de forma independiente.</p></article>
-                        <article class="feature-explorer-item"><h3>GPU y memoria en tiempo real</h3><p>Un medidor y un gráfico en movimiento muestran cuánto esfuerzo están haciendo tu GPU y la memoria mientras juegas.</p></article>
-                        <article class="feature-explorer-item"><h3>Marco de cuadros y superposición de FPS</h3><p>Limita la tasa de fotogramas para reducir el calor y el ruido del ventilador, activa la mejora de resolución MetalFX y muestra la lectura de FPS en tiempo real cuando lo desees.</p></article>
-                        <article class="feature-explorer-item"><h3>Borrar la caché del shader</h3><p>Un nuevo botón en Ajustes libera el espacio en disco que usa la caché de shaders de Metal. Los juegos la reconstruyen automáticamente en el siguiente lanzamiento.</p></article>
-                        <article class="feature-explorer-item"><h3>Comprobaciones de preparación</h3><p>La página del juego marca problemas como la memoria ajustada y ofrece una solución con un solo toque antes de jugar.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h7M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg></span><h3>Gráficos por juego</h3><p>Seleccione DXMT o D3DMetal, GPTK 3 o GPTK 4, el modo de ventana y el límite de cuadros por segundo para cada juego de forma independiente.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>GPU y memoria en tiempo real</h3><p>Un medidor y un gráfico en movimiento muestran cuánto esfuerzo están haciendo tu GPU y la memoria mientras juegas.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17a8 8 0 1 1 14 0M12 13l4-4"/><circle cx="12" cy="13" r="1"/></svg></span><h3>Marco de cuadros y superposición de FPS</h3><p>Limita la tasa de fotogramas para reducir el calor y el ruido del ventilador, activa la mejora de resolución MetalFX y muestra la lectura de FPS en tiempo real cuando lo desees.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></span><h3>Borrar la caché del shader</h3><p>Un nuevo botón en Ajustes libera el espacio en disco que usa la caché de shaders de Metal. Los juegos la reconstruyen automáticamente en el siguiente lanzamiento.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><h3>Comprobaciones de preparación</h3><p>La página del juego marca problemas como la memoria ajustada y ofrece una solución con un solo toque antes de jugar.</p></article>
                     </div>
                 </details>
 
                 <details class="feature-category" id="feature-library" data-feature-panel="library">
                     <summary>Biblioteca</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>Inicio rápido</h3><p>Buscar juegos y acciones</p></article>
-                        <article class="feature-explorer-item"><h3>Tu biblioteca de un vistazo</h3><p>La vista de Inicio muestra todos los juegos y su estado actual: listo, en reproducción o necesita configuración.</p></article>
-                        <article class="feature-explorer-item"><h3>Capturas de pantalla mientras juegas</h3><p>Un atajo captura la ventana del juego en lugar de toda la pantalla. Las tomas se abren en un visor en la página del juego, con una galería y las teclas de flecha.</p></article>
-                        <article class="feature-explorer-item"><h3>Favoritos y búsqueda</h3><p>Fije los juegos que juega en la parte superior de la biblioteca y la barra lateral, busque por nombre y ordene por último jugado, nombre o tamaño.</p></article>
-                        <article class="feature-explorer-item"><h3>Exportar su biblioteca</h3><p>Guarda tu lista de juegos, preferencias y configuraciones por juego en un solo archivo pequeño, y restaura todo en otro Mac.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5M10 7v6M7 10h6"/></svg></span><h3>Inicio rápido</h3><p>Buscar juegos y acciones</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="15" width="7" height="6" rx="1"/><rect x="14" y="15" width="7" height="6" rx="1"/></svg></span><h3>Tu biblioteca de un vistazo</h3><p>La vista de Inicio muestra todos los juegos y su estado actual: listo, en reproducción o necesita configuración.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v9H3V9a2 2 0 0 1 2-2Z"/><circle cx="12" cy="12.5" r="3.5"/></svg></span><h3>Capturas de pantalla mientras juegas</h3><p>Un atajo captura la ventana del juego en lugar de toda la pantalla. Las tomas se abren en un visor en la página del juego, con una galería y las teclas de flecha.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg></span><h3>Favoritos y búsqueda</h3><p>Fije los juegos que juega en la parte superior de la biblioteca y la barra lateral, busque por nombre y ordene por último jugado, nombre o tamaño.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></span><h3>Exportar su biblioteca</h3><p>Guarda tu lista de juegos, preferencias y configuraciones por juego en un solo archivo pequeño, y restaura todo en otro Mac.</p></article>
                     </div>
                 </details>
 
                 <details class="feature-category" id="feature-safety" data-feature-panel="safety">
                     <summary>Seguridad</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>Sus guardados están protegidos</h3><p>Al eliminar un juego, se solicita confirmación primero. Se cuentan los archivos de guardado en juego y se ofrece exportarlos antes de borrar cualquier cosa.</p></article>
-                        <article class="feature-explorer-item"><h3>Caja fuerte de datos guardados</h3><p>Corvus Arcade crea primero un punto de restauración de seguridad a partir de las partidas guardadas actuales. Es necesario cerrar el juego.</p></article>
-                        <article class="feature-explorer-item"><h3>Instantáneas de contenedores</h3><p>Captura el contenedor completo de Windows antes de realizar experimentos o cambios importantes. Las instantáneas de APFS se inician rápidamente y solo ocupan más espacio a medida que cambian los archivos.</p></article>
-                        <article class="feature-explorer-item"><h3>Reparar un contenedor</h3><p>Una nueva opción de Reparación restaura las fuentes faltantes y vuelve a aplicar la configuración de cada juego, solucionando los menús y el texto en blanco sin eliminar nada de lo que hayas instalado.</p></article>
-                        <article class="feature-explorer-item"><h3>Una instalación fallida lo indica</h3><p>Cuando la instalación se detiene antes de tiempo, Corvus Arcade lo notifica en lugar de dejar un juego vacío en tu biblioteca.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="M9 12h6M12 9v6"/></svg></span><h3>Sus guardados están protegidos</h3><p>Al eliminar un juego, se solicita confirmación primero. Se cuentan los archivos de guardado en juego y se ofrece exportarlos antes de borrar cualquier cosa.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v6h8V3M8 17h8M9 13h6"/></svg></span><h3>Caja fuerte de datos guardados</h3><p>Corvus Arcade crea primero un punto de restauración de seguridad a partir de las partidas guardadas actuales. Es necesario cerrar el juego.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 8 4-8 4-8-4Z"/><path d="m4 12 8 4 8-4M4 17l8 4 8-4"/></svg></span><h3>Instantáneas de contenedores</h3><p>Captura el contenedor completo de Windows antes de realizar experimentos o cambios importantes. Las instantáneas de APFS se inician rápidamente y solo ocupan más espacio a medida que cambian los archivos.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L4 17v3h3l5.7-5.7a4 4 0 0 0 5-5l-2.5 2.5-3-3Z"/></svg></span><h3>Reparar un contenedor</h3><p>Una nueva opción de Reparación restaura las fuentes faltantes y vuelve a aplicar la configuración de cada juego, solucionando los menús y el texto en blanco sin eliminar nada de lo que hayas instalado.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 2.8 19h18.4Z"/><path d="M12 9v4M12 17h.01"/></svg></span><h3>Una instalación fallida lo indica</h3><p>Cuando la instalación se detiene antes de tiempo, Corvus Arcade lo notifica en lugar de dejar un juego vacío en tu biblioteca.</p></article>
                     </div>
                 </details>
             </div>

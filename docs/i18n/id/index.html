@@ -184,8 +184,9 @@
         .feature-category[data-active] { display: block; }
         .feature-category > summary { display: none; }
         .feature-explorer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
-        .feature-explorer-item::before { content: ""; position: absolute; left: 20px; top: 23px; width: 18px; height: 18px; border: 1.5px solid var(--accent-light); border-radius: 50%; background: radial-gradient(circle, var(--accent-light) 0 3px, transparent 4px); }
+        .feature-explorer-item { position: relative; min-height: 112px; padding: 20px 20px 20px 62px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+        .feature-explorer-icon { position: absolute; left: 18px; top: 18px; width: 30px; height: 30px; display: grid; place-items: center; color: var(--accent-light); background: var(--accent-dim); border: 1px solid color-mix(in srgb, var(--accent-light) 38%, transparent); border-radius: 9px; }
+        .feature-explorer-icon svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
         .feature-explorer-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
         .feature-explorer-item p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
         .changelog-box { max-width: 720px; margin: 8px auto 0; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
@@ -261,8 +262,8 @@
             .feature-category > summary::after { content: "+"; margin-left: auto; color: var(--accent-light); font-size: 20px; font-weight: 400; }
             .feature-category[open] > summary::after { content: "−"; }
             .feature-explorer-grid { grid-template-columns: 1fr; gap: 0; padding: 0 12px 12px; }
-            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 38px; }
-            .feature-explorer-item::before { left: 8px; top: 19px; }
+            .feature-explorer-item { min-height: 0; border-radius: 0; border-width: 1px 0 0; padding: 16px 8px 16px 48px; }
+            .feature-explorer-icon { left: 8px; top: 15px; }
         }
         @media (max-width: 520px) {
             .nav-cta { display: none; }
@@ -439,44 +440,44 @@
                 <details class="feature-category" id="feature-play" data-feature-panel="play" data-active open>
                     <summary>Mainkan</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>Overwatch dengan satu klik</h3><p>A curated setup membuat wadah bersih, menginstal Battle.net, dan langsung meluncurkan permainan tanpa konfigurasi.</p></article>
-                        <article class="feature-explorer-item"><h3>Permainan Anda ditemukan untuk Anda</h3><p>Setelah instalasi selesai, Corvus Arcade membaca apa yang telah didaftarkan ke Windows dan menjalankan program game secara otomatis, sehingga tidak perlu lagi mencari file .exe.</p></article>
-                        <article class="feature-explorer-item"><h3>Jalankan game di jendela</h3><p>Sekarang game dapat dimulai dalam mode jendela alih-alih mengambil alih seluruh layar.</p></article>
-                        <article class="feature-explorer-item"><h3>Pilih program lain kapan saja</h3><p>Pilihan Baru Eksekusi Game memungkinkan Anda memperbaiki target peluncuran nanti, dan Corvus Arcade memberi peringatan jika file yang dipilih adalah program instalasi.</p></article>
-                        <article class="feature-explorer-item"><h3>Instal game yang terdiri dari beberapa bagian</h3><p>Arahkan Point Corvus Arcade ke folder yang berisi berkas-berkas penginstal yang diberi nomor, lalu program ini akan memeriksanya; jika ada yang hilang atau rusak, program ini akan menjalankan penginstal tersebut.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></svg></span><h3>Overwatch dengan satu klik</h3><p>A curated setup membuat wadah bersih, menginstal Battle.net, dan langsung meluncurkan permainan tanpa konfigurasi.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4M8 11l2 2 4-4"/></svg></span><h3>Permainan Anda ditemukan untuk Anda</h3><p>Setelah instalasi selesai, Corvus Arcade membaca apa yang telah didaftarkan ke Windows dan menjalankan program game secara otomatis, sehingga tidak perlu lagi mencari file .exe.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 7h.01"/></svg></span><h3>Jalankan game di jendela</h3><p>Sekarang game dapat dimulai dalam mode jendela alih-alih mengambil alih seluruh layar.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h11M4 12h7M4 17h9M17 13l3 3-3 3M20 16h-6"/></svg></span><h3>Pilih program lain kapan saja</h3><p>Pilihan Baru Eksekusi Game memungkinkan Anda memperbaiki target peluncuran nanti, dan Corvus Arcade memberi peringatan jika file yang dipilih adalah program instalasi.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h6l2 2h8v10H4Z"/><path d="M8 4h8v5M8 14h8M12 11v6"/></svg></span><h3>Instal game yang terdiri dari beberapa bagian</h3><p>Arahkan Point Corvus Arcade ke folder yang berisi berkas-berkas penginstal yang diberi nomor, lalu program ini akan memeriksanya; jika ada yang hilang atau rusak, program ini akan menjalankan penginstal tersebut.</p></article>
                     </div>
                 </details>
 
                 <details class="feature-category" id="feature-performance" data-feature-panel="performance">
                     <summary>Kinerja</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>Grafik per permainan</h3><p>Pilih DXMT atau D3DMetal, GPTK 3 atau GPTK 4, mode jendela, dan pembatasan tingkat frame untuk setiap game secara independen.</p></article>
-                        <article class="feature-explorer-item"><h3>GPU dan memori langsung</h3><p>Gauge dan grafik bergulir menampilkan seberapa keras GPU dan memori Anda bekerja saat bermain.</p></article>
-                        <article class="feature-explorer-item"><h3>Tampilan bingkai dan FPS</h3><p>Batasi tingkat pembuangan frame untuk mengurangi panas dan kebisingan kipas, aktifkan MetalFX upscaling, dan tampilkan pembacaan FPS langsung saat Anda menginginkannya.</p></article>
-                        <article class="feature-explorer-item"><h3>Hapus cache shader</h3><p>Tombol baru di Pengaturan membebaskan ruang disk yang digunakan oleh cache shader Metal. Game akan membangunnya kembali secara otomatis pada peluncuran berikutnya.</p></article>
-                        <article class="feature-explorer-item"><h3>Periksa kesiapan</h3><p>Halaman game menandai masalah seperti memori yang ketat dan menawarkan perbaikan satu sentuhan sebelum Anda bermain.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h7M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg></span><h3>Grafik per permainan</h3><p>Pilih DXMT atau D3DMetal, GPTK 3 atau GPTK 4, mode jendela, dan pembatasan tingkat frame untuk setiap game secara independen.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>GPU dan memori langsung</h3><p>Gauge dan grafik bergulir menampilkan seberapa keras GPU dan memori Anda bekerja saat bermain.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17a8 8 0 1 1 14 0M12 13l4-4"/><circle cx="12" cy="13" r="1"/></svg></span><h3>Tampilan bingkai dan FPS</h3><p>Batasi tingkat pembuangan frame untuk mengurangi panas dan kebisingan kipas, aktifkan MetalFX upscaling, dan tampilkan pembacaan FPS langsung saat Anda menginginkannya.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></span><h3>Hapus cache shader</h3><p>Tombol baru di Pengaturan membebaskan ruang disk yang digunakan oleh cache shader Metal. Game akan membangunnya kembali secara otomatis pada peluncuran berikutnya.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><h3>Periksa kesiapan</h3><p>Halaman game menandai masalah seperti memori yang ketat dan menawarkan perbaikan satu sentuhan sebelum Anda bermain.</p></article>
                     </div>
                 </details>
 
                 <details class="feature-category" id="feature-library" data-feature-panel="library">
                     <summary>Perpustakaan</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>Peluncuran Cepat</h3><p>Cari game dan aktivitas</p></article>
-                        <article class="feature-explorer-item"><h3>Ringkasan pustaka game Anda</h3><p>Tampilan Utama menampilkan setiap game beserta statusnya saat ini: siap, sedang diputar, atau perlu disetel.</p></article>
-                        <article class="feature-explorer-item"><h3>Tangkap layar saat bermain</h3><p>Percepatan ini merekam jendela permainan, bukan seluruh layar. Gambar ditampilkan di pemutar di halaman permainan, dengan galeri dan tombol panah.</p></article>
-                        <article class="feature-explorer-item"><h3>Favorit dan pencarian</h3><p>Sematkan game yang Anda mainkan di bagian atas pustaka game dan bilah sisi, cari berdasarkan nama, dan urutkan berdasarkan terakhir dimainkan, nama, atau ukuran.</p></article>
-                        <article class="feature-explorer-item"><h3>Ekspor pustaka game Anda</h3><p>Simpan daftar game, preferensi, dan pengaturan per game ke dalam satu file kecil, lalu kembalikan mereka di Mac lainnya.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5M10 7v6M7 10h6"/></svg></span><h3>Peluncuran Cepat</h3><p>Cari game dan aktivitas</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="15" width="7" height="6" rx="1"/><rect x="14" y="15" width="7" height="6" rx="1"/></svg></span><h3>Ringkasan pustaka game Anda</h3><p>Tampilan Utama menampilkan setiap game beserta statusnya saat ini: siap, sedang diputar, atau perlu disetel.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v9H3V9a2 2 0 0 1 2-2Z"/><circle cx="12" cy="12.5" r="3.5"/></svg></span><h3>Tangkap layar saat bermain</h3><p>Percepatan ini merekam jendela permainan, bukan seluruh layar. Gambar ditampilkan di pemutar di halaman permainan, dengan galeri dan tombol panah.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg></span><h3>Favorit dan pencarian</h3><p>Sematkan game yang Anda mainkan di bagian atas pustaka game dan bilah sisi, cari berdasarkan nama, dan urutkan berdasarkan terakhir dimainkan, nama, atau ukuran.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></span><h3>Ekspor pustaka game Anda</h3><p>Simpan daftar game, preferensi, dan pengaturan per game ke dalam satu file kecil, lalu kembalikan mereka di Mac lainnya.</p></article>
                     </div>
                 </details>
 
                 <details class="feature-category" id="feature-safety" data-feature-panel="safety">
                     <summary>Keamanan</summary>
                     <div class="feature-explorer-grid">
-                        <article class="feature-explorer-item"><h3>Data simpanan Anda dilindungi</h3><p>Menghapus game meminta konfirmasi terlebih dahulu. Sistem menghitung file simpanan yang terpengaruh dan menawarkan untuk mengekspornya sebelum menghapus apa pun.</p></article>
-                        <article class="feature-explorer-item"><h3>Brankas Data Simpanan</h3><p>Corvus Arcade terlebih dahulu membuat titik pemulihan aman dari penyimpanan saat ini. Game harus ditutup.</p></article>
-                        <article class="feature-explorer-item"><h3>Snapshot Kontainer</h3><p>Buat salinan lengkap kontainer Windows sebelum melakukan eksperimen atau perubahan besar. Snapshot APFS dimulai dengan cepat dan hanya menggunakan lebih banyak ruang saat file berubah.</p></article>
-                        <article class="feature-explorer-item"><h3>Perbaiki kontainer</h3><p>Opsi Perbaikan baru memulihkan font yang hilang dan menerapkan kembali pengaturan setiap game, memperbaiki menu dan teks kosong tanpa menghapus apa pun yang Anda instalasi.</p></article>
-                        <article class="feature-explorer-item"><h3>Pemasangan yang gagal menunjukkan hal itu</h3><p>Jika sebuah game berhenti sebelum selesai, Corvus Arcade akan melaporkannya, alih-alih membiarkan game kosong di perpustakaan Anda.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="M9 12h6M12 9v6"/></svg></span><h3>Data simpanan Anda dilindungi</h3><p>Menghapus game meminta konfirmasi terlebih dahulu. Sistem menghitung file simpanan yang terpengaruh dan menawarkan untuk mengekspornya sebelum menghapus apa pun.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v6h8V3M8 17h8M9 13h6"/></svg></span><h3>Brankas Data Simpanan</h3><p>Corvus Arcade terlebih dahulu membuat titik pemulihan aman dari penyimpanan saat ini. Game harus ditutup.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 8 4-8 4-8-4Z"/><path d="m4 12 8 4 8-4M4 17l8 4 8-4"/></svg></span><h3>Snapshot Kontainer</h3><p>Buat salinan lengkap kontainer Windows sebelum melakukan eksperimen atau perubahan besar. Snapshot APFS dimulai dengan cepat dan hanya menggunakan lebih banyak ruang saat file berubah.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L4 17v3h3l5.7-5.7a4 4 0 0 0 5-5l-2.5 2.5-3-3Z"/></svg></span><h3>Perbaiki kontainer</h3><p>Opsi Perbaikan baru memulihkan font yang hilang dan menerapkan kembali pengaturan setiap game, memperbaiki menu dan teks kosong tanpa menghapus apa pun yang Anda instalasi.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 2.8 19h18.4Z"/><path d="M12 9v4M12 17h.01"/></svg></span><h3>Pemasangan yang gagal menunjukkan hal itu</h3><p>Jika sebuah game berhenti sebelum selesai, Corvus Arcade akan melaporkannya, alih-alih membiarkan game kosong di perpustakaan Anda.</p></article>
                     </div>
                 </details>
             </div>
