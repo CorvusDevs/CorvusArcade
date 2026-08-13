@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 0.8.0</title>
+            <pubDate>Thu, 13 Aug 2026 00:42:35 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Quick Launch: Search games and actions</li><li>Save Data Vault: Corvus Arcade creates a safety restore point from the current saves first. The game must be closed.</li><li>Container Snapshots: Capture the full Windows container before experiments or major changes. APFS snapshots start quickly and use more space only as files change.</li><li>Compatibility Assistant: This game has been tested in Corvus Arcade. Updates can still change compatibility.</li><li>Tags: Add tags such as Co-op, Relaxing, Finished, or Family. Separate tags with commas.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.8.0/CorvusArcade-0.8.0.zip" sparkle:version="16" sparkle:shortVersionString="0.8.0" sparkle:edSignature="Gqz3Kj8oV27gQTGhLCA5p3l4fPG32luL+SAXKCiYTjaPd/WkBMh6/KOPTQyAjXREqGVp3i60MP7XcUzm8rTNDA==" length="574737051" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 0.7.0</title>
             <pubDate>Mon, 10 Aug 2026 20:10:25 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
