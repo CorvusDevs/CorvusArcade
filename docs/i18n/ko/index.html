@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade: Apple Silicon Mac 에서 Windows 게임을 실행하세요</title>
-    <meta name="description" content="Wine 11, DXMT 및 D3DMetal이 번들로 제공되는 무료 네이티브 런처를 통해 Apple Silicon 기반 Mac에서 Windows 게임을 실행하세요. CrossOver, Homebrew 또는 터미널이 필요하지 않습니다.">
+    <meta name="description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/i18n/ko/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/i18n/ko/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="Wine 11, DXMT 및 D3DMetal이 번들로 제공되는 무료 네이티브 런처를 통해 Apple Silicon 기반 Mac에서 Windows 게임을 실행하세요. CrossOver, Homebrew 또는 터미널이 필요하지 않습니다.">
+    <meta property="og:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="Wine 11, DXMT 및 D3DMetal이 번들로 제공되는 무료 네이티브 런처를 통해 Apple Silicon 기반 Mac에서 Windows 게임을 실행하세요. CrossOver, Homebrew 또는 터미널이 필요하지 않습니다.">
+    <meta name="twitter:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -596,13 +596,10 @@
                 <summary class="changelog-summary">새로운 기능</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.8.0</span>
+                    <span class="release-ver">0.9.0</span>
                     <ul class="changelog-list">
-                        <li><strong>빠른 실행</strong>게임 및 활동 검색</li>
-                        <li><strong>저장 데이터 보관소</strong>Corvus Arcade는 먼저 현재 저장 데이터에서 안전 복원 지점을 생성합니다. 게임을 종료해야 합니다.</li>
-                        <li><strong>컨테이너 스냅샷</strong>실험이나 주요 변경을 수행하기 전에 전체 Windows 컨테이너를 캡처하십시오. APFS 스냅샷은 빠르게 시작되며, 파일이 변경될 때만 추가 공간을 사용합니다.</li>
-                        <li><strong>호환성 도우미</strong>이 게임은 Corvus Arcade에서 테스트를 거쳤습니다. 업데이트에 따라 호환성이 달라질 수 있습니다.</li>
-                        <li><strong>태그</strong>'협동', '편안한', '완료', '가족'과 같은 태그를 추가하세요. 태그 사이에는 쉼표를 넣어 구분하세요.</li>
+                        <li><strong>게임 지원 파일</strong>이 게임의 컨테이너에 Microsoft Visual C++ 2015-2022 런타임을 설치합니다. 게임에서 MSVCP 또는 VCRUNTIME 파일이 없다고 보고할 때만 사용하세요.</li>
+                        <li><strong>호환성 도우미</strong>이 게임에 검증된 호환성 설정을 사용할 수 있습니다.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">릴리스</a>

@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade: Spil Windows-spil på din Apple Silicon Mac</title>
-    <meta name="description" content="Kør Windows-spil på Apple Silicon-Mac&#x27;er med et gratis, indbygget startprogram, der indeholder Wine 11, DXMT og D3DMetal. Ingen CrossOver, Homebrew eller Terminal.">
+    <meta name="description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/i18n/da/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/i18n/da/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="Kør Windows-spil på Apple Silicon-Mac&#x27;er med et gratis, indbygget startprogram, der indeholder Wine 11, DXMT og D3DMetal. Ingen CrossOver, Homebrew eller Terminal.">
+    <meta property="og:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="Kør Windows-spil på Apple Silicon-Mac&#x27;er med et gratis, indbygget startprogram, der indeholder Wine 11, DXMT og D3DMetal. Ingen CrossOver, Homebrew eller Terminal.">
+    <meta name="twitter:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -596,13 +596,10 @@
                 <summary class="changelog-summary">Nyheder</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.8.0</span>
+                    <span class="release-ver">0.9.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Hurtigstart</strong>Søg efter spil og aktiviteter</li>
-                        <li><strong>Dataopbevaringsboks</strong>Corvus Arcade opretter først et sikkerhedsgendannelsespunkt ud fra de aktuelle gemte spil. Spillet skal lukkes.</li>
-                        <li><strong>Container-snapshots</strong>Tag en fuldstændig sikkerhedskopi af Windows-containeren inden eksperimenter eller større ændringer. APFS-snapshots starter hurtigt og bruger kun mere plads, når filerne ændres.</li>
-                        <li><strong>Kompatibilitetsassistent</strong>Dette spil er blevet testet i Corvus Arcade. Opdateringer kan stadig påvirke kompatibiliteten.</li>
-                        <li><strong>Tags</strong>Tilføj tags som f.eks. Co-op, Afslappende, Færdig eller Familie. Adskil tags med kommaer.</li>
+                        <li><strong>Spillets supportfiler</strong>Installerer Microsoft Visual C++ 2015-2022-kørselsmiljøet i spillets container. Brug det kun, hvis spillet melder om en manglende MSVCP- eller VCRUNTIME-fil.</li>
+                        <li><strong>Kompatibilitetsassistent</strong>Bekræftede kompatibilitetsindstillinger er tilgængelige for dette spil.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Udgivelser</a>

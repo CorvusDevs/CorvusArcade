@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade: Spouštěte hry pro Windows na svém Macu s čipem Apple Silicon</title>
-    <meta name="description" content="Spouštějte hry pro Windows na počítačích Mac s čipem Apple Silicon pomocí bezplatného nativního spouštěče, který obsahuje Wine 11, DXMT a D3DMetal. Bez CrossOveru, Homebrewu nebo terminálu.">
+    <meta name="description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/i18n/cs/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/i18n/cs/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="Spouštějte hry pro Windows na počítačích Mac s čipem Apple Silicon pomocí bezplatného nativního spouštěče, který obsahuje Wine 11, DXMT a D3DMetal. Bez CrossOveru, Homebrewu nebo terminálu.">
+    <meta property="og:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="Spouštějte hry pro Windows na počítačích Mac s čipem Apple Silicon pomocí bezplatného nativního spouštěče, který obsahuje Wine 11, DXMT a D3DMetal. Bez CrossOveru, Homebrewu nebo terminálu.">
+    <meta name="twitter:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -596,13 +596,10 @@
                 <summary class="changelog-summary">Co je nového</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.8.0</span>
+                    <span class="release-ver">0.9.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Rychlé spuštění</strong>Vyhledávání her a akcí</li>
-                        <li><strong>Úložiště uložených her</strong>Corvus Arcade nejprve vytvoří bezpečnostní bod obnovení z aktuálních uložených her. Hra musí být ukončena.</li>
-                        <li><strong>Snímky kontejnerů</strong>Před experimenty nebo významnými změnami pořiďte úplnou kopii kontejneru Windows. Snímky APFS se spouštějí rychle a zabírají více místa pouze v případě, že dojde ke změnám v souborech.</li>
-                        <li><strong>Asistent kompatibility</strong>Tato hra byla otestována v Corvus Arcade. Aktualizace mohou kompatibilitu ještě změnit.</li>
-                        <li><strong>Značky</strong>Přidejte štítky, jako například „Kooperativní“, „Relaxační“, „Dokončeno“ nebo „Rodinné“. Štítky oddělte čárkami.</li>
+                        <li><strong>Podpůrné soubory hry</strong>Nainstaluje modul Microsoft Visual C++ 2015-2022 do kontejneru této hry. Použijte jej jen pokud hra hlásí chybějící soubor MSVCP nebo VCRUNTIME.</li>
+                        <li><strong>Asistent kompatibility</strong>Pro tuto hru jsou k dispozici ověřená nastavení kompatibility.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Vydání</a>

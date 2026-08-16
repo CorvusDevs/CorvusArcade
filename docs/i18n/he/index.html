@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade: הפעלת משחקי Windows במחשב Mac עם Apple Silicon שלכם</title>
-    <meta name="description" content="הפעל משחקי Windows במחשבי Mac עם Apple Silicon באמצעות משגר ייעודי חינמי המשלב את Wine 11, DXMT ו-D3DMetal. ללא CrossOver, Homebrew או Terminal.">
+    <meta name="description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/i18n/he/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/i18n/he/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="הפעל משחקי Windows במחשבי Mac עם Apple Silicon באמצעות משגר ייעודי חינמי המשלב את Wine 11, DXMT ו-D3DMetal. ללא CrossOver, Homebrew או Terminal.">
+    <meta property="og:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="הפעל משחקי Windows במחשבי Mac עם Apple Silicon באמצעות משגר ייעודי חינמי המשלב את Wine 11, DXMT ו-D3DMetal. ללא CrossOver, Homebrew או Terminal.">
+    <meta name="twitter:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -596,13 +596,10 @@
                 <summary class="changelog-summary">חדש</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.8.0</span>
+                    <span class="release-ver">0.9.0</span>
                     <ul class="changelog-list">
-                        <li><strong>הפעלה מהירה</strong>חיפוש משחקים ופעילויות</li>
-                        <li><strong>כספת נתוני שמירה</strong>Corvus Arcade יוצר תחילה נקודת שחזור בטיחותית מהשמירות הנוכחיות. יש לסגור את המשחק.</li>
-                        <li><strong>תמונות מצב של מכולות</strong>צרו תמונת מצב מלאה של מכולת Windows לפני ביצוע ניסויים או שינויים משמעותיים. תמונת מצב של APFS מתחילה במהירות ומשתמשת בשטח אחסון נוסף רק כאשר הקבצים משתנים.</li>
-                        <li><strong>עוזר תאימות</strong>משחק זה נבדק ב-Corvus Arcade. עדכונים עשויים עדיין להשפיע על התאימות.</li>
-                        <li><strong>תגיות</strong>הוסף תגיות כגון "שיתופי", "מרגיע", "מושלם" או "משפחתי". הפרד בין התגיות בפסיקים.</li>
+                        <li><strong>קובצי תמיכה למשחק</strong>מתקין את סביבת הזמן ריצה Microsoft Visual C++ 2015-2022 במכל של המשחק הזה. השתמשו בה רק אם המשחק מדווח שחסר קובץ MSVCP או VCRUNTIME.</li>
+                        <li><strong>עוזר תאימות</strong>הגדרות תאימות מאומתות זמינות למשחק הזה.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">הפצות</a>

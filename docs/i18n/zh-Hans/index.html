@@ -5,12 +5,12 @@
     <script>window.__corvusAppsPromise=fetch('https://corvusdevs.github.io/apps.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});window.__corvusI18nPromise=(function(){var l=document.documentElement.lang||'en';if(l==='en')return Promise.resolve(null);function g(x){return fetch('https://corvusdevs.github.io/apps.'+x+'.json',{cache:'default'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}return g(l).then(function(d){return d||(l.indexOf('-')>0?g(l.split('-')[0]):null);});})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Corvus Arcade：在 Apple Silicon Mac 上运行 Windows 游戏</title>
-    <meta name="description" content="通过一款集成了 Wine 11、DXMT 和 D3DMetal 的免费原生启动器，在搭载 Apple Silicon 的 Mac 上运行 Windows 游戏。无需 CrossOver、Homebrew 或终端。">
+    <meta name="description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <link rel="canonical" href="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://corvusdevs.github.io/CorvusArcade/i18n/zh-Hans/">
     <meta property="og:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta property="og:description" content="通过一款集成了 Wine 11、DXMT 和 D3DMetal 的免费原生启动器，在搭载 Apple Silicon 的 Mac 上运行 Windows 游戏。无需 CrossOver、Homebrew 或终端。">
+    <meta property="og:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta property="og:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CorvusDevs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corvus Arcade: Run Windows Games on Your Apple Silicon Mac">
-    <meta name="twitter:description" content="通过一款集成了 Wine 11、DXMT 和 D3DMetal 的免费原生启动器，在搭载 Apple Silicon 的 Mac 上运行 Windows 游戏。无需 CrossOver、Homebrew 或终端。">
+    <meta name="twitter:description" content="Run Windows games on Apple Silicon Macs with a free native launcher that bundles Wine 11, DXMT and D3DMetal. No CrossOver, Homebrew or Terminal.">
     <meta name="twitter:image" content="https://corvusdevs.github.io/CorvusArcade/og-image.png">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="run windows games on mac, apple silicon gaming, game porting toolkit, d3dmetal, dxmt, wine mac, overwatch mac, battle.net mac, crossover alternative, whisky alternative, macos game launcher, m1 m2 m3 m4 gaming">
@@ -596,13 +596,10 @@
                 <summary class="changelog-summary">新功能</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.8.0</span>
+                    <span class="release-ver">0.9.0</span>
                     <ul class="changelog-list">
-                        <li><strong>快速启动</strong>搜索游戏和活动</li>
-                        <li><strong>存档数据库</strong>Corvus Arcade 会先从当前存档创建一个安全还原点。必须先关闭游戏。</li>
-                        <li><strong>容器快照</strong>在进行实验或重大更改之前，请完整捕获整个 Windows 容器。APFS 快照启动迅速，且仅在文件发生变化时才会占用更多空间。</li>
-                        <li><strong>兼容性助手</strong>本游戏已在 Corvus Arcade 上经过测试。更新仍可能影响兼容性。</li>
-                        <li><strong>标签</strong>添加标签，例如“合作”、“休闲”、“已完成”或“家庭”。标签之间用逗号分隔。</li>
+                        <li><strong>游戏支持文件</strong>在此游戏的容器中安装 Microsoft Visual C++ 2015-2022 运行时。仅当游戏报告缺少 MSVCP 或 VCRUNTIME 文件时使用。</li>
+                        <li><strong>兼容性助手</strong>此游戏有经过验证的兼容性设置可用。</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">发布</a>
