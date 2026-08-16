@@ -7,10 +7,10 @@
         <language>en</language>
         <item>
             <title>Version 0.9.0</title>
-            <pubDate>Sun, 16 Aug 2026 20:51:55 +0000</pubDate>
+            <pubDate>Sun, 16 Aug 2026 21:08:01 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<ul><li>Game support files: Installs the Microsoft Visual C++ 2015-2022 runtime in this game's container. Use it only if the game reports a missing MSVCP or VCRUNTIME file.</li><li>Compatibility Assistant: Verified compatibility settings are available for this game.</li></ul>]]></description>
-            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.9.0/CorvusArcade-0.9.0.zip" sparkle:version="17" sparkle:shortVersionString="0.9.0" sparkle:edSignature="VHM/Dw45CAbkrnJtq+cMk7uuG6TtGZto6rSDkLod4beA+XuOluXIQs4ZmR6/uQOBgcIDjJIfwJWF5PdDTRhWCA==" length="575241837" type="application/octet-stream" />
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.9.0/CorvusArcade-0.9.0.zip" sparkle:version="17" sparkle:shortVersionString="0.9.0" sparkle:edSignature="VEOfbHdnQQh3l4j68Qr/3ensiKUo+JKt1QPyPnDOwxP6y3+mZK3GaDXO3mkvoj0TYRmCuo/StQuw5Mioe6RHCw==" length="573716499" type="application/octet-stream" />
         </item>
         <item>
             <title>Version 0.8.0</title>
