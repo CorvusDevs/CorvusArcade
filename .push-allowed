@@ -1,3 +1,9 @@
 .push-allowed
+.gitignore
 README.md
+SUPPORT.md
+SECURITY.md
+.github/ISSUE_TEMPLATE/bug-report.yml
+.github/ISSUE_TEMPLATE/game-compatibility.yml
+.github/ISSUE_TEMPLATE/config.yml
 docs/**

@@ -1,0 +1,80 @@
+name: Game compatibility report
+description: Report a game, launcher, or installer that fails or behaves incorrectly.
+title: "[Compatibility] "
+labels:
+  - compatibility
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Compatibility can change after game, launcher, Wine, macOS, or anti-cheat updates. Share enough detail to reproduce the exact configuration.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I installed the latest Corvus Arcade release.
+          required: true
+        - label: I ran the Compatibility Assistant and tried its recommended fix.
+          required: true
+        - label: I searched existing issues for this game and symptom.
+          required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game and version
+      placeholder: Game title, version or build number
+    validations:
+      required: true
+  - type: input
+    id: launcher
+    attributes:
+      label: Store or launcher
+      placeholder: Steam, Battle.net, standalone installer
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Mac and macOS
+      placeholder: MacBook Pro M3 Pro, 18 GB, macOS 26.4
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Graphics backend
+      options:
+        - DXMT
+        - D3DMetal
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: gptk
+    attributes:
+      label: GPTK generation
+      options:
+        - GPTK 3
+        - GPTK 4
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: symptom
+    attributes:
+      label: What happened?
+      description: Include the last visible installer step, error, visual problem, or launch behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics and screenshots
+      description: Attach only information that is safe to share publicly. Remove account names, file paths with your user name, and license information.

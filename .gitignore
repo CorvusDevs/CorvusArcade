@@ -1,0 +1,18 @@
+# Keep the public repository limited to documentation and release metadata.
+*.swift
+*.xcodeproj/
+*.xcworkspace/
+*.entitlements
+*.plist
+*.xcstrings
+*.icns
+*.p8
+Assets.xcassets/
+Sources/
+Tests/
+Resources/
+engine/
+build/
+.build/
+.env
+.*-env

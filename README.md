@@ -1,148 +1,110 @@
 <div align="center">
 
-<img src="https://corvusdevs.github.io/CorvusArcade/icon.png?v=8" width="200" height="200" alt="Corvus Arcade icon">
+<a href="docs/screenshots/launcher.png"><img src="docs/screenshots/launcher.webp" width="100%" alt="Corvus Arcade 0.9.0, a native Mac launcher for Windows games"></a>
 
 # Corvus Arcade
 
-**Run Windows games on your Apple Silicon Mac**
+**Windows games, at home on Mac.**
 
-<p>
-  <img src="https://img.shields.io/github/v/release/CorvusDevs/CorvusArcade?style=flat-square&color=6D5AE6&label=release" alt="Latest release">
-  <img src="https://img.shields.io/badge/macOS-26.0+-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS 26.0+">
-  <img src="https://img.shields.io/badge/Apple%20Silicon-only-444?style=flat-square" alt="Apple Silicon only">
-  <img src="https://img.shields.io/badge/price-free-4CAF50?style=flat-square" alt="Free">
-</p>
+A native launcher for running selected Windows games on Apple Silicon. Corvus Arcade bundles its own Wine-based compatibility runtime, guides setup, and keeps tuning, diagnostics, saves, and updates in one Mac app.
 
-<p>
-  <a href="https://github.com/CorvusDevs/CorvusArcade/releases/latest"><img src="https://img.shields.io/badge/%E2%AC%87%20Download%20for%20macOS-6D5AE6?style=for-the-badge&logoColor=white" alt="Download for macOS" height="44"></a>
-</p>
+[**Download the latest release**](https://github.com/CorvusDevs/CorvusArcade/releases/latest) &nbsp; [**Explore the website**](https://corvusdevs.github.io/CorvusArcade/)
 
-<p>
-  <a href="https://corvusdevs.github.io/CorvusArcade/">Website</a> ·
-  <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Releases</a> ·
-  <a href="#what-makes-corvus-arcade-different">Why Corvus</a> ·
-  <a href="#privacy">Privacy</a>
-</p>
+Free to download. No account. No analytics. macOS 26 or later.
 
 </div>
 
----
+## Play, tune, protect
 
-A game launcher that runs Windows games on Apple Silicon Macs, with no CrossOver subscription and no manual Wine setup. Corvus Arcade bundles its own redistributable engine, **Wine 11** with **DXMT** and Apple's **D3DMetal** (Game Porting Toolkit), and drives it from a native **SwiftUI** launcher. Pick a game, press Play. It is free, and it runs entirely on your Mac.
-
-<div align="center">
-
-<img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.webp?v=080" width="920" alt="Corvus Arcade 0.8.0 showing Overwatch, compatibility checks, screenshots, and live system readiness">
-
-<em>Your Windows game library, presented as a native Mac launcher.</em>
-
-</div>
+| Play | Tune | Protect |
+|---|---|---|
+| Add a supported game, let Corvus build its container, and launch it from a native library. | Choose DXMT or D3DMetal, select a GPTK generation, and adjust graphics and window behavior per game. | Back up detected saves and create APFS container snapshots before experimenting. |
 
 <table>
   <tr>
-    <td width="50%"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/quick-launch.webp?v=080" alt="Quick Launch searching games and launcher actions"></td>
-    <td width="50%"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/game-tools.webp?v=080" alt="Per-game settings with Save Data Vault and Container Snapshots"></td>
+    <td width="50%"><a href="docs/screenshots/quick-launch.png"><img src="docs/screenshots/quick-launch.webp" alt="Corvus Arcade Quick Launch"></a></td>
+    <td width="50%"><a href="docs/screenshots/game-tools.png"><img src="docs/screenshots/game-tools.webp" alt="Corvus Arcade game tools for saves and container snapshots"></a></td>
   </tr>
   <tr>
-    <td align="center"><em>Open games and actions instantly with Command-K.</em></td>
-    <td align="center"><em>Protect saves and the full game container before changes.</em></td>
+    <td align="center"><sub>Find games and actions instantly with Command-K.</sub></td>
+    <td align="center"><sub>Keep recovery tools close without crowding the main game view.</sub></td>
   </tr>
 </table>
 
 <p align="center">
-  <img src="https://corvusdevs.github.io/CorvusArcade/screenshots/overwatch.webp?v=080" width="920" alt="Overwatch running in a macOS window on Apple Silicon through Corvus Arcade">
-  <br><em>Overwatch in a live match, running in a macOS window.</em>
+  <a href="docs/screenshots/overwatch.png"><img src="docs/screenshots/overwatch.webp" width="920" alt="Overwatch running in a macOS window through Corvus Arcade"></a>
+  <br><sub>Overwatch running in a macOS window. Open the image at full resolution.</sub>
 </p>
 
-## Contents
+## New in 0.9.0
 
-- [Features](#features)
-- [Install](#install)
-- [What makes Corvus Arcade different](#what-makes-corvus-arcade-different)
-- [Requirements](#requirements)
-- [Built with](#built-with)
-- [Privacy](#privacy)
-- [More from CorvusDevs](#more-from-corvusdevs)
+- **Game support files.** Install common dependencies through guided, reusable repair recipes.
+- **Compatibility Assistant.** See readiness checks, likely blockers, and recommended fixes before launch.
+- **Steam library sync.** Discover eligible games from an existing Steam library.
+- **Spotlight launch.** Open installed games directly from macOS Spotlight.
 
-## Features
-
-- **Live GPU and memory.** A GPU and memory gauge sits right next to Play, with a rolling graph while you play, so you can see how your Mac is holding up.
-- **Readiness checks with quick fixes.** The game page flags things like tight memory and offers a one-tap fix before you start.
-- **Your whole library at a glance.** A Home view shows each game with its live status, ready, playing, or needs setup.
-- **One-click Overwatch.** A curated setup creates a clean container, installs Battle.net, and launches straight toward a match.
-- **Your own engine, bundled.** Wine 11 with DXMT and Apple's D3DMetal ship inside the app. No CrossOver, no Homebrew, no terminal.
-- **Backend picker.** Choose DXMT (open-source Metal D3D11) or D3DMetal (Apple's toolkit, D3D11 and D3D12), globally or per game.
-- **Your saves are protected.** Removing a game asks first, says how many save files are at stake, and offers to export them before anything is deleted.
-- **Add your own games (experimental).** Point it at a Windows installer or `.exe`, and it builds a fresh container. You can also drag a program straight onto the library.
-
-<details>
-<summary><strong>Complete feature list</strong></summary>
-
-- GPTK 3 or GPTK 4 per game
-- Windowed play with Command-Tab support
-- Frame-rate cap, MetalFX, and FPS overlay
-- In-game screenshots and gallery
-- Eight colour themes
-- Favourites, search, sorting, and custom names
-- Library export and restore
-- DirectX and bitness detection
-- Desktop shortcuts
-- Automatic Rosetta setup and readiness checks
-- Live installer progress and multi-part installer validation
-- Automatic cover art and custom artwork
-- Container repair, cleanup, reset, and disk usage
-- Automatic updates
-
-</details>
+[Read the complete 0.9.0 release notes](https://github.com/CorvusDevs/CorvusArcade/releases/tag/v0.9.0)
 
 ## Install
 
-1. Download the latest disk image from [GitHub Releases](https://github.com/CorvusDevs/CorvusArcade/releases/latest).
-2. Open it and drag Corvus Arcade to Applications.
-3. Launch Corvus Arcade, choose a game, and follow the guided setup.
+1. Download the latest `.dmg` from [GitHub Releases](https://github.com/CorvusDevs/CorvusArcade/releases/latest).
+2. Open the disk image.
+3. Drag Corvus Arcade onto Applications.
+4. Open Corvus Arcade and follow the guided setup for your game.
 
-Every release is signed with an Apple Developer ID and notarized by Apple.
+<p align="center">
+  <a href="docs/screenshots/install-window.png"><img src="docs/screenshots/install-window.png" width="720" alt="Corvus Arcade disk image with an arrow from the app to Applications"></a>
+  <br><sub>The actual 0.9.0 installer window.</sub>
+</p>
 
-## What makes Corvus Arcade different
+Every release is signed with an Apple Developer ID and notarized by Apple. You can also verify the published files with the release's [SHA256 checksums](https://github.com/CorvusDevs/CorvusArcade/releases/download/v0.9.0/SHA256SUMS.txt).
 
-🎮 **A launcher, not a toolkit.** No CrossOver license, no Whisky bottles to hand-configure, no Terminal. The engine is bundled and the setup is one button.
+## Compatibility expectations
 
-🧩 **Real per-game control.** DXMT vs D3DMetal, GPTK 3 vs GPTK 4, fullscreen vs alt-tab-able window, and a frame cap, all switchable per game.
+Corvus Arcade is a compatibility launcher, not a promise that every Windows game will run. Game updates, anti-cheat systems, launchers, and graphics APIs can change compatibility at any time.
 
-🐦 **Built for Apple Silicon.** No Intel baggage. The engine and the launcher are tuned for M-series Macs and Apple's Metal-based Game Porting Toolkit.
+- Apple Silicon Mac, M1 or newer
+- macOS 26 or later
+- macOS 26.4 or later for the GPTK 4 backend
+- Rosetta 2, which Corvus Arcade can install when missing
+- Enough free storage for the game and its Windows container
 
-🛡️ **Private and free.** No account, no analytics, no phone-home. GPTK ships under Apple's non-commercial terms, so Corvus Arcade is free.
+Start with the app's recommended backend. Use the Compatibility Assistant before changing advanced options. If a game fails, submit a [game compatibility report](https://github.com/CorvusDevs/CorvusArcade/issues/new?template=game-compatibility.yml) with the diagnostics requested by the form.
 
-## Requirements
+## What Corvus Arcade includes
 
-- Apple Silicon Mac (M1 or newer)
-- macOS 26 or later (26.4 for the GPTK 4 backend)
-- Rosetta 2 (the app installs it for you if it is missing)
-- Around 60 GB free for a Battle.net + Overwatch install
-- Corvus Arcade checks a multi-part installer's files before anything runs, and says if one is missing or damaged.
+- Native SwiftUI library, search, favourites, sorting, custom artwork, and desktop shortcuts
+- Curated one-click setup for Overwatch through Battle.net
+- Experimental support for your own Windows installers and executables
+- DXMT and Apple D3DMetal graphics backends
+- GPTK 3 or GPTK 4 selection per game
+- Windowed play, frame cap, MetalFX, FPS overlay, and screenshots
+- Save Data Vault, APFS container snapshots, repair, cleanup, reset, and disk usage tools
+- Multi-part installer validation and live installer progress
+- Automatic app updates through Sparkle
 
-## Built with
+## Trust and project scope
 
-**SwiftUI** · **Wine 11** · **DXMT** · **Apple D3DMetal / Game Porting Toolkit** · **Rosetta 2** · **Sparkle**
+Corvus Arcade runs locally. It has no account system, analytics, telemetry, or advertising. Network access is used only for user-requested downloads, update checks, public artwork, and game launcher traffic.
 
-## Privacy
+The compatibility stack includes Wine, DXMT, Apple Game Porting Toolkit components, Rosetta 2, and Sparkle. Their own licenses and terms apply. Third-party notices are included with the app. Corvus Arcade is not affiliated with Apple, Blizzard, CodeWeavers, Microsoft, or Valve.
 
-No accounts, no analytics, no telemetry, no tracking. Corvus Arcade runs entirely on your Mac. It downloads the Battle.net installer directly from Blizzard and, optionally, cover art from public sources; nothing else leaves your machine.
+This public repository intentionally contains documentation, the website, release downloads, checksums, and issue tracking. The application source is maintained privately and is never published here.
+
+## Help and reporting
+
+- [Installation and troubleshooting help](SUPPORT.md)
+- [Report a Corvus Arcade bug](https://github.com/CorvusDevs/CorvusArcade/issues/new?template=bug-report.yml)
+- [Report game compatibility](https://github.com/CorvusDevs/CorvusArcade/issues/new?template=game-compatibility.yml)
+- [Report a security issue privately](SECURITY.md)
+- [Browse releases](https://github.com/CorvusDevs/CorvusArcade/releases)
 
 ## More from CorvusDevs
 
-| | App | Description |
-|---|-----|-------------|
-| <img src="https://corvusdevs.github.io/icons/corvus-display.png" width="32"> | [Corvus Display](https://corvusdevs.github.io/CorvusDisplay/) | Brightness, color, and resolution for any Mac display |
-| <img src="https://corvusdevs.github.io/icons/corvus-player.png" width="32"> | [Corvus Player](https://corvusdevs.github.io/Corvus-Player/) | The most powerful media player for macOS |
-| <img src="https://corvusdevs.github.io/icons/ekual.png" width="32"> | [Ekual](https://corvusdevs.github.io/Ekual/) | Automatic loudness equalization for macOS |
-| <img src="https://corvusdevs.github.io/icons/corvus-rss.png" width="32"> | [Corvus RSS Reader](https://corvusdevs.github.io/Corvus-RSS-Reader-For-Safari/) | Privacy-first RSS reader for Safari |
-| <img src="https://corvusdevs.github.io/icons/purple-crow.png" width="32"> | [Purple Crow for Safari](https://corvusdevs.github.io/Purple-Crow-For-Safari/) | BTTV, FFZ & 7TV emotes plus 50+ Twitch features |
-
----
+[Corvus Display](https://corvusdevs.github.io/CorvusDisplay/) · [Corvus Player](https://corvusdevs.github.io/Corvus-Player/) · [Ekual](https://corvusdevs.github.io/Ekual/) · [Corvus RSS Reader](https://corvusdevs.github.io/Corvus-RSS-Reader-For-Safari/) · [Purple Crow for Safari](https://corvusdevs.github.io/Purple-Crow-For-Safari/)
 
 <div align="center">
 
-<sub>Made with care by <a href="https://corvusdevs.github.io">CorvusDevs</a> · Not affiliated with Blizzard, Apple, or CrossOver</sub>
+<sub>Made by <a href="https://corvusdevs.github.io">CorvusDevs</a></sub>
 
 </div>

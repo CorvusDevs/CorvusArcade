@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Installation and troubleshooting help
+    url: https://github.com/CorvusDevs/CorvusArcade/blob/main/SUPPORT.md
+    about: Check the support guide before opening a report.
+  - name: Report a security issue privately
+    url: https://github.com/CorvusDevs/CorvusArcade/security/advisories/new
+    about: Use GitHub private vulnerability reporting for security issues.
