@@ -389,10 +389,14 @@
                 <summary class="changelog-summary">Co nowego</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.9.0</span>
+                    <span class="release-ver">1.0.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Pliki pomocnicze gry</strong>Instaluje środowisko uruchomieniowe Microsoft Visual C++ 2015-2022 w kontenerze tej gry. Użyj go tylko wtedy, gdy gra zgłasza brak pliku MSVCP lub VCRUNTIME.</li>
-                        <li><strong>Asystent zgodności</strong>Dla tej gry dostępne są zweryfikowane ustawienia zgodności.</li>
+                        <li><strong>Gra się zamyka lub ulega awarii</strong>Gdy gra działa lepiej na innym backendzie graficznym, jej strona informuje o tym i pozwala na przełączenie jednym kliknięciem.</li>
+                        <li><strong>Dostępna jest referencyjna konfiguracja graficzna, która stanowi punkt startowy.</strong>To ten punkt startowy został zweryfikowany w innym launcherze Mac. Corvus Arcade używa innego środowiska uruchomieniowego Wine, więc przetestuj go przed jego użyciem.</li>
+                        <li><strong>Kompatybilność z kontrolerami</strong>Użyj Wine DLL sterownika obok pliku wykonywalnego tej gry. Wyłącz tę opcję, chyba że brakuje wejścia lub jest ono błędnie przypisane.</li>
+                        <li><strong>Tryb 4 GB pamięci</strong>Zezwól tej grze 32-bitowej na korzystanie z większej przestrzeni adresowej. Corvus tworzy dokładną kopię zapasową, dzięki czemu można cofnąć tę zmianę.</li>
+                        <li><strong>Przechwytywanie śladu Metal</strong>Nagrywa 20 sekund z Apple po Metal System Trace po następnym uruchomieniu. Używaj go tylko przy badaniu przestojów renderowania, ponieważ nagrywanie generuje dodatkowe obciążenie.</li>
+                        <li><strong>O Corvus Arcade</strong>Uruchamiaj gry z systemu Windows na Macu z procesorem Apple Silicon.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Wydania</a>
@@ -539,7 +543,7 @@
                     <summary>Wydajność</summary>
                     <div class="feature-explorer-grid">
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h7M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg></span><h3>Grafiki na grę</h3><p>Wybierz DXMT lub D3DMetal, GPTK 3 lub GPTK 4, tryb okna oraz limit klatek na sekundę dla każdej gry niezależnie.</p></article>
-                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>Aktywna GPU i pamięć</h3><p>Przyrząd i wykres rolujący pokazują, jak intensywnie pracuje Twoja GPU i pamięć podczas gry.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>GPU i pamięć w czasie rzeczywistym</h3><p>Przyrząd i wykres rolujący pokazują, jak intensywnie pracuje Twoja GPU i pamięć podczas gry.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17a8 8 0 1 1 14 0M12 13l4-4"/><circle cx="12" cy="13" r="1"/></svg></span><h3>Okres klatkowy i nakładka FPS</h3><p>Ograniczaj liczbę klatek na sekundę, aby zmniejszyć ciepło i hałas wentylatora, włącz skalowanie MetalFX oraz wyświetlaj odczyt FPS na żywo, gdy tego potrzebujesz.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></span><h3>Wyczyść pamięć podręczną shaderów</h3><p>Nowy przycisk w Ustawieniach zwalnia miejsce na dysku zajmowane przez pamięć podręczną cieni Metal. Gry automatycznie odbudowują ją przy kolejnym uruchomieniu.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><h3>Sprawdzanie gotowości</h3><p>Strona gry wykrywa problemy, takie jak ograniczona pamięć, i oferuje naprawę jednym kliknięciem przed rozpoczęciem gry.</p></article>

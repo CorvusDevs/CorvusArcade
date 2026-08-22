@@ -389,10 +389,14 @@
                 <summary class="changelog-summary">Apa yang Baru</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.9.0</span>
+                    <span class="release-ver">1.0.0</span>
                     <ul class="changelog-list">
-                        <li><strong>File pendukung game</strong>Menginstal runtime Microsoft Visual C++ 2015-2022 di kontainer game ini. Gunakan hanya jika game melaporkan file MSVCP atau VCRUNTIME tidak ada.</li>
-                        <li><strong>Asisten Kompatibilitas</strong>Pengaturan kompatibilitas terverifikasi tersedia untuk game ini.</li>
+                        <li><strong>Game tertutup atau mengalami crash</strong>Ketika game diketahui berjalan lebih baik pada backend grafis lainnya, halamannya sekarang menyatakan hal tersebut dan beralih dengan satu klik.</li>
+                        <li><strong>Titik awal grafis yang telah diuji referensi tersedia.</strong>Titik awal ini diverifikasi di peluncur Mac lain. Corvus Arcade menggunakan runtime Wine yang berbeda, jadi uji terlebih dahulu sebelum menggunakannya.</li>
+                        <li><strong>Kesesuaian kontroler</strong>Gunakan DLL pengontrol Wine di samping berkas eksekutabel game. Biarkan opsi ini mati kecuali input hilang atau dipetakan dengan keliru.</li>
+                        <li><strong>Mode memori 4 GB</strong>Biarkan game 32-bit ini menggunakan lebih banyak ruang alamat. Corvus membuat cadangan persis sehingga perubahan ini dapat dibalik.</li>
+                        <li><strong>Perekaman jejak Metal</strong>Merekam 20 detik dengan Apple's Metal System Trace setelah peluncuran berikutnya. Gunakan hanya saat menyelidiki hambatan rendering karena perekaman menambah beban.</li>
+                        <li><strong>Tentang Corvus Arcade</strong>Jalankan game Windows di Mac Apple Silicon Anda.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Rilis</a>

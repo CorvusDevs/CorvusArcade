@@ -389,10 +389,14 @@
                 <summary class="changelog-summary">الجديد</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.9.0</span>
+                    <span class="release-ver">1.0.0</span>
                     <ul class="changelog-list">
-                        <li><strong>ملفات دعم اللعبة</strong>يثبّت وقت تشغيل Microsoft Visual C++ 2015-2022 في حاوية هذه اللعبة. استخدمه فقط إذا أبلغت اللعبة عن فقدان ملف MSVCP أو VCRUNTIME.</li>
-                        <li><strong>مساعد التوافق</strong>تتوفر إعدادات توافق تم التحقق منها لهذه اللعبة.</li>
+                        <li><strong>تغلق اللعبة أو تتعطل</strong>عندما يُعرف أن اللعبة تعمل بشكل أفضل على واجهة الرسوميات الأخرى، فإن صفحتها الآن تشير إلى ذلك وتقوم بالتبديل بنقرة واحدة.</li>
+                        <li><strong>نقطة انطلاق للرسومات تم اختبارها مرجعية متاحة.</strong>تم التحقق من نقطة البداية هذه في محرر Mac آخر. يستخدم Corvus Arcade بيئة تشغيل Wine مختلفة، لذا قم بتجربته قبل الاعتماد عليه.</li>
+                        <li><strong>توافق وحدات التحكم</strong>استخدم مكتبة DLL الخاصة بـ Wine للتحكم بجهاز التحكم إلى جانب تنفيذ اللعبة. اترك هذا الخيار مطفأ ما لم تكن المدخلات مفقودة أو غير مخصصة بشكل صحيح.</li>
+                        <li><strong>وضع الذاكرة 4 جيجابايت</strong>السماح لهذه اللعبة 32 بت باستخدام مساحة ذاكرة أكبر. يحافظ Corvus على نسخة احتياطية دقيقة بحيث يمكن عكس التغيير.</li>
+                        <li><strong>تتبع Metal لتسجيل التقاط</strong>يسجل 20 ثانية بعد الإقلاع التالي باستخدام Apple في Metal System Trace. استخدمه فقط عند التحقيق في توقفات الرسم، لأن التقاط البيانات يزيد من الحمل.</li>
+                        <li><strong>حول Corvus Arcade</strong>شغل ألعاب ويندوز على جهاز Mac الخاص بك الذي يعمل بتقنية Apple Silicon.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">الإصدارات</a>
@@ -539,7 +543,7 @@
                     <summary>الأداء</summary>
                     <div class="feature-explorer-grid">
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h7M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg></span><h3>رسومات لكل لعبة</h3><p>اختر DXMT أو D3DMetal، GPTK 3 أو GPTK 4، وضع نافذة، وحدد الحد الأقصى لمعدل الإطارات لكل لعبة بشكل منفصل.</p></article>
-                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>GPU.. GPU الحي والذاكرة</h3><p>يُظهر مقياس ومخطط متحرك مقدار الجهد الذي تبذله وحدة معالجة الرسومات (GPU) والذاكرة أثناء اللعب.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>بيانات GPU والذاكرة المباشرة</h3><p>يُظهر مقياس ومخطط متحرك مقدار الجهد الذي تبذله وحدة معالجة الرسومات (GPU) والذاكرة أثناء اللعب.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17a8 8 0 1 1 14 0M12 13l4-4"/><circle cx="12" cy="13" r="1"/></svg></span><h3>حد الإطارات وتراكب معدل الإطارات</h3><p>قم بتقييد معدل الإطارات لتقليل الحرارة وضجيج المراوح، وتفعيل تحسين MetalFX، وعرض قراءة FPS المباشرة عند الحاجة.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></span><h3>مسح ذاكرة تخزين المظللات المؤقتة</h3><p>يوفر زر جديد في الإعدادات مساحة القرص التي يشغلها ذاكرة المؤثرات الصلبة لميتال. تقوم الألعاب بإعادة بنائها تلقائيًا عند التشغيل التالي.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><h3>فحوصات التأهيل</h3><p>يُظهر صفحة اللعبة مشاكل مثل الذاكرة المحدودة ويقدم إصلاحًا بنقرة واحدة قبل اللعب.</p></article>

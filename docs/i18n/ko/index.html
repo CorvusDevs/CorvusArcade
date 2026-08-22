@@ -389,10 +389,14 @@
                 <summary class="changelog-summary">새로운 기능</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.9.0</span>
+                    <span class="release-ver">1.0.0</span>
                     <ul class="changelog-list">
-                        <li><strong>게임 지원 파일</strong>이 게임의 컨테이너에 Microsoft Visual C++ 2015-2022 런타임을 설치합니다. 게임에서 MSVCP 또는 VCRUNTIME 파일이 없다고 보고할 때만 사용하세요.</li>
-                        <li><strong>호환성 도우미</strong>이 게임에 검증된 호환성 설정을 사용할 수 있습니다.</li>
+                        <li><strong>게임이 종료되거나 강제 종료됩니다</strong>게임이 다른 그래픽 백엔드에서 더 잘 실행된다고 알려진 경우, 해당 페이지는 이를 표시하고 한 번의 클릭으로 전환합니다.</li>
+                        <li><strong>테스트를 거친 다른 Mac 런처에서 확인한 그래픽 설정 기준이 제공됩니다.</strong>이 시작점은 다른 Mac 런처에서 확인되었습니다. Corvus Arcade 는 다른 Wine 런타임을 사용하므로 신뢰하기 전에 테스트하세요.</li>
+                        <li><strong>컨트롤러 호환성</strong>이 게임의 실행 파일 옆에 Wine 컨트롤러 DLL 을 사용하세요. 입력이 누락되거나 잘못 매핑된 경우에만 이 옵션을 켜 두세요.</li>
+                        <li><strong>4 GB 메모리 모드</strong>이 32-bit 게임이 더 많은 주소 공간을 사용할 수 있게 합니다. Corvus는 정확한 백업을 유지하여 이 변경 사항을 되돌릴 수 있습니다.</li>
+                        <li><strong>Metal 추적 캡처</strong>다음 시작 후 Apple의 Metal System Trace를 20 초 기록합니다. 오버헤드가 추가되므로 렌더링 정체를 조사할 때만 사용하세요.</li>
+                        <li><strong>Corvus Arcade 정보</strong>Apple Silicon Mac 에서 Windows 게임을 실행하세요.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">릴리스</a>
@@ -539,7 +543,7 @@
                     <summary>성능</summary>
                     <div class="feature-explorer-grid">
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h7M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg></span><h3>게임별 그래픽</h3><p>각 게임마다 독립적으로 DXMT 또는 D3DMetal, GPTK 3 또는 GPTK 4, 창 모드 및 프레임 레이트 제한을 선택할 수 있습니다.</p></article>
-                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>GPU.. 실시간 GPU 및 메모리</h3><p>게임 중 GPU 및 메모리 사용량을 게이지와 롤링 그래프로 시각화하여 작업 강도를 확인하세요.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>실시간 GPU 및 메모리</h3><p>게임 중 GPU 및 메모리 사용량을 게이지와 롤링 그래프로 시각화하여 작업 강도를 확인하세요.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17a8 8 0 1 1 14 0M12 13l4-4"/><circle cx="12" cy="13" r="1"/></svg></span><h3>프레임 캡 및 FPS 오버레이</h3><p>프레임 레이트를 제한하여 발열과 팬 소음을 줄이고, MetalFX 업스케일링을 활성화하며, 필요할 때 실시간 FPS 읽기 값을 표시합니다.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></span><h3>셰이더 캐시를 삭제합니다.</h3><p>설정에서 새로운 버튼을 통해 Metal 셰이더 캐시가 사용하는 디스크 공간을 해제할 수 있습니다. 게임은 다음 실행 시 자동으로 다시 구축합니다.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><h3>준비 상태 확인</h3><p>게임 페이지는 메모리 부족 문제를 표시하고, 플레이하기 전에 한 번의 터치로 해결책을 제공합니다.</p></article>

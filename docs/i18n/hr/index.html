@@ -389,10 +389,14 @@
                 <summary class="changelog-summary">Novo</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.9.0</span>
+                    <span class="release-ver">1.0.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Datoteke podrške za igru</strong>Instalira Microsoft Visual C++ 2015-2022 runtime u spremnik ove igre. Upotrijebite ga samo ako igra prijavi da nedostaje datoteka MSVCP ili VCRUNTIME.</li>
-                        <li><strong>Asistent za kompatibilnost</strong>Za ovu igru dostupne su provjerene postavke kompatibilnosti.</li>
+                        <li><strong>Igra se zatvara ili se ruši</strong>Kada igra bolje radi na drugom grafičkom backendu, njegova stranica sada to navodi i prebacuje se s jednim klikom.</li>
+                        <li><strong>Dostupna je referentna početna točka grafičke konfiguracije.</strong>Ovaj početni točnik je provjeren u drugom Mac pokretaču. Corvus Arcade koristi drugačiji Wine okruženje, stoga ga testirajte prije nego se oslonite na njega.</li>
+                        <li><strong>Kompatibilnost upravljača</strong>Koristite Wine DLL za upravljačku pločicu pored izvršne datoteke igre. Isključite ovo osim ako ulaz podataka nedostaje ili nije pravilno mapiran.</li>
+                        <li><strong>4 GB mod za memoriju</strong>Ovo omogućuje ovoj igri za 32-bitne procese da koristi više prostora za adrese. Corvus čuva točnu rezervnu kopiju kako bi se promjena mogla poništiti.</li>
+                        <li><strong>Snimka praćenja sustava Metal</strong>Zabilježuje 20 sekundi s Apple-ovim Metal System Trace nakon sljedećeg pokretanja. Koristite ga samo prilikom istraživanja zaustavljanja renderiranja jer snimanje povećava opterećenje.</li>
+                        <li><strong>O Corvus Arcade</strong>Pokrenite Windows igre na svom Apple Silicon Macu.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Releases</a>
@@ -539,7 +543,7 @@
                     <summary>Performanse</summary>
                     <div class="feature-explorer-grid">
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h7M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg></span><h3>Per-game graphics</h3><p>Choose DXMT or D3DMetal, GPTK 3 or GPTK 4, window mode, and a frame-rate cap for each game independently.</p></article>
-                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>Živi GPU i memorija</h3><p>A gauge and rolling graph show how hard your GPU and memory are working while you play.</p></article>
+                        <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V3"/></svg></span><h3>GPU i memorija u stvarnom vremenu</h3><p>A gauge and rolling graph show how hard your GPU and memory are working while you play.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17a8 8 0 1 1 14 0M12 13l4-4"/><circle cx="12" cy="13" r="1"/></svg></span><h3>Frame cap &amp; FPS overlay</h3><p>Cap the frame rate to cut heat and fan noise, enable MetalFX upscaling, and show a live FPS readout when you want it.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></span><h3>Očisti shader cache</h3><p>Novi gumb u Postavkama oslobađa prostor na disku koji koristi Metalov cache za sjenila. Igre će ga ponovno izgraditi automatski pri sljedećem pokretanju.</p></article>
                         <article class="feature-explorer-item"><span class="feature-explorer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><h3>Readiness checks</h3><p>The game page flags issues like tight memory and offers a one-tap fix before you play.</p></article>

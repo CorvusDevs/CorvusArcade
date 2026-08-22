@@ -389,10 +389,14 @@
                 <summary class="changelog-summary">Mới</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.9.0</span>
+                    <span class="release-ver">1.0.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Tệp hỗ trợ trò chơi</strong>Cài đặt môi trường chạy Microsoft Visual C++ 2015-2022 trong vùng chứa của trò chơi này. Chỉ dùng khi trò chơi báo thiếu tệp MSVCP hoặc VCRUNTIME.</li>
-                        <li><strong>Trợ lý tương thích</strong>Có cài đặt tương thích đã được xác minh cho trò chơi này.</li>
+                        <li><strong>Trò chơi bị đóng hoặc bị treo</strong>Khi một game được biết là chạy tốt hơn trên backend đồ họa khác, trang của game giờ sẽ hiển thị thông tin này và chuyển đổi chỉ với một cú nhấp chuột.</li>
+                        <li><strong>Điểm khởi đầu đồ họa được kiểm tra tham chiếu đã sẵn sàng.</strong>Điểm khởi đầu này đã được xác minh trong trình khởi chạy Mac khác. Corvus Arcade sử dụng môi trường runtime Wine khác, vì vậy hãy thử nghiệm trước khi tin tưởng vào nó.</li>
+                        <li><strong>Tương thích điều khiển</strong>Sử dụng DLL điều khiển Wine bên cạnh tệp thực thi của trò chơi này. Tắt tính năng này trừ khi đầu vào bị thiếu hoặc được ánh xạ không chính xác.</li>
+                        <li><strong>Chế độ bộ nhớ 4 GB</strong>Cho phép trò chơi 32-bit này sử dụng nhiều bộ nhớ địa chỉ hơn. Corvus giữ nguyên bản sao lưu chính xác để có thể đảo ngược thay đổi này.</li>
+                        <li><strong>Bắt ghi lại trace hệ thống Metal</strong>Ghi lại 20 giây với Apple's Metal System Trace sau lần khởi chạy tiếp theo. Chỉ sử dụng khi điều tra các sự cố treo trình hiển thị, vì việc ghi lại sẽ làm tăng tải hệ thống.</li>
+                        <li><strong>Giới thiệu Corvus Arcade</strong>Chạy trò chơi Windows trên Mac Apple Silicon.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Phiên bản</a>

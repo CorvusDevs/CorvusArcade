@@ -389,10 +389,14 @@
                 <summary class="changelog-summary">Ce e nou</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.9.0</span>
+                    <span class="release-ver">1.0.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Fișiere de suport pentru joc</strong>Instalează runtime-ul Microsoft Visual C++ 2015-2022 în containerul acestui joc. Folosește-l numai dacă jocul raportează un fișier MSVCP sau VCRUNTIME lipsă.</li>
-                        <li><strong>Asistent de compatibilitate</strong>Sunt disponibile setări de compatibilitate verificate pentru acest joc.</li>
+                        <li><strong>Jocul se închide sau se blochează</strong>Când se știe că un joc rulează mai bine pe alt backend grafic, pagina acestuia indică acest lucru și permite schimbarea cu un singur click.</li>
+                        <li><strong>Un punct de plecare pentru configurația grafică, testat pe referință, este disponibil.</strong>Acest punct de pornire a fost verificat în alt launcher Mac. Corvus Arcade folosește un runtime Wine diferit, deci testați-l înainte să îl folosiți.</li>
+                        <li><strong>Compatibilitatea cu controllerul</strong>Folosiți o DLL Wine pentru controller alături de executabilul acestui joc. Păstrați această opțiune dezactivată, cu excepția cazului în care input-ul lipsește sau este mapat incorect.</li>
+                        <li><strong>Modul de 4 GB de memorie</strong>Permite acestei aplicații 32-biți să folosească mai mult spațiu de adresă. Corvus păstrează o copie de rezervă exactă, astfel încât modificarea să poată fi inversată.</li>
+                        <li><strong>Captură de trasare Metal</strong>Înregistrează 20 de secunde cu Apple după Metal System Trace, urmat de lansarea următoare. Folosiți-l doar pentru investigarea blocărilor de randare, deoarece capturarea adaugă suprasarcină.</li>
+                        <li><strong>Despre Corvus Arcade</strong>Rulează jocuri Windows pe Mac cu Apple Silicon.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Versiuni</a>

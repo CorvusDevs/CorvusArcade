@@ -455,12 +455,14 @@
                 <summary class="changelog-summary">What's New</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.9.0</span>
+                    <span class="release-ver">1.0.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Game support files</strong>Install the Microsoft Visual C++ 2015-2022 runtime inside an individual game's container when it reports a missing MSVCP or VCRUNTIME file.</li>
-                        <li><strong>Compatibility Assistant</strong>Apply verified compatibility settings for supported games with one click.</li>
-                        <li><strong>Steam library sync</strong>Games already installed through Corvus Arcade's Steam container are added to your library when they are ready to launch.</li>
-                        <li><strong>Spotlight launch</strong>Installed games appear in macOS Spotlight, ready to open with their current Corvus Arcade settings.</li>
+                        <li><strong>Game closes or crashes</strong>When a game is known to run better on the other graphics backend, its page now says so and switches with one click.</li>
+                        <li><strong>A reference-tested graphics starting point is available.</strong>This starting point was verified in another Mac launcher. Corvus Arcade uses a different Wine runtime, so test it before relying on it.</li>
+                        <li><strong>Controller compatibility</strong>Use a Wine controller DLL beside this game&#x27;s executable. Leave this off unless input is missing or mapped incorrectly.</li>
+                        <li><strong>4 GB memory mode</strong>Lets this 32-bit game use more address space. Corvus keeps an exact backup so the change can be reversed.</li>
+                        <li><strong>Metal trace capture</strong>Records 20 seconds with Apple&#x27;s Metal System Trace after the next launch. Use it only when investigating rendering stalls because capture adds overhead.</li>
+                        <li><strong>About Corvus Arcade</strong>Run Windows games on your Apple Silicon Mac.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Releases</a>

@@ -389,10 +389,14 @@
                 <summary class="changelog-summary">O que há de novo</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">0.9.0</span>
+                    <span class="release-ver">1.0.0</span>
                     <ul class="changelog-list">
-                        <li><strong>Arquivos de suporte do jogo</strong>Instala o runtime Microsoft Visual C++ 2015-2022 no contêiner deste jogo. Use-o somente se o jogo informar que falta um arquivo MSVCP ou VCRUNTIME.</li>
-                        <li><strong>Assistente de compatibilidade</strong>Há configurações de compatibilidade verificadas disponíveis para este jogo.</li>
+                        <li><strong>O jogo fecha ou trava</strong>Quando um jogo é conhecido por rodar melhor no outro backend de gráficos, a página dele agora informa isso e alterna com um único clique.</li>
+                        <li><strong>Um ponto de partida para a configuração gráfica, testado em referência, está disponível.</strong>Este ponto de partida foi verificado em outro launcher Mac. O Corvus Arcade usa um runtime Wine diferente, então teste-o antes de confiar nele.</li>
+                        <li><strong>Compatibilidade com controladores</strong>Use uma DLL do controle Wine ao lado do executável do jogo. Deixe esta opção desativada, a menos que a entrada esteja ausente ou mapeada incorretamente.</li>
+                        <li><strong>Modo de 4 GB de memória</strong>Permita que este jogo de 32 bits utilize mais espaço de endereçamento. O Corvus mantém uma cópia de segurança exata para que a alteração possa ser revertida.</li>
+                        <li><strong>Captura de rastreamento do Metal</strong>Grava 20 segundos com o Apple do Metal System Trace após o próximo lançamento. Use-o apenas ao investigar travamentos de renderização, pois a captura adiciona sobrecarga.</li>
+                        <li><strong>Sobre o Corvus Arcade</strong>Execute jogos do Windows no seu Mac com Apple Silicon.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">Lançamentos</a>
