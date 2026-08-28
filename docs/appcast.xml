@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 1.1.0</title>
+            <pubDate>Fri, 28 Aug 2026 19:59:10 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Repair: Re-applies the known-safe Wine setup without touching the game install or saves.</li><li>Built-in performance log: Corvus Arcade records what affects performance while you play, so lag is easy to look into later. Manage log space in Settings.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v1.1.0/CorvusArcade-1.1.0.zip" sparkle:version="19" sparkle:shortVersionString="1.1.0" sparkle:edSignature="54ez4XL5liVEAGPiRhXLp1SPRFtbelzwOwTgPFQEXLQrn4/N3zzcJ03tBFuKruQ0KHBCRt/rjC6yNiU8mAjaBg==" length="552359814" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.0.0</title>
             <pubDate>Sat, 22 Aug 2026 11:35:13 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
