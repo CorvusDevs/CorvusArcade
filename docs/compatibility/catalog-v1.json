@@ -1,0 +1,29 @@
+{
+  "expiresAt": "2026-12-15T00:00:00Z",
+  "format": 1,
+  "generatedAt": "2026-09-01T00:00:00Z",
+  "minimumAppVersion": "1.2.0",
+  "recipes": [
+    {"backend":"d3dmetal","id":"elden-ring","knownCrashingBackends":[],"name":"Elden Ring","source":"Corvus reference audit 2026-09-01","steamAppID":1245620},
+    {"backend":"d3dmetal","id":"armored-core-vi","knownCrashingBackends":[],"name":"Armored Core VI Fires of Rubicon","source":"Corvus reference audit 2026-09-01","steamAppID":1888160},
+    {"backend":"d3dmetal","id":"high-on-life","knownCrashingBackends":[],"name":"High on Life","source":"Corvus reference audit 2026-09-01","steamAppID":1583230},
+    {"backend":"d3dmetal","id":"cyberpunk-2077","knownCrashingBackends":[],"name":"Cyberpunk 2077","source":"Corvus reference audit 2026-09-01","steamAppID":1091500},
+    {"backend":"d3dmetal","id":"ghostrunner","knownCrashingBackends":[],"name":"Ghostrunner","source":"Corvus reference audit 2026-09-01","steamAppID":1139900},
+    {"backend":"d3dmetal","id":"control","knownCrashingBackends":[],"name":"Control Ultimate Edition","source":"Corvus reference audit 2026-09-01","steamAppID":870780},
+    {"backend":"d3dmetal","id":"jedi-fallen-order","knownCrashingBackends":[],"name":"Star Wars Jedi: Fallen Order","source":"Corvus reference audit 2026-09-01","steamAppID":1172380},
+    {"backend":"d3dmetal","id":"shadow-tomb-raider","knownCrashingBackends":[],"name":"Shadow of the Tomb Raider","source":"Corvus reference audit 2026-09-01","steamAppID":750920},
+    {"backend":"dxmt","id":"repo","knownCrashingBackends":[],"name":"R.E.P.O.","source":"Corvus reference audit 2026-09-01","steamAppID":3241660},
+    {"backend":"dxmt","id":"cult-of-the-lamb","knownCrashingBackends":[],"name":"Cult of the Lamb","source":"Corvus reference audit 2026-09-01","steamAppID":1313140},
+    {"backend":"dxmt","id":"witcher-3","knownCrashingBackends":[],"name":"The Witcher 3: Wild Hunt","source":"Corvus reference audit 2026-09-01","steamAppID":292030},
+    {"backend":"dxmt","id":"long-dark","knownCrashingBackends":[],"name":"The Long Dark","source":"Corvus reference audit 2026-09-01","steamAppID":305620},
+    {"backend":"dxmt","id":"subnautica","knownCrashingBackends":[],"name":"Subnautica","source":"Corvus reference audit 2026-09-01","steamAppID":264710},
+    {"backend":"dxmt","id":"subnautica-below-zero","knownCrashingBackends":[],"name":"Subnautica: Below Zero","source":"Corvus reference audit 2026-09-01","steamAppID":848450},
+    {"backend":"dxmt","id":"rain-world","knownCrashingBackends":[],"name":"Rain World","source":"Corvus reference audit 2026-09-01","steamAppID":312520},
+    {"backend":"dxmt","id":"hollow-knight","knownCrashingBackends":[],"name":"Hollow Knight","source":"Corvus reference audit 2026-09-01","steamAppID":367520},
+    {"backend":"dxmt","id":"dave-the-diver","knownCrashingBackends":[],"name":"Dave the Diver","source":"Corvus reference audit 2026-09-01","steamAppID":1868140},
+    {"backend":"dxmt","id":"lethal-company","knownCrashingBackends":[],"name":"Lethal Company","source":"Corvus reference audit 2026-09-01","steamAppID":1966720},
+    {"backend":"dxmt","id":"sekiro","knownCrashingBackends":[],"name":"Sekiro: Shadows Die Twice","source":"Corvus reference audit 2026-09-01","steamAppID":814380},
+    {"backend":"dxmt","id":"sons-of-the-forest","knownCrashingBackends":[],"name":"Sons of the Forest","source":"Corvus reference audit 2026-09-01","steamAppID":1326470}
+  ],
+  "wineVersion": "11.0"
+}

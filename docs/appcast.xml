@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 1.2.0</title>
+            <pubDate>Tue, 01 Sep 2026 20:32:45 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Stop: Cleared leftover Windows processes</li><li>Repair: Refreshed the Windows environment</li><li>Compatibility Assistant: A reference-tested graphics starting point is available.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v1.2.0/CorvusArcade-1.2.0.zip" sparkle:version="20" sparkle:shortVersionString="1.2.0" sparkle:edSignature="St1ShHIj9Piqbi7thPNu66KuQ+caeIuTt6gwDYNGmVs2M3Ui/c4vG8jQm23i5r75gvIWVjotSKUdeIRdn0ufAQ==" length="552392492" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.1.0</title>
             <pubDate>Fri, 28 Aug 2026 19:59:10 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
