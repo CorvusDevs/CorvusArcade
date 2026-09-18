@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 1.3.2</title>
+            <pubDate>Fri, 18 Sep 2026 19:09:39 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Clearer container setup errors: A failed container setup now reports on the game it actually belongs to.</li><li>Inspect the launch log: The log records the launch configuration and the first failure reported by Wine.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v1.3.2/CorvusArcade-1.3.2.zip" sparkle:version="23" sparkle:shortVersionString="1.3.2" sparkle:edSignature="lbLal/4X/tgErr9J3sEO8xeUnTPrF35BYX/gko7AVSOLvzROrPwuDtlSqDi13eH6Wx+O0Z37idQtWyDoiEbAAw==" length="553439900" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.3.1</title>
             <pubDate>Wed, 16 Sep 2026 05:45:55 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
