@@ -172,15 +172,17 @@
         .gallery > input:nth-of-type(1):checked ~ .gallery-stage .gallery-item:nth-of-type(1),
         .gallery > input:nth-of-type(2):checked ~ .gallery-stage .gallery-item:nth-of-type(2),
         .gallery > input:nth-of-type(3):checked ~ .gallery-stage .gallery-item:nth-of-type(3),
-        .gallery > input:nth-of-type(4):checked ~ .gallery-stage .gallery-item:nth-of-type(4) { display: block; }
-        .gallery-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
+        .gallery > input:nth-of-type(4):checked ~ .gallery-stage .gallery-item:nth-of-type(4),
+        .gallery > input:nth-of-type(5):checked ~ .gallery-stage .gallery-item:nth-of-type(5) { display: block; }
+        .gallery-thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 14px; }
         .gallery-thumbs label { cursor: pointer; border-radius: 10px; overflow: hidden; border: 2px solid transparent; opacity: 0.55; transition: opacity .2s, border-color .2s; display: block; }
         .gallery-thumbs label:hover { opacity: 0.85; }
         .gallery-thumbs img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 10; }
         .gallery > input:nth-of-type(1):checked ~ .gallery-thumbs label:nth-of-type(1),
         .gallery > input:nth-of-type(2):checked ~ .gallery-thumbs label:nth-of-type(2),
         .gallery > input:nth-of-type(3):checked ~ .gallery-thumbs label:nth-of-type(3),
-        .gallery > input:nth-of-type(4):checked ~ .gallery-thumbs label:nth-of-type(4) { opacity: 1; border-color: var(--accent); }
+        .gallery > input:nth-of-type(4):checked ~ .gallery-thumbs label:nth-of-type(4),
+        .gallery > input:nth-of-type(5):checked ~ .gallery-thumbs label:nth-of-type(5) { opacity: 1; border-color: var(--accent); }
         .gallery > input:focus-visible ~ .gallery-thumbs label { outline: 2px solid var(--accent-light); outline-offset: 2px; }
         .shot-cap { text-align: center; font-size: 13.5px; color: var(--text-secondary); margin-top: 12px; }
         .shot-viewer { width: 100vw; max-width: none; height: 100vh; max-height: none; margin: 0; padding: 0; border: 0; background: rgba(5,4,12,.96); color: #fff; overflow: hidden; }
@@ -396,10 +398,9 @@
                 <summary class="changelog-summary">새로운 기능</summary>
                 <div class="changelog">
                 <div class="release">
-                    <span class="release-ver">1.3.2</span>
+                    <span class="release-ver">1.3.3</span>
                     <ul class="changelog-list">
                         <li><strong>컨테이너 설정 오류가 더 명확하게 표시됩니다.</strong>실패한 컨테이너 설정이 이제 실제로 속한 게임에 대해 보고합니다.</li>
-                        <li><strong>실행 로그 확인</strong>이 로그에는 실행 구성과 Wine에서 보고한 첫 번째 오류가 기록됩니다.</li>
                     </ul>
                 </div>
                     <a href="https://github.com/CorvusDevs/CorvusArcade/releases">릴리스</a>
@@ -418,6 +419,7 @@
                 <input type="radio" name="ca-shot" id="ca-shot-2">
                 <input type="radio" name="ca-shot" id="ca-shot-3">
                 <input type="radio" name="ca-shot" id="ca-shot-4">
+                <input type="radio" name="ca-shot" id="ca-shot-5">
                 <div class="gallery-stage">
                     <figure class="gallery-item">
                         <button class="gallery-open" type="button" data-full="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.png?v=090"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/launcher.webp?v=090" alt="Corvus Arcade 0.9.0 showing Overwatch, compatibility checks, screenshots, and live system readiness" width="1400" height="989"></button>
@@ -435,12 +437,17 @@
                         <button class="gallery-open" type="button" data-full="https://corvusdevs.github.io/CorvusArcade/screenshots/light-theme.png?v=090"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/light-theme.webp?v=090" alt="Corvus Arcade game page using the Linen light theme" width="1400" height="951" loading="lazy"></button>
                         <figcaption class="shot-cap">여덟 가지 색상 테마</figcaption>
                     </figure>
+                    <figure class="gallery-item">
+                        <button class="gallery-open" type="button" data-full="https://corvusdevs.github.io/CorvusArcade/screenshots/crown-siege.png?v=133"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/crown-siege.webp?v=133" alt="Crown Siege" width="2560" height="1440" loading="lazy"></button>
+                        <figcaption class="shot-cap">Crown Siege</figcaption>
+                    </figure>
                 </div>
                 <div class="gallery-thumbs">
                     <label for="ca-shot-1" title="Your library, native to macOS"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/launcher.webp?v=090" alt="" width="360" height="245" loading="lazy"></label>
                     <label for="ca-shot-2" title="Quick Launch"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/quick-launch.webp?v=090" alt="" width="360" height="245" loading="lazy"></label>
                     <label for="ca-shot-3" title="Your saves are protected"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/game-tools.webp?v=090" alt="" width="360" height="245" loading="lazy"></label>
                     <label for="ca-shot-4" title="Eight colour themes"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/light-theme.webp?v=090" alt="" width="360" height="245" loading="lazy"></label>
+                    <label for="ca-shot-5" title="Crown Siege"><img src="https://corvusdevs.github.io/CorvusArcade/screenshots/thumbs/crown-siege.webp?v=133" alt="" width="360" height="245" loading="lazy"></label>
                 </div>
             </div>
         </div>
