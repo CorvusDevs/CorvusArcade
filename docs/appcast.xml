@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 1.4.1</title>
+            <pubDate>Sun, 04 Oct 2026 11:00:20 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Which one starts the game?: Choose between similar programs without unpacking again.</li><li>LAUNCH PROGRAM: Steam launch options retain arguments and working folders.</li><li>WORKING SETUP: Open recovery directly from a launch error.</li><li>Graphics: Only show controls supported by the selected backend.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v1.4.1/CorvusArcade-1.4.1.zip" sparkle:version="26" sparkle:shortVersionString="1.4.1" sparkle:edSignature="5irwVJXQtZ36eK/8vujY8LEJKN8XY8KINcn1KqPxmiV0NmZhLDNAW8gVEISeWoKFqaukkvgAbDY3YFwQ7hprBw==" length="554942826" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.4.0</title>
             <pubDate>Sun, 04 Oct 2026 03:56:18 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
