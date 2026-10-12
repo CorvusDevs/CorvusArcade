@@ -6,6 +6,13 @@
         <description>Most recent updates to Corvus Arcade.</description>
         <language>en</language>
         <item>
+            <title>Version 1.5.0</title>
+            <pubDate>Mon, 12 Oct 2026 19:15:36 +0000</pubDate>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Recall for Overwatch: Recall is the first recommendation for installed Overwatch after its runtime and host checks pass. D3DMetal remains a safe alternative.</li><li>Upstream performance results: Recall's published M1 Pro test measured 99.6 FPS versus CrossOver 26.3's 58.4 FPS at 1080p Low using Recall 1.0. These are upstream results, not a Corvus benchmark.</li><li>Validated Recall setup: Reuse a compatible Recall runtime already on your Mac. If none is found, import an existing runtime folder. The update does not include or download Recall's runtime.</li><li>Clearer Recall settings: Your setting and Last prepared distinguish saved preferences from the previous profile setup. Readable information panels keep compatibility warnings visible.</li><li>Copy launch diagnostics: Open launch logs from an error and copy the full inspected log for troubleshooting.</li></ul>]]></description>
+            <enclosure url="https://github.com/CorvusDevs/CorvusArcade/releases/download/v1.5.0/CorvusArcade-1.5.0.zip" sparkle:version="27" sparkle:shortVersionString="1.5.0" sparkle:edSignature="4nUVoIi1IooPD266Bnb/xhGv3OZNE18FL/+Ff0rMib7O91Xag28vD5vFMixC271vWmDd4QTI191mjrRhUS7RBg==" length="556567438" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.4.1</title>
             <pubDate>Sun, 04 Oct 2026 11:00:20 +0000</pubDate>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
